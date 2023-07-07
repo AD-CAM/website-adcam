@@ -33,13 +33,24 @@ const useStyles = makeStyles()((theme) => {
         logoImage: {
             height: "100%",
             width: "auto",
+        },
+        nav: {
+            display: "flex",
+            alignItems: "center",
+        },
+        devisButton: {
+            
         }
     }
 })
 
+interface HeaderProps {
+    activePage: string;
+}
 
 
-export default function Header() {
+
+export default function Header({ activePage }: HeaderProps) {
     const { classes } = useStyles()
 
     return (      
@@ -49,7 +60,13 @@ export default function Header() {
                     src={ adCamHeaderLogo }
                     alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
                 />
-            </Link>   
+            </Link>
+            <nav className={ classes.nav }>
+
+            </nav>
+            <Link className={ classes.devisButton } href="/contact">
+                DEVIS GRATUIT
+            </Link>
         </header>
     )
 }
