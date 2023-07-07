@@ -1,7 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import { makeStyles } from 'tss-react/mui'
+import CallUs from './_components/CallUs'
+import Header from './_components/Header'
+
+
 
 const useStyles = makeStyles()((theme) => {
     return {
@@ -14,11 +17,14 @@ const useStyles = makeStyles()((theme) => {
 })
 
 
+
 export default function Home() {
     const { classes } = useStyles()
 
     return (
         <>
+            <Header />
+            <CallUs />
             <main className={ classes.root }>
                 test
             </main>

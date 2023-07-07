@@ -1,4 +1,5 @@
 import './globals.css'
+
 import { Quicksand } from 'next/font/google'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
@@ -20,12 +21,10 @@ export const metadata = {
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
     return (
-
-        <html lang="fr">
-            <body className={ quicksand.className }>
-                {children}
-            </body>
-        </html>
-        
+                <html lang="fr">
+                    <body className={ quicksand.className }>
+                        {children}
+                    </body>
+                </html>
     )
 }
