@@ -1,5 +1,6 @@
 import './globals.css'
 
+import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir"
 import { Quicksand } from 'next/font/google'
 
 const quicksand = Quicksand({ subsets: ['latin'] })
@@ -23,7 +24,9 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     return (
                 <html lang="fr">
                     <body className={ quicksand.className }>
-                        {children}
+                        <NextAppDirEmotionCacheProvider options={{ key: "css" }}>
+                            {children}
+                        </NextAppDirEmotionCacheProvider>
                     </body>
                 </html>
     )
