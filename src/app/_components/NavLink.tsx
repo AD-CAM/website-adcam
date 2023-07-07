@@ -9,11 +9,11 @@ import { makeStyles } from 'tss-react/mui'
 
 const textVariants: Variants = {
 	rest: {
-		color: "rgba(255, 255, 255, 1)",
+		color: "rgba(0, 0, 0, 1)",
 		transition: { duration: 0.1 }
 	},
 	hover: {
-		color: "rgba(245, 176, 65, 1)",
+		color: "rgba(200, 4, 4, 1)",
 		transition: { duration: 0.1 }
 	}
 }
@@ -36,13 +36,34 @@ const underlineVariants: Variants = {
 const useStyles = makeStyles()((theme) => {
     return {
         root: {
+            display: "block",
+            position: "relative",
+
+            marginLeft: theme.spacing(2),
+            marginRight: theme.spacing(2),
         },
         text: {
+            fontSize: theme.typography.pxToRem(15),
+            fontWeight: 500,
+        },
+        activeText: {
+            color: "#C80404",
+            fontSize: theme.typography.pxToRem(15),
+            fontWeight: 600,
 
+            paddingBottom: "1px",
         },
         underline: {
+            display: "block",
 
-        },
+            position: "absolute",
+			left: 0,
+			bottom: "1px",
+
+			height: "1px",
+			width: "100%",
+			backgroundColor: "#C80404",
+		}
     }
 })
 
@@ -59,8 +80,14 @@ export default function Header({ isActive, link, linkText }: HeaderProps) {
 
     return (      
         <Link href={ link } className={ classes.root }>
-            <motion.span className={ classes.text } variants={ textVariants }>{ linkText }</motion.span>
-			<motion.span className={ classes.underline } variants={ underlineVariants }></motion.span>
+            { !isActive  ?
+                            <motion.span initial="rest" animate="rest" whileHover="hover">
+                                <motion.span className={ classes.text } variants={ textVariants }>{ linkText }</motion.span>
+                                <motion.span className={ classes.underline } variants={ underlineVariants }></motion.span>
+                            </motion.span>
+                        :
+                            <motion.span className={ classes.activeText }>{ linkText }</motion.span>
+            }   
         </Link>
     )
 }

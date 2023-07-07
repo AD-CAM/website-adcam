@@ -1,9 +1,11 @@
 'use client'
 
-import Link from 'next/link'
-import Image from 'next/image'
 import adCamHeaderLogo from "/public/ad-cam_logo-title_nobg.png"
 import { makeStyles } from 'tss-react/mui'
+
+import Link from 'next/link'
+import Image from 'next/image'
+import NavLink from './NavLink'
 
 
 
@@ -36,10 +38,12 @@ const useStyles = makeStyles()((theme) => {
         },
         nav: {
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-end",
+
+            height: "60%",
         },
         devisButton: {
-            
+
         }
     }
 })
@@ -62,7 +66,11 @@ export default function Header({ activePage }: HeaderProps) {
                 />
             </Link>
             <nav className={ classes.nav }>
-
+                <NavLink isActive={ activePage === "home" } link="/" linkText="ACCUEIL"/>
+                <NavLink isActive={ activePage === "alarm" } link="/installation-alarme-orleans/" linkText="ALARME"/>
+                <NavLink isActive={ activePage === "video" } link="/installation-video-surveillance-orleans/" linkText="VIDÉO SURVEILLANCE"/>
+                <NavLink isActive={ activePage === "contact" } link="/contact/" linkText="CONTACT"/>
+                <NavLink isActive={ activePage === "support" } link="/assistance-technique/" linkText="ASSISTANCE TECHNIQUE"/>
             </nav>
             <Link className={ classes.devisButton } href="/contact">
                 DEVIS GRATUIT
