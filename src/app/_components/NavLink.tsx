@@ -76,7 +76,7 @@ interface HeaderProps {
 
 
 
-export default function Header({ isActive, link, linkText }: HeaderProps) {
+export default function NavLink({ isActive, link, linkText }: HeaderProps) {
     const { classes } = useStyles()
 
     return (      
