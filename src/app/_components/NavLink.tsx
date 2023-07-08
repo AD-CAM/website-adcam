@@ -40,6 +40,9 @@ const useStyles = makeStyles()((theme) => {
             display: "block",
             position: "relative",
 
+            padding: 0,
+            margin: 0,
+
             marginLeft: theme.spacing(2),
             marginRight: theme.spacing(2),
         },
@@ -53,6 +56,8 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 600,
 
             paddingBottom: "1px",
+
+            cursor: "default",
         },
         underline: {
             display: "block",
@@ -79,16 +84,21 @@ interface HeaderProps {
 export default function NavLink({ isActive, link, linkText }: HeaderProps) {
     const { classes } = useStyles()
 
-    return (      
-        <Link href={ link } className={ classes.root }>
+    return (  
+        <>
             { !isActive  ?
-                            <motion.span initial="rest" animate="rest" whileHover="hover">
-                                <motion.span className={ classes.text } variants={ textVariants }>{ linkText }</motion.span>
-                                <motion.span className={ classes.underline } variants={ underlineVariants }></motion.span>
-                            </motion.span>
-                        :
-                            <motion.span className={ classes.activeText }>{ linkText }</motion.span>
-            }   
-        </Link>
+                <Link href={ link } className={ classes.root }>
+                    <motion.span initial="rest" animate="rest" whileHover="hover">
+                        <motion.span className={ classes.text } variants={ textVariants }>{ linkText }</motion.span>
+                        <motion.span className={ classes.underline } variants={ underlineVariants }></motion.span>
+                    </motion.span>   
+                </Link>
+                
+            :
+                <p className={ classes.root }>
+                    <motion.span className={ classes.activeText }>{ linkText }</motion.span>
+                </p>
+            }
+        </>
     )
 }

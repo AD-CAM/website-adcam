@@ -23,13 +23,16 @@ const useStyles = makeStyles()((theme) => {
             fontSize: theme.typography.pxToRem(26),
         },
         bannerText: {
-            color: "#000",
+            color: "#FFF",
             fontWeight: 500,
         },
         bannerPhone: {
             color: "#FFF",
-            fontWeight: 800,
 
+            marginLeft: theme.spacing(1),
+            marginRight: theme.spacing(1),
+
+            fontWeight: 800,
             fontSize: theme.typography.pxToRem(26),
         },
     }
