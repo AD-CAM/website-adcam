@@ -85,6 +85,7 @@ interface ButtonProps {
     icon: string;
     text: string;
     link: string;
+    description: string;
 }
 
 const Icon = ({ icon }: IconProps) => {
@@ -100,18 +101,30 @@ const Icon = ({ icon }: IconProps) => {
 
 
 
-export default function IconButton({ icon, text, link }: ButtonProps) {
+export default function IconButton({ icon, text, link, description }: ButtonProps) {
     const { classes } = useStyles()
 
     return (      
         <Link href={ link }>
-            <motion.span className={ classes.root } variants={ linkVariants } initial="rest" animate="rest" whileHover="hover">
+            <motion.span    
+                className={ classes.root }
+
+                variants={ linkVariants }
+                initial="rest"
+                animate="rest"
+                whileHover="hover"
+                
+                aria-label={ description }
+                role="button"
+            >
+
                 <motion.span className={ classes.icon } variants={ iconVariants }>
                     <Icon icon={ icon }/>
                 </motion.span>
                 <motion.span className={ classes.text } variants={ textVariants }>
                     { text }
                 </motion.span>
+
             </motion.span>
         </Link>
     )

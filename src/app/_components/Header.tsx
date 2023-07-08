@@ -88,7 +88,7 @@ export default function Header({ activePage }: HeaderProps) {
                     <NavLink isActive={ activePage === "contact" } link="/contact/" linkText="CONTACT"/>
                     <NavLink isActive={ activePage === "support" } link="/assistance-technique/" linkText="ASSISTANCE TECHNIQUE"/>
                 </nav>
-                <IconButton icon={ 'invoice' } text={ 'DEVIS GRATUIT' } link={ '/contact' }/>
+                <IconButton icon={ 'invoice' } text={ 'DEVIS GRATUIT' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
             </div>
         </header>
     )
