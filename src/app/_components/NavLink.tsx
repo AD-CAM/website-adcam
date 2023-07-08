@@ -48,7 +48,7 @@ const useStyles = makeStyles()((theme) => {
         },
         activeText: {
             color: "#C80404",
-            fontSize: theme.typography.pxToRem(15),
+            fontSize: theme.typography.pxToRem(16),
             fontWeight: 600,
 
             paddingBottom: "1px",
