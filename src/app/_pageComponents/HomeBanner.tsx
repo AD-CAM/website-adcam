@@ -15,29 +15,40 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "center",
 
             width: "100%",
-            height: "90vh",
+            height: "85vh",
 
             background: "linear-gradient(150deg, rgba(3,0,0,1) 0%, rgba(69,16,16,1) 37%, rgba(126,85,85,1) 75%, rgba(154,143,143,1) 100%)",
         },
         banner: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+
             borderRadius: theme.spacing(2),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
-            background: "linear-gradient(350deg, rgba(37,16,5,0.1) 0%, rgba(136,37,16,0.2) 35%, rgba(179,39,36,0.25) 63%, rgba(255,23,0,0.3) 100%)",
+            background: "linear-gradient(350deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 100%)",
             backdropFilter: "blur(4px)",
+
+            padding: theme.spacing(4),
         },
         bannerTitle: {
+            margin: "0",
 
+            color: "#C80404",
+            fontSize: theme.typography.pxToRem(36),
         },
         bannerSubText: {
-
+            fontWeight: 500,
+            fontSize: theme.typography.pxToRem(22),
         },
         buttonsContainer: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
+            justifyContent: "space-evenly",
 
-            width: "100%",
+            minWidth: "200px",
+            width: "40%",
         }
     }
 })
@@ -57,7 +68,7 @@ export default function HomeBanner() {
                     </Link>
                 </h1>
 
-                <p className={ classes.bannerSubText }>{ `Pour avoir un oeil partout, tout le temps !` }</p>
+                <h2 className={ classes.bannerSubText }>{ `Pour avoir un oeil partout, tout le temps !` }</h2>
 
                 <div className={ classes.buttonsContainer }>
                     <GoToButton text={"ALARME"} link={"/installation-alarme-orleans"} description={"Renseignez-vous sur les installations d'alarme par AD CAM"} />
