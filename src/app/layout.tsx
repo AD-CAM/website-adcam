@@ -1,7 +1,9 @@
+/* Assets Imports */
 import './globals.css'
-
-import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir"
 import { Quicksand } from 'next/font/google'
+/* Library Imports */
+import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir"
+
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
