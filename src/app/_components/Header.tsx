@@ -34,6 +34,9 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "space-between",
 
+            marginLeft: theme.spacing(6),
+            marginRight: theme.spacing(6),
+
             height: "100%",
             width: "100%",
             maxWidth: "1450px",
