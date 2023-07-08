@@ -3,6 +3,7 @@ import './globals.css'
 /* Components Imports */
 import CallUs from './_components/CallUs'
 import Header from './_components/Header'
+import HomeBanner from './_pageComponents/HomeBanner'
 
 
 
@@ -12,7 +13,7 @@ export default function Home() {
             <Header activePage={ "home" } />
             <CallUs />
             <main>
-                test
+                <HomeBanner />
             </main>
         </>
     )

@@ -8,6 +8,7 @@ const useStyles = makeStyles()((theme) => {
     return {
         root: {
             position: "fixed",
+            zIndex: 9999,
             top: "0",
 
             display: "flex",
