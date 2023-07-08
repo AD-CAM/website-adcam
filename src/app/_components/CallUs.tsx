@@ -1,5 +1,5 @@
 'use client'
-
+/* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 
 
@@ -42,9 +42,9 @@ export default function CallUs() {
 
     return (      
         <div className={ classes.root }>
-            <p className={ classes.bannerText }>
+            <a className={ classes.bannerText } href="tel:0695869176">
                 <span className={ classes.bannerPercentage }>100%</span> AUTONOME <strong className={ classes.bannerPhone }>06 95 86 91 76</strong> SANS ABONNEMENT
-            </p>
+            </a>
         </div>
     )
 }
