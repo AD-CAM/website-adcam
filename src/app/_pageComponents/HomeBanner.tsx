@@ -1,6 +1,7 @@
 'use client'
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+import { motion, Variants } from 'framer-motion'
 /* Components Imports */
 import Link from 'next/link'
 import GoToButton from '../_components/GoToButton'
@@ -53,6 +54,24 @@ const useStyles = makeStyles()((theme) => {
     }
 })
 
+const bannerVariants: Variants = {
+    rest: {
+        opacity: 0,
+        transform: "translateY(100px)",
+    },
+    loaded: {
+        opacity: 1,
+        transform: "translateY(0px)",
+        transition: {
+            type: "spring",
+            duration: 0.8,
+            opacity: {
+                duration: 0.9,
+            }
+        }
+    },
+}
+
 
 
 export default function HomeBanner() {
@@ -60,7 +79,7 @@ export default function HomeBanner() {
 
     return (      
         <section className={ classes.root }>
-            <div className={ classes.banner }>
+            <motion.div className={ classes.banner } variants={ bannerVariants } initial="rest" animate="loaded">
 
                 <h1 className={ classes.bannerTitle }>
                     <Link href="/installation-video-surveillance-orleans">
@@ -75,7 +94,7 @@ export default function HomeBanner() {
                     <GoToButton text={"VIDÉO SURVEILLANCE"} link={"/installation-video-surveillance-orleans"} description={"Renseignez-vous sur les installations de vidéo surveillance par AD CAM"} />
                 </div>
 
-            </div>
+            </motion.div>
         </section>
     )
 }
