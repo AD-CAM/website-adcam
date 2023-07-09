@@ -10,6 +10,8 @@ const useStyles = makeStyles()((theme) => {
             display: "flex",
             alignItems: "center",
 
+            marginTop: theme.spacing(5),
+            marginBottom: theme.spacing(5),
         },
         dividerLine: {
             flexGrow: 1,
@@ -20,6 +22,9 @@ const useStyles = makeStyles()((theme) => {
             backgroundColor: "#C80404"
         },
         titleText: {
+            marginLeft: theme.spacing(2),
+            marginRight: theme.spacing(2),
+
             fontSize: theme.typography.pxToRem(24),
             fontWeight: 600,
         },
@@ -42,7 +47,7 @@ export default function SectionTitle({ text }: SectionTitleProps) {
             <span className={ classes.titleText }>
                 { text }
             </span>
-            
+
             <span className={ classes.dividerLine }></span>
         </h2>
     )

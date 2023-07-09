@@ -15,6 +15,8 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
 
             width: "100%",
+
+            paddingTop: theme.spacing(10),
         },
         subRoot: {
             maxWidth: "1450px",
@@ -26,7 +28,7 @@ const useStyles = makeStyles()((theme) => {
 
         },
         textParagraph: {
-
+            textAlign: "justify",
         },
     }
 })
