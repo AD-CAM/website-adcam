@@ -95,7 +95,7 @@ export default function NavLink({ isActive, link, linkText }: HeaderProps) {
                 </Link>
                 
             :
-                <p className={ classes.root }>
+                <p className={ classes.root } aria-current="page">
                     <motion.span className={ classes.activeText }>{ linkText }</motion.span>
                 </p>
             }

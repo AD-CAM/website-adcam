@@ -20,7 +20,15 @@ export default function AboutSection() {
 
     return (      
         <section className={ classes.root }>
+            <div>
+                <aside></aside>
+                <article>
+                    
+                </article>
+                <aside></aside>
+            </div>
 
+            <aside></aside>
         </section>
     )
 }
