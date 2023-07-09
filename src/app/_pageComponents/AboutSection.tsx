@@ -70,7 +70,7 @@ export default function AboutSection() {
                     </p>
                     <p className={ classes.textParagraph }>
                         { `Nous installons vos caméras de vidéosurveillance/vidéoprotection dans votre habitation, commerce,
-                        entreprise, parking, entrepôt ou tout autre lieu devant être protégé.`}
+                        entreprise, parking, entrepôt ou tout autre lieu devant être protégé. `}
                         <strong>{ `Nous assurons l’assistance technique ` }</strong>
                         {`de vos alarmes et vidéo surveillance qui `}
                         <strong>{ `protège votre entreprise ou votre habitation.` }</strong>
