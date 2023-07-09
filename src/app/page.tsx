@@ -4,6 +4,7 @@ import './globals.css'
 import CallUs from './_components/CallUs'
 import Header from './_components/Header'
 import HomeBanner from './_pageComponents/HomeBanner'
+import AboutSection from './_pageComponents/AboutSection'
 
 
 
@@ -14,6 +15,7 @@ export default function Home() {
             <CallUs />
             <main>
                 <HomeBanner />
+                <AboutSection />
             </main>
         </>
     )
