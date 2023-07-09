@@ -39,9 +39,14 @@ const useStyles = makeStyles()((theme) => {
             color: "#C80404",
             fontSize: theme.typography.pxToRem(36),
         },
-        bannerSubText: {
+        bannerSubTitle: {
             fontWeight: 500,
             fontSize: theme.typography.pxToRem(22),
+        },
+        bannerSubText: {
+            marginTop: 0,
+
+            fontSize: theme.typography.pxToRem(18),
         },
         buttonsContainer: {
             display: "flex",
@@ -87,7 +92,9 @@ export default function HomeBanner() {
                     </Link>
                 </h1>
 
-                <h2 className={ classes.bannerSubText }>{ `Pour avoir un oeil partout, tout le temps !` }</h2>
+                <h2 className={ classes.bannerSubTitle }>{ `Pour avoir un oeil partout, tout le temps !` }</h2>
+
+                <p className={ classes.bannerSubText }>{ `Pour professionnels et particuliers.` }</p>
 
                 <div className={ classes.buttonsContainer }>
                     <GoToButton text={"ALARME"} link={"/installation-alarme-orleans"} description={"Renseignez-vous sur les installations d'alarme par AD CAM"} />
