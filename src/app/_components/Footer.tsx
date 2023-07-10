@@ -77,7 +77,7 @@ export default function Footer() {
             <div className={ classes.logoRoot }>
                 <Image  className={ classes.logoImage }
                         src={ adCamFooterLogo }
-                        alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
+                        alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
                 />
                 <div className={ classes.logoInfoContainer }>
                     <h3 className={ classes.logoInfoTitle }>
