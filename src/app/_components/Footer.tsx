@@ -37,6 +37,8 @@ const useStyles = makeStyles()((theme) => {
         logoImage: {
             height: "60%",
             width: "auto",
+
+            marginRight: theme.spacing(2),
         },
         logoInfoContainer: {
             display: "flex",
@@ -45,7 +47,14 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "center",
         },
         logoInfoTitle: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
 
+            marginTop: 0,
+
+            color: "#FFF",
         }
     }
 })
@@ -63,7 +72,10 @@ export default function Footer() {
                         alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
                 />
                 <div className={ classes.logoInfoContainer }>
-                    <h3 className={ classes.logoInfoTitle }>{ `Installateur d’alarme et vidéo surveillance à Orléans (45)` }</h3>
+                    <h3 className={ classes.logoInfoTitle }>
+                        <span>{ `Installateur d’alarme et vidéo` }</span>
+                        <span>{ `surveillance à Orléans (45)` }</span>
+                    </h3>
                     <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
                 </div>
             </div>
