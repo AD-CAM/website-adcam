@@ -13,9 +13,13 @@ import Link from 'next/link'
 const buttonVariants: Variants = {
     rest: {
         color: "rgba(255, 255, 255, 1)",
+        backgroundColor: "rgba(255, 255, 255, 0)",
+        transition: { duration: 0.1 }
     },
     hover: {
         color: "rgba(200, 4, 4, 1)",
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        transition: { duration: 0.1 }
     },
 }
 
@@ -28,11 +32,11 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "space-between",
 
-            height: "100%",
-            width: "auto",
+            fontSize: theme.typography.pxToRem(36),
 
+            borderRadius: theme.spacing(.75),
             boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
-        },
+        }
     }
 })
 
@@ -73,7 +77,7 @@ export default function SocialButton({ icon, link, description }: ButtonProps) {
                     initial="rest"
                     whileHover="hover"
         >
-            <Icon icon={ icon } />
+            <Icon icon={ icon }/>
         </motion.a>
     )
 }

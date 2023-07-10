@@ -6,6 +6,7 @@ import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
 import Image from "next/image"
 import IconButton from "./IconButton"
+import SocialButton from "./SocialButton"
 
 
 
@@ -59,7 +60,9 @@ const useStyles = makeStyles()((theme) => {
         logoInfoButtons: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-around",
+
+            width: "100%",
         }
     }
 })
@@ -83,7 +86,7 @@ export default function Footer() {
                     </h3>
                     <div className={ classes.logoInfoButtons }>
                         <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
-                        
+                        <SocialButton icon={ 'facebook' } link={ 'https://www.facebook.com/AD-CAM-103597488861540' } description={ 'Suivez nous sur Facebook.' }/>
                     </div>
                 </div>
             </div>
