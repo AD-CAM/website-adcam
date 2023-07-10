@@ -3,6 +3,7 @@ import './globals.css'
 /* Components Imports */
 import CallUs from './_components/CallUs'
 import Header from './_components/Header'
+import Footer from './_components/Footer'
 import HomeBanner from './_pageComponents/HomeBanner'
 import AboutSection from './_pageComponents/AboutSection'
 
@@ -17,6 +18,7 @@ export default function Home() {
                 <HomeBanner />
                 <AboutSection />
             </main>
+            <Footer />
         </>
     )
 }

@@ -76,9 +76,9 @@ export default function Header({ activePage }: HeaderProps) {
         <header className={ classes.root }>
             <div className={ classes.headerContent }>
                 <Link className={ classes.logoRoot } href="/">
-                    <Image className={ classes.logoImage }
-                        src={ adCamHeaderLogo }
-                        alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
+                    <Image  className={ classes.logoImage }
+                            src={ adCamHeaderLogo }
+                            alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
                     />
                 </Link>
                 <nav className={ classes.nav }>
