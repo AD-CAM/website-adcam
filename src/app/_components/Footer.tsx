@@ -55,6 +55,11 @@ const useStyles = makeStyles()((theme) => {
             marginTop: 0,
 
             color: "#FFF",
+        },
+        logoInfoButtons: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
         }
     }
 })
@@ -76,7 +81,10 @@ export default function Footer() {
                         <span>{ `Installateur d’alarme et vidéo` }</span>
                         <span>{ `surveillance à Orléans (45)` }</span>
                     </h3>
-                    <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
+                    <div className={ classes.logoInfoButtons }>
+                        <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
+                        
+                    </div>
                 </div>
             </div>
         </footer>
