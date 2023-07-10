@@ -4,7 +4,7 @@ import { Variants } from 'framer-motion'
 import { motion } from 'framer-motion'
 import { makeStyles } from 'tss-react/mui'
 /* Icons Imports */
-import { FaPhone } from 'react-icons/fa'
+import { FaPhoneAlt } from 'react-icons/fa'
 import { FaFileInvoice } from 'react-icons/fa'
 /* Components Imports */
 import Link from 'next/link'
@@ -93,7 +93,7 @@ const Icon = ({ icon }: IconProps) => {
         default :
             break
         case 'phone' :
-            return <FaPhone />
+            return <FaPhoneAlt />
         case 'invoice' :
             return <FaFileInvoice />
     }

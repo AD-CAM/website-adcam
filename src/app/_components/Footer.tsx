@@ -5,6 +5,7 @@ import adCamFooterLogo from "/public/ad-cam_logo_nobg.png"
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
 import Image from "next/image"
+import IconButton from "./IconButton"
 
 
 
@@ -26,10 +27,26 @@ const useStyles = makeStyles()((theme) => {
             background: "linear-gradient(350deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)",
             backdropFilter: "blur(2px)",
         },
+        logoRoot: {
+            display: "flex",
+            alignItems: "center",
+            
+            height: "100%",
+            width: "auto",
+        },
         logoImage: {
             height: "60%",
             width: "auto",
         },
+        logoInfoContainer: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+        },
+        logoInfoTitle: {
+
+        }
     }
 })
 
@@ -40,10 +57,16 @@ export default function Footer() {
 
     return (      
         <footer className={ classes.root }>
-            <Image  className={ classes.logoImage }
-                    src={ adCamFooterLogo }
-                    alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
-            />
+            <div className={ classes.logoRoot }>
+                <Image  className={ classes.logoImage }
+                        src={ adCamFooterLogo }
+                        alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
+                />
+                <div className={ classes.logoInfoContainer }>
+                    <h3 className={ classes.logoInfoTitle }>{ `Installateur d’alarme et vidéo surveillance à Orléans (45)` }</h3>
+                    <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
+                </div>
+            </div>
         </footer>
     )
 }
