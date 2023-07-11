@@ -67,6 +67,16 @@ const useStyles = makeStyles()((theme) => {
     }
 })
 
+function FooterNavigation() {
+    const { classes } = useStyles()
+
+    return (
+        <div>
+
+        </div>
+    )
+}
+
 
 
 export default function Footer() {
