@@ -67,6 +67,20 @@ interface HeaderProps {
     activePage: string;
 }
 
+interface PageInfo {
+    name: string;
+    link: string;
+    text: string;
+}
+
+const pageList: PageInfo[] = [
+    { name: "home", link: "/", text: "ACCUEIL" },
+    { name: "alarm", link: "/installation-alarme-orleans/", text: "ALARME" },
+    { name: "video", link: "/installation-video-surveillance-orleans/", text: "VIDÉO SURVEILLANCE" },
+    { name: "contact", link: "/contact/", text: "CONTACT" },
+    { name: "support", link: "/assistance-technique/", text: "ASSISTANCE TECHNIQUE" }
+]
+
 
 
 export default function Header({ activePage }: HeaderProps) {
@@ -81,12 +95,16 @@ export default function Header({ activePage }: HeaderProps) {
                             alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
                     />
                 </Link>
+                
                 <nav className={ classes.nav }>
-                    <NavLink isActive={ activePage === "home" } link="/" linkText="ACCUEIL"/>
-                    <NavLink isActive={ activePage === "alarm" } link="/installation-alarme-orleans/" linkText="ALARME"/>
-                    <NavLink isActive={ activePage === "video" } link="/installation-video-surveillance-orleans/" linkText="VIDÉO SURVEILLANCE"/>
-                    <NavLink isActive={ activePage === "contact" } link="/contact/" linkText="CONTACT"/>
-                    <NavLink isActive={ activePage === "support" } link="/assistance-technique/" linkText="ASSISTANCE TECHNIQUE"/>
+                    {
+                        pageList.map(({ name, link, text }) => (
+                            <NavLink    key={ name }
+                                        isActive={ activePage === name }
+                                        link={ link }
+                                        linkText={ text } />
+                        ))
+                    }
                 </nav>
                 <IconButton icon={ 'invoice' } text={ 'DEVIS GRATUIT' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
             </div>
