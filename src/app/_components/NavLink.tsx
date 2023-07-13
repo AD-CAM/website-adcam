@@ -81,7 +81,7 @@ interface HeaderProps {
 
 
 
-export default function NavLink({ isActive, link, linkText }: HeaderProps) {
+function NavLinkHeader({ isActive, link, linkText }: HeaderProps) {
     const { classes } = useStyles()
 
     return (  
@@ -102,3 +102,20 @@ export default function NavLink({ isActive, link, linkText }: HeaderProps) {
         </>
     )
 }
+
+function NavLinkFooter({ link, linkText }: HeaderProps) {
+    const { classes } = useStyles()
+
+    return (  
+        <Link href={ link } className={ classes.root }>
+            <motion.span initial="rest" animate="rest" whileHover="hover">
+                <motion.span className={ classes.text } variants={ textVariants }>{ linkText }</motion.span>
+                <motion.span className={ classes.underline } variants={ underlineVariants }></motion.span>
+            </motion.span>   
+        </Link>
+    )
+}
+
+
+
+export { NavLinkHeader, NavLinkFooter }

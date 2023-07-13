@@ -9,9 +9,8 @@ import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
 import Link from 'next/link'
 import Image from 'next/image'
-import NavLink from './NavLink'
-import IconButton from './IconButton'
-import GoToButton from "./GoToButton"
+import { NavLinkHeader } from './NavLink'
+import { IconButton, GoToButton } from "./Button"
 
 
 
@@ -88,7 +87,7 @@ export default function Header({ activePage }: HeaderProps) {
                 <nav className={ classes.nav }>
                     {
                         pageList.map(({ name, link, text }) => (
-                            <NavLink    key={ name }
+                            <NavLinkHeader    key={ name }
                                         isActive={ activePage === name }
                                         link={ link }
                                         linkText={ text } />

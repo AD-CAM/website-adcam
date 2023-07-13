@@ -4,7 +4,7 @@ import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Components Imports */
 import Link from 'next/link'
-import GoToButton from '../_components/GoToButton'
+import { GoToButton } from '../_components/Button'
 
 
 

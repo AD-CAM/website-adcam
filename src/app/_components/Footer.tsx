@@ -8,8 +8,8 @@ const pageList: PageInfo[] = require("../_data/pageList.json")
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
 import Image from "next/image"
-import IconButton from "./IconButton"
-import SocialButton from "./SocialButton"
+import { IconButton, SocialButton } from "./Button"
+import { NavLinkFooter } from "./NavLink"
 
 
 
@@ -81,8 +81,15 @@ function FooterNavigation() {
     const { classes } = useStyles()
 
     return (
-        <div>
-
+        <div className={ classes.footerNavRoot }>
+            {
+                pageList.map(({ name, link, text }) => (
+                    <NavLinkFooter  key={ name }
+                                    isActive={ false }
+                                    link={ link }
+                                    linkText={ text } />
+                ))
+            }
         </div>
     )
 }
@@ -110,8 +117,8 @@ export default function Footer() {
                     </div>
                     <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/ajax-fibra_certificate.pdf' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
                 </div>
-                
             </div>
+            <FooterNavigation />
         </footer>
     )
 }

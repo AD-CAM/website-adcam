@@ -4,8 +4,7 @@ import { Variants } from 'framer-motion'
 import { motion } from 'framer-motion'
 import { makeStyles } from 'tss-react/mui'
 /* Icons Imports */
-import { FaPhoneAlt } from 'react-icons/fa'
-import { FaFileInvoice } from 'react-icons/fa'
+import { FaArrowRight, FaPhoneAlt, FaFileInvoice, FaFacebookSquare } from 'react-icons/fa'
 import { PiCertificateBold } from 'react-icons/pi'
 /* Components Imports */
 import Link from 'next/link'
@@ -23,6 +22,21 @@ const iconVariants: Variants = {
         opacity: 1,
         width: "auto",
         marginRight: "5px",
+        transform: 'translateX(0%)',
+    },
+}
+
+const arrowVariants: Variants = {
+    rest: {
+        opacity: 0,
+        width: "0px",
+        marginLeft: "0px",
+        transform: 'translateX(-100%)',
+    },
+    hover: {
+        opacity: 1,
+        width: "auto",
+        marginLeft: "5px",
         transform: 'translateX(0%)',
     },
 }
@@ -45,6 +59,19 @@ const linkVariants: Variants = {
     },
 }
 
+const socialButtonVariants: Variants = {
+    rest: {
+        color: "rgba(255, 255, 255, 1)",
+        backgroundColor: "rgba(255, 255, 255, 0)",
+        transition: { duration: 0.1 }
+    },
+    hover: {
+        color: "rgba(200, 4, 4, 1)",
+        backgroundColor: "rgba(255, 255, 255, 1)",
+        transition: { duration: 0.1 }
+    },
+}
+
 
 
 const useStyles = makeStyles()((theme) => {
@@ -64,6 +91,16 @@ const useStyles = makeStyles()((theme) => {
             boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
 
             fontWeight: 500,
+        },
+        socialRoot: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+
+            fontSize: theme.typography.pxToRem(36),
+
+            borderRadius: theme.spacing(.75),
+            boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
         },
         icon: {
             display: "flex",
@@ -89,6 +126,18 @@ interface ButtonProps {
     description: string;
 }
 
+interface IconlessButtonProps {
+    text: string;
+    link: string;
+    description: string;
+}
+
+interface TextlessButtonProps {
+    icon: string;
+    link: string;
+    description: string;
+}
+
 const Icon = ({ icon }: IconProps) => {
     switch(icon) {
         default :
@@ -99,12 +148,14 @@ const Icon = ({ icon }: IconProps) => {
             return <FaFileInvoice />
         case 'certificate' :
             return <PiCertificateBold />
+        case 'facebook' :
+            return <FaFacebookSquare />
     }
 }
 
 
 
-export default function IconButton({ icon, text, link, description }: ButtonProps) {
+function IconButton({ icon, text, link, description }: ButtonProps) {
     const { classes } = useStyles()
 
     return (      
@@ -132,3 +183,55 @@ export default function IconButton({ icon, text, link, description }: ButtonProp
         </Link>
     )
 }
+
+function GoToButton({ text, link, description }: IconlessButtonProps) {
+    const { classes } = useStyles()
+
+    return (      
+        <Link href={ link }>
+            <motion.span
+                className={ classes.root }
+
+                variants={ linkVariants }
+                initial="rest"
+                animate="rest"
+                whileHover="hover"
+
+                aria-label={ description }
+                role="button"
+            >
+
+                <motion.span className={ classes.text } variants={ textVariants }>
+                    { text }
+                </motion.span>
+                <motion.span className={ classes.icon } variants={ arrowVariants }>
+                    <FaArrowRight />
+                </motion.span>
+
+            </motion.span>
+        </Link>
+    )
+}
+
+function SocialButton({ icon, link, description }: TextlessButtonProps) {
+    const { classes } = useStyles()
+
+    return (      
+        <motion.a   className={ classes.socialRoot }
+                    href={ link }
+                    
+                    role="button"
+                    aria-label={ description }
+
+                    variants={ socialButtonVariants }
+                    initial="rest"
+                    whileHover="hover"
+        >
+            <Icon icon={ icon }/>
+        </motion.a>
+    )
+}
+
+
+
+export { IconButton, GoToButton, SocialButton }
