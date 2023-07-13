@@ -1,6 +1,9 @@
 'use client'
 /* Assets Imports */
 import adCamHeaderLogo from "/public/ad-cam_logo-title_nobg.png"
+/* Utils & Data Imports */
+import PageInfo from "../_types/pageList"
+const pageList: PageInfo[] = require("../_data/pageList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
@@ -66,20 +69,6 @@ const useStyles = makeStyles()((theme) => {
 interface HeaderProps {
     activePage: string;
 }
-
-interface PageInfo {
-    name: string;
-    link: string;
-    text: string;
-}
-
-const pageList: PageInfo[] = [
-    { name: "home", link: "/", text: "ACCUEIL" },
-    { name: "alarm", link: "/installation-alarme-orleans/", text: "ALARME" },
-    { name: "video", link: "/installation-video-surveillance-orleans/", text: "VIDÉO SURVEILLANCE" },
-    { name: "contact", link: "/contact/", text: "CONTACT" },
-    { name: "support", link: "/assistance-technique/", text: "ASSISTANCE TECHNIQUE" }
-]
 
 
 

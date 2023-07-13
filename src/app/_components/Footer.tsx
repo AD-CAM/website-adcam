@@ -1,6 +1,9 @@
 'use client'
 /* Assets Imports */
 import adCamFooterLogo from "/public/ad-cam_logo_nobg.png"
+/* Utils & Data Imports */
+import PageInfo from "../_types/pageList"
+const pageList: PageInfo[] = require("../_data/pageList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
@@ -107,6 +110,7 @@ export default function Footer() {
                     </div>
                     <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/ajax-fibra_certificate.pdf' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
                 </div>
+                
             </div>
         </footer>
     )

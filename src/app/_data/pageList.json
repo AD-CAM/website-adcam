@@ -1,0 +1,7 @@
+[
+    { "name": "home", "link": "/", "text": "ACCUEIL" },
+    { "name": "alarm", "link": "/installation-alarme-orleans/", "text": "ALARME" },
+    { "name": "video", "link": "/installation-video-surveillance-orleans/", "text": "VIDÉO SURVEILLANCE" },
+    { "name": "contact", "link": "/contact/", "text": "CONTACT" },
+    { "name": "support", "link": "/assistance-technique/", "text": "ASSISTANCE TECHNIQUE" }
+]
