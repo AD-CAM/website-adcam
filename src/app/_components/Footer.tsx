@@ -21,7 +21,7 @@ const useStyles = makeStyles()((theme) => {
             zIndex: 4,
 
             width: "100%",
-            height: theme.spacing(24),
+            height: theme.spacing(28),
             marginTop: theme.spacing(5),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
@@ -54,6 +54,7 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "center",
 
             marginTop: 0,
+            marginBottom: theme.spacing(2),
 
             color: "#FFF",
         },
@@ -62,8 +63,14 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "space-around",
 
+            marginTop: 0,
+            marginBottom: theme.spacing(2),
+
             width: "100%",
-        }
+        },
+        footerNavRoot: {
+
+        },
     }
 })
 
@@ -98,6 +105,7 @@ export default function Footer() {
                         <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
                         <SocialButton icon={ 'facebook' } link={ 'https://www.facebook.com/AD-CAM-103597488861540' } description={ 'Suivez nous sur Facebook.' }/>
                     </div>
+                    <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
                 </div>
             </div>
         </footer>

@@ -6,6 +6,7 @@ import { makeStyles } from 'tss-react/mui'
 /* Icons Imports */
 import { FaPhoneAlt } from 'react-icons/fa'
 import { FaFileInvoice } from 'react-icons/fa'
+import { PiCertificateBold } from 'react-icons/pi'
 /* Components Imports */
 import Link from 'next/link'
 
@@ -96,6 +97,8 @@ const Icon = ({ icon }: IconProps) => {
             return <FaPhoneAlt />
         case 'invoice' :
             return <FaFileInvoice />
+        case 'certificate' :
+            return <PiCertificateBold />
     }
 }
 
