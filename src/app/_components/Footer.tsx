@@ -4,6 +4,7 @@ import adCamFooterLogo from "/public/ad-cam_logo_nobg.png"
 /* Utils & Data Imports */
 import PageInfo from "../_types/pageList"
 const pageList: PageInfo[] = require("../_data/pageList.json")
+const conditionsList: PageInfo[] = require("../_data/conditionsList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
@@ -94,6 +95,23 @@ function FooterNavigation() {
     )
 }
 
+function FooterConditions() {
+    const { classes } = useStyles()
+
+    return (
+        <div className={ classes.footerNavRoot }>
+            {
+                conditionsList.map(({ name, link, text }) => (
+                    <NavLinkFooter  key={ name }
+                                    isActive={ false }
+                                    link={ link }
+                                    linkText={ text } />
+                ))
+            }
+        </div>
+    )
+}
+
 
 
 export default function Footer() {
@@ -119,6 +137,7 @@ export default function Footer() {
                 </div>
             </div>
             <FooterNavigation />
+            <FooterConditions />
         </footer>
     )
 }
