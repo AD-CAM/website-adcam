@@ -19,14 +19,16 @@ const useStyles = makeStyles()((theme) => {
         root: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-around",
 
             position: "relative",
             zIndex: 4,
 
             width: "100%",
-            height: theme.spacing(28),
+            height: theme.spacing(25),
             marginTop: theme.spacing(5),
+            paddingTop: theme.spacing(4),
+            paddingBottom: theme.spacing(4),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
             background: "linear-gradient(350deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)",
@@ -40,8 +42,10 @@ const useStyles = makeStyles()((theme) => {
             width: "auto",
         },
         logoImage: {
-            height: "60%",
+            height: "80%",
             width: "auto",
+
+            alignSelf: "center",
 
             marginRight: theme.spacing(2),
         },
@@ -73,7 +77,9 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
         },
         footerNavRoot: {
+            height: "100%",
 
+            marginTop: theme.spacing(5),
         },
     }
 })
@@ -83,6 +89,9 @@ function FooterNavigation() {
 
     return (
         <div className={ classes.footerNavRoot }>
+            <h3 className={ classes.logoInfoTitle }>
+                { `NAVIGATION` }
+            </h3>
             {
                 pageList.map(({ name, link, text }) => (
                     <NavLinkFooter  key={ name }
@@ -100,6 +109,9 @@ function FooterConditions() {
 
     return (
         <div className={ classes.footerNavRoot }>
+            <h3 className={ classes.logoInfoTitle }>
+                { `CONDITIONS` }
+            </h3>
             {
                 conditionsList.map(({ name, link, text }) => (
                     <NavLinkFooter  key={ name }
