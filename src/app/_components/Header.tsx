@@ -87,14 +87,14 @@ export default function Header({ activePage }: HeaderProps) {
                 <nav className={ classes.nav }>
                     {
                         pageList.map(({ name, link, text }) => (
-                            <NavLinkHeader    key={ name }
-                                        isActive={ activePage === name }
-                                        link={ link }
-                                        linkText={ text } />
+                            <NavLinkHeader  key={ name }
+                                            isActive={ activePage === name }
+                                            link={ link }
+                                            linkText={ text } />
                         ))
                     }
                 </nav>
-                <IconButton icon={ 'invoice' } text={ 'DEVIS GRATUIT' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
+                <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
             </div>
         </header>
     )

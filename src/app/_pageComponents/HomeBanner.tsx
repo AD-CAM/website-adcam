@@ -88,15 +88,15 @@ export default function HomeBanner() {
 
                 <h1 className={ classes.bannerTitle }>
                     <Link href="/installation-video-surveillance-orleans">
-                        { `INSTALLATEUR D'ALARME ET VIDÉO SURVEILLANCE À ORLÉANS` }
+                        { `Installateur d'alarme et vidéo surveillance à Orléans` }
                     </Link>
                 </h1>
 
                 <h2 className={ classes.bannerSubTitle }>{ `Pour avoir un oeil partout, tout le temps !` }</h2>
 
                 <div className={ classes.buttonsContainer }>
-                    <GoToButton text={"ALARME"} link={"/installation-alarme-orleans"} description={"Renseignez-vous sur les installations d'alarme par AD CAM"} />
-                    <GoToButton text={"VIDÉO SURVEILLANCE"} link={"/installation-video-surveillance-orleans"} description={"Renseignez-vous sur les installations de vidéo surveillance par AD CAM"} />
+                    <GoToButton text={"Alarme"} link={"/installation-alarme-orleans"} description={"Renseignez-vous sur les installations d'alarme par AD CAM"} />
+                    <GoToButton text={"Vidéo surveillance"} link={"/installation-video-surveillance-orleans"} description={"Renseignez-vous sur les installations de vidéo surveillance par AD CAM"} />
                 </div>
 
             </motion.div>

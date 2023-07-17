@@ -30,7 +30,7 @@ const useStyles = makeStyles()((theme) => {
 
         },
         textParagraph: {
-            textAlign: "justify",
+
         },
     }
 })
@@ -45,7 +45,7 @@ export default function AboutSection() {
             <div className={ classes.subRoot }>
                 <aside className={ classes.imageContainer }></aside>
                 <article className={ classes.mainArticle }>
-                    <SectionTitle text={ "AD CAM, À PROPOS" } />
+                    <SectionTitle text={ "AD CAM, À propos" } />
 
                     <p className={ classes.textParagraph }>
                         { `AD CAM est une entreprise d’installation de sécurités pour les professionnels et particuliers.` }
