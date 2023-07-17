@@ -1,6 +1,10 @@
 'use client'
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+/* Type Imports */
+import { MouseEventHandler } from 'react'
+/* Components Imports */
+import { FunctionButton } from "./Button"
 
 
 
@@ -9,7 +13,6 @@ const useStyles = makeStyles()((theme) => {
         footerRoot: {
         },
         genericRoot: {
-            
         }
     }
 })
@@ -18,6 +21,13 @@ interface ContactFormProps {
     location: string;
 }
 
+const testHandler: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation()
+
+    console.log("Ahah test")
+}
+
+
 
 export default function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
@@ -25,10 +35,14 @@ export default function ContactForm({ location }: ContactFormProps) {
     return (      
         <>
             { location === "footer" ?
-                <div className={ classes.footerRoot }></div>
+                <div className={ classes.footerRoot }>
+                    <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } />
+                </div>
 
                                     :
-                <div className={ classes.genericRoot }></div>
+                <div className={ classes.genericRoot }>
+
+                </div>
                                     
             }
         </>

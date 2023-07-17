@@ -11,6 +11,7 @@ import { makeStyles } from 'tss-react/mui'
 import Image from "next/image"
 import { IconButton, SocialButton } from "./Button"
 import { NavLinkFooter } from "./NavLink"
+import ContactForm from "./ContactForm"
 
 
 
@@ -150,6 +151,7 @@ export default function Footer() {
             </div>
             <FooterNavigation />
             <FooterConditions />
+            <ContactForm location={ "footer" } />
         </footer>
     )
 }

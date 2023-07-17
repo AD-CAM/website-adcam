@@ -1,8 +1,9 @@
 'use client'
 /* Library Imports */
-import { Variants } from 'framer-motion'
-import { motion } from 'framer-motion'
+import { Variants, motion, TapInfo } from 'framer-motion'
 import { makeStyles } from 'tss-react/mui'
+/* Type Imports */
+import { MouseEventHandler } from 'react'
 /* Icons Imports */
 import { FaArrowRight, FaPhoneAlt, FaFileInvoice, FaFacebookSquare } from 'react-icons/fa'
 import { PiCertificateBold } from 'react-icons/pi'
@@ -91,6 +92,8 @@ const useStyles = makeStyles()((theme) => {
             boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
 
             fontWeight: 500,
+
+            cursor: "pointer",
         },
         socialRoot: {
             display: "flex",
@@ -136,6 +139,12 @@ interface TextlessButtonProps {
     icon: string;
     link: string;
     description: string;
+}
+
+interface FunctionButtonProps {
+    text: string;
+    description: string;
+    handler: MouseEventHandler<HTMLButtonElement>;
 }
 
 const Icon = ({ icon }: IconProps) => {
@@ -232,6 +241,29 @@ function SocialButton({ icon, link, description }: TextlessButtonProps) {
     )
 }
 
+function FunctionButton({ text, description, handler }: FunctionButtonProps) {
+    const { classes } = useStyles()
+
+    return (
+        <motion.button className={ classes.root } onClick={ handler }
+
+                variants={ linkVariants }
+                initial="rest"
+                animate="rest"
+                whileHover="hover"
+
+                aria-label={ description }
+                role="button"
+        >
+
+                <motion.span className={ classes.text } variants={ textVariants }>
+                    { text }
+                </motion.span>
+
+        </motion.button>
+    )
+}
 
 
-export { IconButton, GoToButton, SocialButton }
+
+export { IconButton, GoToButton, SocialButton, FunctionButton }
