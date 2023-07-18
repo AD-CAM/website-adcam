@@ -38,6 +38,11 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
             maxWidth: "864px",
         },
+        articlesRoot: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+        },
         cardRoot: {
 
         },
@@ -108,7 +113,15 @@ export default function OurPledge() {
                     <SectionTitle text={ "Nos engagements" } />
                 </div>
 
-
+                <div className={ classes.articlesRoot }>
+                    {
+                        pledges.map((pledge, index) => {
+                            return (
+                                <PledgeCard key={ index } icon={ pledge.icon } title={ pledge.title } text={ pledge.text } />
+                            )
+                        })
+                    }
+                </div>
             </div>
         </section>
     )
