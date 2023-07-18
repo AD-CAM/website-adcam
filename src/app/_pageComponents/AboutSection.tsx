@@ -30,6 +30,9 @@ const useStyles = makeStyles()((theme) => {
             maxWidth: "864px",
         },
         textParagraph: {
+            fontSize: theme.typography.pxToRem(14),
+            fontWeight: 500,
+    
             color: "rgba(41, 41, 41, 1)",
         },
     }
