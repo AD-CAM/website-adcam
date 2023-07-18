@@ -18,7 +18,7 @@ const useStyles = makeStyles()((theme) => {
 
             paddingTop: theme.spacing(10),
 
-            boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
+            boxShadow: "0px -50px 25px -50px rgba(0, 0, 0, 0.3)",
         },
         subRoot: {
             maxWidth: "1450px",
@@ -27,7 +27,7 @@ const useStyles = makeStyles()((theme) => {
 
         },
         mainArticle: {
-
+            maxWidth: "864px",
         },
         textParagraph: {
 

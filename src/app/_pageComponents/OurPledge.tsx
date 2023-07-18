@@ -21,8 +21,18 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
 
             paddingTop: theme.spacing(10),
+        },
+        subRoot: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
 
-            boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
+            width: "100%",
+            maxWidth: "1450px",
+        },
+        titleRoot: {
+            width: "100%",
+            maxWidth: "864px",
         },
         cardRoot: {
 
@@ -89,9 +99,13 @@ export default function OurPledge() {
 
     return (      
         <section className={ classes.root }>
-            <SectionTitle text={ "NOS ENGAGEMENTS" } />
+            <div className={ classes.subRoot }>
+                <div className={ classes.titleRoot }>
+                    <SectionTitle text={ "Nos engagements" } />
+                </div>
 
-            
+
+            </div>
         </section>
     )
 }
