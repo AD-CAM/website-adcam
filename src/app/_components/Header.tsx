@@ -67,7 +67,7 @@ const useStyles = makeStyles()((theme) => {
 
 interface HeaderProps {
     activePage: string;
-}export default 
+}
 
 
 

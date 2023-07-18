@@ -4,7 +4,7 @@ import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
 import { PledgeInfo } from '../_types/dataFiles'
-const pledges: PledgeInfo[] = require('./_data/pledges.json')
+const pledges: PledgeInfo[] = require('../_data/ourPledges.json')
 /* Components Imports */
 import SectionTitle from '../_components/SectionTitle'
 /* Icons Imports */
