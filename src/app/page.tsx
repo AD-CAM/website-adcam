@@ -7,7 +7,7 @@ import Footer from './_components/Footer'
 /* Page Components Imports */
 import HomeBanner from './_pageComponents/HomeBanner'
 import AboutSection from './_pageComponents/AboutSection'
-import OurPledge from './_pageComponents/OurPledge'
+import WhatWeOffer from './_pageComponents/WhatWeOffer'
 
 
 
@@ -19,7 +19,8 @@ export default function Home() {
             <main>
                 <HomeBanner />
                 <AboutSection />
-                <OurPledge />
+                <WhatWeOffer sectionType={ "ourPledges"} />
+                <WhatWeOffer sectionType={ "ourServices"} />
             </main>
             <Footer />
         </>

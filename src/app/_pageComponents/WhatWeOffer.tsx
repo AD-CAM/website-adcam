@@ -5,6 +5,7 @@ import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
 import { PledgeInfo } from '../_types/dataFiles'
 const pledges: PledgeInfo[] = require('../_data/ourPledges.json')
+const services: PledgeInfo[] = require('../_data/ourServices.json')
 /* Components Imports */
 import SectionTitle from '../_components/SectionTitle'
 /* Icons Imports */
@@ -85,6 +86,10 @@ interface PledgeCardProps {
     text: string;
 }
 
+interface WhatWeOfferProps {
+    sectionType: string;
+}
+
 const Icon = ({ icon }: IconProps) => {
     switch(icon) {
         default :
@@ -118,7 +123,7 @@ function PledgeCard({ icon, title, text }: PledgeCardProps) {
 
 
 
-export default function OurPledge() {
+export default function WhatWeOffer({ sectionType }: WhatWeOfferProps) {
     const { classes } = useStyles()
 
     return (      
@@ -130,9 +135,16 @@ export default function OurPledge() {
 
                 <div className={ classes.articlesRoot }>
                     {
-                        pledges.map((pledge, index) => {
+                        sectionType === "ourPledges" && pledges.map((pledge, index) => {
                             return (
                                 <PledgeCard key={ index } icon={ pledge.icon } title={ pledge.title } text={ pledge.text } />
+                            )
+                        })
+                    }
+                    {
+                        sectionType === "ourServices" && services.map((service, index) => {
+                            return (
+                                <PledgeCard key={ index } icon={ service.icon } title={ service.title } text={ service.text } />
                             )
                         })
                     }

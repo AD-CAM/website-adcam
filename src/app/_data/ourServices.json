@@ -1,0 +1,6 @@
+[
+    { "icon": "quality", "title": "La qualité", "text": "Nous vous proposons uniquement du matériel français, réputé pour sa haute fiabilité." },
+    { "icon": "speed", "title": "La réactivité", "text": "Nos techniciens qualifiés interviennent très rapidement pour répondre à vos besoins." },
+    { "icon": "trust", "title": "La confiance", "text": "Notre priorité est votre satisfaction. Nous nous engageons à une totale transparence." },
+    { "icon": "continuity", "title": "La continuité", "text": "Notre force, nous la devons à la fidélité de nos clients qui nous recommandent chaque jour." }
+]
