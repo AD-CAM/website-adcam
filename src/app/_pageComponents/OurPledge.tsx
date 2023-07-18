@@ -4,6 +4,10 @@ import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Components Imports */
 import SectionTitle from '../_components/SectionTitle'
+/* Icons Imports */
+import { PiSealCheckBold } from 'react-icons/pi'
+import { FaRegClock, FaRegThumbsUp } from 'react-icons/fa'
+import { FaPeopleGroup } from 'react-icons/fa6'
 
 
 
@@ -20,8 +24,63 @@ const useStyles = makeStyles()((theme) => {
 
             boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
         },
+        cardRoot: {
+
+        },
+        cardSubRoot: {
+
+        },
+        cardTitle: {
+
+        },
+        cardText: {
+
+        }
     }
 })
+
+
+
+interface IconProps {
+    icon: string;
+}
+
+interface PledgeCardProps {
+    icon: string;
+    title: string;
+    text: string;
+}
+
+const Icon = ({ icon }: IconProps) => {
+    switch(icon) {
+        default :
+            break
+        case 'quality' :
+            return <PiSealCheckBold />
+        case 'speed' :
+            return <FaRegClock />
+        case 'trust' :
+            return <FaPeopleGroup />
+        case 'continuity' :
+            return <FaRegThumbsUp />
+    }
+}
+
+
+
+function PledgeCard({ icon, title, text }: PledgeCardProps) {
+    const { classes } = useStyles()
+
+    return (      
+        <article className={ classes.cardRoot }>
+            <Icon icon={ icon } />
+            <div className={ classes.cardSubRoot }>
+                <h2 className={ classes.cardTitle }>{ title }</h2>
+                <p className={ classes.cardText }>{ text }</p>
+            </div>
+        </article>
+    )
+}
 
 
 
