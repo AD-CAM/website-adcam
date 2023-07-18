@@ -40,7 +40,7 @@ const useStyles = makeStyles()((theme) => {
         },
         articlesRoot: {
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "space-between",
 
             paddingTop: theme.spacing(5),
@@ -53,12 +53,13 @@ const useStyles = makeStyles()((theme) => {
 
             color: "#C80404",
             maxWidth: "20%",
+            height: "100%",
 
             fontSize: theme.typography.pxToRem(56),
         },
         cardSubRoot: {
             marginTop: theme.spacing(2),
-            
+
             color: "rgba(41, 41, 41, 1)",
         },
         cardTitle: {
