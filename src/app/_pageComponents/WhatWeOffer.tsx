@@ -56,7 +56,7 @@ const useStyles = makeStyles()((theme) => {
             maxWidth: "20%",
             height: "100%",
 
-            fontSize: theme.typography.pxToRem(56),
+            fontSize: theme.typography.pxToRem(68),
         },
         cardSubRoot: {
             marginTop: theme.spacing(2),

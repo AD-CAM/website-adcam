@@ -27,7 +27,7 @@ const useStyles = makeStyles()((theme) => {
 
             color: "rgba(41, 41, 41, 1)",
 
-            fontSize: theme.typography.pxToRem(24),
+            fontSize: theme.typography.pxToRem(26),
             fontWeight: 600,
         },
     }
