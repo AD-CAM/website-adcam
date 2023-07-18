@@ -42,19 +42,32 @@ const useStyles = makeStyles()((theme) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+
+            paddingTop: theme.spacing(5),
         },
         cardRoot: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+
             color: "#C80404",
             maxWidth: "20%",
+
+            fontSize: theme.typography.pxToRem(56),
         },
         cardSubRoot: {
+            marginTop: theme.spacing(2),
+            
             color: "rgba(41, 41, 41, 1)",
         },
         cardTitle: {
-
+            fontWeight: 600,
+            fontSize: theme.typography.pxToRem(22),
         },
         cardText: {
-
+            fontWeight: 500,
+            fontSize: theme.typography.pxToRem(14),
         }
     }
 })
