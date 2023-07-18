@@ -44,7 +44,7 @@ const arrowVariants: Variants = {
 
 const textVariants: Variants = {
     rest: {
-        color: "rgba(0, 0, 0, 1)",
+        color: "rgba(41, 41, 41, 1)",
     },
     hover: {
         color: "rgba(200, 4, 4, 1)",

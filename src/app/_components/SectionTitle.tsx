@@ -25,6 +25,8 @@ const useStyles = makeStyles()((theme) => {
             marginLeft: theme.spacing(2),
             marginRight: theme.spacing(2),
 
+            color: "rgba(41, 41, 41, 1)",
+
             fontSize: theme.typography.pxToRem(24),
             fontWeight: 600,
         },

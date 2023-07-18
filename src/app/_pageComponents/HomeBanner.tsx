@@ -40,6 +40,8 @@ const useStyles = makeStyles()((theme) => {
             fontSize: theme.typography.pxToRem(40),
         },
         bannerSubTitle: {
+            color: "rgba(18, 18, 18, 1)",
+
             fontWeight: 500,
             fontSize: theme.typography.pxToRem(22),
         },

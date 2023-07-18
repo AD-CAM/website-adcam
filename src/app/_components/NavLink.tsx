@@ -15,7 +15,7 @@ function getTextVariants(location: string) {
         case "header":
             return {
                 rest: {
-                    color: "rgba(0, 0, 0, 1)",
+                    color: "rgba(41, 41, 41, 1)",
                     transition: { duration: 0.1 }
                 },
                 hover: {

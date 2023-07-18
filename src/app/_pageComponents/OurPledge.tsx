@@ -44,10 +44,11 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "space-between",
         },
         cardRoot: {
-
+            color: "#C80404",
+            maxWidth: "20%",
         },
         cardSubRoot: {
-
+            color: "rgba(41, 41, 41, 1)",
         },
         cardTitle: {
 
