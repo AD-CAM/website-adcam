@@ -1,6 +1,22 @@
 [
-    { "icon": "quality", "title": "La qualité", "text": "Nous vous proposons uniquement du matériel français, réputé pour sa haute fiabilité." },
-    { "icon": "speed", "title": "La réactivité", "text": "Nos techniciens qualifiés interviennent très rapidement pour répondre à vos besoins." },
-    { "icon": "trust", "title": "La confiance", "text": "Notre priorité est votre satisfaction. Nous nous engageons à une totale transparence." },
-    { "icon": "continuity", "title": "La continuité", "text": "Notre force, nous la devons à la fidélité de nos clients qui nous recommandent chaque jour." }
+    {
+        "icon": "study",
+        "title": "Etude, analyse et conseil",
+        "text": "Après analyse de vos attentes, nous vous proposons la solution la plus adaptée à vos besoins, et ceci avec un excellent rapport qualité prix."
+    },
+    { 
+        "icon": "installation",
+        "title": "Préparation et installation",
+        "text": "Nous préparons et installons le matériel de vidéosurveillance sur votre site. Nous paramétrons l’enregistreur et les caméras afin d’obtenir un résultat optimal."
+    },
+    {
+        "icon": "aid",
+        "title": "Formation à l'utilisation",
+        "text": "Nous vous formons à l’utilisation de votre système, visualisation en direct, recherche et relecture de vidéo, consultation du journal des évènements…"
+    },
+    {
+        "icon": "maintenance",
+        "title": "Entretien et maintenance",
+        "text": "Nous contrôlons rigoureusement votre système et ajustons les réglages si besoin afin de vous offrir le meilleur paramétrage de votre installation."
+    }
 ]

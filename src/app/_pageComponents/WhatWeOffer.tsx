@@ -10,7 +10,7 @@ const services: PledgeInfo[] = require('../_data/ourServices.json')
 import SectionTitle from '../_components/SectionTitle'
 /* Icons Imports */
 import { PiSealCheckBold } from 'react-icons/pi'
-import { FaRegClock, FaRegThumbsUp } from 'react-icons/fa'
+import { FaRegClock, FaRegThumbsUp, FaPencilRuler, FaCog, FaUserFriends, FaTools } from 'react-icons/fa'
 import { FaPeopleGroup } from 'react-icons/fa6'
 
 
@@ -102,6 +102,14 @@ const Icon = ({ icon }: IconProps) => {
             return <FaPeopleGroup />
         case 'continuity' :
             return <FaRegThumbsUp />
+        case 'study' :
+            return <FaPencilRuler />
+        case 'installation' :
+            return <FaCog />
+        case 'aid' :
+            return <FaUserFriends />
+        case 'maintenance' :
+            return <FaTools />
     }
 }
 
@@ -129,26 +137,42 @@ export default function WhatWeOffer({ sectionType }: WhatWeOfferProps) {
     return (      
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
-                <div className={ classes.titleRoot }>
-                    <SectionTitle text={ "Nos engagements" } />
-                </div>
+                {
+                    sectionType === "ourPledges" && 
+                            <>
+                                <div className={ classes.titleRoot }>
+                                    <SectionTitle text={ "Nos engagements" } />
+                                </div>
 
-                <div className={ classes.articlesRoot }>
-                    {
-                        sectionType === "ourPledges" && pledges.map((pledge, index) => {
-                            return (
-                                <PledgeCard key={ index } icon={ pledge.icon } title={ pledge.title } text={ pledge.text } />
-                            )
-                        })
-                    }
-                    {
-                        sectionType === "ourServices" && services.map((service, index) => {
-                            return (
-                                <PledgeCard key={ index } icon={ service.icon } title={ service.title } text={ service.text } />
-                            )
-                        })
-                    }
-                </div>
+                                <div className={ classes.articlesRoot }>
+                                    {
+                                        pledges.map((pledge, index) => {
+                                            return (
+                                                <PledgeCard key={ index } icon={ pledge.icon } title={ pledge.title } text={ pledge.text } />
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </>
+                }
+                {
+                    sectionType === "ourServices" && 
+                            <>
+                                <div className={ classes.titleRoot }>
+                                    <SectionTitle text={ "Nos services" } />
+                                </div>
+
+                                <div className={ classes.articlesRoot }>
+                                    {
+                                        services.map((service, index) => {
+                                            return (
+                                                <PledgeCard key={ index } icon={ service.icon } title={ service.title } text={ service.text } />
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </>
+                }
             </div>
         </section>
     )
