@@ -43,12 +43,12 @@ const useStyles = makeStyles()((theme) => {
             width: "auto",
         },
         logoImage: {
-            height: "80%",
+            height: "60%",
             width: "auto",
 
             alignSelf: "center",
 
-            marginRight: theme.spacing(2),
+            marginRight: theme.spacing(4),
         },
         logoInfoContainer: {
             display: "flex",
