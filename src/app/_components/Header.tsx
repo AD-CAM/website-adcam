@@ -2,7 +2,7 @@
 /* Assets Imports */
 import adCamHeaderLogo from "/public/ad-cam_logo-title_nobg.png"
 /* Utils & Data Imports */
-import PageInfo from "../_types/pageList"
+import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
@@ -67,7 +67,7 @@ const useStyles = makeStyles()((theme) => {
 
 interface HeaderProps {
     activePage: string;
-}
+}export default 
 
 
 

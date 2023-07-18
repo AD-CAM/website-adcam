@@ -2,7 +2,7 @@
 /* Assets Imports */
 import adCamFooterLogo from "/public/ad-cam_logo_nobg.png"
 /* Utils & Data Imports */
-import PageInfo from "../_types/pageList"
+import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
 const conditionsList: PageInfo[] = require("../_data/conditionsList.json")
 /* Library Imports */
