@@ -35,14 +35,14 @@ export default function ContactForm({ location }: ContactFormProps) {
     return (      
         <>
             { location === "footer" ?
-                <div className={ classes.footerRoot }>
+                <form className={ classes.footerRoot }>
                     <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } />
-                </div>
+                </form>
 
                                     :
-                <div className={ classes.genericRoot }>
+                <form className={ classes.genericRoot }>
 
-                </div>
+                </form>
                                     
             }
         </>
