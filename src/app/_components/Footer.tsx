@@ -91,7 +91,7 @@ function FooterNavigation() {
     return (
         <div className={ classes.footerNavRoot }>
             <h3 className={ classes.logoInfoTitle }>
-                { `NAVIGATION` }
+                { `Navigation` }
             </h3>
             {
                 pageList.map(({ name, link, text }) => (
@@ -111,7 +111,7 @@ function FooterConditions() {
     return (
         <div className={ classes.footerNavRoot }>
             <h3 className={ classes.logoInfoTitle }>
-                { `CONDITIONS` }
+                { `Conditions` }
             </h3>
             {
                 conditionsList.map(({ name, link, text }) => (
