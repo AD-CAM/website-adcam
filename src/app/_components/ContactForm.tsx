@@ -9,12 +9,15 @@ import { FunctionButton } from "./Button"
 
 
 
-const inputVariant: Variants = {
+const inputVariants: Variants = {
     rest: {
-
+        borderColor: "rgba(255, 255, 255, 0)",
     },
-    select: {
-
+    hover: {
+        borderColor: "rgba(252, 105, 105, 1)",
+    },
+    focus: {
+        borderColor: "rgba(200, 4, 4, 1)",
     }
 }
 
@@ -39,17 +42,24 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 600,
         },
         inputContainer: {
-            width: "50%",
+            marginBottom: theme.spacing(2),
+
+            width: "48%",
         },
         inputLabel: {
+            marginLeft: theme.spacing(0.5),
 
+            fontSize: theme.typography.pxToRem(14),
+            fontWeight: 500,
         },
         inputField: {
             boxSizing: "border-box",
 
             margin: "0",
-            padding: "0",
+            padding: theme.spacing(0.5),
             outline: "none",
+            border: "1px solid transparent",
+            borderRadius: theme.spacing(0.5),
 
             width: "100%",
             maxWidth: "100%",
@@ -58,9 +68,12 @@ const useStyles = makeStyles()((theme) => {
             boxSizing: "border-box",
 
             margin: "0",
-            padding: "0",
+            padding: theme.spacing(0.5),
             outline: "none",
+            border: "1px solid transparent",
+            borderRadius: theme.spacing(0.5),
 
+            minHeight: theme.spacing(8),
             minWidth: "100%",
             resize: "none",
         }
@@ -87,16 +100,31 @@ export default function ContactForm({ location }: ContactFormProps) {
             <h3 className={ classes.formTitle }>{ `Contactez-nous` }</h3>
 
             <div className={ classes.inputContainer }>
-                <label className={ classes.inputLabel }></label>
-                <input className={ classes.inputField }></input>
+                <label className={ classes.inputLabel }>{ `Nom` }</label>
+                <motion.input   className={ classes.inputField }
+                                variants={ inputVariants }
+                                initial="rest"
+                                whileHover="hover"
+                                whileFocus="focus"
+                />
             </div>
             <div className={ classes.inputContainer }>
-                <label className={ classes.inputLabel }></label>
-                <input className={ classes.inputField }></input>
+                <label className={ classes.inputLabel }>{ `Adresse Email` }</label>
+                <motion.input   className={ classes.inputField }
+                                variants={ inputVariants }
+                                initial="rest"
+                                whileHover="hover"
+                                whileFocus="focus"
+                />
             </div>
 
 
-            <textarea className={ classes.messageField }></textarea>
+            <motion.textarea    className={ classes.messageField }
+                                variants={ inputVariants }
+                                initial="rest"
+                                whileHover="hover"
+                                whileFocus="focus"
+            />
 
             <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } />
         </form>
