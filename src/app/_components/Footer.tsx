@@ -26,7 +26,7 @@ const useStyles = makeStyles()((theme) => {
             zIndex: 4,
 
             width: "100%",
-            height: theme.spacing(25),
+            height: theme.spacing(28),
             marginTop: theme.spacing(5),
             paddingTop: theme.spacing(4),
             paddingBottom: theme.spacing(4),
