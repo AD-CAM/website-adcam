@@ -1,10 +1,22 @@
 'use client'
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+import { motion, Variants } from 'framer-motion'
 /* Type Imports */
 import { MouseEventHandler } from 'react'
 /* Components Imports */
 import { FunctionButton } from "./Button"
+
+
+
+const inputVariant: Variants = {
+    rest: {
+
+    },
+    select: {
+
+    }
+}
 
 
 
@@ -33,11 +45,24 @@ const useStyles = makeStyles()((theme) => {
 
         },
         inputField: {
+            boxSizing: "border-box",
+
+            margin: "0",
+            padding: "0",
+            outline: "none",
+
             width: "100%",
             maxWidth: "100%",
         },
         messageField: {
+            boxSizing: "border-box",
+
+            margin: "0",
+            padding: "0",
+            outline: "none",
+
             minWidth: "100%",
+            resize: "none",
         }
     }
 })
