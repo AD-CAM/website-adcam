@@ -56,7 +56,7 @@ const useStyles = makeStyles()((theme) => {
             boxSizing: "border-box",
 
             margin: "0",
-            padding: theme.spacing(0.5),
+            padding: theme.spacing(1),
             outline: "none",
             border: "1px solid transparent",
             borderRadius: theme.spacing(0.5),
@@ -68,7 +68,8 @@ const useStyles = makeStyles()((theme) => {
             boxSizing: "border-box",
 
             margin: "0",
-            padding: theme.spacing(0.5),
+            marginBottom: theme.spacing(2),
+            padding: theme.spacing(1),
             outline: "none",
             border: "1px solid transparent",
             borderRadius: theme.spacing(0.5),
@@ -76,6 +77,13 @@ const useStyles = makeStyles()((theme) => {
             minHeight: theme.spacing(8),
             minWidth: "100%",
             resize: "none",
+        },
+        buttonContainer: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+
+            width: "100%",
         }
     }
 })
@@ -100,8 +108,9 @@ export default function ContactForm({ location }: ContactFormProps) {
             <h3 className={ classes.formTitle }>{ `Contactez-nous` }</h3>
 
             <div className={ classes.inputContainer }>
-                <label className={ classes.inputLabel }>{ `Nom` }</label>
+                <label className={ classes.inputLabel }>{ `Nom*` }</label>
                 <motion.input   className={ classes.inputField }
+                                placeholder='Votre nom...'
                                 variants={ inputVariants }
                                 initial="rest"
                                 whileHover="hover"
@@ -109,8 +118,9 @@ export default function ContactForm({ location }: ContactFormProps) {
                 />
             </div>
             <div className={ classes.inputContainer }>
-                <label className={ classes.inputLabel }>{ `Adresse Email` }</label>
+                <label className={ classes.inputLabel }>{ `Adresse Email*` }</label>
                 <motion.input   className={ classes.inputField }
+                                placeholder='Votre adresse email...'
                                 variants={ inputVariants }
                                 initial="rest"
                                 whileHover="hover"
@@ -120,13 +130,17 @@ export default function ContactForm({ location }: ContactFormProps) {
 
 
             <motion.textarea    className={ classes.messageField }
+                                placeholder='Votre message...'
+
                                 variants={ inputVariants }
                                 initial="rest"
                                 whileHover="hover"
                                 whileFocus="focus"
             />
 
-            <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } />
+            <div className={ classes.buttonContainer }>
+                <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } />
+            </div>
         </form>
     )
 }
