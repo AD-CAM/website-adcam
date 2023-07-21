@@ -147,6 +147,11 @@ interface FunctionButtonProps {
     handler: MouseEventHandler<HTMLButtonElement>;
 }
 
+interface SubmitButtonProps {
+    text: string;
+    description: string;
+}
+
 const Icon = ({ icon }: IconProps) => {
     switch(icon) {
         default :
@@ -264,6 +269,29 @@ function FunctionButton({ text, description, handler }: FunctionButtonProps) {
     )
 }
 
+function SubmitButton({ text, description }: SubmitButtonProps) {
+    const { classes } = useStyles()
+
+    return (
+        <motion.button className={ classes.root } type="submit"
+
+                variants={ linkVariants }
+                initial="rest"
+                animate="rest"
+                whileHover="hover"
+
+                aria-label={ description }
+                role="button"
+        >
+
+                <motion.span className={ classes.text } variants={ textVariants }>
+                    { text }
+                </motion.span>
+
+        </motion.button>
+    )
+}
 
 
-export { IconButton, GoToButton, SocialButton, FunctionButton }
+
+export { IconButton, GoToButton, SocialButton, FunctionButton, SubmitButton }
