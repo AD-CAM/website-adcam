@@ -1,7 +1,10 @@
 'use client'
 /* Library Imports */
+import { useState, useEffect } from 'react'
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
+/* Utils & Data Imports */
+import { emailRegex } from '../_utils/regex'
 /* Type Imports */
 import { MouseEventHandler } from 'react'
 /* Components Imports */
@@ -92,7 +95,7 @@ interface ContactFormProps {
     location: string;
 }
 
-const testHandler: MouseEventHandler<HTMLButtonElement> = (event) => {
+function handleFormSend(event: React.FormEvent<HTMLFormElement>) {
     event.stopPropagation()
 
     console.log("Ahah test")
@@ -103,8 +106,61 @@ const testHandler: MouseEventHandler<HTMLButtonElement> = (event) => {
 export default function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
 
+    const [formData, setFormData] = useState({
+        name: {
+            value: '',
+            valid: true,
+            changed: false
+        },
+        email: {
+            value: '',
+            valid: false,
+            changed: false
+        },
+        message: {
+            value: '',
+            valid: true,
+            changed: false
+        },
+    })
+
+    function validateField(value: string) {
+        const fieldIsValid = emailRegex.test(value)
+
+        return fieldIsValid
+    }
+
+    function handleFormChange(event: React.ChangeEvent<HTMLInputElement>) {
+        const { name, value } = event.target
+
+
+        name === "email" ?  setFormData({
+                                            ...formData,
+                                            [name]: {
+                                                value: value,
+                                                valid: validateField(value),
+                                                changed: true,
+                                            }
+                                        })
+
+                         :  setFormData({
+                                            ...formData,
+                                            [name]: {
+                                                value: value,
+                                                valid: true,
+                                                changed: true,
+                                            }
+                                        })
+    }
+
+    useEffect(() => {
+        setFormData(formData)
+    }, [formData])
+
+
+
     return (      
-        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot }>
+        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleFormSend }>
             <h3 className={ classes.formTitle }>{ `Contactez-nous` }</h3>
 
             <div className={ classes.inputContainer }>
