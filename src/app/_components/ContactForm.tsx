@@ -67,6 +67,14 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
             maxWidth: "100%",
         },
+        messageLabel: {
+            width: "100%",
+
+            marginLeft: theme.spacing(0.5),
+
+            fontSize: theme.typography.pxToRem(14),
+            fontWeight: 500,
+        },
         messageField: {
             boxSizing: "border-box",
 
@@ -160,13 +168,22 @@ export default function ContactForm({ location }: ContactFormProps) {
 
 
     return (      
-        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleFormSend }>
-            <h3 className={ classes.formTitle }>{ `Contactez-nous` }</h3>
+        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleFormSend }
+              aria-labelledby="form-title"
+        >
+            <h3 className={ classes.formTitle } id="form-title">{ `Contactez-nous` }</h3>
 
             <div className={ classes.inputContainer }>
-                <label className={ classes.inputLabel }>{ `Nom*` }</label>
+                <label className={ classes.inputLabel } htmlFor="name-field" id="name-label">{ `Nom*` }</label>
                 <motion.input   className={ classes.inputField }
                                 placeholder='Votre nom...'
+                                id="name-field"
+                                name="name"
+                                autoComplete="off"
+
+                                aria-required="true"
+                                aria-describedby='name-label'
+
                                 variants={ inputVariants }
                                 initial="rest"
                                 whileHover="hover"
@@ -174,9 +191,17 @@ export default function ContactForm({ location }: ContactFormProps) {
                 />
             </div>
             <div className={ classes.inputContainer }>
-                <label className={ classes.inputLabel }>{ `Adresse Email*` }</label>
+                <label className={ classes.inputLabel } htmlFor="email-field" id="email-label">{ `Adresse Email*` }</label>
                 <motion.input   className={ classes.inputField }
                                 placeholder='Votre adresse email...'
+                                id="email-field"
+                                name="email"
+                                type="email" 
+                                autoComplete="off"
+
+                                aria-required="true"
+                                aria-describedby='email-label'
+
                                 variants={ inputVariants }
                                 initial="rest"
                                 whileHover="hover"
@@ -184,9 +209,14 @@ export default function ContactForm({ location }: ContactFormProps) {
                 />
             </div>
 
-
+            <label className={ classes.messageLabel } htmlFor="message-field" id="message-label">{ `Message*` }</label>
             <motion.textarea    className={ classes.messageField }
                                 placeholder='Votre message...'
+                                id="message-field"
+                                name="message"
+
+                                aria-required="true"
+                                aria-describedby='message-label'
 
                                 variants={ inputVariants }
                                 initial="rest"
@@ -195,7 +225,7 @@ export default function ContactForm({ location }: ContactFormProps) {
             />
 
             <div className={ classes.buttonContainer }>
-                <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } />
+                {/* <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } /> */}
             </div>
         </form>
     )
