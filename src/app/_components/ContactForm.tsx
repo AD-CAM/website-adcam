@@ -5,10 +5,8 @@ import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
 import { emailRegex } from '../_utils/regex'
-/* Type Imports */
-import { MouseEventHandler } from 'react'
 /* Components Imports */
-import { FunctionButton } from "./Button"
+import { SubmitButton } from "./Button"
 
 
 
@@ -105,7 +103,7 @@ interface ContactFormProps {
 }
 
 function handleFormSend(event: React.FormEvent<HTMLFormElement>) {
-    event.stopPropagation()
+    event.preventDefault()
 
     console.log("Ahah test")
 }
@@ -235,7 +233,7 @@ export default function ContactForm({ location }: ContactFormProps) {
             />
 
             <div className={ classes.buttonContainer }>
-                {/* <FunctionButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } handler={ testHandler } /> */}
+                <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" }/>
             </div>
         </form>
     )
