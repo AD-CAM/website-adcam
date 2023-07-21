@@ -76,6 +76,7 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 500,
         },
         messageField: {
+            textAlign: "start",
             boxSizing: "border-box",
 
             margin: "0",
@@ -138,7 +139,7 @@ export default function ContactForm({ location }: ContactFormProps) {
         return fieldIsValid
     }
 
-    function handleFormChange(event: React.ChangeEvent<HTMLInputElement>) {
+    function handleFormChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const { name, value } = event.target
 
 
@@ -188,6 +189,9 @@ export default function ContactForm({ location }: ContactFormProps) {
                                 initial="rest"
                                 whileHover="hover"
                                 whileFocus="focus"
+
+                                value={ formData.name.value }
+                                onChange={ handleFormChange }
                 />
             </div>
             <div className={ classes.inputContainer }>
@@ -206,6 +210,9 @@ export default function ContactForm({ location }: ContactFormProps) {
                                 initial="rest"
                                 whileHover="hover"
                                 whileFocus="focus"
+
+                                value={ formData.email.value }
+                                onChange={ handleFormChange }
                 />
             </div>
 
@@ -222,6 +229,9 @@ export default function ContactForm({ location }: ContactFormProps) {
                                 initial="rest"
                                 whileHover="hover"
                                 whileFocus="focus"
+
+                                value={ formData.message.value }
+                                onChange={ handleFormChange }
             />
 
             <div className={ classes.buttonContainer }>
