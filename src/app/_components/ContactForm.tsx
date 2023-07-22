@@ -102,12 +102,6 @@ interface ContactFormProps {
     location: string;
 }
 
-function handleFormSend(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-
-    console.log("Ahah test")
-}
-
 
 
 export default function ContactForm({ location }: ContactFormProps) {
@@ -116,7 +110,7 @@ export default function ContactForm({ location }: ContactFormProps) {
     const [formData, setFormData] = useState({
         name: {
             value: '',
-            valid: true,
+            valid: false,
             changed: false
         },
         email: {
@@ -126,38 +120,48 @@ export default function ContactForm({ location }: ContactFormProps) {
         },
         message: {
             value: '',
-            valid: true,
+            valid: false,
             changed: false
         },
     })
 
-    function validateField(value: string) {
-        const fieldIsValid = emailRegex.test(value)
+    function handleFormSend(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault()
 
+        const formWasCompleted: boolean =       formData.name.valid
+                                            &&  formData.email.valid
+                                            &&  formData.message.valid
+
+        if(formWasCompleted) {
+            console.log("Placeholder for sending to API")
+        }
+    }
+
+    function validateField(value: string, name: string) {
+        const field = { value: value, name: name }
+        const fieldIsEmpty = field.value === ''
+        let fieldIsValid = false
+
+        if(field.name === "email") {
+            fieldIsValid = emailRegex.test(field.value)
+        } else {
+            fieldIsValid = !fieldIsEmpty
+        }
+        
         return fieldIsValid
     }
 
     function handleFormChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const { name, value } = event.target
 
-
-        name === "email" ?  setFormData({
-                                            ...formData,
-                                            [name]: {
-                                                value: value,
-                                                valid: validateField(value),
-                                                changed: true,
-                                            }
-                                        })
-
-                         :  setFormData({
-                                            ...formData,
-                                            [name]: {
-                                                value: value,
-                                                valid: true,
-                                                changed: true,
-                                            }
-                                        })
+        setFormData({
+                        ...formData,
+                        [name]: {
+                            value: value,
+                            valid: validateField(value, name),
+                            changed: true,
+                        }
+                    })
     }
 
     useEffect(() => {
