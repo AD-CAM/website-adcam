@@ -1,6 +1,7 @@
 'use client'
 /* Library Imports */
 import { useState, useEffect } from 'react'
+import { useForm } from 'react-hook-form'
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
@@ -107,6 +108,8 @@ interface ContactFormProps {
 export default function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
 
+
+    const { handleSubmit, register } = useForm({mode: 'onChange'})
     const [formData, setFormData] = useState({
         name: {
             value: '',
