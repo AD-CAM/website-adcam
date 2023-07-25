@@ -41,10 +41,18 @@ const useStyles = makeStyles()((theme) => {
         },
         articlesRoot: {
             display: "flex",
-            alignItems: "flex-start",
             justifyContent: "space-between",
 
             paddingTop: theme.spacing(3),
+
+            [theme.breakpoints.down('sm')]: {
+                alignItems: "center",
+                flexDirection: "column",
+            },
+            [theme.breakpoints.up('sm')]: {
+                alignItems: "flex-start",
+                flexDirection: "row",      
+            },
         },
         cardRoot: {
             display: "flex",
@@ -53,10 +61,17 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "center",
 
             color: "#C80404",
-            maxWidth: "20%",
             height: "100%",
 
             fontSize: theme.typography.pxToRem(68),
+
+            [theme.breakpoints.down('sm')]: {
+                maxWidth: "90%",
+                marginBottom: theme.spacing(8),
+            },
+            [theme.breakpoints.up('sm')]: {
+                maxWidth: "20%",     
+            },
         },
         cardSubRoot: {
             marginTop: theme.spacing(2),
@@ -66,6 +81,10 @@ const useStyles = makeStyles()((theme) => {
         cardTitle: {
             fontWeight: 600,
             fontSize: theme.typography.pxToRem(22),
+
+            [theme.breakpoints.down('sm')]: {
+            marginTop: "0",
+            },
         },
         cardText: {
             fontWeight: 500,
