@@ -33,9 +33,22 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "space-between",
             flexWrap: "wrap",
 
-            width: "30%",
+            
 
             color: "#FFFFFF",
+
+            [theme.breakpoints.down('sm')]: {
+                boxSizing: "border-box",
+
+                width: "100%",
+
+                marginTop: theme.spacing(5),
+                paddingLeft: theme.spacing(5),
+                paddingRight: theme.spacing(5),
+            },
+            [theme.breakpoints.up('sm')]: {
+                width: "30%",
+            },
         },
         genericRoot: {
         },
@@ -44,9 +57,13 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 600,
         },
         inputContainer: {
-            marginBottom: theme.spacing(2),
-
-            width: "48%",
+            [theme.breakpoints.down('sm')]: {
+                marginBottom: theme.spacing(1),
+                width: "100%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                width: "48%",
+            },
         },
         inputLabel: {
             marginLeft: theme.spacing(0.5),
@@ -88,10 +105,15 @@ const useStyles = makeStyles()((theme) => {
             borderRadius: theme.spacing(0.5),
 
             fontSize: theme.typography.pxToRem(12),
-
-            minHeight: theme.spacing(8),
             minWidth: "100%",
             resize: "none",
+
+            [theme.breakpoints.down('sm')]: {
+                minHeight: theme.spacing(16),
+            },
+            [theme.breakpoints.up('sm')]: {
+                minHeight: theme.spacing(8),
+            },
         },
         buttonContainer: {
             display: "flex",

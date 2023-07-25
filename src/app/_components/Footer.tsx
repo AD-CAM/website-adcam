@@ -70,17 +70,18 @@ const useStyles = makeStyles()((theme) => {
         logoImage: {
             alignSelf: "center",
 
-            marginRight: theme.spacing(4),
-
             [theme.breakpoints.down('sm')]: {
                 width: "75%",
                 height: "auto",
 
+                marginRight: "0",
                 marginBottom: theme.spacing(2),
             },
             [theme.breakpoints.up('sm')]: {
                 height: "60%",
-                width: "auto",    
+                width: "auto",
+                
+                marginRight: theme.spacing(4),
             },
         },
         logoInfoContainer: {
