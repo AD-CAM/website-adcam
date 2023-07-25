@@ -95,10 +95,26 @@ const useStyles = makeStyles()((theme) => {
         },
         buttonContainer: {
             display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-end",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
 
             width: "100%",
+        },
+        characterCount: {
+            margin: "0",
+            padding: "0",
+
+            fontSize: theme.typography.pxToRem(14),
+            fontWeight: 500,
+        },
+        characterCountTooLarge: {
+            margin: "0",
+            padding: "0",
+
+            fontSize: theme.typography.pxToRem(14),
+            fontWeight: 500,
+
+            color: "rgba(252, 105, 105, 1)",
         }
     }
 })
@@ -111,7 +127,8 @@ interface ContactFormProps {
 
 export default function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
-    const { handleSubmit, register, formState: { isValid } } = useForm({mode: 'onChange'})
+    const { handleSubmit, register, formState: { isValid, errors }, watch } = useForm({mode: 'onChange'})
+    const messageValue = watch('message', '')
 
 
 
@@ -131,7 +148,7 @@ export default function ContactForm({ location }: ContactFormProps) {
                 <label className={ classes.inputLabel } htmlFor="name-field" id="name-label">{ `Nom*` }</label>
                 <motion.input   className={ classes.inputField }
 
-                            { ... register('email', { required: true })}
+                            { ... register('name', { required: true, pattern: regex.name })}
 
                             placeholder='Votre nom...'
                             id="name-field"
@@ -190,6 +207,9 @@ export default function ContactForm({ location }: ContactFormProps) {
 
             <div className={ classes.buttonContainer }>
                 <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+                <p className={ (messageValue.length <= 180) ? classes.characterCount : classes.characterCountTooLarge }>
+                    { (messageValue.length <= 180) ? `${messageValue.length}/180` : `( ! ) ${messageValue.length}/180` }
+                </p>
             </div>
         </form>
     )
