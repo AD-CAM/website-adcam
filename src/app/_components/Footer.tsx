@@ -1,11 +1,13 @@
 'use client'
 /* Assets Imports */
+import adCamFullLogo from "/public/ad-cam_logo-title_nobg.png"
 import adCamFooterLogo from "/public/ad-cam_logo_nobg.png"
 /* Utils & Data Imports */
 import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
 const conditionsList: PageInfo[] = require("../_data/conditionsList.json")
 /* Library Imports */
+import { useTheme, useMediaQuery } from "@mui/material"
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
 import Image from "next/image"
@@ -32,8 +34,21 @@ const useStyles = makeStyles()((theme) => {
             paddingBottom: theme.spacing(4),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
-            background: "linear-gradient(350deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)",
+            
             backdropFilter: "blur(2px)",
+
+            [theme.breakpoints.down('sm')]: {
+                flexDirection: "column",
+
+                height: "auto",
+
+                background: "linear-gradient(170deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.78) 50%, rgba(0, 0, 0, 1) 100%)",
+            },
+            [theme.breakpoints.up('sm')]: {
+                flexDirection: "row",
+                
+                background: "linear-gradient(350deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)",
+            },
         },
         logoRoot: {
             display: "flex",
@@ -41,14 +56,32 @@ const useStyles = makeStyles()((theme) => {
             
             height: "100%",
             width: "auto",
+
+            [theme.breakpoints.down('sm')]: {
+                flexDirection: "column",
+                alignItems: "center",
+
+                height: "auto",
+            },
+            [theme.breakpoints.up('sm')]: {
+                flexDirection: "row",      
+            },
         },
         logoImage: {
-            height: "60%",
-            width: "auto",
-
             alignSelf: "center",
 
             marginRight: theme.spacing(4),
+
+            [theme.breakpoints.down('sm')]: {
+                width: "75%",
+                height: "auto",
+
+                marginBottom: theme.spacing(2),
+            },
+            [theme.breakpoints.up('sm')]: {
+                height: "60%",
+                width: "auto",    
+            },
         },
         logoInfoContainer: {
             display: "flex",
@@ -78,9 +111,35 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
         },
         footerNavRoot: {
-            height: "100%",
+            display: "flex",
+            flexDirection: "column",
 
             marginTop: theme.spacing(5),
+
+            [theme.breakpoints.down('sm')]: {
+                alignItems: "flex-start",
+
+                paddingLeft: theme.spacing(6),
+                width: "100%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                height: "100%",     
+            },
+        },
+        footerNavTitle: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+
+            marginTop: 0,
+            marginBottom: theme.spacing(2),
+
+            color: "#FFF",
+
+            [theme.breakpoints.down('sm')]: {
+                marginLeft: theme.spacing(2),
+            },
         },
     }
 })
@@ -90,7 +149,7 @@ function FooterNavigation() {
 
     return (
         <div className={ classes.footerNavRoot }>
-            <h3 className={ classes.logoInfoTitle }>
+            <h3 className={ classes.footerNavTitle }>
                 { `Navigation` }
             </h3>
             {
@@ -110,7 +169,7 @@ function FooterConditions() {
 
     return (
         <div className={ classes.footerNavRoot }>
-            <h3 className={ classes.logoInfoTitle }>
+            <h3 className={ classes.footerNavTitle }>
                 { `Conditions` }
             </h3>
             {
@@ -130,13 +189,25 @@ function FooterConditions() {
 export default function Footer() {
     const { classes } = useStyles()
 
+    const theme = useTheme()
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+
     return (      
         <footer className={ classes.root }>
             <div className={ classes.logoRoot }>
-                <Image  className={ classes.logoImage }
-                        src={ adCamFooterLogo }
-                        alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
-                />
+                {   !isSmallScreen  ? (
+                                        <Image  className={ classes.logoImage }
+                                            src={ adCamFooterLogo }
+                                            alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
+                                        />
+                                )   : (
+                                        <Image  className={ classes.logoImage }
+                                            src={ adCamFullLogo }
+                                            alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
+                                        />
+                                )
+
+                }
                 <div className={ classes.logoInfoContainer }>
                     <h3 className={ classes.logoInfoTitle }>
                         <span>{ `Installateur d’alarme et vidéo` }</span>
