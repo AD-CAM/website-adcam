@@ -1,7 +1,7 @@
 'use client'
 /* Library Imports */
 import { useState, useEffect } from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
@@ -107,74 +107,18 @@ interface ContactFormProps {
 
 export default function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
-
-
     const { handleSubmit, register } = useForm({mode: 'onChange'})
-    const [formData, setFormData] = useState({
-        name: {
-            value: '',
-            valid: false,
-            changed: false
-        },
-        email: {
-            value: '',
-            valid: false,
-            changed: false
-        },
-        message: {
-            value: '',
-            valid: false,
-            changed: false
-        },
-    })
 
-    function handleFormSend(event: React.FormEvent<HTMLFormElement>) {
-        event.preventDefault()
 
-        const formWasCompleted: boolean =       formData.name.valid
-                                            &&  formData.email.valid
-                                            &&  formData.message.valid
 
-        if(formWasCompleted) {
-            console.log("Placeholder for sending to API")
-        }
+    function handleFormSend(data: any) {
+        console.log("Placeholder for sending to API")
     }
-
-    function validateField(value: string, name: string) {
-        const field = { value: value, name: name }
-        const fieldIsEmpty = field.value === ''
-        let fieldIsValid = false
-
-        if(field.name === "email") {
-            fieldIsValid = emailRegex.test(field.value)
-        } else {
-            fieldIsValid = !fieldIsEmpty
-        }
-        
-        return fieldIsValid
-    }
-
-    function handleFormChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-        const { name, value } = event.target
-
-        setFormData({
-                        ...formData,
-                        [name]: {
-                            value: value,
-                            valid: validateField(value, name),
-                            changed: true,
-                        }
-                    })
-    }
-
-    useEffect(() => {
-        setFormData(formData)
-    }, [formData])
 
 
 
     return (      
-        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleFormSend }
+        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleSubmit(handleFormSend)}
               aria-labelledby="form-title"
         >
             <h3 className={ classes.formTitle } id="form-title">{ `Contactez-nous` }</h3>
@@ -182,61 +126,62 @@ export default function ContactForm({ location }: ContactFormProps) {
             <div className={ classes.inputContainer }>
                 <label className={ classes.inputLabel } htmlFor="name-field" id="name-label">{ `Nom*` }</label>
                 <motion.input   className={ classes.inputField }
-                                placeholder='Votre nom...'
-                                id="name-field"
-                                name="name"
-                                autoComplete="off"
 
-                                aria-required="true"
-                                aria-describedby='name-label'
+                            { ... register('email', { required: true, pattern: emailRegex })}
 
-                                variants={ inputVariants }
-                                initial="rest"
-                                whileHover="hover"
-                                whileFocus="focus"
+                            placeholder='Votre nom...'
+                            id="name-field"
+                            type="text"
+                            name="name"
+                            autoComplete="off"
 
-                                value={ formData.name.value }
-                                onChange={ handleFormChange }
+                            aria-required="true"
+                            aria-describedby='name-label'
+
+                            variants={ inputVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileFocus="focus"
                 />
             </div>
             <div className={ classes.inputContainer }>
                 <label className={ classes.inputLabel } htmlFor="email-field" id="email-label">{ `Adresse Email*` }</label>
                 <motion.input   className={ classes.inputField }
-                                placeholder='Votre adresse email...'
-                                id="email-field"
-                                name="email"
-                                type="email" 
-                                autoComplete="off"
 
-                                aria-required="true"
-                                aria-describedby='email-label'
+                            { ... register('email', { required: true, pattern: emailRegex })}
 
-                                variants={ inputVariants }
-                                initial="rest"
-                                whileHover="hover"
-                                whileFocus="focus"
+                            placeholder='Votre adresse email...'
+                            id="email-field"
+                            name="email"
+                            type="email" 
+                            autoComplete="off"
 
-                                value={ formData.email.value }
-                                onChange={ handleFormChange }
+                            aria-required="true"
+                            aria-describedby='email-label'
+
+                            variants={ inputVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileFocus="focus"
                 />
             </div>
 
             <label className={ classes.messageLabel } htmlFor="message-field" id="message-label">{ `Message*` }</label>
             <motion.textarea    className={ classes.messageField }
-                                placeholder='Votre message...'
-                                id="message-field"
-                                name="message"
 
-                                aria-required="true"
-                                aria-describedby='message-label'
+                            { ... register('message', { required: true, pattern: emailRegex })}
+                            
+                            placeholder='Votre message...'
+                            id="message-field"
+                            name="message"
 
-                                variants={ inputVariants }
-                                initial="rest"
-                                whileHover="hover"
-                                whileFocus="focus"
+                            aria-required="true"
+                            aria-describedby='message-label'
 
-                                value={ formData.message.value }
-                                onChange={ handleFormChange }
+                            variants={ inputVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileFocus="focus"
             />
 
             <div className={ classes.buttonContainer }>
