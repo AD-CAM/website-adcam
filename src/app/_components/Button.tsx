@@ -95,6 +95,22 @@ const useStyles = makeStyles()((theme) => {
 
             cursor: "pointer",
         },
+        rootDisabled: {
+            display: "flex",
+            justifyContent: "space-between",
+
+            height: "100%",
+            width: "auto",
+            padding: theme.spacing(1.2),
+
+            borderRadius: theme.spacing(1),
+            border: "2px solid",
+
+            backgroundColor: "rgba(255, 255, 255, .5)",
+            boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
+
+            fontWeight: 500,
+        },
         socialRoot: {
             display: "flex",
             alignItems: "center",
@@ -150,6 +166,7 @@ interface FunctionButtonProps {
 interface SubmitButtonProps {
     text: string;
     description: string;
+    enabled: boolean;
 }
 
 const Icon = ({ icon }: IconProps) => {
@@ -269,18 +286,19 @@ function FunctionButton({ text, description, handler }: FunctionButtonProps) {
     )
 }
 
-function SubmitButton({ text, description }: SubmitButtonProps) {
+function SubmitButton({ text, description, enabled }: SubmitButtonProps) {
     const { classes } = useStyles()
 
     return (
-        <motion.button className={ classes.root } type="submit"
+        <motion.button className={ enabled ? classes.root : classes.rootDisabled } type="submit"
 
                 variants={ linkVariants }
                 initial="rest"
                 animate="rest"
-                whileHover="hover"
+                whileHover={ enabled ? "hover" : "rest" }
 
                 aria-label={ description }
+                aria-disabled={ !enabled }
                 role="button"
         >
 

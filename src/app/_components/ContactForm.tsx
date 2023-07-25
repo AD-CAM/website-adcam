@@ -5,7 +5,7 @@ import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
-import { emailRegex } from '../_utils/regex'
+import { regex } from '../_utils/regex'
 /* Components Imports */
 import { SubmitButton } from "./Button"
 
@@ -63,6 +63,8 @@ const useStyles = makeStyles()((theme) => {
             border: "1px solid transparent",
             borderRadius: theme.spacing(0.5),
 
+            fontSize: theme.typography.pxToRem(14),
+
             width: "100%",
             maxWidth: "100%",
         },
@@ -84,6 +86,8 @@ const useStyles = makeStyles()((theme) => {
             outline: "none",
             border: "1px solid transparent",
             borderRadius: theme.spacing(0.5),
+
+            fontSize: theme.typography.pxToRem(12),
 
             minHeight: theme.spacing(8),
             minWidth: "100%",
@@ -107,7 +111,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
-    const { handleSubmit, register } = useForm({mode: 'onChange'})
+    const { handleSubmit, register, formState: { isValid } } = useForm({mode: 'onChange'})
 
 
 
@@ -127,7 +131,7 @@ export default function ContactForm({ location }: ContactFormProps) {
                 <label className={ classes.inputLabel } htmlFor="name-field" id="name-label">{ `Nom*` }</label>
                 <motion.input   className={ classes.inputField }
 
-                            { ... register('email', { required: true, pattern: emailRegex })}
+                            { ... register('email', { required: true })}
 
                             placeholder='Votre nom...'
                             id="name-field"
@@ -148,7 +152,7 @@ export default function ContactForm({ location }: ContactFormProps) {
                 <label className={ classes.inputLabel } htmlFor="email-field" id="email-label">{ `Adresse Email*` }</label>
                 <motion.input   className={ classes.inputField }
 
-                            { ... register('email', { required: true, pattern: emailRegex })}
+                            { ... register('email', { required: true, pattern: regex.email })}
 
                             placeholder='Votre adresse email...'
                             id="email-field"
@@ -169,8 +173,8 @@ export default function ContactForm({ location }: ContactFormProps) {
             <label className={ classes.messageLabel } htmlFor="message-field" id="message-label">{ `Message*` }</label>
             <motion.textarea    className={ classes.messageField }
 
-                            { ... register('message', { required: true, pattern: emailRegex })}
-                            
+                            { ... register('message', { required: true, pattern: regex.message })}
+
                             placeholder='Votre message...'
                             id="message-field"
                             name="message"
@@ -185,7 +189,7 @@ export default function ContactForm({ location }: ContactFormProps) {
             />
 
             <div className={ classes.buttonContainer }>
-                <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" }/>
+                <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
             </div>
         </form>
     )

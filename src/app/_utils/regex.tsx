@@ -1,3 +1,6 @@
-const emailRegex = /^[\w-.+ÔÀ-ÖØ-öø-ÿ]{1,64}@[\w-ÔÀ-ÖØ-öø-ÿ]{1,255}.+[\w-]{2,4}$/g
+const regex = {
+    email: /^[\w.%+-]+@[\w.-]+\.[a-zA-Z]{2,}$/g,
+    message: /^.{1,180}$/,
+}
 
-export { emailRegex }
+export { regex }
