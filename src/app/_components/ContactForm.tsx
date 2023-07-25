@@ -207,8 +207,8 @@ export default function ContactForm({ location }: ContactFormProps) {
 
             <div className={ classes.buttonContainer }>
                 <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
-                <p className={ (messageValue.length <= 180) ? classes.characterCount : classes.characterCountTooLarge }>
-                    { (messageValue.length <= 180) ? `${messageValue.length}/180` : `( ! ) ${messageValue.length}/180` }
+                <p className={ (messageValue.length <= 360) ? classes.characterCount : classes.characterCountTooLarge }>
+                    { (messageValue.length <= 360) ? `${messageValue.length}/360` : `( ! ) ${messageValue.length}/360` }
                 </p>
             </div>
         </form>
