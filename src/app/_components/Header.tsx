@@ -11,6 +11,7 @@ import { useTheme, useMediaQuery } from "@mui/material"
 import Link from 'next/link'
 import Image from 'next/image'
 import { NavLinkHeader } from './NavLink'
+import { HamburgerNav } from "./HamburgerNav"
 import { IconButton, GoToButton } from "./Button"
 
 
@@ -118,7 +119,9 @@ export default function Header({ activePage }: HeaderProps) {
                                             <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
                                         </>
                                     ) : (
-                                        <></>
+                                        <>
+                                            <HamburgerNav />
+                                        </>
                                     )
                 }
             </div>
