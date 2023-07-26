@@ -31,7 +31,7 @@ const useStyles = makeStyles()((theme) => {
         mainArticle: {
             [theme.breakpoints.down('sm')]: {
                 maxWidth: "90%",
-                marginBottom: theme.spacing(8),
+                marginBottom: theme.spacing(2),
             },
             [theme.breakpoints.up('sm')]: {
                 maxWidth: "864px",   

@@ -25,7 +25,12 @@ const useStyles = makeStyles()((theme) => {
 
             width: "100%",
 
-            paddingTop: theme.spacing(10),
+            [theme.breakpoints.down('sm')]: {
+                paddingTop: theme.spacing(2),
+            },
+            [theme.breakpoints.up('sm')]: {
+                paddingTop: theme.spacing(10),     
+            },
         },
         subRoot: {
             display: "flex",
@@ -37,7 +42,13 @@ const useStyles = makeStyles()((theme) => {
         },
         titleRoot: {
             width: "100%",
-            maxWidth: "864px",
+
+            [theme.breakpoints.down('sm')]: {
+                maxWidth: "90%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                maxWidth: "864px",   
+            },
         },
         articlesRoot: {
             display: "flex",
@@ -56,7 +67,7 @@ const useStyles = makeStyles()((theme) => {
         },
         cardRoot: {
             display: "flex",
-            flexDirection: "column",
+            
             alignItems: "center",
             justifyContent: "center",
 
@@ -66,10 +77,15 @@ const useStyles = makeStyles()((theme) => {
             fontSize: theme.typography.pxToRem(68),
 
             [theme.breakpoints.down('sm')]: {
+                flexDirection: "row",
+                justifyContent: "space-between",
+
                 maxWidth: "90%",
                 marginBottom: theme.spacing(8),
             },
             [theme.breakpoints.up('sm')]: {
+                flexDirection: "column",
+
                 maxWidth: "20%",     
             },
         },
@@ -77,6 +93,14 @@ const useStyles = makeStyles()((theme) => {
             marginTop: theme.spacing(2),
 
             color: "rgba(41, 41, 41, 1)",
+
+            [theme.breakpoints.down('sm')]: {
+                width: "90%",
+                paddingLeft: theme.spacing(4),
+            },
+            [theme.breakpoints.up('sm')]: {
+                width: "auto",    
+            },
         },
         cardTitle: {
             fontWeight: 600,
