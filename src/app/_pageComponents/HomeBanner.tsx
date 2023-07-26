@@ -72,10 +72,20 @@ const useStyles = makeStyles()((theme) => {
         buttonsContainer: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
-
+        
             minWidth: "200px",
-            width: "80%",
+            
+
+            [theme.breakpoints.down('sm')]: {
+                justifyContent: "space-between",
+
+                width: "80%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                justifyContent: "space-evenly",
+
+                width: "40%",
+            },
         }
     }
 })
