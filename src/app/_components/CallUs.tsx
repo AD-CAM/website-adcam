@@ -1,6 +1,7 @@
 'use client'
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+import { useTheme, useMediaQuery } from '@mui/material'
 
 
 
@@ -16,9 +17,15 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "center",
 
             width: "100%",
-            height: theme.spacing(5),
 
             backgroundColor: "#C80404",
+
+            [theme.breakpoints.down('sm')]: {
+                height: theme.spacing(8),
+            },
+            [theme.breakpoints.up('sm')]: {
+                height: theme.spacing(5),
+            },
         },
         bannerPercentage: {
             fontSize: theme.typography.pxToRem(26),
@@ -36,6 +43,34 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 800,
             fontSize: theme.typography.pxToRem(26),
         },
+        mobileTextRoot: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+
+            color: "#FFF",
+            fontWeight: 500,
+        },
+        mobileText: {
+            margin: "0",
+            padding: "0",
+
+            width: "100%",
+
+            textAlign: "center",
+        },
+        mobilePhone: {
+            color: "#FFF",
+
+            margin: "0",
+            padding: "0",
+
+            width: "100%",
+
+            fontWeight: 800,
+            fontSize: theme.typography.pxToRem(26),
+            textAlign: "center",
+        },
     }
 })
 
@@ -44,11 +79,26 @@ const useStyles = makeStyles()((theme) => {
 export default function CallUs() {
     const { classes } = useStyles()
 
+    const theme = useTheme()
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+
+
+
     return (      
         <div className={ classes.root }>
-            <a className={ classes.bannerText } href="tel:0695869176">
-                <span className={ classes.bannerPercentage }>100%</span> AUTONOME <strong className={ classes.bannerPhone }>06 95 86 91 76</strong> SANS ABONNEMENT
-            </a>
+            {
+                !isSmallScreen   ? (
+                                    <a className={ classes.bannerText } href="tel:0695869176">
+                                        <span className={ classes.bannerPercentage }>100%</span> AUTONOME <strong className={ classes.bannerPhone }>06 95 86 91 76</strong> SANS ABONNEMENT
+                                    </a>
+                                )
+                                : (
+                                    <a className={ classes.mobileTextRoot } href="tel:0695869176">
+                                        <p className={ classes.mobileText }>100% autonome et sans abonnement</p>
+                                        <p className={ classes.mobilePhone }>06 95 86 91 76</p>
+                                    </a>
+                                )
+            }
         </div>
     )
 }
