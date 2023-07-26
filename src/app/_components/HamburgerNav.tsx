@@ -1,4 +1,7 @@
 'use client'
+/* Utils & Data Imports */
+import { PageInfo } from "../_types/dataFiles"
+const pageList: PageInfo[] = require("../_data/pageList.json")
 /* Library Imports */
 import { useState } from 'react'
 import { Variants, motion } from 'framer-motion'
@@ -63,10 +66,25 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "center",
         },
+        navMenuWindow: {
+            position: "fixed",
+            zIndex: 9999,
+            top: "0",
+
+            padding: theme.spacing(2),
+            paddingLeft: "0",
+            backgroundColor: "white",
+        }
     }
 })
 
-function HamburgerNav() {
+interface HamburgerNavProps {
+    activePage: string
+}
+
+
+
+function HamburgerNav({ activePage }: HamburgerNavProps) {
     const { classes } = useStyles()
 
     const [isOpen, setIsOpen] = useState(false)
@@ -74,23 +92,36 @@ function HamburgerNav() {
 
 
     return (  
-        <motion.button className={ classes.hamburgerButtonRoot }
-                variants={ buttonVariants }
-                initial="rest"
-                animate="rest"
-                whileHover="hover"
-                whileTap="tap"
-                
-                aria-label="Ouvrir le menu de navigation"
-                role="button"
-                
-                onClick={ () => setIsOpen(!isOpen) }
-        >
+        <>
+            <motion.button className={ classes.hamburgerButtonRoot }
+                    variants={ buttonVariants }
+                    initial="rest"
+                    animate="rest"
+                    whileHover="hover"
+                    whileTap="tap"
+                    
+                    aria-label="Ouvrir le menu de navigation"
+                    role="button"
+                    
+                    onClick={ () => setIsOpen(!isOpen) }
+            >
 
-                <motion.span className={ classes.hamburgerButtonIcon } variants={ iconVariants }>
-                    <FaBars />
-                </motion.span>
-        </motion.button>
+                    <motion.span className={ classes.hamburgerButtonIcon } variants={ iconVariants }>
+                        <FaBars />
+                    </motion.span>
+            </motion.button>
+
+            <nav className={ classes.navMenuWindow }>
+                {
+                    pageList.map(({ name, link, text }) => (
+                    <NavLinkHeader  key={ name }
+                                    isActive={ activePage === name }
+                                    link={ link }
+                                    linkText={ text } />
+                    ))
+                }
+            </nav>
+        </>
     )
 }
 

@@ -24,20 +24,29 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "center",
 
             position: "relative",
-            zIndex: 4,
+            
 
             width: "100%",
             height: theme.spacing(12),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
             background: "linear-gradient(350deg, rgba(37,16,5,0.1) 0%, rgba(136,37,16,0.2) 35%, rgba(179,39,36,0.25) 63%, rgba(255,23,0,0.3) 100%)",
+            backgroundColor: "#FFF",
             backdropFilter: "blur(2px)",
 
             [theme.breakpoints.down('sm')]: {
+                position: "fixed",
+                top: "0",
+                left: "0",
+                zIndex: 9999,
+
                 marginTop: theme.spacing(8),
             },
             [theme.breakpoints.up('sm')]: {
+                position: "relative",
                 marginTop: theme.spacing(5),
+
+                zIndex: 4,
             },
         },
         headerContent: {
@@ -120,7 +129,7 @@ export default function Header({ activePage }: HeaderProps) {
                                         </>
                                     ) : (
                                         <>
-                                            <HamburgerNav />
+                                            <HamburgerNav activePage={ activePage } />
                                         </>
                                     )
                 }
