@@ -25,25 +25,44 @@ const useStyles = makeStyles()((theme) => {
             flexDirection: "column",
             alignItems: "center",
 
-            borderRadius: theme.spacing(2),
-
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
             background: "linear-gradient(350deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 100%)",
             backdropFilter: "blur(4px)",
 
             padding: theme.spacing(4),
+
+            [theme.breakpoints.down('sm')]: {
+                borderRadius: "0",
+            },
+            [theme.breakpoints.up('sm')]: {
+                borderRadius: theme.spacing(2),  
+            },
         },
         bannerTitle: {
             margin: "0",
 
             color: "#C80404",
-            fontSize: theme.typography.pxToRem(40),
+            
+
+            [theme.breakpoints.down('sm')]: {
+                fontSize: theme.typography.pxToRem(26),
+            },
+            [theme.breakpoints.up('sm')]: {
+                fontSize: theme.typography.pxToRem(40), 
+            },
         },
         bannerSubTitle: {
             color: "rgba(18, 18, 18, 1)",
 
             fontWeight: 500,
-            fontSize: theme.typography.pxToRem(22),
+            
+
+            [theme.breakpoints.down('sm')]: {
+                fontSize: theme.typography.pxToRem(18),
+            },
+            [theme.breakpoints.up('sm')]: {
+                fontSize: theme.typography.pxToRem(22), 
+            },
         },
         bannerSubText: {
             marginTop: 0,
@@ -53,10 +72,10 @@ const useStyles = makeStyles()((theme) => {
         buttonsContainer: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-evenly",
+            justifyContent: "space-between",
 
             minWidth: "200px",
-            width: "40%",
+            width: "80%",
         }
     }
 })
