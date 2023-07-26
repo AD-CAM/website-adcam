@@ -15,19 +15,27 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
 
             width: "100%",
-
             paddingTop: theme.spacing(10),
 
             boxShadow: "0px -50px 25px -50px rgba(0, 0, 0, 0.3)",
         },
         subRoot: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             maxWidth: "1450px",
         },
         imageContainer: {
 
         },
         mainArticle: {
-            maxWidth: "864px",
+            [theme.breakpoints.down('sm')]: {
+                maxWidth: "90%",
+                marginBottom: theme.spacing(8),
+            },
+            [theme.breakpoints.up('sm')]: {
+                maxWidth: "864px",   
+            },
         },
         textParagraph: {
             fontSize: theme.typography.pxToRem(14),
