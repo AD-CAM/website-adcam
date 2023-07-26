@@ -57,6 +57,7 @@ const useStyles = makeStyles()((theme) => {
 
             width: "100%",
 
+            fontSize: theme.typography.pxToRem(20),
             textAlign: "center",
         },
         mobilePhone: {
@@ -68,7 +69,7 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
 
             fontWeight: 800,
-            fontSize: theme.typography.pxToRem(26),
+            fontSize: theme.typography.pxToRem(24),
             textAlign: "center",
         },
     }
