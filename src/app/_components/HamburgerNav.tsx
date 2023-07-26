@@ -10,6 +10,7 @@ import { makeStyles } from 'tss-react/mui'
 import { FaBars } from 'react-icons/fa'
 /* Components Imports */
 import { NavLinkHeader } from './NavLink'
+import { IconButton } from "./Button"
 
 
 
@@ -32,6 +33,15 @@ const buttonVariants: Variants = {
     },
     tap: {
         scale: 0.9,
+    }
+}
+
+const navMenuVariants: Variants = {
+    open: {
+        transform: "translateX(0)",
+    },
+    closed: {
+        transform: "translateX(100%)",
     }
 }
 
@@ -67,13 +77,34 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "center",
         },
         navMenuWindow: {
-            position: "fixed",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+
+            position: "absolute",
             zIndex: 9999,
-            top: "0",
+            top: theme.spacing(14),
+            right: "0",
 
             padding: theme.spacing(2),
             paddingLeft: "0",
-            backgroundColor: "white",
+
+            borderBottomLeftRadius: theme.spacing(1),
+            borderTopLeftRadius: theme.spacing(1),
+            boxShadow: "-15px 15px 10px -10px rgba(0, 0, 0, 0.1)",
+            background: "linear-gradient(170deg, rgba(37,16,5,0.1) 0%, rgba(136,37,16,0.2) 35%, rgba(179,39,36,0.25) 63%, rgba(255,23,0,0.3) 100%)",
+            backgroundColor: "#FFF",
+            backdropFilter: "blur(2px)",
+        },
+        navButtonContainer: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+
+            width: "100%",
+            marginTop: theme.spacing(2),
+            marginBottom: theme.spacing(1),
+            marginLeft: theme.spacing(2),
         }
     }
 })
@@ -96,7 +127,7 @@ function HamburgerNav({ activePage }: HamburgerNavProps) {
             <motion.button className={ classes.hamburgerButtonRoot }
                     variants={ buttonVariants }
                     initial="rest"
-                    animate="rest"
+                    animate={ isOpen ? "hover" : "rest" }
                     whileHover="hover"
                     whileTap="tap"
                     
@@ -111,7 +142,11 @@ function HamburgerNav({ activePage }: HamburgerNavProps) {
                     </motion.span>
             </motion.button>
 
-            <nav className={ classes.navMenuWindow }>
+            <motion.nav className={ classes.navMenuWindow }
+                    variants={ navMenuVariants }
+                    initial="closed"
+                    animate={ isOpen ? "open" : "closed" }
+            >
                 {
                     pageList.map(({ name, link, text }) => (
                     <NavLinkHeader  key={ name }
@@ -120,7 +155,11 @@ function HamburgerNav({ activePage }: HamburgerNavProps) {
                                     linkText={ text } />
                     ))
                 }
-            </nav>
+
+                <div className={ classes.navButtonContainer }>
+                    <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
+                </div>
+            </motion.nav>
         </>
     )
 }

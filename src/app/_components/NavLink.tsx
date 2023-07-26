@@ -59,15 +59,24 @@ const useStyles = makeStyles()((theme) => {
             display: "block",
             position: "relative",
 
-            padding: 0,
-            margin: 0,
+            width: "auto",
 
-            marginLeft: theme.spacing(2),
-            marginRight: theme.spacing(2),
+            padding: 0,
+
+            [theme.breakpoints.down('sm')]: {
+                margin: theme.spacing(.7),
+                marginLeft: theme.spacing(2),
+                marginRight: theme.spacing(2),
+            },
+            [theme.breakpoints.up('sm')]: {
+                margin: 0,
+                marginLeft: theme.spacing(2),
+                marginRight: theme.spacing(2),
+            },
         },
         linkRoot: {
             position: "relative",
-            width: "auto",
+            
         },
         text: {
             fontSize: theme.typography.pxToRem(15),
