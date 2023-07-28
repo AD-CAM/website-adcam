@@ -19,6 +19,13 @@ const useStyles = makeStyles()((theme) => {
             height: "85vh",
 
             background: "linear-gradient(150deg, rgba(3,0,0,1) 0%, rgba(69,16,16,1) 37%, rgba(126,85,85,1) 75%, rgba(154,143,143,1) 100%)",
+
+            [theme.breakpoints.down('sm')]: {
+                marginTop: theme.spacing(12),
+            },
+            [theme.breakpoints.up('sm')]: {
+                marginTop: "0",
+            },
         },
         banner: {
             display: "flex",
@@ -75,7 +82,6 @@ const useStyles = makeStyles()((theme) => {
         
             minWidth: "200px",
             
-
             [theme.breakpoints.down('sm')]: {
                 justifyContent: "space-between",
 
