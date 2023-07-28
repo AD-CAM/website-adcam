@@ -2,7 +2,8 @@
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
-
+/* Utils & Data Imports */
+import { ReviewObject } from '../_types/reviews'
 
 
 
@@ -23,19 +24,6 @@ const useStyles = makeStyles()((theme) => {
 
 
 
-interface ReviewObject  {
-    author_name: string,
-    author_url: string,
-    language: string,
-    profile_photo_url: string,
-    rating: number,
-    relative_time_description: string,
-    text: string,
-    time: number
-}
-
-
-
 function ReviewsHeading({ reviewsArray }: { reviewsArray: ReviewObject[] }) {
     const { classes } = useStyles()
 
@@ -45,6 +33,9 @@ function ReviewsHeading({ reviewsArray }: { reviewsArray: ReviewObject[] }) {
         </section>
     )
 }
+
+
+
 
 
 
