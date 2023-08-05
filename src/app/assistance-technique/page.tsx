@@ -8,7 +8,7 @@ import Footer from '../_components/Footer'
 
 
 
-export default function ContactPage() {
+export default function TechSupportPage() {
     return (
         <>
             <Header activePage={ "home" } />
