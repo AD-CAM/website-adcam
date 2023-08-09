@@ -10,6 +10,8 @@ const useStyles = makeStyles()((theme) => {
             display: "flex",
             alignItems: "center",
 
+            width: "100%",
+
             marginTop: theme.spacing(5),
             marginBottom: theme.spacing(5),
         },
