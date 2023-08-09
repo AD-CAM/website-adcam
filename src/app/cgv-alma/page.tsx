@@ -1,9 +1,10 @@
 /* Assets Imports */
-import './globals.css'
+import '../globals.css'
 /* Components Imports */
 import CallUs from '../_components/CallUs'
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
+import SectionTitle from '../_components/SectionTitle'
 /* Page Components Imports */
 
 
