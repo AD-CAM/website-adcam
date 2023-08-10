@@ -26,10 +26,15 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
             maxWidth: "1024px",
         },
-        mainArticle: {
-            width: "100%",
-            
+        mainArticle: {  
             color: "rgba(41, 41, 41, 1)",
+
+            [theme.breakpoints.down('sm')]: {
+                width: "90%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                width: "100%",   
+            },
         },
         subTitleRoot: {
             display: "flex",
