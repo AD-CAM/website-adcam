@@ -49,7 +49,16 @@ const useStyles = makeStyles()((theme) => {
             maxHeight: "32px",
 
             fill: "rgba(250, 80, 34, 1)"
-        }
+        },
+        textRoot: {
+
+        },
+        text: {
+
+        },
+        textItem: {
+
+        },
     }
 })
 
@@ -72,6 +81,11 @@ export default function AlmaConditions() {
                                 </path>
                             </svg>
                         </a>
+                    </div>
+                    <div className={ classes.textRoot }>
+                        <ol className={ classes.text }>
+
+                        </ol>
                     </div>
                 </article>
 
