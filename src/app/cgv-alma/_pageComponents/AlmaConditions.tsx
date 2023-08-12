@@ -84,7 +84,19 @@ export default function AlmaConditions() {
                     </div>
                     <div className={ classes.textRoot }>
                         <ol className={ classes.text }>
-
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }></li>
                         </ol>
                     </div>
                 </article>
