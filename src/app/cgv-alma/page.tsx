@@ -12,7 +12,7 @@ import AlmaConditions from './_pageComponents/AlmaConditions'
 export default function AlmaTermsPage() {
     return (
         <>
-            <Header activePage={ "home" } />
+            <Header activePage={ "alma-terms" } />
             <CallUs />
             <main>
                 <AlmaConditions />
