@@ -63,6 +63,19 @@ const useStyles = makeStyles()((theme) => {
                 fontWeight: "bold",
             }
         },
+        almaLink: {
+            textDecoration: "underline",
+
+            '&:link': {
+                color: "#C80404",
+            },
+            '&:hover': {
+                color: "#FC6969",
+            },
+            '&:active': {
+                color: "#FC6969",
+            },
+        }
     }
 })
 
@@ -124,7 +137,7 @@ export default function AlmaConditions() {
                                 <strong>{ `Cas particulier :` }</strong>
                                 { ` En cas de contrat de vente ou de prestation de services à exécution successive ou livré dans des délais assez longs, le Vendeur doit préciser dans ses CGV le moment de début de la livraison ou de la fourniture, pour plus de précisions vous pouvez contacter les équipes alma sur support@getalma.eu.` }
                             </li>
-                            <li className={ classes.textItem }><a href={ `https://help.almapay.com/` }>{ `Page de réclamation du site Alma` }</a></li>
+                            <li className={ classes.textItem }><a href={ `https://help.almapay.com/` } className={ classes.almaLink }>{ `Page de réclamation du site Alma` }</a></li>
                         </ol>
                     </div>
                 </article>
