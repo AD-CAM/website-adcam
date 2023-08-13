@@ -57,7 +57,11 @@ const useStyles = makeStyles()((theme) => {
 
         },
         textItem: {
+            marginBottom: theme.spacing(2),
 
+            '&::marker': {
+                fontWeight: "bold",
+            }
         },
     }
 })
@@ -84,19 +88,43 @@ export default function AlmaConditions() {
                     </div>
                     <div className={ classes.textRoot }>
                         <ol className={ classes.text }>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
-                            <li className={ classes.textItem }></li>
+                            <li className={ classes.textItem }>{ `Le Vendeur propose à ses Clients le service de crédit d’Alma pour le règlement de leurs achats et l’exécution du paiement. Cela est conditionné par l’acceptation par le Client des CGU ou du contrat de crédit proposé par Alma.` }</li>
+                            <li className={ classes.textItem }>{ `Tout refus d’octroi de crédit par Alma pour une commande pourra entraîner l’annulation de celle-ci.` }</li>
+                            <li className={ classes.textItem }>{ `Toute résiliation des CGV qui lient le Client et Le Vendeur entraîne la résiliation des CGU ou du contrat de crédit entre Alma et le Client.` }</li>
+                            <li className={ classes.textItem }>{ `Le paiement en trois / quatre fois est disponible via notre partenaire Alma. La sécurisation des paiements est assurée par Alma et ses prestataires. Tous les paiements sont protégés par le 3D Secure.` }</li>
+                            <li className={ classes.textItem }>
+                                <strong>{ `Montant des achats :` }</strong>
+                                { `Seuls les achats entre 50€ et 2000€ ont éligibles au paiement avec Alma.` }
+                            </li>
+                            <li className={ classes.textItem }>
+                                <strong>{ `Frais :` }</strong>
+                                { ` En payant en plusieurs fois avec Alma le Client ne paye pas des frais, sauf dans les cas suivants :` }
+
+                                <ul>
+                                    <li className={ classes.textItem }>{ `Pour le paiement en 2 fois = 0,71% frais client TTC et 3,61% TTC pour le professionnel)` }</li>
+                                    <li className={ classes.textItem }>{ `Pour le paiement en 3 fois = 1,46% frais client TTC et 3,10% TTC pour le professionnel)` }</li>
+                                    <li className={ classes.textItem }>{ `Pour le paiement en 4 fois = 2,21% frais client TTC et 3,55% TTC pour le professionnel)` }</li>
+                                </ul>
+                            </li>
+                            <li className={ classes.textItem }>{ `Alma est gestionnaire de télépaiement et délivre un certificat électronique qui vaudra preuve du montant et de la date de la transaction conformément aux dispositions des articles 1316 et suivants du code civil.` }</li>
+                            <li className={ classes.textItem }>
+                                <strong>{ `Résiliation :` }</strong>
+                                { ` Toute résiliation des CGV qui lient le Vendeur et le client, entraîne la résiliation des CGU ente Alma et le client.` }
+                            </li>
+                            <li className={ classes.textItem }>{ `Le montant est payé par un crédit octroyé par Alma SAS inscrit sur le REGAFI sous le numéro 90876.` }</li>
+                            <li className={ classes.textItem }>
+                                <strong>{ `Paiement :` }</strong>
+                                { ` Le paiement par crédit est disponible pour le règlement de leurs achats via notre partenaire Alma, l’exécution du paiement est conditionnée par la signature du contrat de crédit proposé par Alma. Le Vendeur accepte par anticipation l’octroi de crédit conclu entre Alma et le client conformément à l’article L312-46 du code de la consommation. Si Alma accepte d’octroyer le crédit au client, le montant sera payé par crédit conformément à l’article L312-45 du code de la consommation. Tout refus par Alma d’octroyer un crédit pour une commande pourra entraîner l’annulation de celle-ci, sauf si le client accepte de payer comptant. Toute résiliation des CGV qui lient le Vendeur et le client, entraîne la résiliation du contrat de crédit ente Alma et le client. En cas de rétractation, les frais et intérêts des Clients, leur seront remboursés conformément à la réglementation.` }
+                            </li>
+                            <li className={ classes.textItem }>
+                                <strong>{ `Sécurité :` }</strong>
+                                { ` La sécurisation des paiements est assurée par Alma et ses prestataires. Tous les paiements sont protégés par le 3D Secure. Alma est gestionnaire de télépaiement et délivre un certificat électronique qui vaudra preuve du montant et de la date de la transaction conformément aux dispositions des articles 1316 et suivants du code civil.` }
+                            </li>
+                            <li className={ classes.textItem }>
+                                <strong>{ `Cas particulier :` }</strong>
+                                { ` En cas de contrat de vente ou de prestation de services à exécution successive ou livré dans des délais assez longs, le Vendeur doit préciser dans ses CGV le moment de début de la livraison ou de la fourniture, pour plus de précisions vous pouvez contacter les équipes alma sur support@getalma.eu.` }
+                            </li>
+                            <li className={ classes.textItem }><a href={ `https://help.almapay.com/` }>{ `Page de réclamation du site Alma` }</a></li>
                         </ol>
                     </div>
                 </article>
