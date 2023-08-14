@@ -110,11 +110,11 @@ export default function LegalNotices() {
                         
                         
                         <h3 className={ classes.textTitle }>{ `3. Description des services fournis.` }</h3>
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Le site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` a pour objet de fournir une information concernant l’ensemble des activités de la société.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `AD CAM s’efforce de fournir sur le site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` des informations aussi précises que possible. Toutefois, il ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Tous les informations indiquées sur le site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.` }</p>
                         
                         
                         
