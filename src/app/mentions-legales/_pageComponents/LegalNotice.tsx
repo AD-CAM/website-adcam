@@ -135,11 +135,11 @@ export default function LegalNotices() {
                         
                         
                         <h3 className={ classes.textTitle }>{ `6. Limitations de responsabilité.` }</h3>
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `AD CAM ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ `, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `AD CAM ne pourra également être tenue responsable des dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ `.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. AD CAM se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, AD CAM se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).` }</p>
                         
                         
                         
