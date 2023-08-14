@@ -51,7 +51,8 @@ const useStyles = makeStyles()((theme) => {
             fill: "rgba(250, 80, 34, 1)"
         },
         textRoot: {
-
+            marginTop: theme.spacing(6),
+            marginBottom: theme.spacing(6),
         },
         text: {
 
