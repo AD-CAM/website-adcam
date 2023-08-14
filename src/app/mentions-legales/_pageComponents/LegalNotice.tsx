@@ -36,35 +36,30 @@ const useStyles = makeStyles()((theme) => {
                 width: "100%",   
             },
         },
-        subTitleRoot: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-        },
-        subTitle: {
-            fontWeight: 500,
-            fontSize: theme.typography.pxToRem(24),
-        },
-        almaTitle: {
-            maxHeight: "32px",
-
-            fill: "rgba(250, 80, 34, 1)"
-        },
         textRoot: {
-            marginTop: theme.spacing(6),
+            marginTop: theme.spacing(10),
             marginBottom: theme.spacing(6),
         },
-        text: {
+        textTitle: {
+            marginTop: theme.spacing(6),
 
+            fontSize: theme.typography.pxToRem(20),
+            fontWeight: 600,
         },
-        textItem: {
+        textParagraph: {
+            padding: 0,
+            margin: 0,
             marginBottom: theme.spacing(2),
-
-            '&::marker': {
-                fontWeight: "bold",
-            }
+            
+            fontSize: theme.typography.pxToRem(15),
         },
-        almaLink: {
+        textListing: {
+            padding: 0,
+            margin: 0,
+            
+            fontSize: theme.typography.pxToRem(15),
+        },
+        textLink: {
             textDecoration: "underline",
 
             '&:link': {
@@ -94,7 +89,113 @@ export default function LegalNotices() {
                     
 
                     <div className={ classes.textRoot }>
+                        <h3 className={ classes.textTitle }>{ `1. Présentation du site.` }</h3>
+                        <p className={ classes.textParagraph }>{ `En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi :` }</p>
+
+                        <p className={ classes.textListing }><strong>{ `Propriétaire : ` }</strong>{ `AD CAM – N° de SIRET 89842578000019 – 7 impasse du Brault – 45760 – Vennecy – France` }</p>
+                        <p className={ classes.textListing }><strong>{ `Webmaster & Créateur : ` }</strong>{ `Florian Douay - contact@florian-douay.fr` }</p>
+                        <p className={ classes.textListing }><strong>{ `Responsable publication : ` }</strong>{ `Aurélien Duval – contact@ad-cam.fr` }</p>
+                        <p className={ classes.textListing }>{ `Le responsable publication est une personne physique ou une personne morale.` }</p>
+                        <p className={ classes.textListing }><strong>{ `Hébergeur : ` }</strong>{ `Vercel Inc. - San Francisco, CA` }</p>
+
+
+
+                        <h3 className={ classes.textTitle }>{ `2. Conditions générales d’utilisation du site et des services proposés.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
                         
+                        
+                        <h3 className={ classes.textTitle }>{ `3. Description des services fournis.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `4. Limitations contractuelles sur les données techniques.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `5. Propriété intellectuelle et contrefaçons.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `6. Limitations de responsabilité.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `7. Gestion des données personnelles.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `8. Liens hypertextes et cookies.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `9. Droit applicable et attribution de juridiction.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `10. Les principales lois concernées.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        
+                        
+                        
+                        <h3 className={ classes.textTitle }>{ `11. Lexique.` }</h3>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+
+
                     </div>
                 </article>
 
