@@ -119,9 +119,9 @@ export default function LegalNotices() {
                         
                         
                         <h3 className={ classes.textTitle }>{ `4. Limitations contractuelles sur les données techniques.` }</h3>
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Le site utilise la technologie JavaScript.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour` }</p>
                         
                         
                         
