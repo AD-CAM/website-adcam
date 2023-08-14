@@ -144,19 +144,19 @@ export default function LegalNotices() {
                         
                         
                         <h3 className={ classes.textTitle }>{ `7. Gestion des données personnelles.` }</h3>
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l’article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `A l’occasion de l’utilisation du site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ `, peuvent êtres recueillies : l’URL des liens par l’intermédiaire desquels l’utilisateur a accédé au site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ `, le fournisseur d’accès de l’utilisateur, l’adresse de protocole Internet (IP) de l’utilisateur.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `En tout état de cause AD CAM ne collecte des informations personnelles relatives à l’utilisateur que pour le besoin de certains services proposés par le site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ `. L’utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu’il procède par lui-même à leur saisie. Il est alors précisé à l’utilisateur du site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` l’obligation ou non de fournir ces informations.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, tout utilisateur dispose d’un droit d’accès, de rectification et d’opposition aux données personnelles le concernant, en effectuant sa demande écrite et signée, accompagnée d’une copie du titre d’identité avec signature du titulaire de la pièce, en précisant l’adresse à laquelle la réponse doit être envoyée.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Aucune information personnelle de l’utilisateur du site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` n’est publiée à l’insu de l’utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l’hypothèse du rachat de AD CAM et de ses droits permettrait la transmission des dites informations à l’éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l’utilisateur du site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ `.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Le site n’est pas déclaré à la CNIL car il ne recueille pas d’informations personnelles.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.` }</p>
                         
                         
                         
