@@ -126,11 +126,11 @@ export default function LegalNotices() {
                         
                         
                         <h3 className={ classes.textTitle }>{ `5. Propriété intellectuelle et contrefaçons.` }</h3>
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `AD CAM est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : AD CAM.` }</p>
 
-                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <p className={ classes.textParagraph }>{ `Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.` }</p>
                         
                         
                         
