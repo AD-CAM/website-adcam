@@ -74,16 +74,12 @@ const useStyles = makeStyles()((theme) => {
             height: "100%",
             width: "auto",
         },
-        nav: {
-            position: "absolute",
-            left: "50%",
-            transform: "translateX(-50%)",
-
+        buttonsRoot: {
             display: "flex",
-            alignItems: "flex-end",
-            justifyContent: "center",
+            alignItems: "center",
+            justifyContent: "space-between",
 
-            height: "60%",
+            width: "250px",
         },
     }
 })
@@ -114,22 +110,13 @@ export default function Header({ activePage }: HeaderProps) {
                 
                 {
                     !isSmallScreen  ? (
-                                        <>
-                                            <nav className={ classes.nav }>
-                                                {
-                                                    pageList.map(({ name, link, text }) => (
-                                                        <NavLinkHeader  key={ name }
-                                                                        isActive={ activePage === name }
-                                                                        link={ link }
-                                                                        linkText={ text } />
-                                                    ))
-                                                }
-                                            </nav>
+                                        <div className={ classes.buttonsRoot }>
                                             <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
-                                        </>
+                                            <HamburgerNav activePage={ activePage } hasButton={ false } />
+                                        </div>
                                     ) : (
                                         <>
-                                            <HamburgerNav activePage={ activePage } />
+                                            <HamburgerNav activePage={ activePage } hasButton={ true } />
                                         </>
                                     )
                 }
