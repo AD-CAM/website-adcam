@@ -110,12 +110,13 @@ const useStyles = makeStyles()((theme) => {
 })
 
 interface HamburgerNavProps {
-    activePage: string
+    activePage: string,
+    hasButton: boolean
 }
 
 
 
-function HamburgerNav({ activePage }: HamburgerNavProps) {
+function HamburgerNav({ activePage, hasButton }: HamburgerNavProps) {
     const { classes } = useStyles()
 
     const [isOpen, setIsOpen] = useState(false)
@@ -156,9 +157,12 @@ function HamburgerNav({ activePage }: HamburgerNavProps) {
                     ))
                 }
 
-                <div className={ classes.navButtonContainer }>
-                    <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
-                </div>
+                { 
+                    hasButton &&  
+                                <div className={ classes.navButtonContainer }>
+                                    <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
+                                </div>
+                }
             </motion.nav>
         </>
     )
