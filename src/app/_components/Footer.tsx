@@ -31,7 +31,6 @@ const useStyles = makeStyles()((theme) => {
             height: "auto",
             marginTop: theme.spacing(5),
             paddingTop: theme.spacing(4),
-            paddingBottom: theme.spacing(4),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
             
@@ -54,7 +53,7 @@ const useStyles = makeStyles()((theme) => {
                 flexWrap: "wrap",
             },
             [theme.breakpoints.up('lg')]: {
-                flexWrap: "nowrap",
+                flexWrap: "wrap",
             },
         },
         logoRoot: {
@@ -195,6 +194,24 @@ const useStyles = makeStyles()((theme) => {
                 marginLeft: theme.spacing(2),
             },
         },
+        copyright: {
+            alignSelf: "flex-end",
+            flexBasis: "100%",
+
+            width: "100vw",
+
+            fontSize: theme.typography.pxToRem(15),
+            fontWeight: 600,
+            textAlign: "center",
+
+            backgroundColor: "rgba(0, 0, 0, 0.6)",
+            color: "#FFF",
+
+            marginTop: theme.spacing(5),
+            marginBottom: 0,
+            paddingTop: theme.spacing(1),
+            paddingBottom: theme.spacing(1),
+        }
     }
 })
 
@@ -279,6 +296,10 @@ export default function Footer() {
                 <FooterConditions />
             </div>
             <ContactForm location={ "footer" } />
+
+            <p className={ classes.copyright }>
+                AD CAM © { new Date().getFullYear() } - Tous droits réservés
+            </p>
         </footer>
     )
 }
