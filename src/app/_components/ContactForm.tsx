@@ -38,6 +38,7 @@ const useStyles = makeStyles()((theme) => {
             color: "#FFFFFF",
 
             [theme.breakpoints.down('sm')]: {
+                flexBasis: "auto",
                 boxSizing: "border-box",
 
                 width: "100%",
@@ -48,6 +49,12 @@ const useStyles = makeStyles()((theme) => {
             },
             [theme.breakpoints.up('sm')]: {
                 width: "30%",
+            },
+            [theme.breakpoints.down('lg')]: {
+                flexBasis: "60%",
+            },
+            [theme.breakpoints.up('lg')]: {
+                flexBasis: "auto",
             },
         },
         genericRoot: {
@@ -113,6 +120,12 @@ const useStyles = makeStyles()((theme) => {
                 minHeight: theme.spacing(16),
             },
             [theme.breakpoints.up('sm')]: {
+                minHeight: theme.spacing(8),
+            },
+            [theme.breakpoints.down('lg')]: {
+                minHeight: theme.spacing(16),
+            },
+            [theme.breakpoints.up('lg')]: {
                 minHeight: theme.spacing(8),
             },
         },

@@ -39,6 +39,7 @@ const useStyles = makeStyles()((theme) => {
 
             [theme.breakpoints.down('sm')]: {
                 flexDirection: "column",
+                flexWrap: "nowrap",
 
                 height: "auto",
 
@@ -48,6 +49,12 @@ const useStyles = makeStyles()((theme) => {
                 flexDirection: "row",
                 
                 background: "linear-gradient(350deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)",
+            },
+            [theme.breakpoints.down('lg')]: {
+                flexWrap: "wrap",
+            },
+            [theme.breakpoints.up('lg')]: {
+                flexWrap: "nowrap",
             },
         },
         logoRoot: {
@@ -60,13 +67,29 @@ const useStyles = makeStyles()((theme) => {
             width: "auto",
 
             [theme.breakpoints.down('sm')]: {
+                flexBasis: "auto",
                 flexDirection: "column",
                 alignItems: "center",
+                justifyContent: "space-between",
 
                 height: "auto",
+
+                marginBottom: 0,
             },
             [theme.breakpoints.up('sm')]: {
                 flexDirection: "row",      
+            },
+            [theme.breakpoints.down('lg')]: {
+                flexBasis: "45%",
+                justifyContent: "center",
+
+                marginBottom: theme.spacing(10),
+            },
+            [theme.breakpoints.up('lg')]: {
+                flexBasis: "auto",
+                justifyContent: "space-between",
+
+                marginBottom: 0,
             },
         },
         logoImage: {
@@ -116,8 +139,16 @@ const useStyles = makeStyles()((theme) => {
         footerNavContainer: {
             display: "flex",
             alignItems: "flex-start",
-            justifyContent: "flex-start",
-            flexWrap: "wrap",
+            justifyContent: "center",
+
+            [theme.breakpoints.down('lg')]: {
+                flexDirection: "row",
+                flexBasis: "45%",
+            },
+            [theme.breakpoints.up('lg')]: {
+                flexDirection: "row",
+                flexBasis: "auto",
+            },
         },
         footerNavRoot: {
             display: "flex",
@@ -130,17 +161,18 @@ const useStyles = makeStyles()((theme) => {
                 width: "100%",
             },
             [theme.breakpoints.up('sm')]: {
-                height: "100%",     
+                height: "100%",
             },
         },
         footerNavTitle: {
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
+            alignItems: "flex-start",
+            justifyContent: "flex-start",
 
             marginTop: 0,
             marginBottom: theme.spacing(2),
+            marginLeft: theme.spacing(2),
 
             color: "#FFF",
 
