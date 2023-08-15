@@ -77,9 +77,13 @@ const useStyles = makeStyles()((theme) => {
                 marginBottom: 0,
             },
             [theme.breakpoints.up('sm')]: {
-                flexDirection: "row",      
+                flexBasis: "100%",
+                justifyContent: "center",
+                flexDirection: "row",
+                
+                marginBottom: theme.spacing(8),
             },
-            [theme.breakpoints.down('lg')]: {
+            [theme.breakpoints.up('md')]: {
                 flexBasis: "45%",
                 justifyContent: "center",
 
@@ -141,7 +145,17 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "flex-start",
             justifyContent: "center",
 
-            [theme.breakpoints.down('lg')]: {
+            [theme.breakpoints.down('sm')]: {
+                flexDirection: "column",
+                flexBasis: "auto",
+            },
+            [theme.breakpoints.up('sm')]: {
+                flexDirection: "row",
+                flexBasis: "100%",
+
+                marginBottom: theme.spacing(8),
+            },
+            [theme.breakpoints.up('md')]: {
                 flexDirection: "row",
                 flexBasis: "45%",
             },
@@ -157,7 +171,8 @@ const useStyles = makeStyles()((theme) => {
             [theme.breakpoints.down('sm')]: {
                 alignItems: "flex-start",
 
-                paddingLeft: theme.spacing(6),
+                marginTop: theme.spacing(6),
+                paddingLeft: theme.spacing(3),
                 width: "100%",
             },
             [theme.breakpoints.up('sm')]: {
