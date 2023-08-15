@@ -53,6 +53,7 @@ const useStyles = makeStyles()((theme) => {
         genericRoot: {
         },
         formTitle: {
+            marginTop: 0,
             width: "100%",
             fontWeight: 600,
         },

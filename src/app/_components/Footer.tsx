@@ -21,14 +21,14 @@ const useStyles = makeStyles()((theme) => {
     return {
         root: {
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "space-around",
 
             position: "relative",
             zIndex: 4,
 
             width: "100%",
-            height: theme.spacing(28),
+            height: "auto",
             marginTop: theme.spacing(5),
             paddingTop: theme.spacing(4),
             paddingBottom: theme.spacing(4),
@@ -53,6 +53,8 @@ const useStyles = makeStyles()((theme) => {
         logoRoot: {
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            
             
             height: "100%",
             width: "auto",
@@ -78,7 +80,7 @@ const useStyles = makeStyles()((theme) => {
                 marginBottom: theme.spacing(2),
             },
             [theme.breakpoints.up('sm')]: {
-                height: "60%",
+                height: "140px",
                 width: "auto",
                 
                 marginRight: theme.spacing(4),
@@ -111,11 +113,15 @@ const useStyles = makeStyles()((theme) => {
 
             width: "100%",
         },
+        footerNavContainer: {
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "flex-start",
+            flexWrap: "wrap",
+        },
         footerNavRoot: {
             display: "flex",
             flexDirection: "column",
-
-            marginTop: theme.spacing(5),
 
             [theme.breakpoints.down('sm')]: {
                 alignItems: "flex-start",
@@ -221,8 +227,10 @@ export default function Footer() {
                     <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/ajax-fibra_certificate.pdf' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
                 </div>
             </div>
-            <FooterNavigation />
-            <FooterConditions />
+            <div className={ classes.footerNavContainer }>
+                <FooterNavigation />
+                <FooterConditions />
+            </div>
             <ContactForm location={ "footer" } />
         </footer>
     )
