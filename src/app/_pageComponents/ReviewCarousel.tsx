@@ -43,14 +43,14 @@ const useStyles = makeStyles()((theme) => {
 
             boxSizing: "border-box",
 
-            paddingLeft: theme.spacing(6),
-            paddingRight: theme.spacing(6),
-
             [theme.breakpoints.down('sm')]: {
                 maxWidth: "90%",
             },
             [theme.breakpoints.up('sm')]: {
-                maxWidth: "864px",   
+                maxWidth: "864px",
+
+                paddingLeft: theme.spacing(6),
+                paddingRight: theme.spacing(6),
             },
         },
         ratingTitleRoot: {

@@ -39,11 +39,13 @@ const useStyles = makeStyles()((theme) => {
 
             boxSizing: "border-box",
 
-            paddingLeft: theme.spacing(6),
-            paddingRight: theme.spacing(6),
-
             width: "100%",
             maxWidth: "1450px",
+
+            [theme.breakpoints.up('sm')]: {
+                paddingLeft: theme.spacing(6),
+                paddingRight: theme.spacing(6),   
+            },
         },
         titleRoot: {
             width: "100%",

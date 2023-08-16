@@ -69,6 +69,7 @@ const useStyles = makeStyles()((theme) => {
                 flexBasis: "auto",
                 flexDirection: "column",
                 alignItems: "center",
+                alignSelf: "center",
                 justifyContent: "space-between",
 
                 height: "auto",
