@@ -91,6 +91,7 @@ const useStyles = makeStyles()((theme) => {
         },
         text: {
             fontSize: theme.typography.pxToRem(15),
+        
             overflow: "hidden",
             textOverflow: "ellipsis",
 
