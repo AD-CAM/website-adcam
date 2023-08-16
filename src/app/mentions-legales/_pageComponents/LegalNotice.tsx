@@ -14,17 +14,30 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
 
             width: "100%",
-            paddingTop: theme.spacing(10),
 
             boxShadow: "0px -50px 25px -50px rgba(0, 0, 0, 0.3)",
+
+            [theme.breakpoints.down('sm')]: {
+                paddingTop: theme.spacing(24),   
+            },
+            [theme.breakpoints.up('sm')]: {
+                paddingTop: theme.spacing(10),   
+            },
         },
         subRoot: {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
 
+            boxSizing: "border-box",
+
             width: "100%",
             maxWidth: "1024px",
+
+            [theme.breakpoints.up('sm')]: {
+                paddingLeft: theme.spacing(6),
+                paddingRight: theme.spacing(6),   
+            },
         },
         mainArticle: {  
             color: "rgba(41, 41, 41, 1)",
