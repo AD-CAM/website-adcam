@@ -37,6 +37,11 @@ const useStyles = makeStyles()((theme) => {
             flexDirection: "column",
             alignItems: "center",
 
+            boxSizing: "border-box",
+
+            paddingLeft: theme.spacing(6),
+            paddingRight: theme.spacing(6),
+
             width: "100%",
             maxWidth: "1450px",
         },
@@ -61,8 +66,11 @@ const useStyles = makeStyles()((theme) => {
                 flexDirection: "column",
             },
             [theme.breakpoints.up('sm')]: {
+                flexWrap: "wrap",
+            },
+            [theme.breakpoints.up('lg')]: {
                 alignItems: "flex-start",
-                flexDirection: "row",      
+                flexDirection: "row",     
             },
         },
         cardRoot: {
@@ -84,6 +92,11 @@ const useStyles = makeStyles()((theme) => {
                 marginBottom: theme.spacing(8),
             },
             [theme.breakpoints.up('sm')]: {
+                flexDirection: "column",
+
+                maxWidth: "45%",     
+            },
+            [theme.breakpoints.up('lg')]: {
                 flexDirection: "column",
 
                 maxWidth: "20%",     

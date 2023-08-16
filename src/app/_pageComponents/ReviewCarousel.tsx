@@ -42,6 +42,11 @@ const useStyles = makeStyles()((theme) => {
         titleRoot: {
             width: "100%",
 
+            boxSizing: "border-box",
+
+            paddingLeft: theme.spacing(6),
+            paddingRight: theme.spacing(6),
+
             [theme.breakpoints.down('sm')]: {
                 maxWidth: "90%",
             },

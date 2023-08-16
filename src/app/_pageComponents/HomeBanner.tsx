@@ -55,6 +55,9 @@ const useStyles = makeStyles()((theme) => {
                 fontSize: theme.typography.pxToRem(26),
             },
             [theme.breakpoints.up('sm')]: {
+                fontSize: theme.typography.pxToRem(28), 
+            },
+            [theme.breakpoints.up('lg')]: {
                 fontSize: theme.typography.pxToRem(40), 
             },
         },
@@ -68,6 +71,9 @@ const useStyles = makeStyles()((theme) => {
                 fontSize: theme.typography.pxToRem(18),
             },
             [theme.breakpoints.up('sm')]: {
+                fontSize: theme.typography.pxToRem(18), 
+            },
+            [theme.breakpoints.up('lg')]: {
                 fontSize: theme.typography.pxToRem(22), 
             },
         },
@@ -88,6 +94,11 @@ const useStyles = makeStyles()((theme) => {
                 width: "80%",
             },
             [theme.breakpoints.up('sm')]: {
+                justifyContent: "space-evenly",
+
+                width: "65%",
+            },
+            [theme.breakpoints.up('lg')]: {
                 justifyContent: "space-evenly",
 
                 width: "40%",

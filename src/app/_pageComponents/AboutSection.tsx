@@ -14,7 +14,10 @@ const useStyles = makeStyles()((theme) => {
             flexDirection: "column",
             alignItems: "center",
 
+            boxSizing: "border-box",
+
             width: "100%",
+
             paddingTop: theme.spacing(10),
 
             boxShadow: "0px -50px 25px -50px rgba(0, 0, 0, 0.3)",
@@ -23,6 +26,12 @@ const useStyles = makeStyles()((theme) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+
+            boxSizing: "border-box",
+
+            paddingLeft: theme.spacing(6),
+            paddingRight: theme.spacing(6),
+
             maxWidth: "1450px",
         },
         imageContainer: {
