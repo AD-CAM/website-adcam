@@ -42,7 +42,7 @@ const useStyles = makeStyles()((theme) => {
                 borderRadius: "0",
             },
             [theme.breakpoints.up('sm')]: {
-                borderRadius: theme.spacing(2),  
+                borderRadius: theme.spacing(0.75),  
             },
         },
         bannerTitle: {

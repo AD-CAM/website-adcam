@@ -85,7 +85,7 @@ const useStyles = makeStyles()((theme) => {
             width: "auto",
             padding: theme.spacing(1.2),
 
-            borderRadius: theme.spacing(1),
+            borderRadius: theme.spacing(0.75),
             border: "2px solid",
 
             backgroundColor: "rgba(255, 255, 255, 1)",
@@ -103,7 +103,7 @@ const useStyles = makeStyles()((theme) => {
             width: "auto",
             padding: theme.spacing(1.2),
 
-            borderRadius: theme.spacing(1),
+            borderRadius: theme.spacing(0.75),
             border: "2px solid",
 
             backgroundColor: "rgba(255, 255, 255, .5)",

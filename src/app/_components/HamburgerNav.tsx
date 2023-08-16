@@ -59,7 +59,7 @@ const useStyles = makeStyles()((theme) => {
             padding: theme.spacing(1.2),
             marginRight: theme.spacing(1),
 
-            borderRadius: theme.spacing(1),
+            borderRadius: theme.spacing(0.75),
             border: "2px solid",
             outline: "none",
 
