@@ -64,7 +64,7 @@ interface CarouselProps {
 export default function Carousel({ children }: CarouselProps) {
     const { classes } = useStyles()
 
-    const [activeIndex, setActiveIndex] = useState(Math.floor(children.length / 2))
+    const [activeIndex, setActiveIndex] = useState(1)
     const handleNext = () => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % children.length);
     }

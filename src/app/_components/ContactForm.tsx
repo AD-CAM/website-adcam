@@ -33,8 +33,6 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "space-between",
             flexWrap: "wrap",
 
-            
-
             color: "#FFFFFF",
 
             [theme.breakpoints.down('sm')]: {
@@ -96,6 +94,7 @@ const useStyles = makeStyles()((theme) => {
         messageLabel: {
             width: "100%",
 
+            marginTop: theme.spacing(1),
             marginLeft: theme.spacing(0.5),
 
             fontSize: theme.typography.pxToRem(14),

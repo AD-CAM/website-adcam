@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 /* Utils & Data Imports */
 import { ReviewInfo } from "../_types/dataFiles"
@@ -5,7 +6,6 @@ const reviewList: ReviewInfo[] = require("../_data/reviewList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { Variants, motion } from "framer-motion"
-import Image from "next/image"
 /* Components Imports */
 
 
@@ -67,6 +67,28 @@ const useStyles = makeStyles()((theme) => {
 
             margin: 0,
             padding: 0,
+        },
+        rating: {
+            display: "flex",
+            alignSelf: "flex-start",
+
+            marginTop: theme.spacing(2),
+        },
+        star: {
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+
+            marginRight: "2px",
+
+            width: "17px",
+            height: "17px",
+        },
+        textRoot: {
+            overflowY: "hide"
+        },
+        text: {
+            fontSize: theme.typography.pxToRem(15),
+            overflow: "ellipsis",
         }
     }
 })
@@ -97,6 +119,16 @@ interface ReviewProps {
 export default function Review({ name, photo, rating, text, time }: ReviewProps) {
     const { classes } = useStyles()
 
+    const ratingArray = []
+    for(let i = 1; i <= 5; i++) {
+        if(rating >= i) {
+            ratingArray.push(true)
+        } else {
+            ratingArray.push(false)
+        }
+    }
+
+
     return (      
         <motion.article className={ classes.root }
                         variants={ reviewVariants }
@@ -112,6 +144,25 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
                     <p className={ classes.name }>{ name }</p>
                     <p className={ classes.date }>{ time }</p>
                 </div>
+            </div>
+
+            <div className={ classes.rating }>
+                {
+                    ratingArray.map((star, index) => {
+                        return (
+                            <div key={ index } className={ classes.star } style={ star ?    {
+                                                                                                backgroundImage: "url(https://cdn.trustindex.io/assets/platform/Google/star/f.svg)",
+                                                                                            } : {
+                                                                                                backgroundImage: "url(https://cdn.trustindex.io/assets/platform/Google/star/e.svg)",
+                                                                                            }}>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+
+            <div className={ classes.textRoot }>
+                <p className={ classes.text }>{ text }</p>
             </div>
         </motion.article> 
     )
