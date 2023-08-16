@@ -43,7 +43,7 @@ export default function ReviewCarousel() {
     return (      
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
-                <Carousel maxDistanceSeen={ 1 } displayCentered={ false }> 
+                <Carousel maxDistanceSeen={ 1 } displayCentered={ true }> 
                 {
                     reviewList.map((review, index) => {
                         return <Review key={index} name={review.author_name} photo={review.profile_photo_url} rating={review.rating} text={review.text} time={review.time} />

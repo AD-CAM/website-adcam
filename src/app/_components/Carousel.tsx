@@ -6,6 +6,7 @@ import { makeStyles } from 'tss-react/mui'
 /* Icons Imports */
 import { MdArrowBackIosNew } from "react-icons/md"
 import { MdArrowForwardIos } from "react-icons/md"
+import { motion, Variants } from "framer-motion"
 
 
 
@@ -22,35 +23,15 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
             maxWidth: "100%",
         },
-        buttonLeft: {
+        button: {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
         
             position: "absolute",
-            left: "-10px",
 
             backgroundColor: "transparent",
-            opacity: 0.7,
-            border: "none",
-            outline: "none",
-            width: "auto",
-            fontSize: theme.typography.pxToRem(36),
-
-            cursor: "pointer",
-
-            zIndex: 10,
-        },
-        buttonRight: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-        
-            position: "absolute",
-            right: "-10px",
-
-            backgroundColor: "transparent",
-            opacity: 0.7,
+            opacity: 0.5,
             border: "none",
             outline: "none",
             width: "auto",
@@ -69,8 +50,6 @@ const useStyles = makeStyles()((theme) => {
 
             width: "95%",
             maxWidth: "95%",
-
-            overflow: "hidden",
         },
         slide: {
             position: "relative",
@@ -84,6 +63,24 @@ const useStyles = makeStyles()((theme) => {
         }
     }
 })
+
+
+
+const buttonVariants: Variants = {
+    rest: {
+        scale: 1,
+        transition: { duration: 0.1 }
+    },
+    hover: {
+        scale: 1.3,
+        transition: { duration: 0.1 }
+    },
+    click: {
+        scale: 0.9,
+    }
+}
+
+
 
 interface CarouselProps {
     children: ReactNode[],
@@ -185,9 +182,17 @@ export default function Carousel({ children, maxDistanceSeen, displayCentered }:
 
     return (      
         <div className={ classes.root}>
-            <button className={ classes.buttonLeft } onClick={ handlePrevious }>
+            <motion.button  className={ classes.button }
+                            onClick={ handlePrevious }
+                            style={{ left: "-10px" }}
+
+                            variants={ buttonVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileTap="click"
+            >
                 <MdArrowBackIosNew />
-            </button>
+            </motion.button>
                 <div className={ classes.content }>
                     {
                         children.map((child, index) => {
@@ -207,9 +212,17 @@ export default function Carousel({ children, maxDistanceSeen, displayCentered }:
                         })
                     }
                 </div>
-            <button className={ classes.buttonRight } onClick={ handleNext }>
+            <motion.button  className={ classes.button } 
+                            onClick={ handleNext }
+                            style={{ right: "-10px" }}
+
+                            variants={ buttonVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileTap="click"
+            >
                 <MdArrowForwardIos />
-            </button>
+            </motion.button>
         </div> 
     )
 }

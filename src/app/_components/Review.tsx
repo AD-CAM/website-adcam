@@ -173,7 +173,7 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
             </div>
 
             <div className={ classes.textRoot }>
-                <p className={ classes.text } dataInitialHeight="80">{ text }</p>
+                <p className={ classes.text }>{ text }</p>
             </div>
         </motion.article> 
     )
