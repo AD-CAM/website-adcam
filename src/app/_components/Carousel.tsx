@@ -124,7 +124,7 @@ export default function Carousel({ children, maxDistanceSeen, displayCentered }:
     }
 
 
-    const [activeIndex, setActiveIndex] = useState(1)
+    const [activeIndex, setActiveIndex] = useState(0)
     const handleNext = () => {
         setActiveIndex((prevIndex) => handleSliding(true, prevIndex));
     }

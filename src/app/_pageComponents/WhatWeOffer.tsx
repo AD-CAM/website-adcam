@@ -29,7 +29,7 @@ const useStyles = makeStyles()((theme) => {
                 paddingTop: theme.spacing(2),
             },
             [theme.breakpoints.up('sm')]: {
-                paddingTop: theme.spacing(10),     
+                paddingTop: theme.spacing(10),    
             },
         },
         subRoot: {
