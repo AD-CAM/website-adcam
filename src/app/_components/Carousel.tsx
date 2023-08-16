@@ -3,7 +3,9 @@
 import { ReactNode, useState } from "react"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
-/* Components Imports */
+/* Icons Imports */
+import { MdArrowBackIosNew } from "react-icons/md"
+import { MdArrowForwardIos } from "react-icons/md"
 
 
 
@@ -15,20 +17,46 @@ const useStyles = makeStyles()((theme) => {
 
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
+            justifyContent: "center",
 
             width: "100%",
             maxWidth: "100%",
         },
         buttonLeft: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+        
             position: "absolute",
-            left: 0,
+            left: "-10px",
+
+            backgroundColor: "transparent",
+            opacity: 0.7,
+            border: "none",
+            outline: "none",
+            width: "auto",
+            fontSize: theme.typography.pxToRem(36),
+
+            cursor: "pointer",
 
             zIndex: 10,
         },
         buttonRight: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+        
             position: "absolute",
-            right: 0,
+            right: "-10px",
+
+            backgroundColor: "transparent",
+            opacity: 0.7,
+            border: "none",
+            outline: "none",
+            width: "auto",
+            fontSize: theme.typography.pxToRem(36),
+
+            cursor: "pointer",
 
             zIndex: 10,
         },
@@ -39,8 +67,10 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "space-around",
 
-            width: "100%",
-            maxWidth: "100%",
+            width: "95%",
+            maxWidth: "95%",
+
+            overflow: "hidden",
         },
         slide: {
             position: "relative",
@@ -155,7 +185,9 @@ export default function Carousel({ children, maxDistanceSeen, displayCentered }:
 
     return (      
         <div className={ classes.root}>
-            <button className={ classes.buttonLeft } onClick={ handlePrevious }>{ `<` }</button>
+            <button className={ classes.buttonLeft } onClick={ handlePrevious }>
+                <MdArrowBackIosNew />
+            </button>
                 <div className={ classes.content }>
                     {
                         children.map((child, index) => {
@@ -175,7 +207,9 @@ export default function Carousel({ children, maxDistanceSeen, displayCentered }:
                         })
                     }
                 </div>
-            <button className={ classes.buttonRight } onClick={ handleNext }>{ `>` }</button>
+            <button className={ classes.buttonRight } onClick={ handleNext }>
+                <MdArrowForwardIos />
+            </button>
         </div> 
     )
 }
