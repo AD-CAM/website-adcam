@@ -45,7 +45,7 @@ const useStyles = makeStyles()((theme) => {
             position: "relative",
 
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "space-around",
 
             width: "95%",

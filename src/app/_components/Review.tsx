@@ -6,6 +6,7 @@ const reviewList: ReviewInfo[] = require("../_data/reviewList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { Variants, motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
 /* Components Imports */
 
 
@@ -72,7 +73,7 @@ const useStyles = makeStyles()((theme) => {
             display: "flex",
             alignSelf: "flex-start",
 
-            marginTop: theme.spacing(2),
+            marginTop: theme.spacing(1.5),
         },
         star: {
             backgroundSize: "cover",
@@ -84,22 +85,40 @@ const useStyles = makeStyles()((theme) => {
             height: "17px",
         },
         textRoot: {
-            marginTop: theme.spacing(2),
+            marginTop: theme.spacing(1.5),
 
             width: "100%",
         },
         text: {
             fontSize: theme.typography.pxToRem(15),
-            display: "-webkit-box",
-            "-webkit-line-clamp": "4",
-            "-webkit-box-orient": "vertical",
             overflow: "hidden",
             textOverflow: "ellipsis",
 
             margin: 0,
 
-            maxHeight: "80px",
             width: "100%",
+        },
+        expandButton: {
+            alignSelf: "flex-start",
+
+            border: "none",
+            outline: "none",
+            backgroundColor: "transparent",
+
+            padding: 0,
+            margin: 0,
+            marginTop: theme.spacing(1.6),
+
+            fontSize: theme.typography.pxToRem(14),
+            fontWeight: 500,
+            opacity: 0.5,
+
+            cursor: "pointer",
+
+            "&:hover": {
+                opacity: .9,
+                textDecoration: "underline",
+            }
         }
     }
 })
@@ -112,6 +131,16 @@ const reviewVariants: Variants = {
     },
     hover: {
         transform: "translateY(-5px)"
+ 
+    }
+}
+
+const textVariants: Variants = {
+    collapsed: {
+        height: "80px",
+    },
+    expanded: {
+        height: "auto",
     }
 }
 
@@ -129,6 +158,17 @@ interface ReviewProps {
 
 export default function Review({ name, photo, rating, text, time }: ReviewProps) {
     const { classes } = useStyles()
+
+    const [expanded, setExpanded] = useState(false)
+    const [overflowing, setOverflowing] = useState(false)
+    const textRef = useRef<HTMLParagraphElement>(null)
+
+    useEffect(() => {
+        if(textRef.current) {
+            setOverflowing(textRef.current.scrollHeight > textRef.current.clientHeight)
+        }
+    }, [text])
+
 
     const ratingArray = []
     for(let i = 1; i <= 5; i++) {
@@ -173,8 +213,23 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
             </div>
 
             <div className={ classes.textRoot }>
-                <p className={ classes.text }>{ text }</p>
+                <motion.p   className={ classes.text }
+                            ref={ textRef }
+                            variants={ textVariants }
+
+                            initial={ expanded ? "collapsed" : "expanded" }
+                            animate={ expanded ? "expanded" : "collapsed" }
+                >
+                    { text }
+                </motion.p>
             </div>
+            {
+                (overflowing || expanded) && (
+                    <button className={ classes.expandButton } onClick={() => setExpanded(!expanded)}>
+                        { expanded ? "Cacher" : "Lire la suite" }
+                    </button>
+                )
+            }
         </motion.article> 
     )
 }
