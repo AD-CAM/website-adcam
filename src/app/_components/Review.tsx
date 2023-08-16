@@ -14,8 +14,6 @@ const useStyles = makeStyles()((theme) => {
         root: {
             height: "200px",
             width: "340px",
-            marginLeft: "5px",
-            marginRight: "5px",
 
             backgroundColor: "gray",
         }

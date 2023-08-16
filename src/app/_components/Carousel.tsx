@@ -45,7 +45,10 @@ const useStyles = makeStyles()((theme) => {
         slide: {
             position: "relative",
             
+            boxSizing: "border-box",
             width: "auto",
+            paddingLeft: "5px",
+            paddingRight: "5px",
 
             transition: "all 0.3s ease-in-out",
         }
@@ -62,14 +65,15 @@ export default function Carousel({ children }: CarouselProps) {
     const { classes } = useStyles()
 
     const [activeIndex, setActiveIndex] = useState(Math.floor(children.length / 2))
-
     const handleNext = () => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % children.length);
     }
-    
+
     const handlePrevious = () => {
         setActiveIndex((prevIndex) => (prevIndex - 1 + children.length) % children.length);
     }
+
+
 
     function isEven(): boolean {
         if(Math.floor(children.length / 2) - (children.length / 2) === 0) {
@@ -87,9 +91,12 @@ export default function Carousel({ children }: CarouselProps) {
         return Math.max(maxOpacity - distanceFromActive * 0.35, minOpacity)
     }
 
-
-
     const offset = Math.floor((children.length - 2) / 2) + 1
+
+
+
+
+    
 
     return (      
         <div className={ classes.root}>
@@ -103,7 +110,7 @@ export default function Carousel({ children }: CarouselProps) {
                                         style={ isEven()    ? { transform: `translateX(-50%) translateX(${(-activeIndex + offset) * 350}px)`,
                                                                 opacity: calculateOpacity(index)
                                                             }
-                                                            : { transform: `translateX(${(-activeIndex + offset) * 350}px)`,
+                                                            : { transform: `translateX(${(-activeIndex + offset) * 100}%)`,
                                                                 opacity: calculateOpacity(index)
                                                             }}
                                 >
