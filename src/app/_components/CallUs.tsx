@@ -21,7 +21,8 @@ const useStyles = makeStyles()((theme) => {
             backgroundColor: "#C80404",
 
             [theme.breakpoints.down('sm')]: {
-                height: theme.spacing(8),
+                minHeight: theme.spacing(8),
+                height: "auto",
             },
             [theme.breakpoints.up('sm')]: {
                 height: theme.spacing(5),
@@ -57,7 +58,7 @@ const useStyles = makeStyles()((theme) => {
 
             width: "100%",
 
-            fontSize: theme.typography.pxToRem(20),
+            fontSize: theme.typography.pxToRem(18),
             textAlign: "center",
         },
         mobilePhone: {
@@ -69,7 +70,7 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
 
             fontWeight: 800,
-            fontSize: theme.typography.pxToRem(24),
+            fontSize: theme.typography.pxToRem(22),
             textAlign: "center",
         },
     }

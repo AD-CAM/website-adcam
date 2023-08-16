@@ -91,7 +91,7 @@ const useStyles = makeStyles()((theme) => {
             [theme.breakpoints.down('sm')]: {
                 justifyContent: "space-between",
 
-                width: "80%",
+                width: "100%",
             },
             [theme.breakpoints.up('sm')]: {
                 justifyContent: "space-evenly",
