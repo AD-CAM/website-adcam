@@ -84,13 +84,14 @@ const buttonVariants: Variants = {
 
 interface CarouselProps {
     children: ReactNode[],
+    startingIndex: number,
     maxDistanceSeen: number,
     displayCentered: boolean
 }
 
 
 
-export default function Carousel({ children, maxDistanceSeen, displayCentered }: CarouselProps) {
+export default function Carousel({ children, startingIndex, maxDistanceSeen, displayCentered }: CarouselProps) {
     const { classes } = useStyles()
 
 
@@ -124,7 +125,7 @@ export default function Carousel({ children, maxDistanceSeen, displayCentered }:
     }
 
 
-    const [activeIndex, setActiveIndex] = useState(0)
+    const [activeIndex, setActiveIndex] = useState(startingIndex)
     const handleNext = () => {
         setActiveIndex((prevIndex) => handleSliding(true, prevIndex));
     }

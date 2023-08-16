@@ -97,6 +97,7 @@ const useStyles = makeStyles()((theme) => {
 
             margin: 0,
 
+            height: "80px",
             width: "100%",
         },
         expandButton: {
@@ -218,7 +219,7 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
                             ref={ textRef }
                             variants={ textVariants }
 
-                            initial={ expanded ? "collapsed" : "expanded" }
+                            initial="collapsed"
                             animate={ expanded ? "expanded" : "collapsed" }
                 >
                     { text }

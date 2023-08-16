@@ -123,7 +123,7 @@ export default function ReviewCarousel() {
                     <p className={ classes.starsBasedOn }>{ `Basée sur ` }<strong>{ `${reviewList.length} avis` }</strong></p>
                     <div className={ classes.googleLogo }></div>
                 </div>
-                <Carousel maxDistanceSeen={ 1 } displayCentered={ true }> 
+                <Carousel startingIndex={ 1 } maxDistanceSeen={ 1 } displayCentered={ true }> 
                 {
                     reviewList.map((review, index) => {
                         return <Review key={index} name={review.author_name} photo={review.profile_photo_url} rating={review.rating} text={review.text} time={review.time} />
