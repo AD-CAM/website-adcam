@@ -11,20 +11,42 @@ import { makeStyles } from 'tss-react/mui'
 const useStyles = makeStyles()((theme) => {
     return {
         root: {
+            position: "relative",
+
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
 
             width: "100%",
+            maxWidth: "100%",
         },
-        button: {
+        buttonLeft: {
+            position: "absolute",
+            left: 0,
 
+            zIndex: 10,
+        },
+        buttonRight: {
+            position: "absolute",
+            right: 0,
+
+            zIndex: 10,
         },
         content: {
+            position: "relative",
 
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-around",
+
+            width: "100%",
+            maxWidth: "100%",
         },
         slide: {
-            display: "flex",
+            position: "relative",
+            
+            width: "auto",
+
             transition: "transform 0.3s ease-in-out",
         }
     }
@@ -39,7 +61,7 @@ interface CarouselProps {
 export default function Carousel({ children }: CarouselProps) {
     const { classes } = useStyles()
 
-    const [activeIndex, setActiveIndex] = useState(children.length / 2)
+    const [activeIndex, setActiveIndex] = useState(Math.floor(children.length / 2))
 
     const handleNext = () => {
         setActiveIndex((prevIndex) => (prevIndex + 1) % children.length);
@@ -49,17 +71,35 @@ export default function Carousel({ children }: CarouselProps) {
         setActiveIndex((prevIndex) => (prevIndex - 1 + children.length) % children.length);
     }
 
-    
+    function isEven() {
+        if(Math.floor(children.length / 2) - (children.length / 2) === 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    const offset = Math.floor((children.length - 2) / 2)
 
     return (      
         <div className={ classes.root}>
-            <button className={ classes.button } onClick={ handlePrevious }>PREVIOUS</button>
+            <button className={ classes.buttonLeft } onClick={ handleNext }>{ `<` }</button>
                 <div className={ classes.content }>
-                    <div className={ classes.slide } style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
-                        { children }
-                    </div>
+                    {
+                        children.map((child, index) => {
+                            return (
+                                <div    key={ index }
+                                        className={ classes.slide }
+                                        style={ isEven()    ? { transform: `translateX(-50%) translateX(${(activeIndex - offset) * 350}px)` }
+                                                            : { transform: `translateX(${(activeIndex - offset - 1) * 350}px)` }}
+                                >
+                                    { child }
+                                </div>
+                            )
+                        })
+                    }
                 </div>
-            <button className={ classes.button } onClick={ handleNext }>NEXT</button>
+            <button className={ classes.buttonRight } onClick={ handlePrevious }>{ `>` }</button>
         </div> 
     )
 }

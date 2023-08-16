@@ -12,7 +12,12 @@ import { makeStyles } from 'tss-react/mui'
 const useStyles = makeStyles()((theme) => {
     return {
         root: {
+            height: "200px",
+            width: "340px",
+            marginLeft: "5px",
+            marginRight: "5px",
 
+            backgroundColor: "gray",
         }
     }
 })
@@ -31,8 +36,8 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
     const { classes } = useStyles()
 
     return (      
-        <article>
-            test
+        <article className={ classes.root }>
+            TEST
         </article> 
     )
 }
