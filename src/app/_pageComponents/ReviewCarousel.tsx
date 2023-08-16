@@ -1,11 +1,10 @@
 'use client'
-/* Assets Imports */
-
 /* Utils & Data Imports */
 import { ReviewInfo } from "../_types/dataFiles"
 const reviewList: ReviewInfo[] = require("../_data/reviewList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+import { useTheme, useMediaQuery } from "@mui/material"
 /* Components Imports */
 import SectionTitle from "../_components/SectionTitle"
 import Review from "../_components/Review"
@@ -92,6 +91,7 @@ const useStyles = makeStyles()((theme) => {
 
 
 export default function ReviewCarousel() {
+    const theme = useTheme()
     const { classes } = useStyles()
 
     const averageRating = reviewList.reduce((total, review) => total + review.rating, 0) / reviewList.length
@@ -105,6 +105,11 @@ export default function ReviewCarousel() {
             ratingArray.push("e")
         }
     }
+
+
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'))
+    const isStrictlyMediumScreen = !isSmallScreen && isMediumScreen
 
 
 
@@ -128,7 +133,7 @@ export default function ReviewCarousel() {
                     <p className={ classes.starsBasedOn }>{ `Basée sur ` }<strong>{ `${reviewList.length} avis` }</strong></p>
                     <div className={ classes.googleLogo }></div>
                 </div>
-                <Carousel startingIndex={ 1 } maxDistanceSeen={ 1 } displayCentered={ true }> 
+                <Carousel startingIndex={ isSmallScreen ? 0 : 1 } maxDistanceSeen={ isMediumScreen ? 0 : 1 } displayCentered={ isStrictlyMediumScreen ? false : true }> 
                 {
                     reviewList.map((review, index) => {
                         return <Review key={index} name={review.author_name} photo={review.profile_photo_url} rating={review.rating} text={review.text} time={review.time} />

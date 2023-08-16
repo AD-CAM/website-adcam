@@ -1,18 +1,14 @@
 'use client'
 /* Assets Imports */
 import adCamHeaderLogo from "/public/ad-cam_logo-title_nobg.png"
-/* Utils & Data Imports */
-import { PageInfo } from "../_types/dataFiles"
-const pageList: PageInfo[] = require("../_data/pageList.json")
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { useTheme, useMediaQuery } from "@mui/material"
 /* Components Imports */
 import Link from 'next/link'
 import Image from 'next/image'
-import { NavLinkHeader } from './NavLink'
 import { HamburgerNav } from "./HamburgerNav"
-import { IconButton, GoToButton } from "./Button"
+import { IconButton } from "./Button"
 
 
 
