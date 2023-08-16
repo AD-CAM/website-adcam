@@ -96,7 +96,7 @@ export default function Carousel({ children }: CarouselProps) {
 
 
 
-    
+
 
     return (      
         <div className={ classes.root}>
@@ -107,7 +107,7 @@ export default function Carousel({ children }: CarouselProps) {
                             return (
                                 <div    key={ index }
                                         className={ classes.slide }
-                                        style={ isEven()    ? { transform: `translateX(-50%) translateX(${(-activeIndex + offset) * 350}px)`,
+                                        style={ isEven()    ? { transform: `translateX(-50%) translateX(${(-activeIndex + offset) * 100}%)`,
                                                                 opacity: calculateOpacity(index)
                                                             }
                                                             : { transform: `translateX(${(-activeIndex + offset) * 100}%)`,
