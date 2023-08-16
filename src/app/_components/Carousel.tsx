@@ -56,37 +56,90 @@ const useStyles = makeStyles()((theme) => {
 })
 
 interface CarouselProps {
-    children: ReactNode[]
+    children: ReactNode[],
+    maxDistanceSeen: number,
+    displayCentered: boolean
 }
 
 
 
-export default function Carousel({ children }: CarouselProps) {
+export default function Carousel({ children, maxDistanceSeen, displayCentered }: CarouselProps) {
     const { classes } = useStyles()
 
-    const [activeIndex, setActiveIndex] = useState(1)
-    const handleNext = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % children.length);
-    }
-
-    const handlePrevious = () => {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + children.length) % children.length);
-    }
 
 
-
-    function isEven(): boolean {
-        if(Math.floor(children.length / 2) - (children.length / 2) === 0) {
+    function isEven(number: number): boolean {
+        if(Math.floor(number / 2) - (number / 2) === 0) {
             return true
         } else {
             return false
         }
     }
 
+    function handleSliding(isNext: boolean, prevIndex: number): number {
+        if(isNext){
+            if((prevIndex + 1) % children.length === 0 && !displayCentered) {
+                return 1
+            }
+            else {
+                return (prevIndex + 1) % children.length
+            }    
+        }
+        if(!isNext){
+            if((prevIndex - 1 + children.length) % children.length === 0 && !displayCentered) {
+                return children.length - 1
+            }
+            else {
+                return (prevIndex - 1 + children.length) % children.length
+            }    
+        }
+        return 0
+    }
+
+
+    const [activeIndex, setActiveIndex] = useState(1)
+    const handleNext = () => {
+        setActiveIndex((prevIndex) => handleSliding(true, prevIndex));
+    }
+
+    const handlePrevious = () => {
+        setActiveIndex((prevIndex) => handleSliding(false, prevIndex));
+    }
+
+
+
+    
+
+    function calculateCentering(): string {
+        if(displayCentered && isEven(children.length)){
+            return "-50%"
+        } else if(!displayCentered && isEven(children.length)){
+            return "0"
+        } else if(displayCentered && !isEven(children.length)){
+            return "0"
+        } else if(!displayCentered && !isEven(children.length)){
+            return "-50%"
+        }
+        return "0"
+    }
+
     function calculateOpacity(index: number): number {
-        const distanceFromActive = Math.abs(activeIndex - index)
+        let distanceFromActive = 0
+
+        if(displayCentered) {
+            distanceFromActive = Math.abs(activeIndex - index)
+        } else if(index >= activeIndex) {
+            distanceFromActive = index - activeIndex
+        } else if(index <= activeIndex) {
+            distanceFromActive = (activeIndex - 1) - index
+            
+        }
+
+        if (!displayCentered && index === activeIndex - 1){
+            return 1
+        }
         
-        if(distanceFromActive > 1) {
+        if(distanceFromActive > maxDistanceSeen) {
             return 0.1
         } else {
             return 1
@@ -109,12 +162,12 @@ export default function Carousel({ children }: CarouselProps) {
                             return (
                                 <div    key={ index }
                                         className={ classes.slide }
-                                        style={ isEven()    ? { transform: `translateX(-50%) translateX(${(-activeIndex + offset) * 100}%)`,
-                                                                opacity: calculateOpacity(index)
-                                                            }
-                                                            : { transform: `translateX(${(-activeIndex + offset) * 100}%)`,
-                                                                opacity: calculateOpacity(index)
-                                                            }}
+                                        style={ isEven(children.length) ? { transform: `translateX(${calculateCentering()}) translateX(${(-activeIndex + offset) * 100}%)`,
+                                                                            opacity: calculateOpacity(index)
+                                                                        }
+                                                                        : { transform: `translateX(${calculateCentering()}) translateX(${(-activeIndex + offset) * 100}%)`,
+                                                                            opacity: calculateOpacity(index)
+                                                                        }}
                                 >
                                     { child }
                                 </div>

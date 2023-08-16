@@ -21,7 +21,7 @@ const useStyles = makeStyles()((theme) => {
             borderRadius: "4px",
 
             padding: "20px",
-            height: "190px",
+            minHeight: "190px",
             width: "300px",
 
             backgroundColor: "#f4f4f4",
@@ -84,11 +84,22 @@ const useStyles = makeStyles()((theme) => {
             height: "17px",
         },
         textRoot: {
-            overflowY: "hide"
+            marginTop: theme.spacing(2),
+
+            width: "100%",
         },
         text: {
             fontSize: theme.typography.pxToRem(15),
-            overflow: "ellipsis",
+            display: "-webkit-box",
+            "-webkit-line-clamp": "4",
+            "-webkit-box-orient": "vertical",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+
+            margin: 0,
+
+            maxHeight: "80px",
+            width: "100%",
         }
     }
 })
@@ -162,7 +173,7 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
             </div>
 
             <div className={ classes.textRoot }>
-                <p className={ classes.text }>{ text }</p>
+                <p className={ classes.text } dataInitialHeight="80">{ text }</p>
             </div>
         </motion.article> 
     )
