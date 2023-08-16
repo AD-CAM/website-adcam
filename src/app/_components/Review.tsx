@@ -26,6 +26,15 @@ const useStyles = makeStyles()((theme) => {
 
             backgroundColor: "#f4f4f4",
         },
+        googleLogo: {
+            position: "absolute",
+            right: "20px",
+
+            backgroundImage: "url(https://cdn.trustindex.io/assets/platform/Google/icon.svg)",
+
+            width: "20px",
+            height: "20px",
+        },
         header: {
             display: "flex",
             alignItems: "center",
@@ -94,6 +103,9 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
                         initial="rest"
                         whileHover="hover"
         >
+            <div className={ classes.googleLogo }>
+            </div>
+
             <div className={ classes.header }>
                 <img decoding="async" className={ classes.profilePicture } src={ photo } alt={ `Photo de ${name}` } />
                 <div className={ classes.nameAndDateRoot }>

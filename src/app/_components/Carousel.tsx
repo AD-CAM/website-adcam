@@ -85,10 +85,12 @@ export default function Carousel({ children }: CarouselProps) {
 
     function calculateOpacity(index: number): number {
         const distanceFromActive = Math.abs(activeIndex - index)
-        const maxOpacity = 1
-        const minOpacity = 0.1
         
-        return Math.max(maxOpacity - distanceFromActive * 0.35, minOpacity)
+        if(distanceFromActive > 1) {
+            return 0.1
+        } else {
+            return 1
+        }
     }
 
     const offset = Math.floor((children.length - 2) / 2) + 1
