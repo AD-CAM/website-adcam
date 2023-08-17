@@ -7,6 +7,7 @@ import Header from '../_components/Header'
 import Footer from '../_components/Footer'
 import Banner from '../_components/Banner'
 /* Page Components Imports */
+import FirstSection from './_pageComponents/FirstSection'
 
 
 
@@ -17,6 +18,7 @@ export default function AlarmPage() {
             <CallUs />
             <main>
                 <Banner image={ alarmBannerPhoto } isSmall={ true } />
+                <FirstSection />
             </main>
             <Footer />
         </>
