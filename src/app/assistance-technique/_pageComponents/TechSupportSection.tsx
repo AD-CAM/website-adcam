@@ -99,6 +99,7 @@ const useStyles = makeStyles()((theme) => {
         tutorialList: {
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
+            marginBottom: 0,
             maxWidth: "100%",
         },
         tutorialListEntry: {
@@ -230,7 +231,7 @@ export default function TechSupportSection() {
                             <div className={ classes.agentRoot }>
                                 <MdOutlineSupportAgent />
                             </div>
-                            <h3 className={ classes.articleTitle }>{ `Gratuite et illimitée notre équipe technique est à votre service` }</h3>
+                            <h3 className={ classes.articleTitle }>{ `Gratuite et illimitée, notre équipe technique est à votre service` }</h3>
                             <p className={ classes.articleText }>{ `Notre équipe technique est à votre service durant toute la durée de vie de votre matériel. Que ce soit pour un système de vidéo surveillance ou pour un système d’alarme, vous pouvez demander notre aide à tout moment.` }</p>
                         </div>
                     </article>
