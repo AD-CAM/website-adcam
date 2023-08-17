@@ -6,7 +6,7 @@ import CallUs from '../_components/CallUs'
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
 /* Page Components Imports */
-import Banner from './_pageComponents/Banner'
+import Banner from '../_components/Banner'
 import FormSection from './_pageComponents/FormSection'
 import MapSection from './_pageComponents/MapSection'
 

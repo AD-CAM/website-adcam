@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 /* Types & Utils Imports */
 import { StaticImageData } from 'next/image';
