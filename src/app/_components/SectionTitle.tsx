@@ -1,6 +1,10 @@
 'use client'
+/* Types & Utils Imports */
+import { StaticImageData } from 'next/image';
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+/* Components Imports */
+import Image from 'next/image'
 
 
 
@@ -36,11 +40,22 @@ const useStyles = makeStyles()((theme) => {
                 fontSize: theme.typography.pxToRem(22),
             }
         },
+        titleImage: {
+            marginLeft: theme.spacing(2),
+            marginRight: theme.spacing(2),
+            
+            maxWidth: "450px",
+        }
     }
 })
 
 interface SectionTitleProps {
     text: string;
+}
+
+interface ImageTitleProps {
+    image: StaticImageData;
+    alt: string;
 }
 
 
@@ -61,16 +76,14 @@ function SectionTitle({ text }: SectionTitleProps) {
     )
 }
 
-function ImageTitle({ text }: SectionTitleProps) {
+function ImageTitle({ image, alt }: ImageTitleProps) {
     const { classes } = useStyles()
 
     return (      
         <h2 className={ classes.root }>
             <span className={ classes.dividerLine }></span>
             
-            <span className={ classes.titleText }>
-                { text }
-            </span>
+                <img src={ image.src } alt={ alt } className={ classes.titleImage } />
 
             <span className={ classes.dividerLine }></span>
         </h2>

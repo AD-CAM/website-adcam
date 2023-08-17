@@ -1,9 +1,11 @@
 'use client'
+/* Assets Imports */
+import ajaxInstaller from "public/ad-cam_authorized_installer.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Components Imports */
-import { SectionTitle } from '../../_components/SectionTitle'
+import { ImageTitle } from '../../_components/SectionTitle'
 import MapComponent from '../../_components/Map'
 
 
@@ -19,7 +21,8 @@ const useStyles = makeStyles()((theme) => {
 
             width: "100%",
 
-            paddingTop: theme.spacing(10),
+            paddingTop: theme.spacing(15),
+            paddingBottom: theme.spacing(10),
         },
         subRoot: {
             display: "flex",
@@ -62,7 +65,7 @@ export default function MapSection() {
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
                 <div className={ classes.mainContainer }>
-                    <SectionTitle text={ "Demande de devis" } />
+                    <ImageTitle image={ ajaxInstaller } alt={ `AD-Cam est un installateur agréé AJAX` } />
 
                     <div className={ classes.mapContainer }>
                         <MapComponent radius={50} />
