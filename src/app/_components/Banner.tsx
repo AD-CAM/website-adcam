@@ -26,6 +26,24 @@ const useStyles = makeStyles()((theme) => {
                 marginTop: 0,
             },
         },
+        rootSmaller: {
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+            width: "100%",
+            height: "250px",
+
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+
+            [theme.breakpoints.down('sm')]: {
+                marginTop: theme.spacing(20),
+            },
+            [theme.breakpoints.up('sm')]: {
+                marginTop: 0,
+            },
+        },
         subRoot: {
             display: "flex",
             justifyContent: "center",
@@ -52,23 +70,40 @@ const useStyles = makeStyles()((theme) => {
             [theme.breakpoints.up('md')]: {
                 width: "50%",
             },
+        },
+        imageHolderSmaller: {
+            height: "100%",
+            
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+
+            [theme.breakpoints.down('sm')]: {
+                width: "270px",
+            },
+            [theme.breakpoints.up('sm')]: {
+                width: "400px",
+            },
+            [theme.breakpoints.up('md')]: {
+                width: "500px",
+            },
         }
     }
 })
 
 interface BannerProps {
-    image: StaticImageData
+    image: StaticImageData;
+    isSmall: boolean
 }
 
 
 
-export default function Banner({ image }: BannerProps) {
+export default function Banner({ image, isSmall }: BannerProps) {
     const { classes } = useStyles()
 
     return (      
-        <div className={ classes.root } style={{ backgroundImage: `url(${image.src})` }}>
+        <div className={ isSmall ? classes.rootSmaller : classes.root } style={{ backgroundImage: `url(${image.src})` }}>
             <div className={ classes.subRoot }>
-                <div className={ classes.imageHolder } style={{ backgroundImage: `url(${image.src})` }}>
+                <div className={ isSmall ? classes.imageHolderSmaller : classes.imageHolder } style={{ backgroundImage: `url(${image.src})` }}>
 
                 </div>
             </div>

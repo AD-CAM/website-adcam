@@ -11,7 +11,7 @@ import Footer from '../_components/Footer'
 export default function CameraPage() {
     return (
         <>
-            <Header activePage={ "home" } />
+            <Header activePage={ "video" } />
             <CallUs />
             <main>
                 

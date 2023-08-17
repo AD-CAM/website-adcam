@@ -15,10 +15,10 @@ import MapSection from './_pageComponents/MapSection'
 export default function ContactPage() {
     return (
         <>
-            <Header activePage={ "home" } />
+            <Header activePage={ "contact" } />
             <CallUs />
             <main>
-                <Banner image={ contactBannerPhoto } />
+                <Banner image={ contactBannerPhoto } isSmall={ false } />
                 <FormSection />
                 <MapSection />
             </main>

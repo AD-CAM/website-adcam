@@ -14,7 +14,7 @@ import TechSupportSection from './_pageComponents/TechSupportSection'
 export default function ContactPage() {
     return (
         <>
-            <Header activePage={ "home" } />
+            <Header activePage={ "support" } />
             <CallUs />
             <main>
                 <Banner image={ techSupportBannerPhoto } />
