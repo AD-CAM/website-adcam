@@ -7,7 +7,7 @@ import { PledgeInfo } from '../_types/dataFiles'
 const pledges: PledgeInfo[] = require('../_data/ourPledges.json')
 const services: PledgeInfo[] = require('../_data/ourServices.json')
 /* Components Imports */
-import SectionTitle from '../_components/SectionTitle'
+import { SectionTitle } from '../_components/SectionTitle'
 /* Icons Imports */
 import { PiSealCheckBold } from 'react-icons/pi'
 import { FaRegClock, FaRegThumbsUp, FaPencilRuler, FaCog, FaUserFriends, FaTools } from 'react-icons/fa'

@@ -2,7 +2,7 @@
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
-import SectionTitle from '../../_components/SectionTitle'
+import { SectionTitle } from '../../_components/SectionTitle'
 
 
 

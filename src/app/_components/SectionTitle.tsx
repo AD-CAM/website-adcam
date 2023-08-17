@@ -45,7 +45,7 @@ interface SectionTitleProps {
 
 
 
-export default function SectionTitle({ text }: SectionTitleProps) {
+function SectionTitle({ text }: SectionTitleProps) {
     const { classes } = useStyles()
 
     return (      
@@ -60,3 +60,23 @@ export default function SectionTitle({ text }: SectionTitleProps) {
         </h2>
     )
 }
+
+function ImageTitle({ text }: SectionTitleProps) {
+    const { classes } = useStyles()
+
+    return (      
+        <h2 className={ classes.root }>
+            <span className={ classes.dividerLine }></span>
+            
+            <span className={ classes.titleText }>
+                { text }
+            </span>
+
+            <span className={ classes.dividerLine }></span>
+        </h2>
+    )
+}
+
+
+
+export { SectionTitle, ImageTitle }

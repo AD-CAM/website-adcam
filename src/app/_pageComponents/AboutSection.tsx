@@ -3,7 +3,7 @@
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Components Imports */
-import SectionTitle from '../_components/SectionTitle'
+import { SectionTitle } from '../_components/SectionTitle'
 
 
 

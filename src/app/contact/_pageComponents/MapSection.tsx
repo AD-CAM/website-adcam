@@ -3,7 +3,7 @@
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Components Imports */
-import SectionTitle from '../../_components/SectionTitle'
+import { SectionTitle } from '../../_components/SectionTitle'
 import MapComponent from '../../_components/Map'
 
 
@@ -20,8 +20,6 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
 
             paddingTop: theme.spacing(10),
-
-            boxShadow: "0px -50px 25px -50px rgba(0, 0, 0, 0.3)",
         },
         subRoot: {
             display: "flex",
@@ -50,7 +48,7 @@ const useStyles = makeStyles()((theme) => {
         },
         mapContainer: {
             height: "450px",
-            width: "750px",
+            width: "864px",
         },
     }
 })

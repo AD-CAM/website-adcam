@@ -6,7 +6,7 @@ const reviewList: ReviewInfo[] = require("../_data/reviewList.json")
 import { makeStyles } from 'tss-react/mui'
 import { useTheme, useMediaQuery } from "@mui/material"
 /* Components Imports */
-import SectionTitle from "../_components/SectionTitle"
+import { SectionTitle } from "../_components/SectionTitle"
 import Review from "../_components/Review"
 import Carousel from "../_components/Carousel"
 
