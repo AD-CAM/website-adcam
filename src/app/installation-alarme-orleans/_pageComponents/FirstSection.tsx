@@ -104,7 +104,7 @@ export default function FirstSection() {
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
                 <div className={ classes.sectionTitleHolder }>
-                    <SectionTitle text={ "Installation d'alarmes à Orléans" } />
+                    <SectionTitle text={ "Installation d'alarmes" } />
                 </div>
                 <div className={ classes.articleContainer }>
                     <ImagedArticle image={ ajaxAlarmTwo } alt={ `Système d'alarme automatisé AJAX` } isLeft={ false } title={ `Faites appel à AD CAM pour sécuriser votre résidence ou votre entreprise` }>

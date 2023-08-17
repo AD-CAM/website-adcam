@@ -5,6 +5,7 @@ import { ReactNode } from "react"
 import { StaticImageData } from "next/image"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+import { useMediaQuery, useTheme } from "@mui/material"
 
 
 
@@ -70,6 +71,7 @@ const useStyles = makeStyles()((theme) => {
             fontSize: theme.typography.pxToRem(15),
 
             [theme.breakpoints.down('md')]: {
+                paddingLeft: 0,
                 maxWidth: "100%",
             },
             [theme.breakpoints.up('md')]: {
@@ -92,13 +94,26 @@ interface BannerProps {
 export default function ImagedArticle({ image, alt, isLeft, children, title }: BannerProps) {
     const { classes } = useStyles()
 
+    const theme = useTheme()
+    const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'))
+
+    function getStyle() {
+        if(isMediumScreen) {
+            return { padding: 0 }
+        } else if(isLeft) {
+            return { paddingLeft: "32px" }
+        } else {
+            return { paddingRight: "32px" }
+        }
+    }
+
     return (      
         <article className={ classes.root }>
             <h3 className={ classes.mainTitle }>{ title }</h3>
             <div className={ isLeft ? classes.mainContainerLeft : classes.mainContainerRight }>
                 { isLeft && <aside className={ classes.imageContainer }><img className={ classes.image } src={ image.src } alt={ alt } /></aside> }
 
-                <div className={ classes.textContainer } style={ isLeft ? { paddingLeft: "32px" } : { paddingRight: "32px" }}>
+                <div className={ classes.textContainer } style={ getStyle() }>
                     { children }
                 </div>
 
