@@ -1,58 +1,46 @@
 'use client'
 /* Library Imports */
-import { useRef, useEffect } from 'react'
-import { makeStyles } from 'tss-react/mui'
-import GoogleMapReact from 'google-map-react'
+import { useState, useCallback } from 'react'
+import { GoogleMap, LoadScript, Circle } from '@react-google-maps/api'
 
 
 
-const useStyles = makeStyles()((theme) => {
-    return {
-        root: {
-            height: "100%",
-            width: "100%",
-        },
-    }
-})
+const containerStyle = {
+    height: "100%",
+    width: "100%",
+}
+
+const defaultCenter = { lat: 47.9022, lng: 1.90997 }
 
 
 
 interface MapComponentProps {
-    latitude: number;
-    longitude: number;
     radius: number;
 }
 
 
-const Circle = ({ latitude, longitude, radius }: MapComponentProps) => (
-    <div
-        style={{
-            position: 'absolute',
-            width: `${radius * 2}px`,
-            height: `${radius * 2}px`,
-            border: '1px solid red',
-            borderRadius: '50%',
-            opacity: 0.5,
-            backgroundColor: 'red',
-            transform: `translate(-50%, -50%)`,
-            pointerEvents: 'none',
-        }}
-    />
-  )
   
-const MapComponent = ({ latitude, longitude, radius }: MapComponentProps) => {
-const center = { lat: latitude, lng: longitude }
+const MapComponent = ({ radius }: MapComponentProps) => {
+    const circleOptions = {
+        strokeColor: '#FF0000',
+        strokeOpacity: 1,
+        strokeWeight: 1,
+        fillColor: '#FF0000',
+        fillOpacity: 0.15,
+        center: defaultCenter,
+        radius: 50000,
+    };
 
     return (
-        <div style={{ height: '400px', width: '100%' }}>
-            <GoogleMapReact
-                bootstrapURLKeys={{ key: 'YOUR_API_KEY' }}
-                defaultCenter={center}
-                defaultZoom={10}
+        <LoadScript googleMapsApiKey={ process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '' }>
+            <GoogleMap
+                mapContainerStyle={ containerStyle }
+                center={ defaultCenter }
+                zoom={10}
             >
-                <Circle latitude={latitude} longitude={longitude} radius={radius} />
-            </GoogleMapReact>
-        </div>
+                <Circle options={ circleOptions } />
+            </GoogleMap>
+        </LoadScript>
     )
 }
   
