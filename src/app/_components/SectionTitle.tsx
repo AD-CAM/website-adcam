@@ -43,7 +43,7 @@ const useStyles = makeStyles()((theme) => {
         titleImage: {
             marginLeft: theme.spacing(2),
             marginRight: theme.spacing(2),
-            
+
             maxWidth: "450px",
         }
     }
@@ -56,6 +56,7 @@ interface SectionTitleProps {
 interface ImageTitleProps {
     image: StaticImageData;
     alt: string;
+    width: string;
 }
 
 
@@ -76,14 +77,14 @@ function SectionTitle({ text }: SectionTitleProps) {
     )
 }
 
-function ImageTitle({ image, alt }: ImageTitleProps) {
+function ImageTitle({ image, alt, width }: ImageTitleProps) {
     const { classes } = useStyles()
 
     return (      
         <h2 className={ classes.root }>
             <span className={ classes.dividerLine }></span>
             
-                <img src={ image.src } alt={ alt } className={ classes.titleImage } />
+                <img src={ image.src } alt={ alt } className={ classes.titleImage } style={{ width: width }} />
 
             <span className={ classes.dividerLine }></span>
         </h2>

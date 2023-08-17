@@ -75,8 +75,6 @@ const useStyles = makeStyles()((theme) => {
             },
         },
         invoiceFormArticle: {
-            
-
             [theme.breakpoints.down('md')]: {
                 width: "100%",
 

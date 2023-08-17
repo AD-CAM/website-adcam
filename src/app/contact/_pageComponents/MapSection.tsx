@@ -7,6 +7,7 @@ import { motion, Variants } from 'framer-motion'
 /* Components Imports */
 import { ImageTitle } from '../../_components/SectionTitle'
 import MapComponent from '../../_components/Map'
+import { useTheme, useMediaQuery } from "@mui/material"
 
 
 
@@ -31,6 +32,7 @@ const useStyles = makeStyles()((theme) => {
 
             boxSizing: "border-box",
 
+            width: "100%",
             maxWidth: "1450px",
 
             [theme.breakpoints.up('sm')]: {
@@ -51,7 +53,15 @@ const useStyles = makeStyles()((theme) => {
         },
         mapContainer: {
             height: "450px",
-            width: "864px",
+            width: "100%",
+            maxWidth: "864px",
+
+            [theme.breakpoints.down('sm')]: {
+                height: "300px",
+            },
+            [theme.breakpoints.up('sm')]: {
+                height: "450px",   
+            },
         },
     }
 })
@@ -61,11 +71,16 @@ const useStyles = makeStyles()((theme) => {
 export default function MapSection() {
     const { classes } = useStyles()
 
+    const theme = useTheme()
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+
+
+
     return (      
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
                 <div className={ classes.mainContainer }>
-                    <ImageTitle image={ ajaxInstaller } alt={ `AD-Cam est un installateur agréé AJAX` } />
+                    <ImageTitle image={ ajaxInstaller } alt={ `AD-Cam est un installateur agréé AJAX` } width={ isSmallScreen ? "80%" : "450px" } />
 
                     <div className={ classes.mapContainer }>
                         <MapComponent radius={50} />

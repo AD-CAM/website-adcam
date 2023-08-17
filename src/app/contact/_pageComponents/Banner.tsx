@@ -18,6 +18,13 @@ const useStyles = makeStyles()((theme) => {
 
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+
+            [theme.breakpoints.down('sm')]: {
+                marginTop: theme.spacing(20),
+            },
+            [theme.breakpoints.up('sm')]: {
+                marginTop: 0,
+            },
         },
         subRoot: {
             display: "flex",
@@ -31,10 +38,20 @@ const useStyles = makeStyles()((theme) => {
         },
         imageHolder: {
             height: "100%",
-            width: "50%",
+            
 
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
+
+            [theme.breakpoints.down('sm')]: {
+                backgroundPositionX: "-100px",
+            },
+            [theme.breakpoints.down('md')]: {
+                width: "100%",
+            },
+            [theme.breakpoints.up('md')]: {
+                width: "50%",
+            },
         }
     }
 })
