@@ -161,7 +161,9 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "center",
 
-            width: "350px",
+            boxSizing: "border-box",
+
+            width: "100%",
             backgroundColor: "#f7f7f7",
             borderRadius: theme.spacing(0.75),
 

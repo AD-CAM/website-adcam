@@ -39,7 +39,7 @@ const useStyles = makeStyles()((theme) => {
                 paddingRight: theme.spacing(6),   
             },
         },
-        formContainer: {
+        mainContainer: {
             width: "100%",
 
             [theme.breakpoints.down('sm')]: {
@@ -50,15 +50,43 @@ const useStyles = makeStyles()((theme) => {
                 maxWidth: "864px",   
             },
         },
+        formContainer: {
+            [theme.breakpoints.down('md')]: {
+                width: "100%",
+            },
+            [theme.breakpoints.up('md')]: {
+                width: "350px",  
+            },
+        },
         articleRoot: {
             display: "flex",
-            alignItems: "flex-start",
-            justifyContent: "space-between",
             
             width: "100%",
+
+            [theme.breakpoints.down('md')]: {
+                flexDirection: "column-reverse",
+                alignItems: "center",
+                justifyContent: "center",
+            },
+            [theme.breakpoints.up('md')]: {
+                flexDirection: "row",
+                alignItems: "flex-start",
+                justifyContent: "space-between",
+            },
         },
         invoiceFormArticle: {
-            width: "50%",
+            
+
+            [theme.breakpoints.down('md')]: {
+                width: "100%",
+
+                marginBottom: theme.spacing(2),
+            },
+            [theme.breakpoints.up('md')]: {
+                width: "48%",
+
+                marginBottom: 0,
+            },
         },
         mailboxRoot: {
             display: "flex",
@@ -70,6 +98,15 @@ const useStyles = makeStyles()((theme) => {
 
             color: "rgba(200, 4, 4, 1)",
             fontSize: theme.typography.pxToRem(72),
+
+            [theme.breakpoints.down('md')]: {
+                alignItems: "center",
+                justifyContent: "center",
+            },
+            [theme.breakpoints.up('md')]: {
+                alignItems: "center",
+                justifyContent: "flex-start",
+            },
         },
         articleTitle: {
             marginTop: 0,
@@ -96,11 +133,13 @@ export default function FormSection() {
     return (      
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
-                <div className={ classes.formContainer }>
+                <div className={ classes.mainContainer }>
                     <SectionTitle text={ "Demande de devis" } />
 
                     <div className={ classes.articleRoot }>
-                        <InvoiceForm />
+                        <div className={ classes.formContainer }>
+                            <InvoiceForm />
+                        </div>
 
                         <article className={ classes.invoiceFormArticle }>
                             <div className={ classes.mailboxRoot }>
