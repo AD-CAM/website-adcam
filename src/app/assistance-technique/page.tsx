@@ -5,8 +5,9 @@ import techSupportBannerPhoto from "public/tech-support_stock_photo.jpg"
 import CallUs from '../_components/CallUs'
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
-/* Page Components Imports */
 import Banner from '../_components/Banner'
+/* Page Components Imports */
+import TechSupportSection from './_pageComponents/TechSupportSection'
 
 
 
@@ -17,7 +18,7 @@ export default function ContactPage() {
             <CallUs />
             <main>
                 <Banner image={ techSupportBannerPhoto } />
-
+                <TechSupportSection />
             </main>
             <Footer />
         </>

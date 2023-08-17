@@ -81,7 +81,7 @@ const useStyles = makeStyles()((theme) => {
             display: "flex",
             justifyContent: "space-between",
 
-            height: "100%",
+            height: "auto",
             width: "auto",
             padding: theme.spacing(1.2),
 
@@ -99,7 +99,7 @@ const useStyles = makeStyles()((theme) => {
             display: "flex",
             justifyContent: "space-between",
 
-            height: "100%",
+            height: "auto",
             width: "auto",
             padding: theme.spacing(1.2),
 
