@@ -56,6 +56,9 @@ const useStyles = makeStyles()((theme) => {
             },
         },
         genericRoot: {
+
+        },
+        invoiceRoot: {
         },
         formTitle: {
             marginTop: 0,
@@ -160,19 +163,98 @@ interface ContactFormProps {
 
 
 
+
+
+
 function InvoiceForm() {
     const { classes } = useStyles()
+    const { handleSubmit, register, formState: { isValid, errors } } = useForm({mode: 'onChange'})
+
+
+
+    function handleFormSend(data: any) {
+        console.log("Placeholder for sending to API")
+    }
 
 
 
     return (
-        
+        <form className={ classes.invoiceRoot } onSubmit={ handleSubmit(handleFormSend) }
+              aria-labelledby="form-title"
+        >
+            <h3 className={ classes.formTitle } id="form-title">{ `Contactez-nous` }</h3>
+
+            <div className={ classes.inputContainer }>
+                <label className={ classes.inputLabel } htmlFor="name-field" id="name-label">{ `Nom*` }</label>
+                <motion.input   className={ classes.inputField }
+
+                            { ... register('name', { required: true, pattern: regex.name })}
+
+                            placeholder='Votre nom...'
+                            id="name-field"
+                            type="text"
+                            name="name"
+                            autoComplete="off"
+
+                            aria-required="true"
+                            aria-describedby='name-label'
+
+                            variants={ inputVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileFocus="focus"
+                />
+            </div>
+            <div className={ classes.inputContainer }>
+                <label className={ classes.inputLabel } htmlFor="email-field" id="email-label">{ `Adresse Email*` }</label>
+                <motion.input   className={ classes.inputField }
+
+                            { ... register('email', { required: true, pattern: regex.email })}
+
+                            placeholder='Votre adresse email...'
+                            id="email-field"
+                            name="email"
+                            type="email" 
+                            autoComplete="off"
+
+                            aria-required="true"
+                            aria-describedby='email-label'
+
+                            variants={ inputVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileFocus="focus"
+                />
+            </div>
+
+            <label className={ classes.messageLabel } htmlFor="message-field" id="message-label">{ `Message*` }</label>
+            <motion.textarea    className={ classes.messageField }
+
+                            { ... register('message', { required: true, pattern: regex.message })}
+
+                            placeholder='Votre message...'
+                            id="message-field"
+                            name="message"
+
+                            aria-required="true"
+                            aria-describedby='message-label'
+
+                            variants={ inputVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileFocus="focus"
+            />
+
+            <div className={ classes.buttonContainer }>
+                <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+            </div>
+        </form>
     )
 }
 
 
 
-export default function ContactForm({ location }: ContactFormProps) {
+function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
     const { handleSubmit, register, formState: { isValid, errors }, watch } = useForm({mode: 'onChange'})
     const messageValue = watch('message', '')
@@ -261,3 +343,7 @@ export default function ContactForm({ location }: ContactFormProps) {
         </form>
     )
 }
+
+
+
+export { ContactForm, InvoiceForm }

@@ -180,7 +180,7 @@ function PledgeCard({ icon, title, text }: PledgeCardProps) {
         <article className={ classes.cardRoot }>
             <Icon icon={ icon } />
             <div className={ classes.cardSubRoot }>
-                <h2 className={ classes.cardTitle }>{ title }</h2>
+                <h3 className={ classes.cardTitle }>{ title }</h3>
                 <p className={ classes.cardText }>{ text }</p>
             </div>
         </article>

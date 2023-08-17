@@ -13,7 +13,7 @@ import { makeStyles } from 'tss-react/mui'
 import Image from "next/image"
 import { IconButton, SocialButton } from "./Button"
 import { NavLinkFooter } from "./NavLink"
-import ContactForm from "./ContactForm"
+import { ContactForm } from "./ContactForm"
 
 
 

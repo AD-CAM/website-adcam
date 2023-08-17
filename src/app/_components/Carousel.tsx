@@ -183,7 +183,7 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
 
     return (      
         <div className={ classes.root}>
-            <motion.button  className={ classes.button }
+            <motion.div  className={ classes.button }
                             onClick={ handlePrevious }
                             style={{ left: "-10px" }}
 
@@ -193,7 +193,7 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
                             whileTap="click"
             >
                 <MdArrowBackIosNew />
-            </motion.button>
+            </motion.div>
                 <div className={ classes.content }>
                     {
                         children.map((child, index) => {
@@ -213,7 +213,7 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
                         })
                     }
                 </div>
-            <motion.button  className={ classes.button } 
+            <motion.div     className={ classes.button } 
                             onClick={ handleNext }
                             style={{ right: "-10px" }}
 
@@ -223,7 +223,7 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
                             whileTap="click"
             >
                 <MdArrowForwardIos />
-            </motion.button>
+            </motion.div>
         </div> 
     )
 }
