@@ -63,7 +63,7 @@ const useStyles = makeStyles()((theme) => {
                 marginBottom: theme.spacing(2),
             },
             [theme.breakpoints.up('sm')]: {
-                maxWidth: "1050px",   
+                maxWidth: "1050px",
             },
         },
         youtubeContainer: {
@@ -71,11 +71,14 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "center",
 
+            marginTop: theme.spacing(6),
+
             [theme.breakpoints.down('sm')]: {
                 width: "90%",
             },
             [theme.breakpoints.up('sm')]: {
-                width: "650px", 
+                width: "650px",
+                maxWidth: "90%",
             },
         },
         textParagraph: {

@@ -21,28 +21,60 @@ const useStyles = makeStyles()((theme) => {
             fontSize: theme.typography.pxToRem(22),
             fontWeight: 500,
 
-            marginBottom: theme.spacing(2),
+            marginBottom: theme.spacing(4),
         },
         imageContainer: {
-            width: "30%"
+            [theme.breakpoints.down('sm')]: {
+                marginTop: theme.spacing(4),
+                width: "75%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                marginTop: theme.spacing(4),
+                width: "50%",
+            },
+            [theme.breakpoints.up('md')]: {
+                width: "30%",
+            },
         },
         image: {
             width: "100%",
             height: "auto",
         },
-        mainContainer: {
+        mainContainerLeft: {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
 
             width: "100%",
             height: "auto",
+
+            [theme.breakpoints.down('md')]: {
+                flexDirection: "column-reverse",
+            }
+        },
+        mainContainerRight: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+
+            width: "100%",
+            height: "auto",
+
+            [theme.breakpoints.down('md')]: {
+                flexDirection: "column",
+            }
         },
         textContainer: {
             boxSizing: "border-box",
-            maxWidth: "70%",
 
-            fontSize: theme.typography.pxToRem(15)
+            fontSize: theme.typography.pxToRem(15),
+
+            [theme.breakpoints.down('md')]: {
+                maxWidth: "100%",
+            },
+            [theme.breakpoints.up('md')]: {
+                maxWidth: "70%",
+            },
         },
     }
 })
@@ -63,7 +95,7 @@ export default function ImagedArticle({ image, alt, isLeft, children, title }: B
     return (      
         <article className={ classes.root }>
             <h3 className={ classes.mainTitle }>{ title }</h3>
-            <div className={ classes.mainContainer }>
+            <div className={ isLeft ? classes.mainContainerLeft : classes.mainContainerRight }>
                 { isLeft && <aside className={ classes.imageContainer }><img className={ classes.image } src={ image.src } alt={ alt } /></aside> }
 
                 <div className={ classes.textContainer } style={ isLeft ? { paddingLeft: "32px" } : { paddingRight: "32px" }}>
