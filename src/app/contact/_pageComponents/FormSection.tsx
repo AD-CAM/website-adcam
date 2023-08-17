@@ -4,7 +4,9 @@ import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Components Imports */
 import SectionTitle from '../../_components/SectionTitle'
-import ContactForm from '../../_components/ContactForm'
+import { InvoiceForm } from '../../_components/ContactForm'
+/* Icons Imports */
+import { BsMailbox2 } from "react-icons/bs"
 
 
 
@@ -37,7 +39,7 @@ const useStyles = makeStyles()((theme) => {
                 paddingRight: theme.spacing(6),   
             },
         },
-        titleRoot: {
+        formContainer: {
             width: "100%",
 
             [theme.breakpoints.down('sm')]: {
@@ -47,6 +49,41 @@ const useStyles = makeStyles()((theme) => {
             [theme.breakpoints.up('sm')]: {
                 maxWidth: "864px",   
             },
+        },
+        articleRoot: {
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            
+            width: "100%",
+        },
+        invoiceFormArticle: {
+            width: "50%",
+        },
+        mailboxRoot: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start",
+
+            height: "100px",
+            width: "auto",
+
+            color: "rgba(200, 4, 4, 1)",
+            fontSize: theme.typography.pxToRem(72),
+        },
+        articleTitle: {
+            marginTop: 0,
+
+            width: "100%",
+
+            fontSize: theme.typography.pxToRem(20),
+            fontWeight: 600,
+        },
+        articleText: {
+            width: "100%",
+
+            fontSize: theme.typography.pxToRem(15),
+            fontWeight: 500,
         },
     }
 })
@@ -59,10 +96,21 @@ export default function FormSection() {
     return (      
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
-                <div className={ classes.titleRoot }>
+                <div className={ classes.formContainer }>
                     <SectionTitle text={ "Demande de devis" } />
-                </div>
 
+                    <div className={ classes.articleRoot }>
+                        <InvoiceForm />
+
+                        <article className={ classes.invoiceFormArticle }>
+                            <div className={ classes.mailboxRoot }>
+                                <BsMailbox2 />
+                            </div>
+                            <h3 className={ classes.articleTitle }>{ `Nos experts vous recontactent` }</h3>
+                            <p className={ classes.articleText }>{ `Nous vous recontactons dans les plus brefs délais afin d'établir avec vous un devis entièrement adapté à vos besoins et à votre budget` }</p>
+                        </article>
+                    </div>
+                </div>
             </div>
         </section>
     )

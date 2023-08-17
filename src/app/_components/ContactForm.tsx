@@ -58,8 +58,6 @@ const useStyles = makeStyles()((theme) => {
         genericRoot: {
 
         },
-        invoiceRoot: {
-        },
         formTitle: {
             marginTop: 0,
             width: "100%",
@@ -153,7 +151,42 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 500,
 
             color: "rgba(252, 105, 105, 1)",
-        }
+        },
+
+
+
+        invoiceRoot: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+
+            width: "350px",
+            backgroundColor: "#f7f7f7",
+            borderRadius: theme.spacing(0.75),
+
+            padding: theme.spacing(3),
+        },
+        invoiceTitle: {
+            marginTop: 0,
+            width: "100%",
+            fontWeight: 600,
+        },
+        invoiceInputRoot: {
+            width: "100%",
+            marginTop: theme.spacing(1),
+            marginBottom: theme.spacing(1),
+        },
+        invoiceButton: {
+            display: "flex",
+            alignSelf: "flex-end",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+
+            width: "100%",
+
+            marginTop: theme.spacing(1),
+        },
     }
 })
 
@@ -182,9 +215,9 @@ function InvoiceForm() {
         <form className={ classes.invoiceRoot } onSubmit={ handleSubmit(handleFormSend) }
               aria-labelledby="form-title"
         >
-            <h3 className={ classes.formTitle } id="form-title">{ `Contactez-nous` }</h3>
+            <h3 className={ classes.invoiceTitle } id="form-title">{ `Devis express` }</h3>
 
-            <div className={ classes.inputContainer }>
+            <div className={ classes.invoiceInputRoot }>
                 <label className={ classes.inputLabel } htmlFor="name-field" id="name-label">{ `Nom*` }</label>
                 <motion.input   className={ classes.inputField }
 
@@ -205,7 +238,7 @@ function InvoiceForm() {
                             whileFocus="focus"
                 />
             </div>
-            <div className={ classes.inputContainer }>
+            <div className={ classes.invoiceInputRoot }>
                 <label className={ classes.inputLabel } htmlFor="email-field" id="email-label">{ `Adresse Email*` }</label>
                 <motion.input   className={ classes.inputField }
 
@@ -227,25 +260,29 @@ function InvoiceForm() {
                 />
             </div>
 
-            <label className={ classes.messageLabel } htmlFor="message-field" id="message-label">{ `Message*` }</label>
-            <motion.textarea    className={ classes.messageField }
+            <div className={ classes.invoiceInputRoot }>
+                <label className={ classes.inputLabel } htmlFor="phone-field" id="phone-label">{ `Numéro de Téléphone*` }</label>
+                <motion.input   className={ classes.inputField }
 
-                            { ... register('message', { required: true, pattern: regex.message })}
+                            { ... register('phone', { required: true, pattern: regex.phone })}
 
-                            placeholder='Votre message...'
-                            id="message-field"
-                            name="message"
+                            placeholder='Votre numéro de téléphone...'
+                            id="phone-field"
+                            name="phone"
+                            type="tel" 
+                            autoComplete="off"
 
                             aria-required="true"
-                            aria-describedby='message-label'
+                            aria-describedby='email-label'
 
                             variants={ inputVariants }
                             initial="rest"
                             whileHover="hover"
                             whileFocus="focus"
-            />
+                />
+            </div>
 
-            <div className={ classes.buttonContainer }>
+            <div className={ classes.invoiceButton }>
                 <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
             </div>
         </form>
