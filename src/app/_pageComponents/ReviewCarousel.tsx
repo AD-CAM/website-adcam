@@ -35,8 +35,14 @@ const useStyles = makeStyles()((theme) => {
             alignItems: "center",
             justifyContent: "center",
 
-            width: "100%",
-            maxWidth: "1450px",
+            width: "90%",
+
+            [theme.breakpoints.down('sm')]: {
+                maxWidth: "90%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                maxWidth: "1450px",
+            },
         },
         titleRoot: {
             width: "100%",

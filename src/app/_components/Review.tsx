@@ -26,6 +26,16 @@ const useStyles = makeStyles()((theme) => {
             width: "300px",
 
             backgroundColor: "#f4f4f4",
+
+            [theme.breakpoints.down('sm')]: {
+                width: "300px",
+            },
+            [theme.breakpoints.up('sm')]: {
+                width: "250px",
+            },
+            [theme.breakpoints.up('lg')]: {
+                width: "300px",
+            },
         },
         googleLogo: {
             position: "absolute",
