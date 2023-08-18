@@ -4,6 +4,7 @@
 import { ReactNode } from "react"
 import { StaticImageData } from "next/image"
 /* Library Imports */
+import { Variants, motion } from "framer-motion"
 import { makeStyles } from 'tss-react/mui'
 import { useMediaQuery, useTheme } from "@mui/material"
 
@@ -82,6 +83,14 @@ const useStyles = makeStyles()((theme) => {
     }
 })
 
+function getImageVariant(isLeft: boolean): Variants {
+    if(isLeft){
+        return {rest: { opacity: 0, translateX: "-100%" }, loaded: { opacity: 1, translateX: "0%" }} 
+    } else {
+        return {rest: { opacity: 0, translateX: "100%" }, loaded: { opacity: 1, translateX: "0%" }}
+    }
+}
+
 interface BannerProps {
     image: StaticImageData;
     alt: string;
@@ -112,13 +121,31 @@ export default function ImagedArticle({ image, alt, isLeft, children, title }: B
         <article className={ classes.root }>
             <h3 className={ classes.mainTitle }>{ title }</h3>
             <div className={ isLeft ? classes.mainContainerLeft : classes.mainContainerRight }>
-                { isLeft && <aside className={ classes.imageContainer }><img className={ classes.image } src={ image.src } alt={ alt } /></aside> }
+                { isLeft && <motion.aside  className={ classes.imageContainer }
+                
+                                            variants={ getImageVariant(isLeft) }
+                                            initial="rest"
+                                            whileInView="loaded"
+                                            transition={{ duration: 1, ease: "easeInOut" }}
+                                            viewport={{ once: true }}
+                            >
+                                <img className={ classes.image } src={ image.src } alt={ alt } />
+                            </motion.aside> }
 
                 <div className={ classes.textContainer } style={ getStyle() }>
                     { children }
                 </div>
 
-                { !isLeft && <aside className={ classes.imageContainer }><img className={ classes.image } src={ image.src } alt={ alt } /></aside>}
+                { !isLeft && <motion.aside  className={ classes.imageContainer }
+
+                                            variants={ getImageVariant(isLeft) }
+                                            initial="rest"
+                                            whileInView="loaded"
+                                            transition={{ duration: 1, ease: "easeInOut" }}
+                                            viewport={{ once: true }}
+                            >
+                                <img className={ classes.image } src={ image.src } alt={ alt } />
+                            </motion.aside> }
             </div>
         </article>
     )
