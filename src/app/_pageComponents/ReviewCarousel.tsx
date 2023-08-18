@@ -38,7 +38,8 @@ const useStyles = makeStyles()((theme) => {
             width: "90%",
 
             [theme.breakpoints.down('sm')]: {
-                maxWidth: "90%",
+                width: "95%",
+                maxWidth: "95%",
             },
             [theme.breakpoints.up('sm')]: {
                 maxWidth: "1450px",
@@ -115,7 +116,8 @@ export default function ReviewCarousel() {
 
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
     const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'))
-    const isStrictlyMediumScreen = !isSmallScreen && isMediumScreen
+    const isLargeScreen = useMediaQuery(theme.breakpoints.down('lg'))
+    const isStrictlyLargeScreen = !isSmallScreen && !isMediumScreen && isLargeScreen
 
 
 
@@ -139,7 +141,7 @@ export default function ReviewCarousel() {
                     <p className={ classes.starsBasedOn }>{ `Basée sur ` }<strong>{ `${reviewList.length} avis` }</strong></p>
                     <div className={ classes.googleLogo }></div>
                 </div>
-                <Carousel startingIndex={ isSmallScreen ? 0 : 1 } maxDistanceSeen={ isMediumScreen ? 0 : 1 } displayCentered={ isStrictlyMediumScreen ? false : true }> 
+                <Carousel startingIndex={ isSmallScreen ? 0 : 1 } maxDistanceSeen={ isLargeScreen ? 0 : 1 } displayCentered={ isStrictlyLargeScreen ? false : true }> 
                 {
                     reviewList.map((review, index) => {
                         return <Review key={index} name={review.author_name} photo={review.profile_photo_url} rating={review.rating} text={review.text} time={review.time} />

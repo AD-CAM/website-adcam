@@ -19,22 +19,21 @@ const useStyles = makeStyles()((theme) => {
             flexDirection: "column",
             alignItems: "center",
 
+            boxSizing: "border-box",
+
             borderRadius: "4px",
 
             padding: "20px",
-            minHeight: "190px",
-            width: "300px",
+            minHeight: "230px",
 
             backgroundColor: "#f4f4f4",
 
             [theme.breakpoints.down('sm')]: {
-                width: "300px",
+                width: "340px",
+                maxWidth: "75vw",
             },
             [theme.breakpoints.up('sm')]: {
-                width: "250px",
-            },
-            [theme.breakpoints.up('lg')]: {
-                width: "300px",
+                width: "340px",
             },
         },
         googleLogo: {
