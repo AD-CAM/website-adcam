@@ -210,6 +210,12 @@ export default function FirstSection() {
                     <p className={ classes.textParagraph }>{ `Pour plus de sérénité, nous installons également des enregistreurs pour conserver un historique des vidéos. En complément, nous proposons également la création d’un réseau informatique vous permettant à tout moment de consulter vos caméras via un ordinateur, votre téléphone portable ou encore votre tablette.` }</p>
                 </div>
                 <ImageGrid imageArray={ imageGridArray } />
+                <div className={ classes.contactUsArea }>
+                    <h3 className={ classes.contactUsTitle }>
+                        { `Nos solutions en matière de vidéo surveillance vous intéressent ? AD CAM est à votre disposition afin de vous transmettre une estimation de prix gratuite ! Nous intervenons dans un rayon de 50 kilomètres autour d’Orléans.` }
+                    </h3>
+                    <IconButton icon={ "invoice" } text={ `Devis 100% gratuit` } link={ "/contact" } description={ `Contactez-nous pour obtenir un devis 100% gratuit` }/>
+                </div>
             </div>
         </section>
     )
