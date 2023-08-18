@@ -3,6 +3,18 @@
 import adCamFullLogo from "public/ad-cam_logo-title_nobg.png"
 import cameraOne from "public/camera-image_one.png"
 import cameraTwo from "public/camera-image_two.png"
+
+import cameraTube from "public/cameras/camera-tube.jpg"
+import cameraDome from "public/cameras/camera-dome.png"
+import cameraFisheye from "public/cameras/camera-fisheye.jpg"
+
+import cameraMall from "public/cameras/camera_mall.jpg"
+import cameraWarehouse from "public/cameras/camera_warehouse.jpg"
+import cameraBuilding from "public/cameras/camera_building.jpg"
+
+import cameraFullCloud from "public/cameras/full-cloud.png"
+import cameraRemote from "public/cameras/full-remote-control.jpg"
+import cameraTelesurveillance from "public/cameras/telesurveillance.jpeg"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */
@@ -10,6 +22,54 @@ import { SectionTitle, ImageTitle } from '../../_components/SectionTitle'
 import ImagedArticle from '../../_components/ImagedArticle'
 import { useMediaQuery, useTheme } from "@mui/material"
 import { IconButton } from "../../_components/Button"
+import ImageGrid from "../../_components/ImageGrid"
+
+
+
+const imageGridArray = [
+    [
+        {
+            image: cameraTube,
+            alt: 'Caméra "tube"',
+        },
+        {
+            image: cameraBuilding,
+            alt: 'Caméra de bâtiment',
+        },
+        {
+            image: cameraRemote,
+            alt: 'Système automatique full-remote',
+        }
+    ],
+    [
+        {
+            image: cameraDome,
+            alt: 'Caméra "dome"',
+        },
+        {
+            image: cameraWarehouse,
+            alt: `Caméra d'entrepôt ou d'usine`,
+        },
+        {
+            image: cameraFullCloud,
+            alt: 'Système entièrement connecté au cloud',
+        }
+    ],
+    [
+        {
+            image: cameraFisheye,
+            alt: 'Caméra "fisheye"',
+        },
+        {
+            image: cameraMall,
+            alt: 'Caméra de supermarché',
+        },
+        {
+            image: cameraTelesurveillance,
+            alt: 'Surveillance contre le cambriolage',
+        }
+    ]
+]
 
 
 
@@ -149,6 +209,7 @@ export default function FirstSection() {
                     <p className={ classes.textParagraph }>{ `Notre équipe est habilitée à installer des dispositifs de vidéosurveillance. Nous intervenons chez vous en toute discrétion et nous nous chargeons de l’installation de caméras de vidéo dans les pièces potentiellement sensibles qui donnent directement sur l’extérieur. Nous vous assurons une couverture totale des pièces à surveiller par nos caméras. Choisissez parmi nos différents dispositifs : caméra avec détecteur de mouvements, avec détecteur thermique, etc. Une photo ou une vidéo est prise lorsque quelque chose d’anormal est détecté et vous pouvez en être informé par téléphone, voire les visualiser depuis votre smartphone.` }</p>
                     <p className={ classes.textParagraph }>{ `Pour plus de sérénité, nous installons également des enregistreurs pour conserver un historique des vidéos. En complément, nous proposons également la création d’un réseau informatique vous permettant à tout moment de consulter vos caméras via un ordinateur, votre téléphone portable ou encore votre tablette.` }</p>
                 </div>
+                <ImageGrid imageArray={ imageGridArray } />
             </div>
         </section>
     )

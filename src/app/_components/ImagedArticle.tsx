@@ -91,7 +91,7 @@ function getImageVariant(isLeft: boolean): Variants {
     }
 }
 
-interface BannerProps {
+interface ImagedArticleProps {
     image: StaticImageData;
     alt: string;
     isLeft: boolean;
@@ -101,7 +101,7 @@ interface BannerProps {
 
 
 
-export default function ImagedArticle({ image, alt, isLeft, children, title }: BannerProps) {
+export default function ImagedArticle({ image, alt, isLeft, children, title }: ImagedArticleProps) {
     const { classes } = useStyles()
 
     const theme = useTheme()
