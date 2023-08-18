@@ -69,6 +69,7 @@ const useStyles = makeStyles()((theme) => {
             boxSizing: "border-box",
 
             fontSize: theme.typography.pxToRem(15),
+            color: "rgba(41, 41, 41, 1)",
 
             [theme.breakpoints.down('md')]: {
                 paddingLeft: 0,
