@@ -1,16 +1,14 @@
 /* Assets Imports */
 import './globals.css'
-/* Components Imports */
-
 /* Page Components Imports */
-
+import NotFoundBody from './_pageComponents/NotFoundBody'
 
 
 
 export default function Home() {
     return (
         <main>
-            
+            <NotFoundBody />
         </main>
     )
 }
