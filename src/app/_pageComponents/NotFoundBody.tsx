@@ -54,21 +54,28 @@ const letterVariant = {
 const useStyles = makeStyles()((theme) => {
     return {
         root: {
+            height: "100vh",
+            width: "100vw",
+
 			display: "flex",
             flexDirection: "column",
 
             alignItems: "center",
             justifyContent: "center",
 
-            color: "#F5F5F5",
+            backgroundColor: "#F5F5F5",
 		},
         number: {
             fontSize: "10vw",
-            marginTop: "10vw",
+            marginTop: 0,
             marginBottom: 0,
+
+            color: "#C80404",
         },
         text: {
             fontSize: "1.75vw",
+
+            color: "rgba(25, 25, 25, 1)",
         },
     }
 })
