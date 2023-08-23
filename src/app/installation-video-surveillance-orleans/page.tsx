@@ -14,7 +14,7 @@ import FirstSection from './_pageComponents/FirstSection'
 export default function AlarmPage() {
     return (
         <>
-            <Header activePage={ "alarm" } />
+            <Header activePage={ "video" } />
             <CallUs />
             <main>
                 <Banner image={ cameraBannerPhoto } isSmall={ false } />
