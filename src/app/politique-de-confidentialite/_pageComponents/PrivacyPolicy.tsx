@@ -53,6 +53,16 @@ const useStyles = makeStyles()((theme) => {
             marginTop: theme.spacing(10),
             marginBottom: theme.spacing(6),
         },
+        sectionSubTitle: {
+            width: "100%",
+            textAlign: "center",
+
+            color: "rgba(200, 4, 4, 1)",
+            fontSize: theme.typography.pxToRem(22),
+            fontWeight: 500,
+
+            marginBottom: theme.spacing(4),
+        },
         textTitle: {
             marginTop: theme.spacing(6),
 
@@ -104,14 +114,119 @@ export default function LegalNotices() {
             <div className={ classes.subRoot }>
 
                 <article className={ classes.mainArticle }>
-                    <SectionTitle text={ "Mentions légales" } />
+                    <SectionTitle text={ "Politique de Confidentialité" } />
                     
-
+                    <h3 className={ classes.sectionSubTitle }>{ `Cette Application collecte certaines Données personnelles de ses Utilisateurs.` }</h3>
                     <div className={ classes.textRoot }>
-                        <h3 className={ classes.textTitle }>{ `1. Présentation du site.` }</h3>
-                        <p className={ classes.textParagraph }>{ `En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site ` }<a href={ `https://ad-cam.fr/` } className={ classes.textLink }>{ `https://ad-cam.fr/` }</a>{ ` l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi :` }</p>
+                        
+                        <h4 className={ classes.textTitle }>{ `Propriétaire et Responsable du traitement` }</h4>
+                        <p className={ classes.textParagraph }>{ `AD-CAM – 7 impasse du Brault – 45760 Vennecy – France.` }</p>
+                        <p className={ classes.textParagraph }><strong>{ `Couriel de contact du Propriétaire: ` }</strong>{ `contact@ad-cam.fr` }</p>
 
 
+
+                        <h4 className={ classes.textTitle }>{ `` }</h4>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+
+
+                        <h4 className={ classes.textTitle }>{ `` }</h4>
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <ul>
+                            <li className={ classes.textListing }>{ `` }</li>
+                            <li className={ classes.textListing }>{ `` }</li>
+                            <li className={ classes.textListing }>{ `` }</li>
+                            <li className={ classes.textListing }>{ `` }</li>
+                            <li className={ classes.textListing }>{ `` }</li>
+                        </ul>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <ul>
+                            <li className={ classes.textListing }>{ `` }</li>
+                            <li className={ classes.textListing }>{ `` }</li>
+                        </ul>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+
+
+                        <h4 className={ classes.textSubTitle }>{ `` }</h4>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+
+
+                        <h4 className={ classes.textSubTitle }>{ `` }</h4>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <ul>
+                            <li className={ classes.textListing }>{ `` }</li>
+                            <li className={ classes.textListing }>{ `` }</li>
+                        </ul>
+
+
+
+                        <h4 className={ classes.textSubTitle }>{ `` }</h4>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+                        <ul>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                        </ul>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+
+
+                        <h4 className={ classes.textTitle }>{ `` }</h4>
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+                        <h5 className={ classes.textSubTitle }>{ `` }</h5>
+                        <p className={ classes.textParagraph }>{ `` }</p>
+
+
+
+                        <h4 className={ classes.textTitle }>{ `` }</h4>
+                        <ul>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                            <li className={ classes.textListing }><strong>{ `` }</strong>{ `` }</li>
+                        </ul>
 
 
                     </div>
