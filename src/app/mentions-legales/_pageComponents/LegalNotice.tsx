@@ -74,6 +74,7 @@ const useStyles = makeStyles()((theme) => {
         },
         textLink: {
             textDecoration: "underline",
+            color: "#C80404",
 
             '&:link': {
                 color: "#C80404",
