@@ -5,6 +5,7 @@ import { motion, Variants } from 'framer-motion'
 /* Components Imports */
 import Link from 'next/link'
 import { GoToButton } from '../_components/Button'
+import ShiftingBackground from '../_components/ShiftingBackground'
 
 
 
@@ -132,6 +133,8 @@ export default function HomeBanner() {
 
     return (      
         <section className={ classes.root }>
+            <ShiftingBackground />
+            
             <motion.div className={ classes.banner } variants={ bannerVariants } initial="rest" animate="loaded">
 
                 <h1 className={ classes.bannerTitle }>
