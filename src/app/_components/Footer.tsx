@@ -289,7 +289,7 @@ export default function Footer() {
                         <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
                         <SocialButton icon={ 'facebook' } link={ 'https://www.facebook.com/AD-CAM-103597488861540' } description={ 'Suivez nous sur Facebook.' }/>
                     </div>
-                    <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/ajax-fibra_certificate.pdf' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
+                    <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/files/ajax-fibra_certificate.pdf' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
                 </div>
             </div>
             <div className={ classes.footerNavContainer }>
