@@ -12,6 +12,8 @@ import ShiftingBackground from '../_components/ShiftingBackground'
 const useStyles = makeStyles()((theme) => {
     return {
         root: {
+            position: "relative",
+
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
