@@ -62,7 +62,8 @@ const useStyles = makeStyles()((theme) => {
             backgroundSize: "cover",
 
             [theme.breakpoints.down('sm')]: {
-                backgroundPositionX: "-100px",
+                width: "100%",
+                height: "40vw",
             },
             [theme.breakpoints.down('md')]: {
                 width: "100%",
@@ -81,7 +82,7 @@ const useStyles = makeStyles()((theme) => {
                 width: "270px",
             },
             [theme.breakpoints.up('sm')]: {
-                width: "400px",
+                width: "450px",
             },
             [theme.breakpoints.up('md')]: {
                 width: "500px",
@@ -92,20 +93,25 @@ const useStyles = makeStyles()((theme) => {
 
 interface BannerProps {
     image: StaticImageData;
-    isSmall: boolean
+    isSmall: boolean;
+    position: string;
 }
 
 
 
-export default function Banner({ image, isSmall }: BannerProps) {
+export default function Banner({ image, isSmall, position }: BannerProps) {
     const { classes } = useStyles()
 
     return (      
         <div className={ isSmall ? classes.rootSmaller : classes.root } style={{ backgroundImage: `url(${image.src})` }}>
             <div className={ classes.subRoot }>
-                <div className={ isSmall ? classes.imageHolderSmaller : classes.imageHolder } style={{ backgroundImage: `url(${image.src})` }}>
+
+                <div    className={ isSmall ? classes.imageHolderSmaller : classes.imageHolder }
+                        style={{ backgroundImage: `url(${image.src})`, backgroundPosition: position }}
+                >
 
                 </div>
+
             </div>
         </div>
     )
