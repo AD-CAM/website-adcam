@@ -125,11 +125,36 @@ const useStyles = makeStyles()((theme) => {
             height: "100%",
 
             padding: 0,
-            paddingTop: "15%",
+            margin: 0,
+        },
+        rootHeaderActive: {
+            display: "block",
+            position: "relative",
+
+            boxSizing: "border-box",
+
+            width: "auto",
+            height: "100%",
+
+            padding: 0,
+            paddingTop: "40px",
             paddingLeft: theme.spacing(2),
             paddingRight: theme.spacing(2),
-
+            
             margin: 0,
+        },
+        subRootHeader: {
+            display: "block",
+
+            boxSizing: "border-box",
+
+            height: "100%",
+            width: "100%",
+
+            padding: 0,
+            paddingTop: "40px",
+            paddingLeft: theme.spacing(2),
+            paddingRight: theme.spacing(2),
         },
         textHeader: {
             fontSize: theme.typography.pxToRem(17),
@@ -200,14 +225,14 @@ function NavLinkHeader({ isActive, link, linkText }: HeaderProps) {
         <>
             { !isActive  ?
                 <Link href={ link } className={ classes.rootHeader }>
-                    <motion.span initial="rest" animate="rest" whileHover="hover">
+                    <motion.span className={ classes.subRootHeader } initial="rest" animate="rest" whileHover="hover">
                         <motion.span className={ classes.textHeader } variants={ getTextVariants("header") }>{ linkText }</motion.span>
                         <motion.span className={ classes.underlineHeader } variants={ underlineVariants }></motion.span>
                     </motion.span>   
                 </Link>
                 
             :
-                <p className={ classes.rootHeader } aria-current="page">
+                <p className={ classes.rootHeaderActive } aria-current="page">
                     <motion.span className={ classes.activeTextHeader }>{ linkText }</motion.span>
                     <motion.span className={ classes.underlineHeader } variants={ underlineVariants }></motion.span>
                 </p>
