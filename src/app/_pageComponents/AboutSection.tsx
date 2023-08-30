@@ -33,7 +33,11 @@ const useStyles = makeStyles()((theme) => {
 
             boxSizing: "border-box",
 
-            [theme.breakpoints.up('sm')]: {
+            [theme.breakpoints.down('md')]: {
+                flexDirection: "column",
+                width: "90%",
+            },
+            [theme.breakpoints.up('md')]: {
                 justifyContent: "space-evenly",
                 width: "100%",
             },
@@ -47,24 +51,37 @@ const useStyles = makeStyles()((theme) => {
 
             boxSizing: "border-box",
 
-            height: "200px",
-            width: "200px",
-
             border: "2px solid",
             borderColor: "rgba(200, 4, 4, 1)",
+
+            [theme.breakpoints.down('md')]: {
+                visibility: "hidden",
+            },
+            [theme.breakpoints.up('md')]: {
+                height: "160px",
+                width: "160px",
+            },
+            [theme.breakpoints.up('lg')]: {
+                height: "200px",
+                width: "200px",
+            },
         },
         imageSubContainer: {
             position: "absolute",
             
             boxSizing: "border-box",
 
-            width: "194px",
-            height: "194px",
+            [theme.breakpoints.up('md')]: {
+                width: "154px",
+                height: "154px",
+            },
+            [theme.breakpoints.up('lg')]: {
+                width: "194px",
+                height: "194px",
+            },
         },
         imageContainerWide: {
             position: "relative",
-
-            marginTop: theme.spacing(8),
 
             display: "flex",
             alignItems: "center",
@@ -72,27 +89,46 @@ const useStyles = makeStyles()((theme) => {
 
             boxSizing: "border-box",
 
-            height: "220px",
-            width: "545px",
-
             border: "2px solid",
             borderColor: "rgba(200, 4, 4, 1)",
+
+            [theme.breakpoints.down('md')]: {
+                marginTop: theme.spacing(4),
+
+
+                width: "80vw",
+                height: "32vw",
+            },
+            [theme.breakpoints.up('md')]: {
+                marginTop: theme.spacing(8),
+
+
+                height: "220px",
+                width: "545px",
+            },
         },
         imageSubContainerWide: {
             position: "absolute",
             
             boxSizing: "border-box",
 
-            width: "539px",
-            height: "214px",
+            [theme.breakpoints.down('md')]: {
+                width: "79vw",
+                height: "31vw",
+            },
+            [theme.breakpoints.up('md')]: {
+                width: "539px",
+                height: "214px",
+            },
         },
         mainArticle: {
-            [theme.breakpoints.down('sm')]: {
-                maxWidth: "90%",
+            [theme.breakpoints.down('md')]: {
+                maxWidth: "100%",
                 marginBottom: theme.spacing(2),
             },
-            [theme.breakpoints.up('sm')]: {
-                maxWidth: "864px",   
+            [theme.breakpoints.up('md')]: {
+                width: "50vw",
+                maxWidth: "864px",
             },
         },
         textParagraph: {
