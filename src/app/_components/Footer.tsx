@@ -1,6 +1,6 @@
 'use client'
 /* Assets Imports */
-import adCamFullLogo from "/public/logos/logo-full_black.png"
+import adCamFullLogo from "/public/logos/logo-full_white.png"
 import adCamFooterLogo from "/public/logos/logo_white.png"
 /* Utils & Data Imports */
 import { PageInfo } from "../_types/dataFiles"
@@ -42,7 +42,7 @@ const useStyles = makeStyles()((theme) => {
 
                 height: "auto",
 
-                background: "linear-gradient(170deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.78) 50%, rgba(0, 0, 0, 1) 100%)",
+                backgroundColor: "rgba(20, 20, 20, 1)",
             },
             [theme.breakpoints.up('sm')]: {
                 flexDirection: "row",
