@@ -1,6 +1,6 @@
 'use client'
 /* Assets Imports */
-import adCamFullLogo from "public/ad-cam_logo-title_nobg.png"
+import adCamFullLogo from "public/logos/logo-full_black.png"
 import cameraOne from "public/camera-image_one.png"
 import cameraTwo from "public/camera-image_two.png"
 

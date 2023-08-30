@@ -1,6 +1,6 @@
 'use client'
 /* Assets Imports */
-import adCamHeaderLogo from "/public/ad-cam_logo-title_nobg.png"
+import adCamHeaderLogo from "/public/logos/logo-full_black.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { useTheme, useMediaQuery } from "@mui/material"
@@ -63,7 +63,7 @@ const useStyles = makeStyles()((theme) => {
             },
         },
         logoRoot: {
-            height: "60%",
+            height: "75%",
         },
         logoImage: {
             height: "100%",

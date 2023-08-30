@@ -1,6 +1,6 @@
 'use client'
 /* Assets Imports */
-import adCamFullLogo from "public/ad-cam_logo-title_nobg.png"
+import adCamFullLogo from "public/logos/logo-full_black.png"
 import ajaxAlarmOne from "public/ajax-image_one.png"
 import ajaxAlarmTwo from "public/ajax-image_two.png"
 import nfa2pNorm from "public/norme_nfa2p.png"

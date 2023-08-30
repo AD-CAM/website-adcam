@@ -1,7 +1,7 @@
 'use client'
 /* Assets Imports */
-import adCamFullLogo from "/public/ad-cam_logo-title_nobg.png"
-import adCamFooterLogo from "/public/ad-cam_logo_nobg.png"
+import adCamFullLogo from "/public/logos/logo-full_black.png"
+import adCamFooterLogo from "/public/logos/logo_white.png"
 /* Utils & Data Imports */
 import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
