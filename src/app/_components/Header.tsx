@@ -26,7 +26,6 @@ const useStyles = makeStyles()((theme) => {
             height: theme.spacing(12),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
-            background: "linear-gradient(350deg, rgba(37,16,5,0.1) 0%, rgba(136,37,16,0.2) 35%, rgba(179,39,36,0.25) 63%, rgba(255,23,0,0.3) 100%)",
             backgroundColor: "#FFF",
             backdropFilter: "blur(2px)",
 
