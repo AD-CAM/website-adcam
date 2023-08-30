@@ -9,7 +9,7 @@ import { makeStyles } from 'tss-react/mui'
 /* Icons Imports */
 import { FaBars } from 'react-icons/fa'
 /* Components Imports */
-import { NavLinkHeader } from './NavLink'
+import { NavLinkHambMenu } from './NavLink'
 import { IconButton } from "./Button"
 
 
@@ -150,10 +150,10 @@ function HamburgerNav({ activePage, hasButton }: HamburgerNavProps) {
             >
                 {
                     pageList.map(({ name, link, text }) => (
-                    <NavLinkHeader  key={ name }
-                                    isActive={ activePage === name }
-                                    link={ link }
-                                    linkText={ text } />
+                    <NavLinkHambMenu    key={ name }
+                                        isActive={ activePage === name }
+                                        link={ link }
+                                        linkText={ text } />
                     ))
                 }
 

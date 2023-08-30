@@ -91,7 +91,7 @@ const useStyles = makeStyles()((theme) => {
 
             cursor: "default",
         },
-        underlineHeader: {
+        underlineHamburger: {
             display: "block",
 
             position: "absolute",
@@ -112,7 +112,49 @@ const useStyles = makeStyles()((theme) => {
 			height: "1px",
 			width: "100%",
             backgroundColor: "#fc6969",
-        }
+        },
+
+
+        rootHeader: {
+            display: "block",
+            position: "relative",
+
+            boxSizing: "border-box",
+
+            width: "auto",
+            height: "100%",
+
+            padding: 0,
+            paddingTop: "15%",
+            paddingLeft: theme.spacing(2),
+            paddingRight: theme.spacing(2),
+
+            margin: 0,
+        },
+        textHeader: {
+            fontSize: theme.typography.pxToRem(17),
+            fontWeight: 500,
+        },
+        activeTextHeader: {
+            color: "#C80404",
+            fontSize: theme.typography.pxToRem(17),
+            fontWeight: 600,
+
+            paddingBottom: "1px",
+
+            cursor: "default",
+        },
+        underlineHeader: {
+            display: "block",
+
+            position: "absolute",
+			left: 0,
+			bottom: 0,
+
+			height: "2px",
+			width: "100%",
+			backgroundColor: "#C80404",
+		},
     }
 })
 
@@ -129,7 +171,7 @@ interface FooterProps {
 
 
 
-function NavLinkHeader({ isActive, link, linkText }: HeaderProps) {
+function NavLinkHambMenu({ isActive, link, linkText }: HeaderProps) {
     const { classes } = useStyles()
 
     return (  
@@ -138,13 +180,36 @@ function NavLinkHeader({ isActive, link, linkText }: HeaderProps) {
                 <Link href={ link } className={ classes.root }>
                     <motion.span initial="rest" animate="rest" whileHover="hover">
                         <motion.span className={ classes.text } variants={ getTextVariants("header") }>{ linkText }</motion.span>
-                        <motion.span className={ classes.underlineHeader } variants={ underlineVariants }></motion.span>
+                        <motion.span className={ classes.underlineHamburger } variants={ underlineVariants }></motion.span>
                     </motion.span>   
                 </Link>
                 
             :
                 <p className={ classes.root } aria-current="page">
                     <motion.span className={ classes.activeText }>{ linkText }</motion.span>
+                </p>
+            }
+        </>
+    )
+}
+
+function NavLinkHeader({ isActive, link, linkText }: HeaderProps) {
+    const { classes } = useStyles()
+
+    return (  
+        <>
+            { !isActive  ?
+                <Link href={ link } className={ classes.rootHeader }>
+                    <motion.span initial="rest" animate="rest" whileHover="hover">
+                        <motion.span className={ classes.textHeader } variants={ getTextVariants("header") }>{ linkText }</motion.span>
+                        <motion.span className={ classes.underlineHeader } variants={ underlineVariants }></motion.span>
+                    </motion.span>   
+                </Link>
+                
+            :
+                <p className={ classes.rootHeader } aria-current="page">
+                    <motion.span className={ classes.activeTextHeader }>{ linkText }</motion.span>
+                    <motion.span className={ classes.underlineHeader } variants={ underlineVariants }></motion.span>
                 </p>
             }
         </>
@@ -168,4 +233,4 @@ function NavLinkFooter({ link, linkText }: HeaderProps) {
 
 
 
-export { NavLinkHeader, NavLinkFooter }
+export { NavLinkHambMenu, NavLinkHeader, NavLinkFooter }

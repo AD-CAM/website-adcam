@@ -1,4 +1,7 @@
 'use client'
+/* Data & Types Imports */
+import { PageInfo } from "../_types/dataFiles"
+const pageList: PageInfo[] = require("../_data/pageList.json")
 /* Assets Imports */
 import adCamHeaderLogo from "/public/logos/logo-full_black.png"
 /* Library Imports */
@@ -7,6 +10,7 @@ import { useTheme, useMediaQuery } from "@mui/material"
 /* Components Imports */
 import Link from 'next/link'
 import Image from 'next/image'
+import { NavLinkHeader } from './NavLink'
 import { HamburgerNav } from "./HamburgerNav"
 import { IconButton } from "./Button"
 
@@ -69,6 +73,12 @@ const useStyles = makeStyles()((theme) => {
             height: "100%",
             width: "auto",
         },
+        servicesLinksRoot: {
+            display: "flex",
+            alignItems: "flex-end",
+
+            height: "100%",
+        },
         buttonsRoot: {
             display: "flex",
             alignItems: "center",
@@ -90,6 +100,7 @@ export default function Header({ activePage }: HeaderProps) {
 
     const theme = useTheme()
     const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
+    const isLargerScreen = useMediaQuery(theme.breakpoints.up('lg'))
 
 
 
@@ -102,6 +113,16 @@ export default function Header({ activePage }: HeaderProps) {
                             alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
                     />
                 </Link>
+
+                {
+                    isLargerScreen &&   <div className={ classes.servicesLinksRoot }>
+                                            {
+                                                pageList.map((page, index) => {
+                                                    return page.onHeader && <NavLinkHeader key={ index } isActive={ activePage === page.name } link={ page.link } linkText={ page.text }/>
+                                                })
+                                            }
+                                        </div>
+                }
                 
                 {
                     !isSmallScreen  ? (

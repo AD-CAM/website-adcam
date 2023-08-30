@@ -2,6 +2,7 @@ interface PageInfo {
     name: string;
     link: string;
     text: string;
+    onHeader: boolean;
 }
 
 interface PledgeInfo {
