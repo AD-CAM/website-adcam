@@ -1,7 +1,7 @@
 [
-    { "name": "home", "link": "/", "text": "Accueil" },
-    { "name": "alarm", "link": "/installation-alarme-orleans/", "text": "Alarme" },
-    { "name": "video", "link": "/installation-video-surveillance-orleans/", "text": "Vidéo surveillance" },
-    { "name": "contact", "link": "/contact/", "text": "Contact" },
-    { "name": "support", "link": "/assistance-technique/", "text": "Assistance technique" }
+    { "name": "home", "link": "/", "text": "Accueil", "onHeader": false },
+    { "name": "alarm", "link": "/installation-alarme-orleans/", "text": "Alarme", "onHeader": true },
+    { "name": "video", "link": "/installation-video-surveillance-orleans/", "text": "Vidéo surveillance", "onHeader": true },
+    { "name": "contact", "link": "/contact/", "text": "Contact", "onHeader": false },
+    { "name": "support", "link": "/assistance-technique/", "text": "Assistance technique", "onHeader": false }
 ]
