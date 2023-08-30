@@ -45,7 +45,12 @@ const useStyles = makeStyles()((theme) => {
             marginLeft: theme.spacing(2),
             marginRight: theme.spacing(2),
 
-            maxWidth: "450px",
+            [theme.breakpoints.down('sm')]: {
+                maxWidth: "70vw",
+            },
+            [theme.breakpoints.up('sm')]: {
+                maxWidth: "450px",
+            }
         }
     }
 })
