@@ -92,9 +92,7 @@ const useStyles = makeStyles()((theme) => {
             borderBottomLeftRadius: theme.spacing(1),
             borderTopLeftRadius: theme.spacing(1),
             boxShadow: "-15px 15px 10px -10px rgba(0, 0, 0, 0.1)",
-            background: "linear-gradient(170deg, rgba(37,16,5,0.1) 0%, rgba(136,37,16,0.2) 35%, rgba(179,39,36,0.25) 63%, rgba(255,23,0,0.3) 100%)",
             backgroundColor: "#FFF",
-            backdropFilter: "blur(2px)",
         },
         navButtonContainer: {
             display: "flex",
