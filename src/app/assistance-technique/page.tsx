@@ -1,6 +1,6 @@
 /* Assets Imports */
 import '../globals.css'
-import techSupportBannerPhoto from "public/tech-support_stock_photo.jpg"
+import techSupportBannerPhoto from "public/banners/tech-support_stock_photo.jpg"
 /* Components Imports */
 import CallUs from '../_components/CallUs'
 import Header from '../_components/Header'

@@ -1,6 +1,4 @@
 'use client'
-/* Assets Imports */
-import ajaxInstaller from "public/ad-cam_authorized_installer.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 /* Components Imports */

@@ -1,6 +1,6 @@
 /* Assets Imports */
 import '../globals.css'
-import cameraBannerPhoto from "public/camera_stock_photo.jpg"
+import cameraBannerPhoto from "public/banners/camera_stock_photo.jpg"
 /* Components Imports */
 import CallUs from '../_components/CallUs'
 import Header from '../_components/Header'

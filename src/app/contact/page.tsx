@@ -1,6 +1,6 @@
 /* Assets Imports */
 import '../globals.css'
-import contactBannerPhoto from "public/contact_stock_photo.jpg"
+import contactBannerPhoto from "public/banners/contact_stock_photo.jpg"
 /* Components Imports */
 import CallUs from '../_components/CallUs'
 import Header from '../_components/Header'
