@@ -33,8 +33,6 @@ const useStyles = makeStyles()((theme) => {
             paddingTop: theme.spacing(4),
 
 			boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.37)",
-            
-            backdropFilter: "blur(2px)",
 
             [theme.breakpoints.down('sm')]: {
                 flexDirection: "column",
@@ -42,12 +40,12 @@ const useStyles = makeStyles()((theme) => {
 
                 height: "auto",
 
-                backgroundColor: "rgba(20, 20, 20, 1)",
+                backgroundColor: "rgba(15, 15, 15, 1)",
             },
             [theme.breakpoints.up('sm')]: {
                 flexDirection: "row",
                 
-                background: "linear-gradient(350deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%)",
+                backgroundColor: "rgba(24, 24, 24, 1)",
             },
             [theme.breakpoints.down('lg')]: {
                 flexWrap: "wrap",
