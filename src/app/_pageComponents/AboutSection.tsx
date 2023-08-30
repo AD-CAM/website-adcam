@@ -1,9 +1,14 @@
 'use client'
+/* Assets Imports */
+import alarmeImage from 'public/accueil/alarmes.jpg'
+import cameraImage from 'public/accueil/video-surveillance.jpg'
+import accessImage from 'public/accueil/controle-acces.png'
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Components Imports */
 import { SectionTitle } from '../_components/SectionTitle'
+import Image from 'next/image'
 
 
 
@@ -24,20 +29,62 @@ const useStyles = makeStyles()((theme) => {
         },
         subRoot: {
             display: "flex",
-            flexDirection: "column",
             alignItems: "center",
 
             boxSizing: "border-box",
 
-            maxWidth: "1450px",
-
             [theme.breakpoints.up('sm')]: {
-                paddingLeft: theme.spacing(6),
-                paddingRight: theme.spacing(6),   
+                justifyContent: "space-evenly",
+                width: "100%",
             },
         },
         imageContainer: {
+            position: "relative",
 
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+
+            boxSizing: "border-box",
+
+            height: "200px",
+            width: "200px",
+
+            border: "2px solid",
+            borderColor: "rgba(200, 4, 4, 1)",
+        },
+        imageSubContainer: {
+            position: "absolute",
+            
+            boxSizing: "border-box",
+
+            width: "194px",
+            height: "194px",
+        },
+        imageContainerWide: {
+            position: "relative",
+
+            marginTop: theme.spacing(8),
+
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+
+            boxSizing: "border-box",
+
+            height: "220px",
+            width: "545px",
+
+            border: "2px solid",
+            borderColor: "rgba(200, 4, 4, 1)",
+        },
+        imageSubContainerWide: {
+            position: "absolute",
+            
+            boxSizing: "border-box",
+
+            width: "539px",
+            height: "214px",
         },
         mainArticle: {
             [theme.breakpoints.down('sm')]: {
@@ -65,7 +112,11 @@ export default function AboutSection() {
     return (      
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
-                <aside className={ classes.imageContainer }></aside>
+                <aside className={ classes.imageContainer }>
+                    <div className={ classes.imageSubContainer }>
+                        <Image src={ accessImage } alt={ "Installation de systèmes d'alarmes automatiques" } fill={ true } style={{ objectFit: "cover" }} />
+                    </div>
+                </aside>
                 <article className={ classes.mainArticle }>
                     <SectionTitle text={ "AD CAM, À propos" } />
 
@@ -104,10 +155,18 @@ export default function AboutSection() {
                         Meung-sur-Loire, Montargis, Pithiviers, Saran, Sully-sur-Loire)` }
                     </p>
                 </article>
-                <aside className={ classes.imageContainer }></aside>
+                <aside className={ classes.imageContainer }>
+                    <div className={ classes.imageSubContainer }>
+                        <Image src={ alarmeImage } alt={ "Installation de systèmes d'alarmes automatiques" } fill={ true } style={{ objectFit: "cover" }} />
+                    </div>
+                </aside>
             </div>
 
-            <aside className={ classes.imageContainer }></aside>
+            <aside className={ classes.imageContainerWide }>
+                <div className={ classes.imageSubContainerWide }>
+                    <Image src={ cameraImage } alt={ "Installation de systèmes d'alarmes automatiques" } fill={ true } style={{ objectFit: "cover" }} />
+                </div>
+            </aside>
         </section>
     )
 }
