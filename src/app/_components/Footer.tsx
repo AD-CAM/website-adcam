@@ -2,6 +2,8 @@
 /* Assets Imports */
 import adCamFullLogo from "/public/logos/logo-full_white.png"
 import adCamFooterLogo from "/public/logos/logo_white.png"
+import escortLogo from "/public/partners/escort-logo.png"
+import isiLogo from "/public/partners/isi-logo.png"
 /* Utils & Data Imports */
 import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
@@ -56,12 +58,21 @@ const useStyles = makeStyles()((theme) => {
         },
         logoRoot: {
             display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+
+            height: "100%",
+            width: "auto",
+        },
+        logoSubRoot: {
+            display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             
             
             height: "100%",
-            width: "auto",
+            width: "100%",
 
             [theme.breakpoints.down('sm')]: {
                 flexBasis: "auto",
@@ -79,13 +90,11 @@ const useStyles = makeStyles()((theme) => {
                 justifyContent: "center",
                 flexDirection: "row",
                 
-                marginBottom: theme.spacing(8),
+                marginBottom: theme.spacing(2),
             },
             [theme.breakpoints.up('md')]: {
                 flexBasis: "45%",
                 justifyContent: "center",
-
-                marginBottom: theme.spacing(10),
             },
             [theme.breakpoints.up('lg')]: {
                 flexBasis: "auto",
@@ -138,6 +147,44 @@ const useStyles = makeStyles()((theme) => {
 
             width: "100%",
         },
+        partnersContainer: {
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "center",
+
+            width: "330px",
+            maxWidth: "100vw",
+
+            [theme.breakpoints.down('sm')]: {
+                justifyContent: "center",
+
+                marginTop: theme.spacing(8),
+                marginBottom: theme.spacing(6),
+            },
+            [theme.breakpoints.up('sm')]: {
+                justifyContent: "space-between",
+
+                marginTop: theme.spacing(4),
+                marginBottom: theme.spacing(8),
+            },
+            [theme.breakpoints.up('lg')]: {
+                marginTop: theme.spacing(4),
+                marginBottom: 0,
+            },
+        },
+        partnersInfoTitle: {
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+
+            marginTop: 0,
+            marginBottom: theme.spacing(2),
+            width: "100%",
+
+            color: "#FFF",
+        },
         footerNavContainer: {
             display: "flex",
             alignItems: "flex-start",
@@ -146,20 +193,25 @@ const useStyles = makeStyles()((theme) => {
             [theme.breakpoints.down('sm')]: {
                 flexDirection: "column",
                 flexBasis: "auto",
+                justifyContent: "center",
+
+                height: "auto",
             },
             [theme.breakpoints.up('sm')]: {
                 flexDirection: "row",
-                flexBasis: "100%",
+                flexBasis: "auto",
+                justifyContent: "space-between",
+
+                height: "auto",
 
                 marginBottom: theme.spacing(8),
             },
-            [theme.breakpoints.up('md')]: {
-                flexDirection: "row",
-                flexBasis: "45%",
-            },
             [theme.breakpoints.up('lg')]: {
-                flexDirection: "row",
+                flexDirection: "column",
                 flexBasis: "auto",
+                justifyContent: "space-between",
+
+                height: "320px",
             },
         },
         footerNavRoot: {
@@ -265,36 +317,51 @@ export default function Footer() {
     return (      
         <footer className={ classes.root }>
             <div className={ classes.logoRoot }>
-                {   !isSmallScreen  ? (
-                                        <Image  className={ classes.logoImage }
-                                            src={ adCamFooterLogo }
-                                            alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
-                                        />
-                                )   : (
-                                        <Image  className={ classes.logoImage }
-                                            src={ adCamFullLogo }
-                                            alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
-                                        />
-                                )
+                <div className={ classes.logoSubRoot }>
+                    {   !isSmallScreen  ? (
+                                            <Image  className={ classes.logoImage }
+                                                src={ adCamFooterLogo }
+                                                alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
+                                            />
+                                    )   : (
+                                            <Image  className={ classes.logoImage }
+                                                src={ adCamFullLogo }
+                                                alt="Logo de AD CAM, installateurs de systèmes de surveillance près d'Orléans"
+                                            />
+                                    )
 
-                }
-                <div className={ classes.logoInfoContainer }>
-                    <h3 className={ classes.logoInfoTitle }>
-                        <span>{ `Installateur d’alarme et vidéo` }</span>
-                        <span>{ `surveillance à Orléans (45)` }</span>
-                    </h3>
-                    <div className={ classes.logoInfoButtons }>
-                        <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
-                        <SocialButton icon={ 'facebook' } link={ 'https://www.facebook.com/AD-CAM-103597488861540' } description={ 'Suivez nous sur Facebook.' }/>
+                    }
+                    <div className={ classes.logoInfoContainer }>
+                        <h3 className={ classes.logoInfoTitle }>
+                            <span>{ `Installateur d’alarme et vidéo` }</span>
+                            <span>{ `surveillance à Orléans (45)` }</span>
+                        </h3>
+                        <div className={ classes.logoInfoButtons }>
+                            <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' }/>
+                            <SocialButton icon={ 'facebook' } link={ 'https://www.facebook.com/AD-CAM-103597488861540' } description={ 'Suivez nous sur Facebook.' }/>
+                        </div>
+                        <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/files/ajax-fibra_certificate.pdf' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
                     </div>
-                    <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ '/files/ajax-fibra_certificate.pdf' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` }/>
+                </div>
+
+                <div className={ classes.partnersContainer }>
+                    <h3 className={ classes.partnersInfoTitle }>
+                        { `Nos partenaires` }
+                    </h3>
+                    <Image src={ escortLogo } alt="Logo de Escort" height={ 75 } width={ 115 } style={{ margin: "10px" }} />
+                    <Image src={ isiLogo } alt="Logo de ISI" height={ 75 } width={ 170 } style={{ margin: "10px" }} />
                 </div>
             </div>
+
+
             <div className={ classes.footerNavContainer }>
                 <FooterNavigation />
                 <FooterConditions />
             </div>
+
+
             <ContactForm location={ "footer" } />
+
 
             <p className={ classes.copyright }>
                 AD CAM © { new Date().getFullYear() } - Tous droits réservés

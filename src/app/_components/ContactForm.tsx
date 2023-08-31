@@ -120,13 +120,7 @@ const useStyles = makeStyles()((theme) => {
                 minHeight: theme.spacing(16),
             },
             [theme.breakpoints.up('sm')]: {
-                minHeight: theme.spacing(8),
-            },
-            [theme.breakpoints.down('lg')]: {
-                minHeight: theme.spacing(16),
-            },
-            [theme.breakpoints.up('lg')]: {
-                minHeight: theme.spacing(8),
+                minHeight: theme.spacing(20),
             },
         },
         buttonContainer: {
