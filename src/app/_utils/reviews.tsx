@@ -11,18 +11,6 @@ function formatDate(timestamp: number) {
     return `${year}-${month}-${day}`
 }
 
-function serviceQuality(reviewsArray: ReviewObject[]) {
-    let ratingTotal = 0
-    
-
-    reviewsArray.forEach((review) => {
-        ratingTotal += review.rating
-    })
-
-
-    const reviewsAverage = ratingTotal / reviewsArray.length
-}
-
 
 
 export { formatDate }
