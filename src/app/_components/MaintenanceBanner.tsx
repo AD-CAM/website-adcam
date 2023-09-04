@@ -18,7 +18,7 @@ export default function MaintenanceBanner() {
 
     return (      
         <div className={ classes.root }>
-            
+            <p>{ `En raison de maintenance, les formulaires de contact ne fonctionnent actuellement pas. Pour toute demande, joignez nous au 06 95 86 91 76.` }</p>
         </div>
     )
 }
