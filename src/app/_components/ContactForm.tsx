@@ -8,6 +8,11 @@ import { motion, Variants } from 'framer-motion'
 import { regex } from '../_utils/regex'
 /* Components Imports */
 import { SubmitButton } from "./Button"
+import MaintenanceBanner from './MaintenanceBanner'
+
+
+
+const isOnMaintenance = process.env.NEXT_PUBLIC_IS_ON_MAINTENANCE
 
 
 
@@ -192,18 +197,24 @@ interface ContactFormProps {
 
 
 
+function handleFormSend(data: any) {
+    if(isOnMaintenance) {
+        console.log("Due to server maintenance, the form could not be sent.")
+
+        return
+    }
+
+    console.log("Placeholder for sending to API")
+}
+
+
+
 
 
 
 function InvoiceForm() {
     const { classes } = useStyles()
     const { handleSubmit, register, formState: { isValid, errors } } = useForm({mode: 'onChange'})
-
-
-
-    function handleFormSend(data: any) {
-        console.log("Placeholder for sending to API")
-    }
 
 
 
@@ -279,7 +290,10 @@ function InvoiceForm() {
             </div>
 
             <div className={ classes.invoiceButton }>
-                <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+                {
+                    isOnMaintenance ?   <MaintenanceBanner /> 
+                                    :   <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+                }
             </div>
         </form>
     )
@@ -291,12 +305,6 @@ function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
     const { handleSubmit, register, formState: { isValid, errors }, watch } = useForm({mode: 'onChange'})
     const messageValue = watch('message', '')
-
-
-
-    function handleFormSend(data: any) {
-        console.log("Placeholder for sending to API")
-    }
 
 
 
@@ -368,10 +376,15 @@ function ContactForm({ location }: ContactFormProps) {
             />
 
             <div className={ classes.buttonContainer }>
-                <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
-                <p className={ (messageValue.length <= 360) ? classes.characterCount : classes.characterCountTooLarge }>
-                    { (messageValue.length <= 360) ? `${messageValue.length}/360` : `( ! ) ${messageValue.length}/360` }
-                </p>
+                {
+                    isOnMaintenance ?   <MaintenanceBanner /> 
+                                    :   <>
+                                            <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+                                            <p className={ (messageValue.length <= 360) ? classes.characterCount : classes.characterCountTooLarge }>
+                                                { (messageValue.length <= 360) ? `${messageValue.length}/360` : `( ! ) ${messageValue.length}/360` }
+                                            </p>
+                                        </>
+                }
             </div>
         </form>
     )
