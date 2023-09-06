@@ -9,6 +9,8 @@ const useStyles = makeStyles()((theme) => {
         root: {
             boxSizing: "border-box",
             padding: theme.spacing(2),
+
+            borderRadius: theme.spacing(0.75),
             
             backgroundColor: "#e64c00",
         },
