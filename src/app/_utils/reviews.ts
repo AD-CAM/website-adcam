@@ -5,7 +5,7 @@ import { ReviewObject } from "../_types/reviews"
 
 async function getReviews(): Promise<ReviewObject[]> {
     try {
-        const response = await fetch('/api/google-reviews')
+        const response = await fetch('/api/reviews')
         const reviews = await response.json()
 
         console.log(reviews)
