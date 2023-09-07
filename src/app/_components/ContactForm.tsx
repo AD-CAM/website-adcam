@@ -5,8 +5,7 @@ import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
-import { handleIsOnMaintenance } from '../_utils/handleEnvVariables'
-const isOnMaintenance = handleIsOnMaintenance()
+import { isOnMaintenance } from '../_utils/handleEnvVariables'
 import { regex } from '../_utils/regex'
 /* Components Imports */
 import { SubmitButton } from "./Button"

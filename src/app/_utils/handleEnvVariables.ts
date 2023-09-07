@@ -1,12 +1,16 @@
-const isOnMaintenance = process.env.NEXT_PUBLIC_IS_ON_MAINTENANCE
+const isOnMaintenanceEnv = process.env.NEXT_PUBLIC_IS_ON_MAINTENANCE
+
+const isOnMaintenance = handleIsOnMaintenance()
 const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+const placeId = process.env.NEXT_PUBLIC_GOOGLE_PLACES_ID
+const placeEndpoint = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews&key=${apiKey}`
 
 
 
 function handleIsOnMaintenance(): boolean {
-    if(isOnMaintenance === "false") {
+    if(isOnMaintenanceEnv === "false") {
         return false
-    } else if(isOnMaintenance === "true") {
+    } else if(isOnMaintenanceEnv === "true") {
         return true
     }
 
@@ -15,4 +19,4 @@ function handleIsOnMaintenance(): boolean {
 
 
 
-export { apiKey, handleIsOnMaintenance }
+export { apiKey, placeId, placeEndpoint, isOnMaintenance }
