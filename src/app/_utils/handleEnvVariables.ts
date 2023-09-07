@@ -1,4 +1,7 @@
 const isOnMaintenance = process.env.NEXT_PUBLIC_IS_ON_MAINTENANCE
+const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+
+
 
 function handleIsOnMaintenance(): boolean {
     if(isOnMaintenance === "false") {
@@ -10,4 +13,6 @@ function handleIsOnMaintenance(): boolean {
     return false
 }
 
-export { handleIsOnMaintenance }
+
+
+export { apiKey, handleIsOnMaintenance }

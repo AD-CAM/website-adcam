@@ -1,4 +1,6 @@
 'use client'
+/* Data & Utils Imports */
+import { apiKey } from "../_utils/handleEnvVariables"
 /* Library Imports */
 import { useState, useCallback } from 'react'
 import { GoogleMap, LoadScript, Circle } from '@react-google-maps/api'
@@ -32,7 +34,7 @@ const MapComponent = ({ radius }: MapComponentProps) => {
     };
 
     return (
-        <LoadScript googleMapsApiKey={ process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '' }>
+        <LoadScript googleMapsApiKey={ apiKey || '' }>
             <GoogleMap
                 mapContainerStyle={ containerStyle }
                 center={ defaultCenter }
