@@ -1,24 +1,23 @@
-/* Data & Utils Imports */
-import { apiKey, placeId, placeEndpoint } from "./handleEnvVariables"
 /* Types Imports */
 import { ReviewObject } from "../_types/reviews"
-/* Library Imports */
-import axios from "axios"
 
 
 
-function getReviews(): Promise<ReviewObject[]> {
-    return axios.get(placeEndpoint)
-                .then((response) => {
-                    const reviews = response.data.result.reviews
-                
-                    console.log(reviews)
+async function getReviews(): Promise<ReviewObject[]> {
+    try {
+        const response = await fetch('/api/google-reviews')
+        const reviews = await response.json()
 
-                    return reviews
-                })
-                .catch((error) => {
-                    console.log('Error while fetching reviews:', error)
-                })
+        console.log(reviews)
+
+        return reviews
+
+    } catch (error) {
+
+        console.log('Error while fetching reviews:', error)
+
+        throw error
+    }
 }
 
 

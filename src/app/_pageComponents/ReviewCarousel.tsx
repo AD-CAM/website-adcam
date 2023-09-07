@@ -1,8 +1,10 @@
 'use client'
 /* Utils & Data Imports */
+import { getReviews } from "../_utils/reviews"
 import { ReviewInfo } from "../_types/dataFiles"
 const reviewList: ReviewInfo[] = require("../_data/reviewList.json")
 /* Library Imports */
+import { useEffect } from "react"
 import { makeStyles } from 'tss-react/mui'
 import { useTheme, useMediaQuery } from "@mui/material"
 /* Components Imports */
@@ -118,6 +120,12 @@ export default function ReviewCarousel() {
     const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'))
     const isLargeScreen = useMediaQuery(theme.breakpoints.down('lg'))
     const isStrictlyLargeScreen = !isSmallScreen && !isMediumScreen && isLargeScreen
+
+
+
+    useEffect(() => {
+        getReviews()
+    })
 
 
 
