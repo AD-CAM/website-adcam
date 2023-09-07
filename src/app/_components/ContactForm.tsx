@@ -5,14 +5,12 @@ import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
+import { handleIsOnMaintenance } from '../_utils/handleEnvVariables'
+const isOnMaintenance = handleIsOnMaintenance()
 import { regex } from '../_utils/regex'
 /* Components Imports */
 import { SubmitButton } from "./Button"
 import MaintenanceBanner from './MaintenanceBanner'
-
-
-
-const isOnMaintenance = process.env.NEXT_PUBLIC_IS_ON_MAINTENANCE
 
 
 
