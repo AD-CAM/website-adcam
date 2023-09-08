@@ -15,7 +15,7 @@ const useStyles = makeStyles()((theme) => {
             backgroundColor: "#e64c00",
         },
         text: {
-            fontWeight: 600,
+            fontWeight: 500,
             color: "white",
 
             margin: 0,
