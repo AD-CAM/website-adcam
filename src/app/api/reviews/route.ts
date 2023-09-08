@@ -6,7 +6,7 @@ import { NextApiRequest, NextApiResponse } from "next"
 
 
 
-export async function GET(req: NextApiRequest & Request, res: NextApiResponse & Response) {
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
     try {
 
         const response = await axios.get( requestEndpoint )
