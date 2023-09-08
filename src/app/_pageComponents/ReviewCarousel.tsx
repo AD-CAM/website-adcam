@@ -123,9 +123,9 @@ export default function ReviewCarousel() {
 
 
 
-    useEffect(() => {
+    /* useEffect(() => {
         getReviews()
-    })
+    }) */
 
 
 
