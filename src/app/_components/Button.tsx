@@ -88,7 +88,7 @@ const useStyles = makeStyles()((theme) => {
             borderRadius: theme.spacing(0.75),
             border: "2px solid",
 
-            backgroundColor: "rgba(255, 255, 255, 1)",
+            backgroundColor: "rgba(245, 245, 245, 1)",
             boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
 
             fontWeight: 500,
@@ -106,7 +106,7 @@ const useStyles = makeStyles()((theme) => {
             borderRadius: theme.spacing(0.75),
             border: "2px solid",
 
-            backgroundColor: "rgba(255, 255, 255, .5)",
+            backgroundColor: "rgba(170, 170, 170, 1)",
             boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
 
             fontWeight: 500,
