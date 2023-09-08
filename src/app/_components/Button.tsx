@@ -5,7 +5,7 @@ import { makeStyles } from 'tss-react/mui'
 /* Type Imports */
 import { MouseEventHandler } from 'react'
 /* Icons Imports */
-import { FaArrowRight, FaPhoneAlt, FaFileInvoice, FaFacebookSquare } from 'react-icons/fa'
+import { FaArrowRight, FaPhoneAlt, FaFileInvoice, FaFacebookSquare, FaStar } from 'react-icons/fa'
 import { PiCertificateBold } from 'react-icons/pi'
 /* Components Imports */
 import Link from 'next/link'
@@ -181,6 +181,8 @@ const Icon = ({ icon }: IconProps) => {
             return <PiCertificateBold />
         case 'facebook' :
             return <FaFacebookSquare />
+        case 'star' :
+            return <FaStar />
     }
 }
 

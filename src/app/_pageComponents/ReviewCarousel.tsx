@@ -11,7 +11,7 @@ import { useTheme, useMediaQuery } from "@mui/material"
 import { SectionTitle } from "../_components/SectionTitle"
 import Review from "../_components/Review"
 import Carousel from "../_components/Carousel"
-
+import { IconButton } from "../_components/Button"
 
 
 
@@ -93,6 +93,9 @@ const useStyles = makeStyles()((theme) => {
             height: "35px",
 
             marginBottom: theme.spacing(4),
+        },
+        writeReviewRoot: {
+            marginTop: theme.spacing(4),
         }
     }
 })
@@ -156,6 +159,9 @@ export default function ReviewCarousel() {
                     })
                 }
                 </Carousel>
+                <div className={ classes.writeReviewRoot }>
+                    <IconButton icon={ "star" } text={ "Donner un avis" } link={ "https://g.page/r/Ce50QaX_gC5NEB0/review" } description={ "Donner un avis" } />
+                </div>
             </div>
         </section> 
     )
