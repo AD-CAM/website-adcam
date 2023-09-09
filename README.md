@@ -1,1 +1,1 @@
-A proof of concept project using NextJS
+A proof of concept project using NextJS designed for a professional security devices installer.
