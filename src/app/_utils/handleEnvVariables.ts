@@ -1,7 +1,6 @@
 const isOnMaintenance = handleIsOnMaintenance()
 const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
-const accountId = process.env.NEXT_PUBLIC_GMB_ACCOUNT_ID
-const locationId = process.env.NEXT_PUBLIC_GMB_LOCATION_ID
+const placesId = process.env.NEXT_PUBLIC_GOOGLE_PLACES_ID
 const requestEndpoint = ``
 
 
@@ -18,4 +17,4 @@ function handleIsOnMaintenance(): boolean {
 
 
 
-export { apiKey, accountId, locationId, requestEndpoint, isOnMaintenance }
+export { apiKey, placesId, requestEndpoint, isOnMaintenance }
