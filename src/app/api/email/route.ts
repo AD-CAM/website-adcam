@@ -14,7 +14,7 @@ sgMail.setApiKey(sgApiKey)
 
 
 export async function POST(req: NextRequest) {
-    const { to, subject, text }: any  = req.body
+    /* const { to, subject, text }: any  = req.body
 
     const msg = {
         to,
@@ -25,5 +25,6 @@ export async function POST(req: NextRequest) {
 
     const response = await sgMail.send(msg)
 
-    return NextResponse.json({ response })
+    return NextResponse.json({ response }) */
+    return "placeholder"
 }
