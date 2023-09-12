@@ -1,7 +1,7 @@
 const isOnMaintenance = handleIsOnMaintenance()
 const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
 const placesId = process.env.NEXT_PUBLIC_GOOGLE_PLACES_ID
-const requestEndpoint = ``
+const requestEndpoint = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placesId}&fields=reviews&key=${apiKey}`
 
 
 
