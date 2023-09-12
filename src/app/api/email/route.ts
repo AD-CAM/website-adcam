@@ -4,27 +4,40 @@ import { EmailData } from '@/app/_types/email'
 import sgMail from '@sendgrid/mail'
 import { NextRequest, NextResponse } from 'next/server'
 
-let sgApiKey = ""
-if(process.env.SENDGRID_API_KEY){
-    sgApiKey = process.env.SENDGRID_API_KEY
-}
 
-sgMail.setApiKey(sgApiKey)
+
+if(process.env.SENDGRID_API_KEY !== undefined) {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+} else {
+    console.error(`The SendGrid API key is undefined!`)
+}
 
 
 
 export async function POST(req: NextRequest) {
-    /* const { to, subject, text }: any  = req.body
+    const data = await req.json()
 
     const msg = {
-        to,
-        from: 'PLACEHOLDER',
-        subject,
-        text,
+        to: "contact@ad-cam.fr",
+        from: "contact@ad-cam.fr",
+        subject: data.subject,
+        text: data.text
     }
 
-    const response = await sgMail.send(msg)
 
-    return NextResponse.json({ response }) */
-    return "placeholder"
+
+    sgMail
+        .send(msg)
+        .then(() => {
+            console.log('Email sent')
+            return new NextResponse('Email sent', { status: 200 })
+        })
+        .catch((error) => {
+            console.error(error)
+            return new NextResponse('Error while sending email', { status: 400 })
+        })
+
+
+
+    
 }

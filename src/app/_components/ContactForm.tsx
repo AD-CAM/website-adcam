@@ -201,6 +201,8 @@ function handleFormSend(data: any) {
         return
     }
 
+    fetch('/api/email/')
+
     console.log("Placeholder for sending to API")
 }
 
