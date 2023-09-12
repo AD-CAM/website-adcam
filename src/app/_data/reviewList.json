@@ -1,62 +1,122 @@
 [
     {
-        "author_name": "John Doe",
+        "author_name": "Alexandra Lievin",
         "author_url": "null",
         "language": "fr",
-        "profile_photo_url": "https://cgfreezedry.com/wp-content/uploads/2018/06/t_01.jpg",
-        "rating": 3,
-        "relative_time_description": "yesterday",
-        "text": "Lorem Ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "time": 2023
-    },
-    {
-        "author_name": "John Doe",
-        "author_url": "null",
-        "language": "fr",
-        "profile_photo_url": "https://cgfreezedry.com/wp-content/uploads/2018/06/t_01.jpg",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKbE51JOV4lhyo0NDHVzab888alsAPJFKW8Q6KyxEJ0=w36-h36-p-rp-mo-br100",
         "rating": 5,
-        "relative_time_description": "yesterday",
-        "text": "Lorem Ipsum dolor sit amet.",
-        "time": 2023
+        "relative_time_description": "09-2023",
+        "text": "Je recommande la société AD CAM à 100%. Je suis très satisfaite de l'installation qui a été faite grâce aux conseils d'Aurelien qui a très bien su cerner nos besoins. Une équipe très professionnelle avec un travail soigné et du matériel de qualité et tout ça avec des prix très compétitifs par rapport aux autres entreprises.",
+        "time": "09-2023"
     },
     {
-        "author_name": "John Doe",
+        "author_name": "Michael DE AMORIM",
         "author_url": "null",
         "language": "fr",
-        "profile_photo_url": "https://cgfreezedry.com/wp-content/uploads/2018/06/t_01.jpg",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLgKpDe1UaWi1So1Pw2uTDPb5F1skViCwMHWYu1QdjQ=w36-h36-p-rp-mo-br100",
         "rating": 5,
-        "relative_time_description": "yesterday",
-        "text": "Lorem Ipsum dolor sit amet, consecetur adipiscing elit.",
-        "time": 2023
+        "relative_time_description": "07-2023",
+        "text": "Au top ! Aurélien met tout en œuvre pour adapter votre projet à vos réels besoin avec des matériels performants et une infinité de configuration possible sans pour autant vous massacrez sur le prix ! Je recommande vivement !",
+        "time": "07-2023"
     },
     {
-        "author_name": "John Doe",
+        "author_name": "Thibaut tips51",
         "author_url": "null",
         "language": "fr",
-        "profile_photo_url": "https://cgfreezedry.com/wp-content/uploads/2018/06/t_01.jpg",
-        "rating": 4,
-        "relative_time_description": "yesterday",
-        "text": "Lorem Ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "time": 2023
-    },
-    {
-        "author_name": "John Doe",
-        "author_url": "null",
-        "language": "fr",
-        "profile_photo_url": "https://cgfreezedry.com/wp-content/uploads/2018/06/t_01.jpg",
-        "rating": 2,
-        "relative_time_description": "yesterday",
-        "text": "Lorem Ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "time": 2023
-    },
-    {
-        "author_name": "John Doe",
-        "author_url": "null",
-        "language": "fr",
-        "profile_photo_url": "https://cgfreezedry.com/wp-content/uploads/2018/06/t_01.jpg",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIWs9g4dTLbGWKZT4AOjtC8F2bBXKh7d2A4fpLQOZpU=w36-h36-p-rp-mo-br100",
         "rating": 5,
-        "relative_time_description": "yesterday",
-        "text": "Lorem Ipsum dolor sit amet, consecetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "time": 2023
+        "relative_time_description": "10-2022",
+        "text": "De l'analyse du besoin jusqu'au test de notification d'intrusion sur smartphone, une intervention professionnelle et rapide. Merci Aurélien pour cette installation de caméras discrètes avec une image de qualité. Je recommande les yeux fermés👌",
+        "time": "10-2022"
+    },
+    {
+        "author_name": "Malika",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocK2-ciBN4sS1GIBRl45U6bKK9vPZW3MSmOTLX9iuJur=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "04-2023",
+        "text": "Je recommande fortement. Preuve de professionnalisme, travail soigné et surtout très efficace. Bon rapport qualité/prix. Merci encore",
+        "time": "04-2023"
+    },
+    {
+        "author_name": "Alex D",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJ5n9vUol2cTfaO-q7SKpzIkOLDVpYrkdxT3Ci0i4DH=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "07-2023",
+        "text": "Entreprise très réactive, professionnel et avec de bon conseil ! Je recommande",
+        "time": "07-2023"
+    },
+    {
+        "author_name": "Bar Fleury",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIabNYvX4ZxiQSNg0R9EEScHCB8U9p5CWJMGsxMzsrR=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "04-2023",
+        "text": "Professionnel à la hauteur des espérances.Très compétent et réactif. Respect les normes et aurelien à de très bon conseillé, nous recommandons.",
+        "time": "04-2023"
+    },
+    {
+        "author_name": "M FM",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIPBmMpUTGZD1GQTVYzLdRt7LJa9Y5F1YhRb_I5a5Wo=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "03-2023",
+        "text": "AD CAM m'a conseillé puis installé un système de vidéosurveillance de qualité. Un rapport qualité prix très intéressant après plusieurs devis. Un SAV de qualité également et pour finir une application avec des mises à jour régulières. Je recommande fortement !!",
+        "time": "03-2023"
+    },
+    {
+        "author_name": "Jean Sitbon",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocINOh8AJgOxW2dE1FXxR8-lXS57M4oga7vq3QSSY85J=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "08-2023",
+        "text": "Qualité des prestations, qualité de l’accueil, qualité de la disponibilité, prix très étudié, je recommande vivement.",
+        "time": "08-2023"
+    },
+    {
+        "author_name": "filipe da silva",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWflVdQ77kJkR1INaKpevOzegxgcmRxUi_BXYQ8zSOB_w=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "06-2023",
+        "text": "Equipe très professionnelle. Et qui oriente bien ses clients. Bravo",
+        "time": "06-2023"
+    },
+    {
+        "author_name": "Sandra Arcas",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXdWmzlL9XqAPravT-7Rx3Z8blkvFM3tXip7s_wFVXOJzGF=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "02-2023",
+        "text": "Merci Aurélien juste parfait !!!🤗 Très professionnel, installation parfaite matériel au top et explications claires avec démonstration. Je recommande fortement !!!",
+        "time": "02-2023"
+    },
+    {
+        "author_name": "Samuel",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIj9pZInxRgUSrsFAtf-1nzky_tg9Yyj58k_OXvH5tM=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "12-2022",
+        "text": "La complexité ne les effraient pas! Malgré des infrastructures compliquées, de l'étude du projet à la réalisation du réseau, nous ne pouvons que recommander! Des conseils clairs et efficaces, du matériel de qualité, une intervention rapide et pro, le tout à un prix défiant la concurrence. Merci à l'équipe AD-CAM.",
+        "time": "12-2022"
+    },
+    {
+        "author_name": "Bruno Fiquet",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIJox0SvzqVELBtiLAwXJCVHr_NyUsZsZg3L6tI7_w6=w36-h36-p-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "07-2022",
+        "text": "très belle expérience avec la société AD CAM. Les tarifs sont très compétitifs, Aurélien le dirigeant est très réactif et n'hésite pas à poser des questions au départ pour que l'installation soit au plus près des attentes client. L'équipe qui est intervenue s'est montrée agréable, discrète et très professionnelle. J'ai même été contacté 15 jours après l'installation pour savoir si tout fonctionnait correctement, ce qui s'est révélé être le cas. Je recommande AD CAM sans aucun problème.",
+        "time": "07-2022"
     }
 ]

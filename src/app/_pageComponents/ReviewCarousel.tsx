@@ -11,7 +11,7 @@ import { useTheme, useMediaQuery } from "@mui/material"
 import { SectionTitle } from "../_components/SectionTitle"
 import Review from "../_components/Review"
 import Carousel from "../_components/Carousel"
-import { IconButton } from "../_components/Button"
+import { GoToButton, IconButton } from "../_components/Button"
 
 
 
@@ -95,6 +95,11 @@ const useStyles = makeStyles()((theme) => {
             marginBottom: theme.spacing(4),
         },
         writeReviewRoot: {
+            display: "flex",
+            justifyContent: "space-evenly",
+
+            minWidth: "310px",
+
             marginTop: theme.spacing(4),
         }
     }
@@ -161,6 +166,10 @@ export default function ReviewCarousel() {
                 </Carousel>
                 <div className={ classes.writeReviewRoot }>
                     <IconButton icon={ "star" } text={ "Donner un avis" } link={ "https://g.page/r/Ce50QaX_gC5NEB0/review" } description={ "Donner un avis" } />
+                    <GoToButton text={ `Voir plus d'avis` }
+                                link={ `https://goo.gl/maps/eqLTBWEQWpXq5cts7` }
+                                description={ "Accéder aux avis google de AD-CAM" }            
+                    />
                 </div>
             </div>
         </section> 

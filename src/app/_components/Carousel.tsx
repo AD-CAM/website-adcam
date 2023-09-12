@@ -146,7 +146,7 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
         } else if(displayCentered && !isEven(children.length)){
             return "0"
         } else if(!displayCentered && !isEven(children.length)){
-            return "-50%"
+            return "50%"
         }
         return "0"
     }
