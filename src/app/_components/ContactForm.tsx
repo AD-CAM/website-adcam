@@ -1,9 +1,12 @@
 'use client'
 /* Library Imports */
+import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 import { makeStyles } from 'tss-react/mui'
 import { motion, Variants } from 'framer-motion'
+/* Types Imports */
+import { EmailData } from '../_types/email'
 /* Utils & Data Imports */
 import { isOnMaintenance } from '../_utils/handleEnvVariables'
 import { regex } from '../_utils/regex'
@@ -194,14 +197,44 @@ interface ContactFormProps {
 
 
 
-function handleFormSend(data: any) {
-    if(isOnMaintenance) {
-        console.log("Due to server maintenance, the form could not be sent.")
+function handleContactSend(data: any) {
+    const emailData = {
+        subject: "Demande de contact depuis AD-CAM.fr",
+        text: `Vous avez reçu une demande de contact.
 
-        return
+        Nom du ou de la correspondant(e): ${data.name}
+        Email du ou de la correspondant(e): ${data.email}
+        Message: ${data.message}
+        
+        Cet email a été envoyé automatiquement depuis le serveur de AD-CAM.fr et ne permet pas d'y répondre directement.`
     }
 
-    fetch('/api/email/')
+    handleFormSubmit(emailData)
+}
+
+function handleInvoiceSend(data: any) {
+    const emailData = {
+        subject: "Demande de devis express depuis AD-CAM.fr",
+        text: `Vous avez reçu une demande de devis express.
+
+        Nom du ou de la correspondant(e): ${data.name}
+        Email du ou de la correspondant(e): ${data.email}
+        Téléphone du ou de la correspondant(e): ${data.phone}
+        
+        Cet email a été envoyé automatiquement depuis le serveur de AD-CAM.fr et ne permet pas d'y répondre directement.`
+    }
+
+    handleFormSubmit(emailData)
+}
+
+function handleFormSubmit(data: EmailData) {
+    axios.post('/api/email/', data)
+        .then(() => {
+            console.log('Email posted')
+        })
+        .catch((error) => {
+            console.log('An error occurred while sending the email:', error)
+        })
 
     console.log("Placeholder for sending to API")
 }
@@ -218,7 +251,7 @@ function InvoiceForm() {
 
 
     return (
-        <form className={ classes.invoiceRoot } onSubmit={ handleSubmit(handleFormSend) }
+        <form className={ classes.invoiceRoot } onSubmit={ handleSubmit(handleInvoiceSend) }
               aria-labelledby="form-title"
         >
             <h3 className={ classes.invoiceTitle } id="form-title">{ `Devis express` }</h3>
@@ -308,7 +341,7 @@ function ContactForm({ location }: ContactFormProps) {
 
 
     return (      
-        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleSubmit(handleFormSend)}
+        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleSubmit(handleContactSend)}
               aria-labelledby="form-title"
         >
             <h3 className={ classes.formTitle } id="form-title">{ `Contactez-nous` }</h3>

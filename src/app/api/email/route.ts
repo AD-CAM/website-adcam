@@ -36,8 +36,4 @@ export async function POST(req: NextRequest) {
             console.error(error)
             return new NextResponse('Error while sending email', { status: 400 })
         })
-
-
-
-    
 }
