@@ -235,8 +235,6 @@ function handleFormSubmit(data: EmailData) {
         .catch((error) => {
             console.log('An error occurred while sending the email:', error)
         })
-
-    console.log("Placeholder for sending to API")
 }
 
 
