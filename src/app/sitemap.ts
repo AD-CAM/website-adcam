@@ -6,7 +6,7 @@ const pageList: PageInfo[] = require("./_data/pageList.json")
 
 
 
-const rootUrl = "http://ad-cam.fr";
+const rootUrl = "https://www.ad-cam.fr";
 
 
 
