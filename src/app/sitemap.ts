@@ -2,7 +2,10 @@
 const fs = require('fs')
 /* Utils & Data Imports */
 import { PageInfo } from "./_types/dataFiles"
-const pageList: PageInfo[] = require("./_data/pageList.json")
+const conditionsList: PageInfo[] = require("./_data/conditionsList.json")
+const filteredConditionsList: PageInfo[] = conditionsList.filter((page) => page.name !== "termsOfUse")
+const normalPagesList: PageInfo[] = require("./_data/pageList.json")
+const pageList: PageInfo[] = normalPagesList.concat(filteredConditionsList)
 
 
 
