@@ -21,6 +21,8 @@ const useStyles = makeStyles()((theme) => {
             backgroundColor: "#ff661a",
         },
         icon: {
+            color: "white",
+            
             minHeight: "30px",
             minWidth: "30px",
         },
