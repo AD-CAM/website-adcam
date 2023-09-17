@@ -206,12 +206,23 @@ const useStyles = makeStyles()((theme) => {
 
                 marginBottom: theme.spacing(8),
             },
+            [theme.breakpoints.up('md')]: {
+                flexDirection: "row",
+                flexBasis: "auto",
+                justifyContent: "space-between",
+
+                height: "auto",
+
+                marginBottom: theme.spacing(2),
+            },
             [theme.breakpoints.up('lg')]: {
                 flexDirection: "column",
                 flexBasis: "auto",
                 justifyContent: "space-between",
 
-                height: "320px",
+                height: "400px",
+
+                marginBottom: 0,
             },
         },
         footerNavRoot: {
