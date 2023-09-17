@@ -17,10 +17,10 @@ import cameraRemote from "public/cameras/full-remote-control.jpg"
 import cameraTelesurveillance from "public/cameras/telesurveillance.jpeg"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
+import { useMediaQuery, useTheme } from "@mui/material"
 /* Components Imports */
 import { SectionTitle, ImageTitle } from '../../_components/SectionTitle'
 import ImagedArticle from '../../_components/ImagedArticle'
-import { useMediaQuery, useTheme } from "@mui/material"
 import { IconButton } from "../../_components/Button"
 import ImageGrid from "../../_components/ImageGrid"
 
