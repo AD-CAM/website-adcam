@@ -1,6 +1,6 @@
 /* Assets Imports */
 import '../globals.css'
-import cameraBannerPhoto from "public/banners/camera_stock_photo.jpg"
+import accessBannerPhoto from "public/banners/access_stock_photo.jpg"
 /* Components Imports */
 import CallUs from '../_components/CallUs'
 import Header from '../_components/Header'
@@ -14,10 +14,10 @@ import FirstSection from './_pageComponents/FirstSection'
 export default function AlarmPage() {
     return (
         <>
-            <Header activePage={ "video" } />
+            <Header activePage={ "access-control" } />
             <CallUs />
             <main>
-                <Banner image={ cameraBannerPhoto } isSmall={ false } position='right' />
+                <Banner image={ accessBannerPhoto } isSmall={ false } position='right' />
                 <FirstSection />
             </main>
             <Footer />
