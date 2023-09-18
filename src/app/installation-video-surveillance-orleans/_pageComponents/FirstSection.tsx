@@ -193,7 +193,7 @@ export default function FirstSection() {
                     </ImagedArticle>
                 </div>
                 <div className={ classes.articleContainer }>
-                    <ImagedArticle image={ cameraTwo } alt={ `Système d'alarme AJAX avec contrôle à distance et sirène` } isLeft={ true } title={ `Pourquoi choisir une alarme ?` }>
+                    <ImagedArticle image={ cameraTwo } alt={ `Un écran de caméras de surveillance` } isLeft={ true } title={ `AD CAM vous procure un système de protection fiable` }>
                     <p>{ `Avec notre entreprise, vous pouvez profiter d’une ` }<strong>{ `caméra de surveillance performante.` }</strong>{ ` Un emplacement discret et une gamme d’appareils parfaitement adaptés font la notoriété de notre service. Dans le but d’optimiser votre protection, nos techniciens qualifiés:` }</p>
                     <ul style={{ paddingLeft: "20px", }}>
                         <li>{ `Détectent l’emplacement stratégique pour l’installation de l’équipement, pour assurer la qualité des images d’informations et la discrétion de l’appareil` }</li>
