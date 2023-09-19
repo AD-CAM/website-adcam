@@ -148,7 +148,7 @@ export default function FirstSection() {
                 </div>
                 <div className={ classes.articleContainer }>
                     <ImagedArticle image={ accessControlOne } alt={ `Système de contrôle d'accès par digicode` } isLeft={ false } title={ `Faites appel à AD CAM pour vous garantir un accès sécurisé à votre bâtiment` }>
-                        <p>{ `Que vous ayez un ou plusieurs bâtiments à sécuriser et quelle que soit le nombre d'utilisateurs, ` }<strong>{ `AD-CAM` }</strong>{ ` propose des solutions de contrôle d'accès souples et modulaires, adaptées aux besoins de chaque client : ` }<strong>{ `multi-sites, multi-bâtiments, multi-postes...` }</strong></p>
+                        <p>{ `Que vous ayez un ou plusieurs bâtiments à sécuriser et quel que soit le nombre d'utilisateurs, ` }<strong>{ `AD CAM` }</strong>{ ` propose des solutions de contrôle d'accès souples et modulaires, adaptées aux besoins de chaque client : ` }<strong>{ `multi-sites, multi-bâtiments, multi-postes...` }</strong></p>
                         <p><strong>{ `Le contrôle d'accès` }</strong>{ ` consiste à s’assurer qu’un individu a bien les droits nécessaires pour accéder à un lieu, un édifice ou un local. Il permet d’organiser la circulation des personnes à l’intérieur d’un site et de gérer l’accès aux différentes zones de façon sélective. ` }</p>
                         <p>{ `Ainsi, ` }<strong>{ `l’accès à des espaces sensibles peut être restreint` }</strong>{ ` à certains utilisateurs, selon des plages horaires prédéfinies, avec un enregistrement de tous les déplacements dans un historique.` }</p> 
                     </ImagedArticle>
