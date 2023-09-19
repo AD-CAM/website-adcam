@@ -5,7 +5,7 @@ import NotFoundBody from './_pageComponents/NotFoundBody'
 
 
 
-export default function Home() {
+export default function NotFound() {
     return (
         <main>
             <NotFoundBody />
