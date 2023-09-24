@@ -129,6 +129,7 @@ const useStyles = makeStyles()((theme) => {
             },
         },
         buttonContainer: {
+            position: "relative",
             display: "flex",
             alignItems: "flex-start",
             justifyContent: "space-between",
@@ -150,6 +151,23 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 500,
 
             color: "rgba(252, 105, 105, 1)",
+        },
+
+
+
+        contactSuccess: {
+            position: "absolute",
+            left: "0",
+
+            borderRadius: theme.spacing(0.75),
+            padding: theme.spacing(1.15),
+            margin: 0,
+
+            fontWeight: 600,
+
+            boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
+            backgroundColor: "#228b22",
+            color: "white",
         },
 
 
@@ -179,6 +197,8 @@ const useStyles = makeStyles()((theme) => {
             marginBottom: theme.spacing(1),
         },
         invoiceButton: {
+            position: "relative",
+
             display: "flex",
             alignSelf: "flex-end",
             alignItems: "flex-start",
@@ -244,12 +264,19 @@ function handleFormSubmit(data: EmailData) {
 
 function InvoiceForm() {
     const { classes } = useStyles()
-    const { handleSubmit, register, formState: { isValid, errors } } = useForm({mode: 'onChange'})
+    const { handleSubmit, register, reset, formState: { isValid, errors, isSubmitSuccessful } } = useForm({mode: 'onChange'})
+
+
+
+    function onSubmit(data: any) {
+        handleInvoiceSend(data)
+        reset()
+    }
 
 
 
     return (
-        <form className={ classes.invoiceRoot } onSubmit={ handleSubmit(handleInvoiceSend) }
+        <form className={ classes.invoiceRoot } onSubmit={ handleSubmit(onSubmit) }
               aria-labelledby="form-title"
         >
             <h3 className={ classes.invoiceTitle } id="form-title">{ `Devis express` }</h3>
@@ -322,7 +349,17 @@ function InvoiceForm() {
             <div className={ classes.invoiceButton }>
                 {
                     isOnMaintenance ?   <MaintenanceBanner /> 
-                                    :   <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+                                    :   <>
+                                            <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+                                            { isSubmitSuccessful && 
+                                                                        <motion.p  className={ classes.contactSuccess }
+                                                                            initial={{ opacity: 0 }}
+                                                                            animate={{ opacity: 1 }}
+                                                                        >
+                                                                            { `Demande envoyée.` }
+                                                                        </motion.p>
+                                            }
+                                        </>
                 }
             </div>
         </form>
@@ -333,13 +370,20 @@ function InvoiceForm() {
 
 function ContactForm({ location }: ContactFormProps) {
     const { classes } = useStyles()
-    const { handleSubmit, register, formState: { isValid, errors }, watch } = useForm({mode: 'onChange'})
+    const { handleSubmit, register, reset, formState: { isValid, errors, isSubmitSuccessful }, watch } = useForm({mode: 'onChange'})
     const messageValue = watch('message', '')
 
 
 
+    function onSubmit(data: any) {
+        handleContactSend(data)
+        reset()
+    }
+
+
+
     return (      
-        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleSubmit(handleContactSend)}
+        <form className={ location === "footer" ? classes.footerRoot : classes.genericRoot } onSubmit={ handleSubmit(onSubmit)}
               aria-labelledby="form-title"
         >
             <h3 className={ classes.formTitle } id="form-title">{ `Contactez-nous` }</h3>
@@ -410,6 +454,16 @@ function ContactForm({ location }: ContactFormProps) {
                     isOnMaintenance ?   <MaintenanceBanner /> 
                                     :   <>
                                             <SubmitButton text={ "Envoyer" } description={ "Nous envoyer le formulaire de contact complété" } enabled={ isValid }/>
+                                            
+                                            { isSubmitSuccessful && 
+                                                                        <motion.p  className={ classes.contactSuccess }
+                                                                            initial={{ opacity: 0 }}
+                                                                            animate={{ opacity: 1 }}
+                                                                        >
+                                                                            { `Message envoyé.` }
+                                                                        </motion.p>
+                                            }
+
                                             <p className={ (messageValue.length <= 360) ? classes.characterCount : classes.characterCountTooLarge }>
                                                 { (messageValue.length <= 360) ? `${messageValue.length}/360` : `( ! ) ${messageValue.length}/360` }
                                             </p>
