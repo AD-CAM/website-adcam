@@ -22,4 +22,9 @@ interface ReviewInfo {
     time: number;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo }
+interface TechSheetInfo {
+    icon: string;
+    text: string;
+}
+
+export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetInfo }
