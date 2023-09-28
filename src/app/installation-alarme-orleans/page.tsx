@@ -17,7 +17,6 @@ export default function AlarmPage() {
             <Header activePage={ "alarm" } />
             <CallUs />
             <main>
-                <Banner image={ alarmBannerPhoto } isSmall={ true } position='right' />
                 <FirstSection />
             </main>
             <Footer />
