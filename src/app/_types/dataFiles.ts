@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 interface PageInfo {
     name: string;
     link: string;
@@ -22,9 +24,19 @@ interface ReviewInfo {
     time: number;
 }
 
-interface TechSheetInfo {
+interface TechSheetData {
+    image: StaticImageData;
+    alt: string;
+    isLeft: boolean;
+    boldTitle: string;
+    regularTitle: string;
+    subTitle: string;
+    techSheet: TechSheetDetails[]
+}
+
+interface TechSheetDetails {
     icon: string;
     text: string;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetInfo }
+export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetDetails }

@@ -1,0 +1,54 @@
+[
+    {
+        "image": "/ajax-image_one.png",
+        "alt": "Alarme AJAX",
+        "isLeft": true,
+        "boldTitle": "Placeholder",
+        "regularTitle": "Title",
+        "subTitle": "Placeholder Subtitle Here",
+        "techSheet":    [
+                            {
+                                "icon": "alarm",
+                                "text": "Type d'alarme réglable"
+                            },
+                            {
+                                "icon": "dry_out",
+                                "text": "Préviens en cas d'évaporation d'eau"
+                            },
+                            {
+                                "icon": "alarm",
+                                "text": "Type d'alarme réglable"
+                            },
+                            {
+                                "icon": "dry_out",
+                                "text": "Préviens en cas d'évaporation d'eau"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax-image_one.png",
+        "alt": "Alarme AJAX",
+        "isLeft": false,
+        "boldTitle": "Placeholder",
+        "regularTitle": "Title",
+        "subTitle": "Placeholder Subtitle Here",
+        "techSheet":    [
+                            {
+                                "icon": "alarm",
+                                "text": "Type d'alarme réglable"
+                            },
+                            {
+                                "icon": "dry_out",
+                                "text": "Préviens en cas d'évaporation d'eau"
+                            },
+                            {
+                                "icon": "alarm",
+                                "text": "Type d'alarme réglable"
+                            },
+                            {
+                                "icon": "dry_out",
+                                "text": "Préviens en cas d'évaporation d'eau"
+                            }
+                        ]
+    }
+]
