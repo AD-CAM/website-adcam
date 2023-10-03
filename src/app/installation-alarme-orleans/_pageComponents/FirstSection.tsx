@@ -62,7 +62,7 @@ export default function FirstSection() {
             <div className={ classes.subRoot }>
                 {
                     placeholderTechSheetsList.map((techSheetData: TechSheetData, index: number) => {
-                        return <TechSheet
+                        return <TechSheet 
                                             key={ index }
                                             image={ techSheetData.image }
                                             alt={ techSheetData.alt }
