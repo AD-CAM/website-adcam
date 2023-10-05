@@ -12,6 +12,7 @@ import HubSection from './_pageComponents/HubSection'
 import LeakSection from './_pageComponents/LeakSection'
 import MotionSection from './_pageComponents/MotionSection'
 import FireSection from './_pageComponents/FireSection'
+import DoorSection from './_pageComponents/DoorSection'
 
 
 
@@ -26,6 +27,7 @@ export default function AlarmPage() {
                 <LeakSection />
                 <MotionSection />
                 <FireSection />
+                <DoorSection />
             </main>
             <Footer />
         </>

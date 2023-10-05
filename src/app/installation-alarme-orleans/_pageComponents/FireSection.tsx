@@ -64,8 +64,8 @@ export default function FireSection() {
                                 alt={ "Détecteur d'incendie' AJAX" }
                                 isTop={ false }
                                 tag={ "Ajax Systems" }
-                                boldTitle={ "" }
-                                regularTitle={ "Détecteurs d'incendie entièrement autonomes" }
+                                boldTitle={ "Détecteurs d'incendie" }
+                                regularTitle={ " entièrement autonomes" }
                                 text={ [
                                     {
                                         type: "regular",

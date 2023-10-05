@@ -65,8 +65,8 @@ export default function MotionSection() {
                                 alt={ "Détecteur de mouvement AJAX" }
                                 isTop={ false }
                                 tag={ "Ajax Security" }
-                                boldTitle={ "" }
-                                regularTitle={ "Détecteurs de mouvement qui ne répondent qu'aux menaces réelles" }
+                                boldTitle={ "Détecteurs de mouvement" }
+                                regularTitle={ " qui ne répondent qu'aux menaces réelles" }
                                 text={ [
                                     {
                                         type: "regular",

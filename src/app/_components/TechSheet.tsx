@@ -90,6 +90,8 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
             height: "auto",
 
+            overflow: "hidden",
+
             backgroundColor: "rgba(20, 20, 20, 1)",
         },
         bannerSubRoot: {
