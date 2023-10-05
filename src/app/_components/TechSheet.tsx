@@ -21,7 +21,10 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "space-between",
 
             width: "100%",
-            maxWidth: "1100px"
+            maxWidth: "1100px",
+
+            marginTop: theme.spacing(4),
+            marginBottom: theme.spacing(4)
         },
         infoRoot: {
             boxSizing: "border-box",

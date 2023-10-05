@@ -1,0 +1,44 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Hub AJAX",
+        "isLeft": true,
+        "boldTitle": "Hub 2 Plus",
+        "regularTitle": " Jeweller",
+        "subTitle": "Centrale d'alarme du système de sécurité prenant en charge la vérification photo des alarmes",
+        "techSheet":    [
+                            {
+                                "icon": "jeweller",
+                                "text": "Prise en charge des dispositifs Jeweller"
+                            },
+                            {
+                                "icon": "wi-fi",
+                                "text": "Ethernet, Wi-Fi et deux cartes SIM (2G/3G/4G)"
+                            },
+                            {
+                                "icon": "products",
+                                "text": "Jusqu'à 200 appareils connectés"
+                            },
+                            {
+                                "icon": "camera",
+                                "text": "Jusqu’à 100 dispositifs de vidéosurveillance"
+                            },
+                            {
+                                "icon": "range",
+                                "text": "Jusqu'à 5 prolongateurs de portée de signaux radio"
+                            },
+                            {
+                                "icon": "users",
+                                "text": "Jusqu'à 200 utilisateurs"
+                            },
+                            {
+                                "icon": "groups",
+                                "text": "Jusqu'à 25 groupes de sécurité"
+                            },
+                            {
+                                "icon": "scenarios",
+                                "text": "Jusqu'à 64 scénarios d'automatisation"
+                            }
+                        ]
+    }
+]
