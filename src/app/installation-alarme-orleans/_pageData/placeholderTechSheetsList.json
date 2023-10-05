@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax-image_one.png",
+        "image": "/ajax/banner-ajax_products.png",
         "alt": "Alarme AJAX",
         "isLeft": true,
         "boldTitle": "Placeholder",
@@ -26,7 +26,7 @@
                         ]
     },
     {
-        "image": "/ajax-image_one.png",
+        "image": "/ajax/banner-ajax_products.png",
         "alt": "Alarme AJAX",
         "isLeft": false,
         "boldTitle": "Placeholder",

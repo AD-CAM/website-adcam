@@ -2,7 +2,7 @@
 /* Types & Utils imports */
 import { ReactNode } from "react"
 import Image, { StaticImageData } from "next/image"
-import { TechSheetData } from "../_types/dataFiles"
+import { TechSheetData, TechSheetTextData } from "../_types/dataFiles"
 /* Library Imports */
 import { Variants, motion } from "framer-motion"
 import { makeStyles } from 'tss-react/mui'
@@ -16,12 +16,15 @@ const useStyles = makeStyles()((theme) => {
         root: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "space-between",
 
             width: "100%",
+            maxWidth: "1100px"
         },
         infoRoot: {
             boxSizing: "border-box",
+
+            width: "600px",
 
             padding: theme.spacing(6),
             margin: 0,
@@ -39,6 +42,14 @@ const useStyles = makeStyles()((theme) => {
         },
         infoTitleBold: {
             fontWeight: 700,
+        },
+        infoText: {
+            color: "#404040",
+        },
+        infoTextBold: {
+            fontWeight: 600,
+
+            color: "#404040",
         },
         infoSubTitle: {
             fontWeight: 600,
@@ -74,14 +85,14 @@ function getVariant(isLeft: boolean): Variants {
 
 
 
-export default function TechSheet({ image, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
+function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
     const { classes } = useStyles()
 
 
 
     return (      
         <article className={ classes.root } style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }>
-            <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "cover" } } />
+            <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
             <div className={ classes.infoRoot }>
                 <h3 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h3>
                 <p className={ classes.infoSubTitle }>{ subTitle }</p>
@@ -101,3 +112,29 @@ export default function TechSheet({ image, alt, isLeft, boldTitle, regularTitle,
         </article>
     )
 }
+
+function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: TechSheetTextData) {
+    const { classes } = useStyles()
+
+
+
+    return (      
+        <article className={ classes.root } style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }>
+            <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
+            <div className={ classes.infoRoot }>
+                <h3 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h3>
+                {
+                    text.map((paragraph, index) => {
+                        return  <p key={ index } className={ paragraph.type === "bold" ? classes.infoTextBold : classes.infoText }>
+                                    { paragraph.text }
+                                </p>
+                    })
+                }
+            </div>
+        </article>
+    )
+}
+
+
+
+export { TechSheetList, TechSheetText }

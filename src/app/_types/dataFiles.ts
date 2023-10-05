@@ -24,6 +24,11 @@ interface ReviewInfo {
     time: number;
 }
 
+interface TextContent {
+    type: string;
+    text: string;
+}
+
 interface TechSheetData {
     image: StaticImageData;
     alt: string;
@@ -34,9 +39,18 @@ interface TechSheetData {
     techSheet: TechSheetDetails[]
 }
 
+interface TechSheetTextData {
+    image: StaticImageData;
+    alt: string;
+    isLeft: boolean;
+    boldTitle: string;
+    regularTitle: string;
+    text: TextContent[];
+}
+
 interface TechSheetDetails {
     icon: string;
     text: string;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetDetails }
+export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetDetails }

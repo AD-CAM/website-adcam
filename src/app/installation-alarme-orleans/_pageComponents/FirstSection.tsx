@@ -2,12 +2,12 @@
 /* Data & Types Imports */
 const placeholderTechSheetsList = require("../_pageData/placeholderTechSheetsList.json")
 /* Assets Imports */
-
+import ajaxAlarm from "../../../../public/ajax/banner-ajax_products.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import YouTube from "react-youtube"
 /* Components Imports */
-import TechSheet from '@/app/_components/TechSheet'
+import { TechSheetList, TechSheetText } from '@/app/_components/TechSheet'
 import { TechSheetData } from '@/app/_types/dataFiles'
 
 
@@ -62,7 +62,7 @@ export default function FirstSection() {
             <div className={ classes.subRoot }>
                 {
                     placeholderTechSheetsList.map((techSheetData: TechSheetData, index: number) => {
-                        return <TechSheet 
+                        return <TechSheetList 
                                             key={ index }
                                             image={ techSheetData.image }
                                             alt={ techSheetData.alt }
@@ -74,6 +74,28 @@ export default function FirstSection() {
                                 />
                     })
                 }
+
+                <TechSheetText 
+                            image={ ajaxAlarm }
+                            alt={ "Alarme AJAX" }
+                            isLeft={ true }
+                            boldTitle={ "Protection " }
+                            regularTitle={ "maximale" }
+                            text={ [
+                                {
+                                    type: "regular",
+                                    text: "Si la fuite est petite ou si de l'eau s'infiltre accidentellement sur le contact, le détecteur signale l'évaporation aussi rapidement qu'une fuite. En cas de fuite, le détecteur peut exécuter un scénario qui coupe automatiquement l'arrivée d'eau, vous ne serez donc pas obligé de vous précipiter sur le lieu de l'inondation en cas d'alarme."
+                                },
+                                {
+                                    type: "bold",
+                                    text: "Peut être couplé à une valve électrique"
+                                },
+                                {
+                                    type: "regular",
+                                    text: "Outre la protection contre le vol et l’incendie, le système de sécurité Ajax peut empêcher l’inondation d’un site due à la rupture d’un tuyau ou à la défaillance d’un équipement de plomberie. Pour mettre en œuvre le système anti-inondation, vous aurez besoin d’un détecteur de fuite d’eau LeaksProtect, d’une électrovanne compatible ainsi que d’un relais WallSwitch ou Relay. Grâce au relais, vous pouvez couper l’alimentation en eau manuellement – avec l’application – ou automatiquement : par l’alarme du détecteur de fuites, par planning ou en changeant le mode de sécurité."
+                                }
+                            ] }
+                />
             </div>
         </section>
     )
