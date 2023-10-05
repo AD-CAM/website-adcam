@@ -10,6 +10,7 @@ import Banner from '../_components/Banner'
 import FirstSection from './_pageComponents/FirstSection'
 import HubSection from './_pageComponents/HubSection'
 import LeakSection from './_pageComponents/LeakSection'
+import MotionSection from './_pageComponents/MotionSection'
 
 
 
@@ -22,6 +23,7 @@ export default function AlarmPage() {
                 <FirstSection />
                 <HubSection />
                 <LeakSection />
+                <MotionSection />
             </main>
             <Footer />
         </>

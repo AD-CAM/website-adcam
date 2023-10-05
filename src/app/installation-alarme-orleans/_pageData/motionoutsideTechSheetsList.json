@@ -1,0 +1,178 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": true,
+        "boldTitle": "DualCurtain",
+        "regularTitle": " Outdoor Jeweller",
+        "subTitle": "Détecteur de mouvement extérieur sans fil de type rideau pour la sécurité du périmètre",
+        "techSheet":    [
+                            {
+                                "icon": "detection-each-side",
+                                "text": "Détection bidirectionnelle jusqu'à 30m"
+                            },
+                            {
+                                "icon": "detection_zone_hor",
+                                "text": "Angle de vision horizontal 4,5°"
+                            },
+                            {
+                                "icon": "detection-different-side",
+                                "text": "Ajustement latéral indépendant"
+                            },
+                            {
+                                "icon": "ELSA",
+                                "text": "Filtrage numérique des fausses alarmes"
+                            },
+                            {
+                                "icon": "Near_area_detection",
+                                "text": "Détection en champ proche"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "antimasking",
+                                "text": "Système anti-masquage"
+                            },
+                            {
+                                "icon": "ip54",
+                                "text": "Résistance à la poussière et aux éclaboussures"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 4 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "two_way_communication",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": false,
+        "boldTitle": "MotionCam Outdoor",
+        "regularTitle": " (PhOD) Jeweller",
+        "subTitle": "Détecteur de mouvement extérieur sans fil avec levée de doute",
+        "techSheet":    [
+                            {
+                                "icon": "alarm_photo",
+                                "text": "Photo par alarme"
+                            },
+                            {
+                                "icon": "photo_verification",
+                                "text": "Photo sur demande"
+                            },
+                            {
+                                "icon": "scenario",
+                                "text": "Photo par scénario"
+                            },
+                            {
+                                "icon": "ELSA",
+                                "text": "Filtrage numérique des fausses alarmes"
+                            },
+                            {
+                                "icon": "HDR",
+                                "text": "Caméra photo HDR"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "antimasking",
+                                "text": "Système anti-masquage"
+                            },
+                            {
+                                "icon": "ip55",
+                                "text": "Résistance à la poussière et aux éclaboussures"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 3 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "two_way_communication",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": true,
+        "boldTitle": "MotionCam Outdoor",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur de mouvement extérieur sans fil avec levée de doute",
+        "techSheet":    [
+                            {
+                                "icon": "alarm_photo",
+                                "text": "Photo par alarme"
+                            },
+                            {
+                                "icon": "ELSA",
+                                "text": "Filtrage numérique des fausses alarmes"
+                            },
+                            {
+                                "icon": "HDR",
+                                "text": "Caméra photo HDR"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "antimasking",
+                                "text": "Système anti-masquage"
+                            },
+                            {
+                                "icon": "ip55",
+                                "text": "Résistance à la poussière et aux éclaboussures"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 3 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "two_way_communication",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": false,
+        "boldTitle": "MotionProtect Outdoor",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur de mouvement extérieur sans fil",
+        "techSheet":    [
+                            {
+                                "icon": "ELSA",
+                                "text": "Filtrage numérique des fausses alarmes"
+                            },
+                            {
+                                "icon": "HDR",
+                                "text": "Caméra photo HDR"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "two_way_communication",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            },
+                            {
+                                "icon": "dc",
+                                "text": "Possibilité de connexion à une alimentation externe"
+                            }
+                        ]
+    }
+]

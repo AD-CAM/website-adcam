@@ -1,0 +1,196 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": true,
+        "boldTitle": "MotionCam",
+        "regularTitle": " (PhOD)",
+        "subTitle": "Détecteur de mouvement sans fil avec caméra photo",
+        "techSheet":    [
+                            {
+                                "icon": "alarm_photo",
+                                "text": "Photo par alarme"
+                            },
+                            {
+                                "icon": "photo_verification",
+                                "text": "Photo sur demande"
+                            },
+                            {
+                                "icon": "scenario",
+                                "text": "Photo par scénario"
+                            },
+                            {
+                                "icon": "photo_sequence",
+                                "text": "Livraison des photos en 9 secondes"
+                            },
+                            {
+                                "icon": "infrared",
+                                "text": "Éclairage infrarouge pour les photos dans l'obscurité"
+                            },
+                            {
+                                "icon": "smart-detect",
+                                "text": "Prévention des déclenchements intempestifs"
+                            },
+                            {
+                                "icon": "temperature_protection",
+                                "text": "Compensation de température"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 4 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": false,
+        "boldTitle": "MotionCam",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur de mouvement sans fil avec caméra photo",
+        "techSheet":    [
+                            {
+                                "icon": "alarm_photo",
+                                "text": "Photo par alarme"
+                            },
+                            {
+                                "icon": "photo_sequence",
+                                "text": "Livraison des photos en 9 secondes"
+                            },
+                            {
+                                "icon": "infrared",
+                                "text": "Éclairage infrarouge pour les photos dans l'obscurité"
+                            },
+                            {
+                                "icon": "smart-detect",
+                                "text": "Prévention des déclenchements intempestifs"
+                            },
+                            {
+                                "icon": "temperature_protection",
+                                "text": "Compensation de température"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": true,
+        "boldTitle": "MotionProtect Plus",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur de mouvement sans fil avec capteur à micro-ondes supplémentaire",
+        "techSheet":    [
+                            {
+                                "icon": "smart-detect",
+                                "text": "Prévention des déclenchements intempestifs"
+                            },
+                            {
+                                "icon": "heat_ignore",
+                                "text": "Filtre de bruit thermique provenant d'un chauffage, d'une cheminée, d'un climatisateur"
+                            },
+                            {
+                                "icon": "temperature_protection",
+                                "text": "Compensation de température"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1200m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": false,
+        "boldTitle": "CombiProtect",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur combiné sans fil de mouvement et de bris de glace",
+        "techSheet":    [
+                            {
+                                "icon": "smart-detect",
+                                "text": "Prévention des déclenchements intempestifs"
+                            },
+                            {
+                                "icon": "temperature_protection",
+                                "text": "Compensation de température"
+                            },
+                            {
+                                "icon": "pet_immunity",
+                                "text": "Immunité aux animaux"
+                            },
+                            {
+                                "icon": "glass_protection",
+                                "text": "Algorithme DualTone pour la vérification du bris de verre"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1200m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": true,
+        "boldTitle": "MotionProtect Curtain",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur de mouvement sans fil à angle de vision étroit",
+        "techSheet":    [
+                            {
+                                "icon": "detection_zone",
+                                "text": "Distance de détection jusqu’à 15m"
+                            },
+                            {
+                                "icon": "detection_zone_hor",
+                                "text": "Angle de vision horizontal de 6°"
+                            },
+                            {
+                                "icon": "false_alarm",
+                                "text": "Système de prévention des fausses alarmes"
+                            },
+                            {
+                                "icon": "temperature_protection",
+                                "text": "Compensation de température"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 3 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            }
+                        ]
+    }
+]

@@ -2,7 +2,7 @@
 /* Data & Types Imports */
 const techSheetsList = require("../_pageData/hubTechSheetsList.json")
 /* Assets Imports */
-import ajaxHubBanner from "../../../../public/ajax/banner-ajax_hubs.png"
+import ajaxBanner from "../../../../public/ajax/banner-ajax_hubs.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import YouTube from "react-youtube"
@@ -60,7 +60,7 @@ export default function HubSection() {
     return (      
         <section className={ classes.root }>
             <TechSheetBanner
-                                image={ ajaxHubBanner }
+                                image={ ajaxBanner }
                                 alt={ "Hub de sécurité AJAX" }
                                 isTop={ true }
                                 tag={ "Ajax Hubs" }
@@ -99,7 +99,7 @@ export default function HubSection() {
                 }
 
                 <TechSheetText 
-                            image={ ajaxHubBanner }
+                            image={ ajaxBanner }
                             alt={ "Mises à jour à distance automatiques" }
                             isLeft={ false }
                             boldTitle={ "Mises à jour" }
@@ -112,7 +112,7 @@ export default function HubSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxHubBanner }
+                            image={ ajaxBanner }
                             alt={ "Protection contre les acteurs malicieux" }
                             isLeft={ true }
                             boldTitle={ "Logiciel protégé" }
@@ -125,7 +125,7 @@ export default function HubSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxHubBanner }
+                            image={ ajaxBanner }
                             alt={ "Stabilité de la communication" }
                             isLeft={ false }
                             boldTitle={ "Communication" }
