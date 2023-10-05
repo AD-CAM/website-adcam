@@ -1,0 +1,78 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de bris de verre AJAX",
+        "isLeft": true,
+        "boldTitle": "GlassProtect",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur sans fil de bris de glace",
+        "techSheet":    [
+                            {
+                                "icon": "glass-range",
+                                "text": "Portée de détection de bris de glace — 9m"
+                            },
+                            {
+                                "icon": "angle-detect1",
+                                "text": "Angle de détection de bris de glace — 180°"
+                            },
+                            {
+                                "icon": "glass_protection",
+                                "text": "Algorithme DualTone pour la vérification du bris de glace"
+                            },
+                            {
+                                "icon": "regulated-sensitivity",
+                                "text": "Sensibilité réglable"
+                            },
+                            {
+                                "icon": "external_connector",
+                                "text": "Bornes de connexion de capteurs tiers"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 7 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication pouvant atteindre 1000m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur de mouvement et de bris de verre AJAX",
+        "isLeft": false,
+        "boldTitle": "CombiProtect",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur combiné de mouvement et de bris de verre",
+        "techSheet":    [
+                            {
+                                "icon": "infrared",
+                                "text": "Portée de détection de mouvement — 12m"
+                            },
+                            {
+                                "icon": "combi-range",
+                                "text": "Portée de détection de bris de glace — 9m"
+                            },
+                            {
+                                "icon": "angle-detect1",
+                                "text": "Angle de détection de bris de glace — 180°"
+                            },
+                            {
+                                "icon": "glass_protection",
+                                "text": "Algorithme DualTone pour la vérification du bris de glace"
+                            },
+                            {
+                                "icon": "regulated-sensitivity",
+                                "text": "Sensibilité réglable"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication pouvant atteindre 1200m"
+                            }
+                        ]
+    }
+]

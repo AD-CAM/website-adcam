@@ -1,8 +1,8 @@
 'use client'
 /* Data & Types Imports */
-const techSheetsList = require("../_pageData/doorTechSheetsList.json")
+const techSheetsList = require("../_pageData/glassTechSheetsList.json")
 /* Assets Imports */
-import ajaxBanner from "../../../../public/ajax/banner-ajax_door.png"
+import ajaxBanner from "../../../../public/ajax/banner-ajax_glass.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import YouTube from "react-youtube"
@@ -52,7 +52,7 @@ const useStyles = makeStyles()((theme) => {
 
 
 
-export default function DoorSection() {
+export default function GlassSection() {
     const { classes } = useStyles()
 
 
@@ -61,19 +61,19 @@ export default function DoorSection() {
         <section className={ classes.root }>
             <TechSheetBanner
                                 image={ ajaxBanner }
-                                alt={ "Détecteur d'ouverture de portes et fenêtres" }
+                                alt={ "Détecteur de bris de verre" }
                                 isTop={ false }
-                                tag={ "Ajax Détecteurs d'ouverture" }
-                                boldTitle={ "Bien plus" }
-                                regularTitle={ " que des simples contacts magnétiques" }
+                                tag={ "Ajax GlassProtect & CombiProtect" }
+                                boldTitle={ "Détecteurs acoustiques" }
+                                regularTitle={ " de bris de verre" }
                                 text={ [
                                     {
                                         type: "regular",
-                                        text: "Les détecteurs d'ouverture sans fil et filaires Ajax se composent de deux parties : des interrupteurs reed et un aimant situé dans un boîtier séparé. Un interrupteur reed est un contact électrique situé dans un boîtier scellé qui se ferme à l'approche de l'aimant et s'ouvre lorsque l'aimant est éloigné de plus de 1 cm. De cette manière, le capteur de contact magnétique enregistre à la fois l'ouverture et la fermeture, et le système de sécurité avertit les utilisateurs et le centre de télésurveillance."
+                                        text: "Les détecteurs de bris de glace constituent une couche de protection supplémentaire pour vos biens non seulement contre les intrusions, mais aussi contre le vandalisme et les intempéries. Les détecteurs filaires et sans fil Ajax déclenchent une alarme quand ils détectent deux sons consécutifs : un son d'impact de basse fréquence et un son de verre brisé de haute fréquence. C'est l'algorithme numérique DualTone qui en est responsable."
                                     },
                                     {
                                         type: "regular",
-                                        text: "Les détecteurs d'ouverture de porte et de fenêtre sont un élément essentiel de tout système de sécurité. Les détecteurs d'ouverture intégrés au système de sécurité Ajax, peuvent déclencher une sirène, exécuter des scénarios d'automatisation et intégrer des capteurs tiers, ces fonctions les rendent indispensables pour votre système de domotique. Les détecteurs d'ouverture Ajax filaires et sans fil sont disponibles dans la gamme de produits."
+                                        text: "Si des intrus tentent de pénétrer dans une maison par une fenêtre cassée, de casser une vitrine pour voler des marchandises, ou si une branche tombe sur une fenêtre et la brise lors d'une tempête, le système en informe immédiatement les utilisateurs et le centre de télésurveillance. Mais le passage d'une voiture, le tonnerre ou les aboiements d'un chien ne provoquent pas de fausses alarmes. Les détecteurs de bris de glace Ajax existent en deux formats : un mini-détecteur indépendant qui saura s'intégrer dans n'importe quel intérieur, et un détecteur combiné doté d'un capteur de mouvement. Les détecteurs de bris de glace filaires et sans fil sont disponibles dans la gamme de produits Ajax."
                                     }
                                 ] }
             />
@@ -96,40 +96,44 @@ export default function DoorSection() {
 
                 <TechSheetText 
                             image={ ajaxBanner }
-                            alt={ "Détection de la moindre ouverture" }
-                            isLeft={ true }
-                            boldTitle={ "Détectez les intrus" }
-                            regularTitle={ " avant même qu'ils n'entrent dans un local" }
-                            text={ [
-                                {
-                                    type: "regular",
-                                    text: "En plus de la fonction de capteur magnétique, les détecteurs d'ouverture Ajax peuvent détecter les vibrations puissantes, enregistrer un changement dans l'angle d'inclinaison et recevoir les signaux de capteurs filaires tiers. L'alarme est déclenchée si quelqu'un essaye de fracturer ou de démonter votre porte. En installant un interrupteur de fin de course dans le cadre de la porte et en le détecteur de vibration, vous obtiendrez une alarme de verrouillage de porte cachée."
-                                }
-                            ] }
-                />
-                <TechSheetText 
-                            image={ ajaxBanner }
-                            alt={ "Protection contre l'ouverture des fenêtres" }
-                            isLeft={ false }
-                            boldTitle={ "" }
-                            regularTitle={ "Alliez sécurité et confort" }
-                            text={ [
-                                {
-                                    type: "regular",
-                                    text: "L'accéléromètre intégré au détecteur vous permet d'aérer vos pièces avec des fenêtres conventionnelles ou des lucarnes. Si l'angle de la fenêtre change de plus de 5°, le système de sécurité se déclenche et appelle une patrouille de la société de sécurité."
-                                }
-                            ] }
-                />
-                <TechSheetText 
-                            image={ ajaxBanner }
                             alt={ "Compatibilité avec les fournisseurs tiers" }
                             isLeft={ true }
                             boldTitle={ "" }
-                            regularTitle={ "Rendez les capteurs de fournisseurs tiers intelligents" }
+                            regularTitle={ "Fonctionne avec les appareils de fournisseurs tier" }
                             text={ [
                                 {
                                     type: "regular",
-                                    text: "Avec DoorProtect Plus Jeweller ou DoorProtect Plus Fibra, vous pouvez intégrer un détecteur de mouvement de volet roulant au système de sécurité Ajax et définir les conditions qui déclencheront l'alarme dans l'application mobile."
+                                    text: "Les détecteurs de bris de glace GlassProtect Jeweller et GlassProtect Fibra sont équipés de bornes permettant de connecter des appareils tiers avec un contact de type NC (normalement fermé). Il peut s'agir de tout type de capteur : mouvement, ouverture, vibration."
+                                }
+                            ] }
+                />
+                <TechSheetText 
+                            image={ ajaxBanner }
+                            alt={ "Installation et configuration simples" }
+                            isLeft={ false }
+                            boldTitle={ "" }
+                            regularTitle={ "Configuration facile" }
+                            text={ [
+                                {
+                                    type: "regular",
+                                    text: "Aucun démontage n'est nécessaire pour configurer les détecteurs de bris de glace Ajax. La connexion au système et la configuration se font via l'application mobile ou pour PC, où les utilisateurs peuvent également créer des scénarios d'automatisations. Par exemple, vous pouvez programmer la fermeture automatique des volets roulants en cas de fenêtre cassée."
+                                }
+                            ] }
+                />
+                <TechSheetText 
+                            image={ ajaxBanner }
+                            alt={ "Communication longue distance fiable" }
+                            isLeft={ true }
+                            boldTitle={ "" }
+                            regularTitle={ "Utilise une technologie de communication fiable" }
+                            text={ [
+                                {
+                                    type: "regular",
+                                    text: "Les détecteurs sans fil de bris de glace et les centrales communiquent via le protocole radio Jeweller. Il s'agit d'une technologie TDMA avec un chiffrement puissant. En cas d'interférence radio ou de tentative de brouillage, le système Ajax commute la fréquence radio et avertit les utilisateurs et le centre de télésurveillance de la situation."
+                                },
+                                {
+                                    type: "regular",
+                                    text: "Et pour contrôler la communication avec les appareils filaires, les centrales utilisent le protocole Fibra, une technologie filaire de génération numérique. Fibra combine la fiabilité des fils avec la liberté offerte par la communication radio."
                                 }
                             ] }
                 />

@@ -13,6 +13,7 @@ import LeakSection from './_pageComponents/LeakSection'
 import MotionSection from './_pageComponents/MotionSection'
 import FireSection from './_pageComponents/FireSection'
 import DoorSection from './_pageComponents/DoorSection'
+import GlassSection from './_pageComponents/GlassSection'
 
 
 
@@ -28,6 +29,7 @@ export default function AlarmPage() {
                 <MotionSection />
                 <FireSection />
                 <DoorSection />
+                <GlassSection />
             </main>
             <Footer />
         </>
