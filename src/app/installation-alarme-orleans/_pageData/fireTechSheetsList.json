@@ -1,0 +1,74 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur d'incendie AJAX",
+        "isLeft": true,
+        "boldTitle": "",
+        "regularTitle": "FireProtect",
+        "subTitle": "Détecteur d'incendie sans fil",
+        "techSheet":    [
+                            {
+                                "icon": "smoke_detection",
+                                "text": "Capteur photoélectrique pour la détection de la fumée"
+                            },
+                            {
+                                "icon": "fire",
+                                "text": "Capteur de température pour la détection incendie"
+                            },
+                            {
+                                "icon": "loudness",
+                                "text": "Sirène intégrée pour des avertissements sonores de 85dB"
+                            },
+                            {
+                                "icon": "no_connect_hub",
+                                "text": "Peut fonctionner sans hub"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 4 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication pouvant atteindre 1300m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Détecteur d'incendie AJAX",
+        "isLeft": false,
+        "boldTitle": "",
+        "regularTitle": "FireProtect Plus",
+        "subTitle": "Détecteur d'incendie sans fil avec capteur de monoxyde de carbone",
+        "techSheet":    [
+                            {
+                                "icon": "smoke_detection",
+                                "text": "Capteur photoélectrique pour la détection de la fumée"
+                            },
+                            {
+                                "icon": "fire",
+                                "text": "Capteur de température pour la détection incendie"
+                            },
+                            {
+                                "icon": "co",
+                                "text": "Capteur de CO qui détecte les taux de 0,005%"
+                            },
+                            {
+                                "icon": "loudness",
+                                "text": "Sirène intégrée pour des avertissements sonores de 85dB"
+                            },
+                            {
+                                "icon": "no_connect_hub",
+                                "text": "Peut fonctionner sans hub"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 4 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication pouvant atteindre 1300m"
+                            }
+                        ]
+    }
+]
