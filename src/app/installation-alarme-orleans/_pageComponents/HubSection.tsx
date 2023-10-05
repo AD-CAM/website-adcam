@@ -1,6 +1,6 @@
 'use client'
 /* Data & Types Imports */
-const hubTechSheetsList = require("../_pageData/hubTechSheetsList.json")
+const techSheetsList = require("../_pageData/hubTechSheetsList.json")
 /* Assets Imports */
 import ajaxHubBanner from "../../../../public/ajax/banner-ajax_hubs.png"
 /* Library Imports */
@@ -55,23 +55,13 @@ const useStyles = makeStyles()((theme) => {
 export default function HubSection() {
     const { classes } = useStyles()
 
-    const opts = {
-        playerVars: {
-          autoplay: 1,
-        },
-    }
-
-    const onReady = (event: any) => {
-        event.target.pauseVideo()
-    }
-
 
 
     return (      
         <section className={ classes.root }>
             <TechSheetBanner
                                 image={ ajaxHubBanner }
-                                alt={ "Alarme AJAX" }
+                                alt={ "Hub de sécurité AJAX" }
                                 isTop={ true }
                                 tag={ "Ajax Hubs" }
                                 boldTitle={ "Centrale" }
@@ -94,7 +84,7 @@ export default function HubSection() {
 
             <div className={ classes.subRoot }>
                 {
-                    hubTechSheetsList.map((techSheetData: TechSheetData, index: number) => {
+                    techSheetsList.map((techSheetData: TechSheetData, index: number) => {
                         return <TechSheetList 
                                             key={ index }
                                             image={ techSheetData.image }
