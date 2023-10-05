@@ -1,0 +1,116 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Sirène d'intérieur AJAX",
+        "isLeft": true,
+        "boldTitle": "HomeSiren",
+        "regularTitle": " Jeweller",
+        "subTitle": "Sirène compacte intérieure sans fil",
+        "techSheet":    [
+                            {
+                                "icon": "volume",
+                                "text": "Volume réglable de 81 à 105dB"
+                            },
+                            {
+                                "icon": "time",
+                                "text": "Durée de l'alarme de 3 à 180 secondes"
+                            },
+                            {
+                                "icon": "external_led",
+                                "text": "Borne pour LED externe"
+                            },
+                            {
+                                "icon": "indication",
+                                "text": "Indicateur du mode de sécurité"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication pouvant atteindre 2000m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Sirène d'extérieur AJAX",
+        "isLeft": false,
+        "boldTitle": "StreetSiren",
+        "regularTitle": " Jeweller",
+        "subTitle": "Sirène compacte intérieure sans fil",
+        "techSheet":    [
+                            {
+                                "icon": "volume",
+                                "text": "Volume réglable de 81 à 113dB"
+                            },
+                            {
+                                "icon": "time",
+                                "text": "Durée de l'alarme de 3 à 180 secondes"
+                            },
+                            {
+                                "icon": "indication_street",
+                                "text": "Cadre LED qui indique les alarmes et les modes de sécurité"
+                            },
+                            {
+                                "icon": "ip54",
+                                "text": "Indice de protection du boîtier IP54"
+                            },
+                            {
+                                "icon": "ac",
+                                "text": "Branchement pour alimentation externe de 12V⎓"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication pouvant atteindre 1500m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Sirène d'extérieur AJAX",
+        "isLeft": true,
+        "boldTitle": "StreetSiren DoubleDeck",
+        "regularTitle": " Jeweller",
+        "subTitle": "Sirène extérieure sans fil avec support de plaque professionnelle pour promouvoir vos services de sécurité",
+        "techSheet":    [
+                            {
+                                "icon": "ss_doubledeck_bracing",
+                                "text": "Support résistant au vent pour la plaque professionnelle"
+                            },
+                            {
+                                "icon": "volume",
+                                "text": "Volume réglable de 81 à 113dB"
+                            },
+                            {
+                                "icon": "time",
+                                "text": "Durée de l'alarme de 3 à 180 secondes"
+                            },
+                            {
+                                "icon": "doubledeck_indication_new",
+                                "text": "Cadre LED qui indique les alarmes et les modes de sécurité"
+                            },
+                            {
+                                "icon": "ip54",
+                                "text": "Indice de protection du boîtier IP54"
+                            },
+                            {
+                                "icon": "ac",
+                                "text": "Branchement pour alimentation externe de 12V⎓"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication pouvant atteindre 1500m"
+                            }
+                        ]
+    }
+]

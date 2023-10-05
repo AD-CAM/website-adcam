@@ -61,7 +61,7 @@ export default function FireSection() {
         <section className={ classes.root }>
             <TechSheetBanner
                                 image={ ajaxBanner }
-                                alt={ "Détecteur d'incendie' AJAX" }
+                                alt={ "Détecteur d'incendie AJAX" }
                                 isTop={ false }
                                 tag={ "Ajax Systems" }
                                 boldTitle={ "Détecteurs d'incendie" }
