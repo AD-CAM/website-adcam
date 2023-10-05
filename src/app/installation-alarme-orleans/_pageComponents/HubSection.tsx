@@ -62,7 +62,7 @@ export default function HubSection() {
             <TechSheetBanner
                                 image={ ajaxBanner }
                                 alt={ "Hub de sécurité AJAX" }
-                                isTop={ true }
+                                isTop={ false }
                                 tag={ "Ajax Hubs" }
                                 boldTitle={ "Centrale" }
                                 regularTitle={ " du système d'alarme pour une sécurité intelligente" }

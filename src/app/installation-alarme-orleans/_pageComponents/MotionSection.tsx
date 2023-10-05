@@ -62,15 +62,15 @@ export default function MotionSection() {
         <section className={ classes.root }>
             <TechSheetBanner
                                 image={ ajaxBanner }
-                                alt={ "Détecteur de fuite d'eau AJAX" }
-                                isTop={ true }
+                                alt={ "Détecteur de mouvement AJAX" }
+                                isTop={ false }
                                 tag={ "Ajax Security" }
-                                boldTitle={ "Détecteurs de fuites d'eau" }
-                                regularTitle={ " sans fil" }
+                                boldTitle={ "" }
+                                regularTitle={ "Détecteurs de mouvement qui ne répondent qu'aux menaces réelles" }
                                 text={ [
                                     {
                                         type: "regular",
-                                        text: "Les détecteurs de fuites d'eau sans fil Ajax préviennent les inondations dès les premières gouttes. Dès que de l'eau s'infiltre dans l'une des quatre paires de capteurs, le système déclenche une alarme. Une notification est envoyée aux utilisateurs et au centre de télésurveillance. En programmant une électrovanne via le dispositif Relay, le système de sécurité Ajax peut couper l'eau automatiquement jusqu'à l'arrivée du plombier."
+                                        text: "Les détecteurs de mouvement sans fil et filaires Ajax détectent les intrus dès leurs premiers pas, que ce soit à l'extérieur ou à l'intérieur. Lorsqu'un intrus pénètre dans le champ de vision des capteurs PIR, le détecteur analyse le rayonnement thermique de son corps, si le détecteur est sûr qu'il s'agit d'un humain il déclenche une alarme. Tout se passe en moins d'une seconde. Les détecteurs de mouvement Ajax filaires et sans fil sont tous deux disponibles dans la gamme. Selon le type de capteur, ils peuvent être installés à l'intérieur comme à l'extérieur."
                                     }
                                 ] }
             />

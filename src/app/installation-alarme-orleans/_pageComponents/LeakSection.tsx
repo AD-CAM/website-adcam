@@ -62,7 +62,7 @@ export default function LeakSection() {
             <TechSheetBanner
                                 image={ ajaxBanner }
                                 alt={ "Détecteur de fuite d'eau AJAX" }
-                                isTop={ true }
+                                isTop={ false }
                                 tag={ "Ajax Security" }
                                 boldTitle={ "Détecteurs de fuites d'eau" }
                                 regularTitle={ " sans fil" }

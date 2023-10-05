@@ -58,9 +58,14 @@ interface TechSheetBannerData {
     text: TextContent[];
 }
 
+interface TechSheetSubBannerData {
+    section: string;
+    subSection: string;
+}
+
 interface TechSheetDetails {
     icon: string;
     text: string;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetDetails }
+export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData, TechSheetDetails }

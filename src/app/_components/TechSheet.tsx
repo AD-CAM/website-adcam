@@ -201,7 +201,7 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
         <article className={ classes.root } style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }>
             <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
             <div className={ classes.infoRoot }>
-                <h3 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h3>
+                <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 <p className={ classes.infoSubTitle }>{ subTitle }</p>
                 
                 <div className={ classes.infoList }>
@@ -229,7 +229,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
         <article className={ classes.root } style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }>
             <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
             <div className={ classes.infoRoot }>
-                <h3 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h3>
+                <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 {
                     text.map((paragraph, index) => {
                         return  <p key={ index } className={ paragraph.type === "bold" ? classes.infoTextBold : classes.infoText }>
@@ -254,7 +254,7 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
                     <p className={ classes.bannerTag }>{ tag }</p>
                     {
                         isTop   ?   <h1 className={ classes.bannerTitle }><strong className={ classes.bannerTitleBold }>{ boldTitle }</strong>{ regularTitle }</h1>
-                                :   <h2></h2>
+                                :   <h2 className={ classes.bannerTitle }><strong className={ classes.bannerTitleBold }>{ boldTitle }</strong>{ regularTitle }</h2>
                     }
                     {
                         text.map((paragraph, index) => {
@@ -268,6 +268,21 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
                     <div className={ classes.bannerImageGlow }></div> 
                     <img src={ image.src } alt={ alt } className={ classes.bannerImage } />
                 </div>
+                
+            </div>
+        </div>
+    )
+}
+
+function TechSheetSubSectionBanner({ text }) {
+    const { classes } = useStyles()
+
+
+
+    return (      
+        <div className={ classes.bannerRoot }>
+            <div className={ classes.bannerSubRoot }>
+                
                 
             </div>
         </div>
