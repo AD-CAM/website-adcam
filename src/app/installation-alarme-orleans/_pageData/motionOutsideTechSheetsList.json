@@ -2,7 +2,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Détecteur de mouvement AJAX",
-        "isLeft": true,
+        "isLeft": false,
         "boldTitle": "DualCurtain",
         "regularTitle": " Outdoor Jeweller",
         "subTitle": "Détecteur de mouvement extérieur sans fil de type rideau pour la sécurité du périmètre",
@@ -52,7 +52,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Détecteur de mouvement AJAX",
-        "isLeft": false,
+        "isLeft": true,
         "boldTitle": "MotionCam Outdoor",
         "regularTitle": " (PhOD) Jeweller",
         "subTitle": "Détecteur de mouvement extérieur sans fil avec levée de doute",
@@ -102,7 +102,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Détecteur de mouvement AJAX",
-        "isLeft": true,
+        "isLeft": false,
         "boldTitle": "MotionCam Outdoor",
         "regularTitle": " Jeweller",
         "subTitle": "Détecteur de mouvement extérieur sans fil avec levée de doute",
@@ -144,7 +144,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Détecteur de mouvement AJAX",
-        "isLeft": false,
+        "isLeft": true,
         "boldTitle": "MotionProtect Outdoor",
         "regularTitle": " Jeweller",
         "subTitle": "Détecteur de mouvement extérieur sans fil",

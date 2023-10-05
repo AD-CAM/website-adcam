@@ -3,7 +3,7 @@
 /* Types & Utils imports */
 import { ReactNode } from "react"
 import Image, { StaticImageData } from "next/image"
-import { TechSheetData, TechSheetTextData, TechSheetBannerData } from "../_types/dataFiles"
+import { TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData } from "../_types/dataFiles"
 /* Library Imports */
 import { Variants, motion } from "framer-motion"
 import { makeStyles } from 'tss-react/mui'
@@ -123,7 +123,7 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 600,
 
 
-            color: "#C80404",
+            color: "rgba(252, 105, 105, 1)",
         },
         bannerTitle: {
             boxSizing: "border-box",
@@ -178,7 +178,46 @@ const useStyles = makeStyles()((theme) => {
             paddingRight: theme.spacing(4),
 
             zIndex: "9998",
-        }
+        },
+
+
+
+        subBannerRoot: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-start",
+
+            boxSizing: "border-box",
+
+            width: "100%",
+            height: "auto",
+
+            backgroundColor: "rgba(30, 30, 30, 1)",
+        },
+        subBannerSubRoot: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+
+            boxSizing: "border-box",
+            
+            width: "100%",
+            height: "100%",
+            maxWidth: "1100px",
+        },
+        subBannerText: {
+            fontSize: theme.typography.pxToRem(28),
+            fontWeight: 600,
+
+            padding: theme.spacing(4),
+            paddingLeft: 0
+        },
+        subBannerTextSection: {
+            color: "#F5F5F5",
+        },
+        subBannerTextSubSection: {
+            color: "rgba(252, 105, 105, 1)",
+        },
     }
 })
 
@@ -274,16 +313,18 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
     )
 }
 
-function TechSheetSubSectionBanner({ text }) {
+function TechSheetSubSectionBanner({ section, subSection }: TechSheetSubBannerData) {
     const { classes } = useStyles()
 
 
 
     return (      
-        <div className={ classes.bannerRoot }>
-            <div className={ classes.bannerSubRoot }>
-                
-                
+        <div className={ classes.subBannerRoot }>
+            <div className={ classes.subBannerSubRoot }>
+                <h3 className={ classes.subBannerText }>
+                    <span className={ classes.subBannerTextSection }>{ section }</span>
+                    <span className={ classes.subBannerTextSubSection }>{ subSection }</span>
+                </h3>
             </div>
         </div>
     )
@@ -291,4 +332,4 @@ function TechSheetSubSectionBanner({ text }) {
 
 
 
-export { TechSheetList, TechSheetText, TechSheetBanner }
+export { TechSheetList, TechSheetText, TechSheetBanner, TechSheetSubSectionBanner }

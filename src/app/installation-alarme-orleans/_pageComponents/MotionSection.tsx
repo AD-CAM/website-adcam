@@ -8,7 +8,7 @@ import ajaxBanner from "../../../../public/ajax/banner-ajax_motion.png"
 import { makeStyles } from 'tss-react/mui'
 import YouTube from "react-youtube"
 /* Components Imports */
-import { TechSheetBanner, TechSheetList, TechSheetText } from '@/app/_components/TechSheet'
+import { TechSheetBanner, TechSheetList, TechSheetSubSectionBanner } from '@/app/_components/TechSheet'
 import { TechSheetData } from '@/app/_types/dataFiles'
 
 
@@ -75,6 +75,11 @@ export default function MotionSection() {
                                 ] }
             />
 
+            <TechSheetSubSectionBanner
+                                        section={ "Détecteurs de mouvement  |  " }
+                                        subSection={ "Intérieur" }
+            />
+
             <div className={ classes.subRoot }>
                 {
                     techSheetsListInside.map((techSheetData: TechSheetData, index: number) => {
@@ -90,7 +95,14 @@ export default function MotionSection() {
                                 />
                     })
                 }
+            </div>
 
+            <TechSheetSubSectionBanner
+                                        section={ "Détecteurs de mouvement  |  " }
+                                        subSection={ "Extérieur" }
+            />
+
+            <div className={ classes.subRoot }>
                 {
                     techSheetsListOutside.map((techSheetData: TechSheetData, index: number) => {
                         return <TechSheetList 
