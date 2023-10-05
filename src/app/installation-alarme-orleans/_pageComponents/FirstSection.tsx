@@ -43,7 +43,7 @@ const useStyles = makeStyles()((theme) => {
                 width: "90%",
             },
             [theme.breakpoints.up('sm')]: {
-                width: "650px",
+                width: "1100px",
                 maxWidth: "90%",
             },
         },
@@ -54,6 +54,16 @@ const useStyles = makeStyles()((theme) => {
 
 export default function FirstSection() {
     const { classes } = useStyles()
+
+    const opts = {
+        playerVars: {
+          autoplay: 1,
+        },
+    }
+
+    const onReady = (event: any) => {
+        event.target.pauseVideo()
+    }
 
 
 
@@ -73,6 +83,10 @@ export default function FirstSection() {
                                     }
                                 ] }
             />
+
+            <div className={ classes.youtubeContainer }>
+                <YouTube videoId={ `gdeDCNWoMGg` } className={ "youtubeContainer" } opts={ opts } onReady={ onReady } />
+            </div>
 
             <div className={ classes.subRoot }>
                 {
