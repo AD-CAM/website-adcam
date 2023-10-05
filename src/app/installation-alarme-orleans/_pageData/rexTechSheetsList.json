@@ -1,0 +1,50 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Prolongateur de portée de signal AJAX",
+        "isLeft": true,
+        "boldTitle": "ReX 2",
+        "regularTitle": "",
+        "subTitle": "Prolongateur de portée du signal radio avec prise en charge de la vérification photo des alarmes",
+        "techSheet":    [
+                            {
+                                "icon": "instant_notification",
+                                "text": "Transmission des alarmes en 0,3 seconde"
+                            },
+                            {
+                                "icon": "battery_multitrans",
+                                "text": "Jusqu'à 38 heures d'autonomie sur batterie de secours"
+                            },
+                            {
+                                "icon": "photo_verification",
+                                "text": "Vérification photo"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication avec le hub pouvant atteindre 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Prolongateur de portée de signal AJAX",
+        "isLeft": false,
+        "boldTitle": "ReX",
+        "regularTitle": "",
+        "subTitle": "Prolongateur de portée du signal radio",
+        "techSheet":    [
+                            {
+                                "icon": "instant_notification",
+                                "text": "Transmission des alarmes en 0,3 seconde"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 35 heures d'autonomie sur batterie de secours"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication avec le hub pouvant atteindre 1800m"
+                            }
+                        ]
+    }
+]

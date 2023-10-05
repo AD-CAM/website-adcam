@@ -15,6 +15,7 @@ import FireSection from './_pageComponents/FireSection'
 import DoorSection from './_pageComponents/DoorSection'
 import GlassSection from './_pageComponents/GlassSection'
 import SirenSection from './_pageComponents/SirenSection'
+import RexSection from './_pageComponents/RexSection'
 
 
 
@@ -32,6 +33,7 @@ export default function AlarmPage() {
                 <DoorSection />
                 <GlassSection />
                 <SirenSection />
+                <RexSection />
             </main>
             <Footer />
         </>
