@@ -2,12 +2,12 @@
 /* Data & Types Imports */
 const placeholderTechSheetsList = require("../_pageData/placeholderTechSheetsList.json")
 /* Assets Imports */
-import ajaxAlarm from "../../../../public/ajax/banner-ajax_products.png"
+import ajaxAlarmBanner from "../../../../public/ajax/banner-ajax_products.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import YouTube from "react-youtube"
 /* Components Imports */
-import { TechSheetList, TechSheetText } from '@/app/_components/TechSheet'
+import { TechSheetBanner, TechSheetList, TechSheetText } from '@/app/_components/TechSheet'
 import { TechSheetData } from '@/app/_types/dataFiles'
 
 
@@ -59,6 +59,21 @@ export default function FirstSection() {
 
     return (      
         <section className={ classes.root }>
+            <TechSheetBanner
+                                image={ ajaxAlarmBanner }
+                                alt={ "Alarme AJAX" }
+                                isTop={ true }
+                                tag={ "" }
+                                boldTitle={ "L'Art" }
+                                regularTitle={ " de se défendre" }
+                                text={ [
+                                    {
+                                        type: "regular",
+                                        text: "Les systèmes de sécurité AJAX sont les meilleurs et les plus modernes des systèmes de sécurité sans fil disponibles sur le marché. Protégez votre maison, votre entreprise ou même votre usine avec les détecteurs d'AJAX Systems. Détectez les cambrioleurs, les incendies ou les dégâts des eaux en une fraction de seconde et évitez les dommages à vos biens de valeur."
+                                    }
+                                ] }
+            />
+
             <div className={ classes.subRoot }>
                 {
                     placeholderTechSheetsList.map((techSheetData: TechSheetData, index: number) => {
@@ -76,7 +91,7 @@ export default function FirstSection() {
                 }
 
                 <TechSheetText 
-                            image={ ajaxAlarm }
+                            image={ ajaxAlarmBanner }
                             alt={ "Alarme AJAX" }
                             isLeft={ true }
                             boldTitle={ "Protection " }

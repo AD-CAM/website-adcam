@@ -36,7 +36,7 @@ interface TechSheetData {
     boldTitle: string;
     regularTitle: string;
     subTitle: string;
-    techSheet: TechSheetDetails[]
+    techSheet: TechSheetDetails[];
 }
 
 interface TechSheetTextData {
@@ -48,9 +48,19 @@ interface TechSheetTextData {
     text: TextContent[];
 }
 
+interface TechSheetBannerData {
+    image: StaticImageData;
+    alt: string;
+    isTop: boolean;
+    tag: string;
+    boldTitle: string;
+    regularTitle: string;
+    text: TextContent[];
+}
+
 interface TechSheetDetails {
     icon: string;
     text: string;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetDetails }
+export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetDetails }
