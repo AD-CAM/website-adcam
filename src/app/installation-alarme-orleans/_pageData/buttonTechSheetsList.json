@@ -1,0 +1,228 @@
+[
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Bouton d'urgence AJAX",
+        "isLeft": true,
+        "boldTitle": "DoubleButton",
+        "regularTitle": " Jeweller",
+        "subTitle": "Bouton d'urgence sans fil",
+        "techSheet":    [
+                            {
+                                "icon": "medal",
+                                "text": "Conforme à la norme PD 6662:2017"
+                            },
+                            {
+                                "icon": "accident_button",
+                                "text": "Protection avancée contre les pressions accidentelles"
+                            },
+                            {
+                                "icon": "confirmation",
+                                "text": "Confirmation de l'exécution d'une commande"
+                            },
+                            {
+                                "icon": "ip55",
+                                "text": "Protection contre la poussière et les éclaboussures"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication avec la centrale pouvant atteindre 1300m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Bouton d'urgence AJAX",
+        "isLeft": false,
+        "boldTitle": "Button",
+        "regularTitle": " Jeweller",
+        "subTitle": "Bouton intelligent sans fil",
+        "techSheet":    [
+                            {
+                                "icon": "two_modes",
+                                "text": "Deux modes : panique et contrôle"
+                            },
+                            {
+                                "icon": "alarm",
+                                "text": "Type d'alarme réglable"
+                            },
+                            {
+                                "icon": "accident_button",
+                                "text": "Protection avancée contre les pressions accidentelles"
+                            },
+                            {
+                                "icon": "confirmation",
+                                "text": "Confirmation de l'exécution d'une commande"
+                            },
+                            {
+                                "icon": "ip55",
+                                "text": "Protection contre la poussière et les éclaboussures"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication avec la centrale pouvant atteindre 1300m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Digicode sécurisé AJAX",
+        "isLeft": true,
+        "boldTitle": "Keypad",
+        "regularTitle": " Jeweller",
+        "subTitle": "Clavier tactile sans fil permettant de contrôler le système de sécurité",
+        "techSheet":    [
+                            {
+                                "icon": "attempts_limit",
+                                "text": "Bloque toute tentative de violation du code d’accès"
+                            },
+                            {
+                                "icon": "mute",
+                                "text": "Fonction d'alarme silencieuse"
+                            },
+                            {
+                                "icon": "keypad-indication",
+                                "text": "Indicateur du mode de sécurité"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 2 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication avec la centrale pouvant atteindre 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Digicode sécurisé AJAX",
+        "isLeft": true,
+        "boldTitle": "Keypad Plus",
+        "regularTitle": " Jeweller",
+        "subTitle": "Clavier tactile sans fil avec prise en charge des cartes et des porte-clés sans contact cryptés",
+        "techSheet":    [
+                            {
+                                "icon": "RFID",
+                                "text": "Prise en charge de la technologie DESFire®"
+                            },
+                            {
+                                "icon": "attempts_limit",
+                                "text": "Bloque toute tentative de violation du code d’accès"
+                            },
+                            {
+                                "icon": "duress_code",
+                                "text": "Prise en charge du code de contrainte"
+                            },
+                            {
+                                "icon": "keypad-indication",
+                                "text": "Indicateur du mode de sécurité"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 4,5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication avec la centrale pouvant atteindre 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Porte-clé crypté sans contact AJAX",
+        "isLeft": false,
+        "boldTitle": "",
+        "regularTitle": "Ajax Tag",
+        "subTitle": "Porte-clés sans contact crypté pour un clavier Keypad Plus Jeweller",
+        "techSheet":    [
+                            {
+                                "icon": "RFID",
+                                "text": "Prise en charge de la technologie DESFire®"
+                            },
+                            {
+                                "icon": "users",
+                                "text": "Accès des visiteurs"
+                            },
+                            {
+                                "icon": "hub",
+                                "text": "Mémoire intégrée pouvant stocker les identifiants pour 13 centrales"
+                            },
+                            {
+                                "icon": "encryption",
+                                "text": "Chiffrement"
+                            },
+                            {
+                                "icon": "security_card",
+                                "text": "Protection contre la contre-façon"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Carte crypté sans contact AJAX",
+        "isLeft": true,
+        "boldTitle": "",
+        "regularTitle": "Ajax Pass",
+        "subTitle": "Carte sans contact cryptée pour un clavier Keypad Plus Jeweller",
+        "techSheet":    [
+                            {
+                                "icon": "RFID",
+                                "text": "Prise en charge de la technologie DESFire®"
+                            },
+                            {
+                                "icon": "users",
+                                "text": "Accès des visiteurs"
+                            },
+                            {
+                                "icon": "hub",
+                                "text": "Mémoire intégrée pouvant stocker les identifiants pour 13 centrales"
+                            },
+                            {
+                                "icon": "encryption",
+                                "text": "Chiffrement"
+                            },
+                            {
+                                "icon": "security_card",
+                                "text": "Protection contre la contre-façon"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/banner-ajax_products.png",
+        "alt": "Télécommande sans fil AJAX",
+        "isLeft": false,
+        "boldTitle": "SpaceControl",
+        "regularTitle": " Jeweller",
+        "subTitle": "Télécommande sans fil pour contrôler le système de sécurité",
+        "techSheet":    [
+                            {
+                                "icon": "alarm",
+                                "text": "Bouton de panique"
+                            },
+                            {
+                                "icon": "accident_button",
+                                "text": "Protection avancée contre les pressions accidentelles"
+                            },
+                            {
+                                "icon": "confirmation",
+                                "text": "Confirmation de l'exécution d'une commande"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 5 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "hub_connection",
+                                "text": "Distance de communication avec la centrale pouvant atteindre 1300m"
+                            }
+                        ]
+    }
+]

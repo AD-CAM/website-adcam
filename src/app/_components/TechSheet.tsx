@@ -176,8 +176,7 @@ const useStyles = makeStyles()((theme) => {
             boxSizing: "border-box",
 
             height: "400px",
-            paddingTop: theme.spacing(4),
-            paddingRight: theme.spacing(4),
+            padding: theme.spacing(4),
 
             zIndex: "9998",
         },
