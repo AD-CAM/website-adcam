@@ -20,8 +20,18 @@ const useStyles = makeStyles()((theme) => {
             flexDirection: "column",
             alignItems: "center",
 
-            width: "100%",
-            maxWidth: "1100px",
+            boxSizing: "border-box",
+
+            
+
+            [theme.breakpoints.down('lg')]: {
+                width: "1100px",
+                maxWidth: "90%",
+            },
+            [theme.breakpoints.up('lg')]: {
+                width: "100%",
+                maxWidth: "1100px",
+            },
         },
         youtubeContainer: {
             display: "flex",
@@ -30,16 +40,11 @@ const useStyles = makeStyles()((theme) => {
 
             marginTop: theme.spacing(6),
 
-            [theme.breakpoints.down('sm')]: {
-                width: "90%",
-            },
-            [theme.breakpoints.up('sm')]: {
-                width: "1100px",
-                maxWidth: "90%",
-            },
+            width: "1100px",
+            maxWidth: "90%",
         },
 
-        
+
 
         contactUsArea: {
             display: "flex",

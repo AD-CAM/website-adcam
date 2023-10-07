@@ -24,7 +24,30 @@ const useStyles = makeStyles()((theme) => {
             maxWidth: "1100px",
 
             marginTop: theme.spacing(4),
-            marginBottom: theme.spacing(4)
+            marginBottom: theme.spacing(4),
+
+            [theme.breakpoints.down('lg')]: {
+                width: "600px",
+                maxWidth: "90%",
+
+
+                borderRadius: theme.spacing(1),
+                backgroundColor: "rgba(240, 240, 240, 1)"
+            },
+        },
+        image: {
+            boxSizing: "border-box",
+
+            width: "600px",
+            height: "auto",
+
+            borderRadius: theme.spacing(1),
+
+            objectFit: "cover",
+
+            [theme.breakpoints.down('lg')]: {
+                maxHeight: "60vh",
+            },
         },
         infoRoot: {
             boxSizing: "border-box",
@@ -230,17 +253,26 @@ function getVariant(isLeft: boolean): Variants {
     }
 }
 
+function getFlexDirection(isLeft: boolean, isSmallScreen: boolean): any {
+    if(isSmallScreen) { return { flexDirection: "column" } }
+    else if(isLeft) { return { flexDirection: "row" } }
+    else { return { flexDirection: "row-reverse" } }
+}
+
 
 
 function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
     const { classes } = useStyles()
+
+    const theme = useTheme()
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'))
 
 
 
     return (      
         <motion.article
                         className={ classes.root }
-                        style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }
+                        style={ getFlexDirection(isLeft, isSmallScreen) }
 
                         variants={ getVariant(isLeft) }
                         initial="rest"
@@ -248,7 +280,7 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
         >
-            <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
+            <img src={ image } alt={ alt } className={ classes.image } />
             <div className={ classes.infoRoot }>
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 <p className={ classes.infoSubTitle }>{ subTitle }</p>
@@ -272,12 +304,15 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
 function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: TechSheetTextData) {
     const { classes } = useStyles()
 
+    const theme = useTheme()
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'))
+
 
 
     return (      
         <motion.article
                         className={ classes.root }
-                        style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }
+                        style={ getFlexDirection(isLeft, isSmallScreen) }
 
                         variants={ getVariant(isLeft) }
                         initial="rest"
@@ -285,7 +320,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
         >
-            <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
+            <img src={ image.src } alt={ alt } className={ classes.image } />
             <div className={ classes.infoRoot }>
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 {
@@ -302,6 +337,9 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
 
 function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text }: TechSheetBannerData) {
     const { classes } = useStyles()
+
+    const theme = useTheme()
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'))
 
 
 

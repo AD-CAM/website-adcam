@@ -30,7 +30,7 @@ interface TextContent {
 }
 
 interface TechSheetData {
-    image: StaticImageData;
+    image: any;
     alt: string;
     isLeft: boolean;
     boldTitle: string;
