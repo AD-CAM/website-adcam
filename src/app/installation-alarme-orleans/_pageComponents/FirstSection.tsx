@@ -61,10 +61,6 @@ export default function FirstSection() {
         },
     }
 
-    const onReady = (event: any) => {
-        event.target.pauseVideo()
-    }
-
 
 
     return (      
@@ -85,7 +81,7 @@ export default function FirstSection() {
             />
 
             <div className={ classes.youtubeContainer }>
-                <YouTube videoId={ `gdeDCNWoMGg` } className={ "youtubeContainer" } opts={ opts } onReady={ onReady } />
+                <YouTube videoId={ `gdeDCNWoMGg` } className={ "youtubeContainer" } />
             </div>
         </section>
     )

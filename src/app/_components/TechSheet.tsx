@@ -224,9 +224,9 @@ const useStyles = makeStyles()((theme) => {
 
 function getVariant(isLeft: boolean): Variants {
     if(isLeft){
-        return {rest: { opacity: 0, translateX: "-100%" }, loaded: { opacity: 1, translateX: "0%" }} 
+        return {rest: { opacity: 0, translateX: "-10%" }, loaded: { opacity: 1, translateX: "0%" }} 
     } else {
-        return {rest: { opacity: 0, translateX: "100%" }, loaded: { opacity: 1, translateX: "0%" }}
+        return {rest: { opacity: 0, translateX: "10%" }, loaded: { opacity: 1, translateX: "0%" }}
     }
 }
 
@@ -238,7 +238,16 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
 
 
     return (      
-        <article className={ classes.root } style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }>
+        <motion.article
+                        className={ classes.root }
+                        style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }
+
+                        variants={ getVariant(isLeft) }
+                        initial="rest"
+                        whileInView="loaded"
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+        >
             <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
             <div className={ classes.infoRoot }>
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
@@ -256,7 +265,7 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
                 </div>
 
             </div>
-        </article>
+        </motion.article>
     )
 }
 
@@ -266,7 +275,16 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
 
 
     return (      
-        <article className={ classes.root } style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }>
+        <motion.article
+                        className={ classes.root }
+                        style={ isLeft ? { flexDirection: "row" } : { flexDirection: "row-reverse" } }
+
+                        variants={ getVariant(isLeft) }
+                        initial="rest"
+                        whileInView="loaded"
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+        >
             <Image src={ image } alt={ alt } height="600" width="600" style={ { objectFit: "contain" } } />
             <div className={ classes.infoRoot }>
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
@@ -278,7 +296,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
                     })
                 }
             </div>
-        </article>
+        </motion.article>
     )
 }
 
@@ -289,7 +307,15 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
 
     return (      
         <div className={ classes.bannerRoot }>
-            <div className={ classes.bannerSubRoot }>
+            <motion.div
+                        className={ classes.bannerSubRoot }
+
+                        variants={ getVariant(true) }
+                        initial="rest"
+                        whileInView="loaded"
+                        transition={{ duration: 0.5 }}
+                        viewport={{ once: true }}
+            >
                 <div className={ classes.bannerInfoRoot }>
                     <p className={ classes.bannerTag }>{ tag }</p>
                     {
@@ -309,7 +335,7 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
                     <img src={ image.src } alt={ alt } className={ classes.bannerImage } />
                 </div>
                 
-            </div>
+            </motion.div>
         </div>
     )
 }
