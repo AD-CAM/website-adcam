@@ -35,7 +35,7 @@ const useStyles = makeStyles()((theme) => {
                 backgroundColor: "rgba(240, 240, 240, 1)"
             },
         },
-        image: {
+        infoImage: {
             boxSizing: "border-box",
 
             width: "600px",
@@ -45,8 +45,14 @@ const useStyles = makeStyles()((theme) => {
 
             objectFit: "cover",
 
-            [theme.breakpoints.down('lg')]: {
+            [theme.breakpoints.down('md')]: {
+                maxWidth: "100%",
+            },
+            [theme.breakpoints.up('md')]: {
                 maxHeight: "60vh",
+            },
+            [theme.breakpoints.up('lg')]: {
+                maxHeight: "none",
             },
         },
         infoRoot: {
@@ -56,6 +62,11 @@ const useStyles = makeStyles()((theme) => {
 
             padding: theme.spacing(6),
             margin: 0,
+
+            [theme.breakpoints.down('md')]: {
+                padding: theme.spacing(4),
+                maxWidth: "100%",
+            },
         },
         infoTitle: {
             boxSizing: "border-box",
@@ -66,7 +77,11 @@ const useStyles = makeStyles()((theme) => {
             fontSize: theme.typography.pxToRem(36),
             fontWeight: 400,
 
-            color: "#404040"
+            color: "#404040",
+
+            [theme.breakpoints.down('sm')]: {
+                fontSize: theme.typography.pxToRem(28),
+            },
         },
         infoTitleBold: {
             fontWeight: 700,
@@ -205,9 +220,6 @@ const useStyles = makeStyles()((theme) => {
 
             position: "relative",
         },
-
-
-
         bannerImageGlow: {
             position: "absolute",
             zIndex: "9998",
@@ -329,7 +341,7 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
         >
-            <img src={ image } alt={ alt } className={ classes.image } />
+            <img src={ image } alt={ alt } className={ classes.infoImage } />
             <div className={ classes.infoRoot }>
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 <p className={ classes.infoSubTitle }>{ subTitle }</p>
@@ -369,7 +381,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
         >
-            <img src={ image.src } alt={ alt } className={ classes.image } />
+            <img src={ image.src } alt={ alt } className={ classes.infoImage } />
             <div className={ classes.infoRoot }>
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 {
