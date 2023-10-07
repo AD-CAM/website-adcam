@@ -104,7 +104,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Digicode sécurisé AJAX",
-        "isLeft": true,
+        "isLeft": false,
         "boldTitle": "Keypad Plus",
         "regularTitle": " Jeweller",
         "subTitle": "Clavier tactile sans fil avec prise en charge des cartes et des porte-clés sans contact cryptés",
@@ -138,7 +138,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Porte-clé crypté sans contact AJAX",
-        "isLeft": false,
+        "isLeft": true,
         "boldTitle": "",
         "regularTitle": "Ajax Tag",
         "subTitle": "Porte-clés sans contact crypté pour un clavier Keypad Plus Jeweller",
@@ -168,7 +168,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Carte crypté sans contact AJAX",
-        "isLeft": true,
+        "isLeft": false,
         "boldTitle": "",
         "regularTitle": "Ajax Pass",
         "subTitle": "Carte sans contact cryptée pour un clavier Keypad Plus Jeweller",
@@ -198,7 +198,7 @@
     {
         "image": "/ajax/banner-ajax_products.png",
         "alt": "Télécommande sans fil AJAX",
-        "isLeft": false,
+        "isLeft": true,
         "boldTitle": "SpaceControl",
         "regularTitle": " Jeweller",
         "subTitle": "Télécommande sans fil pour contrôler le système de sécurité",
