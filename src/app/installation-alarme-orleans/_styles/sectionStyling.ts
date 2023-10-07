@@ -33,16 +33,6 @@ const useStyles = makeStyles()((theme) => {
                 maxWidth: "1100px",
             },
         },
-        youtubeContainer: {
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-
-            marginTop: theme.spacing(6),
-
-            width: "1100px",
-            maxWidth: "90%",
-        },
 
 
 

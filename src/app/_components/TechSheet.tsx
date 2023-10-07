@@ -127,6 +127,10 @@ const useStyles = makeStyles()((theme) => {
             width: "100%",
             height: "100%",
             maxWidth: "1100px",
+
+            [theme.breakpoints.down('lg')]: {
+                flexDirection: "column-reverse"
+            },
         },
         bannerInfoRoot: {
             position: "relative",
@@ -136,6 +140,17 @@ const useStyles = makeStyles()((theme) => {
             padding: theme.spacing(8),
             paddingLeft: "0",
             margin: 0,
+
+            [theme.breakpoints.down('sm')]: {
+                padding: theme.spacing(4),
+                paddingTop: theme.spacing(8),
+            },
+            [theme.breakpoints.up('sm')]: {
+                paddingLeft: theme.spacing(8),
+            },
+            [theme.breakpoints.up('lg')]: {
+                paddingLeft: "0",
+            },
         },
         bannerTag: {
             position: "absolute",
@@ -160,6 +175,11 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 400,
 
             color: "#F5F5F5",
+
+            [theme.breakpoints.down('sm')]: {
+                paddingBottom: theme.spacing(4),
+                fontSize: theme.typography.pxToRem(26),
+            },
         },
         bannerTitleBold: {
             fontWeight: 700,
@@ -168,6 +188,10 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 500,
 
             color: "#F5F5F5",
+
+            [theme.breakpoints.down('sm')]: {
+                fontSize: theme.typography.pxToRem(16),
+            },
         },
         bannerTextBold: {
             fontWeight: 600,
@@ -175,6 +199,10 @@ const useStyles = makeStyles()((theme) => {
             color: "#F5F5F5",
         },
         bannerImageContainer: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+
             position: "relative",
         },
 
@@ -198,10 +226,21 @@ const useStyles = makeStyles()((theme) => {
             position: "relative",
             boxSizing: "border-box",
 
+            objectFit: "cover",
+
             height: "400px",
             padding: theme.spacing(4),
 
             zIndex: "9998",
+
+            [theme.breakpoints.down('lg')]: {
+                width: "600px",
+                maxWidth: "90%",
+                height: "auto",
+
+                paddingTop: theme.spacing(8),
+                paddingBottom: "0",
+            },
         },
 
 
@@ -209,7 +248,7 @@ const useStyles = makeStyles()((theme) => {
         subBannerRoot: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "flex-start",
+            justifyContent: "center",
 
             boxSizing: "border-box",
 
@@ -221,13 +260,23 @@ const useStyles = makeStyles()((theme) => {
         subBannerSubRoot: {
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
+            justifyContent: "flex-start",
 
             boxSizing: "border-box",
-            
-            width: "100%",
-            height: "100%",
-            maxWidth: "1100px",
+
+            [theme.breakpoints.down('sm')]: {
+                paddingLeft: theme.spacing(4),
+            },
+            [theme.breakpoints.up('sm')]: {
+                paddingLeft: theme.spacing(8),
+
+                width: "1100px",
+                maxWidth: "100%",
+                height: "100%",
+            },
+            [theme.breakpoints.up('lg')]: {
+                paddingLeft: 0,
+            },
         },
         subBannerText: {
             fontSize: theme.typography.pxToRem(28),
