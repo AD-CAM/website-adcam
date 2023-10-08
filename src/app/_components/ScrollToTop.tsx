@@ -36,10 +36,6 @@ const useStyles = makeStyles()((theme) => {
 
             cursor: "pointer",
         }
-/*         rootHidden: {
-            display: "none",
-            visibility: "hidden"
-        } */
     }
 })
 
@@ -60,6 +56,9 @@ function getButtonVariants(isVisible: boolean, duration: number): Variants {
 
             transition: {
                 opacity: {
+                    delay: !isVisible ? 0 : duration
+                },
+                translateY: {
                     delay: !isVisible ? 0 : duration
                 },
                 visibility: {
@@ -88,6 +87,9 @@ function getButtonVariants(isVisible: boolean, duration: number): Variants {
                 opacity: {
                     delay: !isVisible ? 0 : duration
                 },
+                translateY: {
+                    delay: !isVisible ? 0 : duration
+                },
                 visibility: {
                     delay: isVisible ? 0 : duration
                 },
@@ -97,61 +99,6 @@ function getButtonVariants(isVisible: boolean, duration: number): Variants {
             }
         }
     }
-
-
-    /* if(isVisible) {
-        return {
-            visible: {
-                scale: 1,
-                translateY: "0%",
-        
-                display: "flex",
-                visibility: "visible",
-
-                opacity: 1,
-            },
-            hover: {
-                scale: 1.05,
-                translateY: "0%",
-            },
-            hidden: {
-                translateY: "-100%",
-
-                display: "none",
-                visibility: "hidden",
-
-                opacity: 0,
-            }
-        }
-    } else {
-        return {
-            visible: {
-                scale: 1,
-                translateY: "0%",
-        
-                display: "flex",
-                visibility: "visible",
-
-                opacity: 1,
-
-                transition: {
-
-                }
-            },
-            hover: {
-                scale: 1.05,
-                translateY: "0%",
-            },
-            hidden: {
-                translateY: "-100%",
-
-                display: "none",
-                visibility: "hidden",
-
-                opacity: 0,
-            }
-        }
-    } */
 }
 
 
