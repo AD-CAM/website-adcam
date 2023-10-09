@@ -36,27 +36,75 @@ const useStyles = makeStyles()((theme) => {
 
 
 
-        contactUsArea: {
+        contactUsRoot: {
             display: "flex",
-            flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
 
-            marginTop: theme.spacing(6),
+            boxSizing: "border-box",
+
+            width: "100%",
+            height: "auto",
+            marginTop: "20px",
+            marginBottom: "-40px",
+
+            overflow: "hidden",
+
+            backgroundColor: "rgba(20, 20, 20, 1)",
+        },
+        contactUsSubRoot: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+
+            boxSizing: "border-box",
+            
+            width: "100%",
+            height: "100%",
+            maxWidth: "1100px",
+
+            paddingBottom: theme.spacing(6),
+        },
+        contactUsText: {
+            position: "relative",
+
+            boxSizing: "border-box",
+
+            padding: theme.spacing(6),
+            paddingLeft: "0",
+            margin: 0,
 
             [theme.breakpoints.down('sm')]: {
-                maxWidth: "90%",
-                marginBottom: theme.spacing(6),
-            },
-            [theme.breakpoints.up('sm')]: {
-                maxWidth: "1050px",
-                marginBottom: theme.spacing(4),
+                padding: theme.spacing(4),
+                paddingTop: theme.spacing(6),
             },
         },
         contactUsTitle: {
-            fontWeight: 500,
-            fontSize: theme.typography.pxToRem(18),
+            boxSizing: "border-box",
+
+            padding: 0,
+            margin: 0,
+
+            fontSize: theme.typography.pxToRem(36),
+            fontWeight: 400,
+
+            color: "rgba(252, 105, 105, 1)",
+
+            [theme.breakpoints.down('sm')]: {
+                paddingBottom: theme.spacing(4),
+                fontSize: theme.typography.pxToRem(26),
+            },
         },
+        contactUsSubTitle: {
+            fontWeight: 500,
+
+            color: "#F5F5F5",
+
+            [theme.breakpoints.down('sm')]: {
+                fontSize: theme.typography.pxToRem(16),
+            },
+        }
     }
 })
 

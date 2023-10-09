@@ -57,12 +57,20 @@ export default function ButtonSection() {
                 }
             </div>
 
-            <div className={ classes.contactUsArea }>
-                    <h3 className={ classes.contactUsTitle }>
-                        { `Nos solutions en matière de systèmes de sécurité AJAX vous intéressent ? AD CAM est à votre disposition pour vous conseiller et vous transmettre une estimation des coûts gratuite ! Nous intervenons dans un rayon de 50 kilomètres autour d'Orléans.` }
-                    </h3>
+            <div className={ classes.contactUsRoot }>
+                <div className={ classes.contactUsSubRoot }>
+                    <div className={ classes.contactUsText }>
+                        <h3 className={ classes.contactUsTitle }>
+                            { `Les systèmes de sécurité AJAX vous intéressent ?` }
+                        </h3>
+                        <p className={ classes.contactUsSubTitle }>
+                            { `AD CAM est à votre disposition pour vous conseiller et vous transmettre une estimation des coûts gratuite ! Nous intervenons dans un rayon de 50 kilomètres autour d'Orléans.` }
+                        </p>
+                    </div>
+
                     <IconButton icon={ "invoice" } text={ `Devis 100% gratuit` } link={ "/contact" } description={ `Contactez-nous pour obtenir un devis 100% gratuit` }/>
                 </div>
+            </div>
         </section>
     )
 }
