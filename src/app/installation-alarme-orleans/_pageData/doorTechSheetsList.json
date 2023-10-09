@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/door/one.jpg",
         "alt": "Détecteur d'ouverture de porte AJAX",
         "isLeft": true,
         "boldTitle": "DoorProtect",
@@ -26,7 +26,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/door/two.jpg",
         "alt": "Détecteur d'ouverture de porte AJAX",
         "isLeft": false,
         "boldTitle": "DoorProtect Plus",

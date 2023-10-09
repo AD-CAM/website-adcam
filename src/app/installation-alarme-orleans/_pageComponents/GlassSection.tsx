@@ -3,6 +3,9 @@
 const techSheetsList = require("../_pageData/glassTechSheetsList.json")
 /* Assets Imports */
 import ajaxBanner from "../../../../public/ajax/banner-ajax_glass.png"
+import glassThree from "../../../../public/ajax/glass/three.jpg"
+import glassFour from "../../../../public/ajax/glass/four.jpg"
+import glassFive from "../../../../public/ajax/glass/five.gif"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
@@ -56,7 +59,7 @@ export default function GlassSection() {
                 }
 
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ glassThree }
                             alt={ "Compatibilité avec les fournisseurs tiers" }
                             isLeft={ true }
                             boldTitle={ "" }
@@ -69,7 +72,7 @@ export default function GlassSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ glassFour }
                             alt={ "Installation et configuration simples" }
                             isLeft={ false }
                             boldTitle={ "" }
@@ -82,7 +85,7 @@ export default function GlassSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ glassFive }
                             alt={ "Communication longue distance fiable" }
                             isLeft={ true }
                             boldTitle={ "" }

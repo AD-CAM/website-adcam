@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/rex/one.jpg",
         "alt": "Prolongateur de portée de signal AJAX",
         "isLeft": true,
         "boldTitle": "ReX 2",
@@ -26,7 +26,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/rex/two.jpg",
         "alt": "Prolongateur de portée de signal AJAX",
         "isLeft": false,
         "boldTitle": "ReX",

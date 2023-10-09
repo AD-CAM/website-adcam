@@ -3,6 +3,9 @@
 const techSheetsList = require("../_pageData/hubTechSheetsList.json")
 /* Assets Imports */
 import ajaxBanner from "../../../../public/ajax/banner-ajax_hubs.png"
+import hubsTwo from "../../../../public/ajax/hubs/two.jpg"
+import hubsThree from "../../../../public/ajax/hubs/three.jpg"
+import hubsFour from "../../../../public/ajax/hubs/four.jpg"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
@@ -60,7 +63,7 @@ export default function HubSection() {
                 }
 
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ hubsTwo }
                             alt={ "Mises à jour à distance automatiques" }
                             isLeft={ false }
                             boldTitle={ "Mises à jour" }
@@ -73,7 +76,7 @@ export default function HubSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ hubsThree }
                             alt={ "Protection contre les acteurs malicieux" }
                             isLeft={ true }
                             boldTitle={ "Logiciel protégé" }
@@ -86,7 +89,7 @@ export default function HubSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ hubsFour }
                             alt={ "Stabilité de la communication" }
                             isLeft={ false }
                             boldTitle={ "Communication" }

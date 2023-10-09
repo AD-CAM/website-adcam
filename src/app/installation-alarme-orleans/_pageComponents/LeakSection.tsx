@@ -3,6 +3,8 @@
 const techSheetsList = require("../_pageData/leakTechSheetsList.json")
 /* Assets Imports */
 import ajaxBanner from "../../../../public/ajax/banner-ajax_hubs.png"
+import leaksTwo from "../../../../public/ajax/leaks/two.jpg"
+import leaksThree from "../../../../public/ajax/leaks/three.jpg"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
@@ -52,7 +54,7 @@ export default function LeakSection() {
                 }
 
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ leaksTwo }
                             alt={ "Installation très simple" }
                             isLeft={ false }
                             boldTitle={ "" }
@@ -65,7 +67,7 @@ export default function LeakSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ leaksThree }
                             alt={ "Détecte très efficacement les fuites" }
                             isLeft={ true }
                             boldTitle={ "Protection" }

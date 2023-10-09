@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/sirens/one.jpg",
         "alt": "Sirène d'intérieur AJAX",
         "isLeft": true,
         "boldTitle": "HomeSiren",
@@ -34,7 +34,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/sirens/two.jpg",
         "alt": "Sirène d'extérieur AJAX",
         "isLeft": false,
         "boldTitle": "StreetSiren",
@@ -72,7 +72,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/sirens/three.jpg",
         "alt": "Sirène d'extérieur AJAX",
         "isLeft": true,
         "boldTitle": "StreetSiren DoubleDeck",

@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/fire/one.jpg",
         "alt": "Détecteur d'incendie AJAX",
         "isLeft": true,
         "boldTitle": "",
@@ -34,7 +34,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/fire/two.jpg",
         "alt": "Détecteur d'incendie AJAX",
         "isLeft": false,
         "boldTitle": "",

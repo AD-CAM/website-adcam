@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/outside/one.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": false,
         "boldTitle": "DualCurtain",
@@ -50,7 +50,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/outside/two.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": true,
         "boldTitle": "MotionCam Outdoor",
@@ -100,7 +100,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/outside/three.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": false,
         "boldTitle": "MotionCam Outdoor",
@@ -142,7 +142,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/outside/four.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": true,
         "boldTitle": "MotionProtect Outdoor",

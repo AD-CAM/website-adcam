@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/buttons/one.jpg",
         "alt": "Bouton d'urgence AJAX",
         "isLeft": true,
         "boldTitle": "DoubleButton",
@@ -34,7 +34,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/buttons/two.jpg",
         "alt": "Bouton d'urgence AJAX",
         "isLeft": false,
         "boldTitle": "Button",
@@ -72,7 +72,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/buttons/three.jpg",
         "alt": "Digicode sécurisé AJAX",
         "isLeft": true,
         "boldTitle": "Keypad",
@@ -102,7 +102,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/buttons/four.jpg",
         "alt": "Digicode sécurisé AJAX",
         "isLeft": false,
         "boldTitle": "Keypad Plus",
@@ -136,7 +136,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/buttons/five.jpg",
         "alt": "Porte-clé crypté sans contact AJAX",
         "isLeft": true,
         "boldTitle": "",
@@ -166,7 +166,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/buttons/six.jpg",
         "alt": "Carte crypté sans contact AJAX",
         "isLeft": false,
         "boldTitle": "",
@@ -196,7 +196,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/buttons/seven.jpg",
         "alt": "Télécommande sans fil AJAX",
         "isLeft": true,
         "boldTitle": "SpaceControl",

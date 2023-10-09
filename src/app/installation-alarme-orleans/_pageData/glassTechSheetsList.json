@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/glass/one.jpg",
         "alt": "Détecteur de bris de verre AJAX",
         "isLeft": true,
         "boldTitle": "GlassProtect",
@@ -38,7 +38,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/glass/two.jpg",
         "alt": "Détecteur de mouvement et de bris de verre AJAX",
         "isLeft": false,
         "boldTitle": "CombiProtect",

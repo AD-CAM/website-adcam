@@ -1,6 +1,6 @@
 [
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/inside/one.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": true,
         "boldTitle": "MotionCam",
@@ -50,7 +50,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/inside/two.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": false,
         "boldTitle": "MotionCam",
@@ -92,7 +92,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/inside/three.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": true,
         "boldTitle": "MotionProtect Plus",
@@ -126,7 +126,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/inside/four.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": false,
         "boldTitle": "CombiProtect",
@@ -160,7 +160,7 @@
                         ]
     },
     {
-        "image": "/ajax/banner-ajax_products.png",
+        "image": "/ajax/motion/inside/five.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": true,
         "boldTitle": "MotionProtect Curtain",

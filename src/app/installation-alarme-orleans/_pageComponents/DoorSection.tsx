@@ -3,6 +3,9 @@
 const techSheetsList = require("../_pageData/doorTechSheetsList.json")
 /* Assets Imports */
 import ajaxBanner from "../../../../public/ajax/banner-ajax_door.png"
+import doorsThree from "../../../../public/ajax/door/three.jpg"
+import doorsFour from "../../../../public/ajax/door/four.jpg"
+import doorsFive from "../../../../public/ajax/door/five.jpg"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
@@ -56,7 +59,7 @@ export default function DoorSection() {
                 }
 
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ doorsThree }
                             alt={ "Détection de la moindre ouverture" }
                             isLeft={ true }
                             boldTitle={ "Détectez les intrus" }
@@ -69,7 +72,7 @@ export default function DoorSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ doorsFour }
                             alt={ "Protection contre l'ouverture des fenêtres" }
                             isLeft={ false }
                             boldTitle={ "" }
@@ -82,7 +85,7 @@ export default function DoorSection() {
                             ] }
                 />
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ doorsFive }
                             alt={ "Compatibilité avec les fournisseurs tiers" }
                             isLeft={ true }
                             boldTitle={ "" }

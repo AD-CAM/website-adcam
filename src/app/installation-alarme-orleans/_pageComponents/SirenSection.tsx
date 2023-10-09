@@ -3,6 +3,7 @@
 const techSheetsList = require("../_pageData/sirenTechSheetsList.json")
 /* Assets Imports */
 import ajaxBanner from "../../../../public/ajax/banner-ajax_siren.png"
+import sirensFour from "../../../../public/ajax/sirens/four.jpg"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
@@ -60,7 +61,7 @@ export default function SirenSection() {
                 }
                 
                 <TechSheetText 
-                            image={ ajaxBanner }
+                            image={ sirensFour }
                             alt={ "Sirènes actives en toute condition" }
                             isLeft={ false }
                             boldTitle={ "" }
