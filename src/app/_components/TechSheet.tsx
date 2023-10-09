@@ -232,7 +232,7 @@ const useStyles = makeStyles()((theme) => {
             filter: "blur(75px)",
             rotate: "45deg",
 
-            backgroundColor: "rgba(230, 230, 255, 1)",
+            backgroundColor: "rgba(230, 230, 255, 0.7)",
         },
         bannerImage: {
             position: "relative",

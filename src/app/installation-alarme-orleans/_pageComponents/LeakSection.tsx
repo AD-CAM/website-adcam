@@ -2,7 +2,7 @@
 /* Data & Types Imports */
 const techSheetsList = require("../_pageData/leakTechSheetsList.json")
 /* Assets Imports */
-import ajaxBanner from "../../../../public/ajax/banner-ajax_hubs.png"
+import ajaxBanner from "../../../../public/ajax/banner-ajax_leaks.png"
 import leaksTwo from "../../../../public/ajax/leaks/two.jpg"
 import leaksThree from "../../../../public/ajax/leaks/three.jpg"
 /* Library Imports */

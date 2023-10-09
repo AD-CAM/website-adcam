@@ -2,7 +2,7 @@
 /* Data & Types Imports */
 const techSheetsList = require("../_pageData/rexTechSheetsList.json")
 /* Assets Imports */
-import ajaxBanner from "../../../../public/ajax/banner-ajax_motion.png"
+import ajaxBanner from "../../../../public/ajax/banner-ajax_rex.jpg"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'

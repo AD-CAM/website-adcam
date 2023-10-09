@@ -2,7 +2,7 @@
 /* Data & Types Imports */
 const techSheetsList = require("../_pageData/fireTechSheetsList.json")
 /* Assets Imports */
-import ajaxBanner from "../../../../public/ajax/banner-ajax_motion.png"
+import ajaxBanner from "../../../../public/ajax/banner-ajax_fire.jpg"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
