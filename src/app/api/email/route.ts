@@ -15,14 +15,18 @@ export async function POST(req: any) {
     if(process.env.SENDGRID_API_KEY !== undefined) {
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
     } else {
-        console.error(`The SendGrid API key is undefined!`)
+        return new Response('The Server Sendgrid API key is undefined', { status: 500 })
     }
+    
+
     
     const data = await req.json()
 
     if(!data.subject || !data.text) {
         return new Response('Error while sending email', { status: 500 })
     }
+
+
 
     const msg = {
         to: destination,
@@ -33,14 +37,15 @@ export async function POST(req: any) {
 
 
 
-    sgMail
-        .send(msg)
-        .then(() => {
-            console.log('Email sent')
-            return new Response('Email sent', { status: 200 })
-        })
-        .catch((error) => {
-            console.error(error)
-            return new Response('Error while sending email', { status: 500 })
-        })
+    try {
+        await sgMail.send(msg)
+
+        console.log('Email sent')
+
+        return new Response('Email sent', { status: 200 })
+    } catch (error) {
+        console.error(error)
+
+        return new Response('Error while sending email', { status: 500 })
+    }
 }
