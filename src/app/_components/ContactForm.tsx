@@ -217,7 +217,7 @@ interface ContactFormProps {
 
 
 
-function handleContactSend(data: any) {
+async function handleContactSend(data: any) {
     const emailData = {
         subject: "Demande de contact depuis AD-CAM.fr",
         text: `Vous avez reçu une demande de contact.
@@ -229,10 +229,10 @@ function handleContactSend(data: any) {
         Cet email a été envoyé automatiquement depuis le serveur de AD-CAM.fr et ne permet pas d'y répondre directement.`
     }
 
-    handleFormSubmit(emailData)
+    await handleFormSubmit(emailData)
 }
 
-function handleInvoiceSend(data: any) {
+async function handleInvoiceSend(data: any) {
     const emailData = {
         subject: "Demande de devis express depuis AD-CAM.fr",
         text: `Vous avez reçu une demande de devis express.
@@ -244,17 +244,23 @@ function handleInvoiceSend(data: any) {
         Cet email a été envoyé automatiquement depuis le serveur de AD-CAM.fr et ne permet pas d'y répondre directement.`
     }
 
-    handleFormSubmit(emailData)
+    await handleFormSubmit(emailData)
 }
 
-function handleFormSubmit(data: EmailData) {
-    axios.post('/api/email/', data)
-        .then(() => {
-            console.log('Email posted')
-        })
-        .catch((error) => {
-            console.log('An error occurred while sending the email:', error)
-        })
+async function handleFormSubmit(data: EmailData) {
+    await fetch('/api/email/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(() => {
+        console.log('Email posted')
+    })
+    .catch((error) => {
+        console.log('An error occurred while sending the email:', error)
+    })
 }
 
 

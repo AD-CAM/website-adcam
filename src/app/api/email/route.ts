@@ -1,8 +1,6 @@
-/* Types Imports */
-import { EmailData } from '@/app/_types/email'
 /* Libraries Imports */
 import sgMail from '@sendgrid/mail'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 
 
 
@@ -14,8 +12,12 @@ if(process.env.SENDGRID_API_KEY !== undefined) {
 
 
 
-export async function POST(req: NextRequest) {
+export async function POST(req: any) {
     const data = await req.json()
+
+    if(!data.subject || !data.text) {
+        return new NextResponse('Error while sending email', { status: 500 })
+    }
 
     const msg = {
         to: "contact@ad-cam.fr",
@@ -34,6 +36,6 @@ export async function POST(req: NextRequest) {
         })
         .catch((error) => {
             console.error(error)
-            return new NextResponse('Error while sending email', { status: 400 })
+            return new NextResponse('Error while sending email', { status: 500 })
         })
 }
