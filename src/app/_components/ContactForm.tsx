@@ -217,7 +217,7 @@ interface ContactFormProps {
 
 
 
-async function handleContactSend(data: any) {
+function handleContactSend(data: any) {
     const emailData = {
         subject: "Demande de contact depuis AD-CAM.fr",
         text: `Vous avez reçu une demande de contact.
@@ -229,10 +229,10 @@ async function handleContactSend(data: any) {
         Cet email a été envoyé automatiquement depuis le serveur de AD-CAM.fr et ne permet pas d'y répondre directement.`
     }
 
-    await handleFormSubmit(emailData)
+    handleFormSubmit(emailData)
 }
 
-async function handleInvoiceSend(data: any) {
+function handleInvoiceSend(data: any) {
     const emailData = {
         subject: "Demande de devis express depuis AD-CAM.fr",
         text: `Vous avez reçu une demande de devis express.
@@ -244,7 +244,7 @@ async function handleInvoiceSend(data: any) {
         Cet email a été envoyé automatiquement depuis le serveur de AD-CAM.fr et ne permet pas d'y répondre directement.`
     }
 
-    await handleFormSubmit(emailData)
+    handleFormSubmit(emailData)
 }
 
 async function handleFormSubmit(data: EmailData) {

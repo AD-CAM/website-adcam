@@ -1,3 +1,5 @@
+/* Env Variable Assignment */
+const destination = process.env.SENDGRID_DESTINATION
 /* Libraries Imports */
 import sgMail from '@sendgrid/mail'
 import { NextResponse } from 'next/server'
@@ -20,7 +22,7 @@ export async function POST(req: any) {
     }
 
     const msg = {
-        to: "contact@ad-cam.fr",
+        to: destination,
         from: "contact@ad-cam.fr",
         subject: data.subject,
         text: data.text
