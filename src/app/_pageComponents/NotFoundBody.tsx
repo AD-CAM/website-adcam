@@ -114,7 +114,7 @@ export default function NotFoundBody() {
                 })}                    
             </motion.h2>
 
-            <GoToButton text={"Accueil"} link={"/"} description={"Retournez à la page d'accueil"} />
+            <GoToButton text={ "Accueil" } link={ "/" } description={ "Retournez à la page d'accueil" } isOutside={ false }/>
         </div>
     )
 }
