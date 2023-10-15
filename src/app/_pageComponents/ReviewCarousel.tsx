@@ -174,7 +174,7 @@ export default function ReviewCarousel() {
                     <GoToButton text={ `Voir plus d'avis` }
                                 link={ `https://goo.gl/maps/eqLTBWEQWpXq5cts7` }
                                 description={ "Accéder aux avis google de AD-CAM" } 
-                                isOutside={ false }           
+                                isOutside={ true }           
                     />
                 </div>
             </div>
