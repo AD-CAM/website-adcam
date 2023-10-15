@@ -69,7 +69,7 @@ export default function ButtonSection() {
                         </p>
                     </div>
 
-                    <IconButton icon={ "invoice" } text={ `Devis 100% gratuit` } link={ "/contact" } description={ `Contactez-nous pour obtenir un devis 100% gratuit` }/>
+                    <IconButton icon={ "invoice" } text={ `Devis 100% gratuit` } link={ "/contact" } description={ `Contactez-nous pour obtenir un devis 100% gratuit` } isOutside={ false }/>
                 </div>
             </div>
         </section>
