@@ -150,6 +150,7 @@ interface IconlessButtonProps {
     text: string;
     link: string;
     description: string;
+    isOutside: boolean;
 }
 
 interface TextlessButtonProps {
@@ -222,11 +223,15 @@ function IconButton({ icon, text, link, description, isOutside }: ButtonProps) {
     )
 }
 
-function GoToButton({ text, link, description }: IconlessButtonProps) {
+function GoToButton({ text, link, description, isOutside }: IconlessButtonProps) {
     const { classes } = useStyles()
 
+    const linkProps = isOutside
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {}
+
     return (      
-        <Link href={ link }>
+        <Link href={ link } {...linkProps}>
             <motion.span
                 className={ classes.root }
 

@@ -165,10 +165,16 @@ export default function ReviewCarousel() {
                 }
                 </Carousel>
                 <div className={ classes.writeReviewRoot }>
-                    <IconButton icon={ "star" } text={ "Donner un avis" } link={ "https://g.page/r/Ce50QaX_gC5NEB0/review" } description={ "Donner un avis" } isOutside={ true }/>
+                    <IconButton icon={ "star" }
+                                text={ "Donner un avis" }
+                                link={ "https://g.page/r/Ce50QaX_gC5NEB0/review" }
+                                description={ "Donner un avis" }
+                                isOutside={ true }
+                    />
                     <GoToButton text={ `Voir plus d'avis` }
                                 link={ `https://goo.gl/maps/eqLTBWEQWpXq5cts7` }
-                                description={ "Accéder aux avis google de AD-CAM" }            
+                                description={ "Accéder aux avis google de AD-CAM" } 
+                                isOutside={ false }           
                     />
                 </div>
             </div>

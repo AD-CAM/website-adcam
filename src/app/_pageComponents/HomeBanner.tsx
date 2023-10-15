@@ -148,8 +148,8 @@ export default function HomeBanner() {
                 <h2 className={ classes.bannerSubTitle }>{ `Pour avoir un oeil partout, tout le temps !` }</h2>
 
                 <div className={ classes.buttonsContainer }>
-                    <GoToButton text={"Alarme"} link={"/installation-alarme-orleans"} description={"Renseignez-vous sur les installations d'alarme par AD CAM"} />
-                    <GoToButton text={"Vidéo surveillance"} link={"/installation-video-surveillance-orleans"} description={"Renseignez-vous sur les installations de vidéo surveillance par AD CAM"} />
+                    <GoToButton text={"Alarme"} link={"/installation-alarme-orleans"} description={"Renseignez-vous sur les installations d'alarme par AD CAM"} isOutside={ false }/>
+                    <GoToButton text={"Vidéo surveillance"} link={"/installation-video-surveillance-orleans"} description={"Renseignez-vous sur les installations de vidéo surveillance par AD CAM"} isOutside={ false }/>
                 </div>
 
             </motion.div>
