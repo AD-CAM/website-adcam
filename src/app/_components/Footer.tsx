@@ -4,6 +4,7 @@ import adCamFullLogo from "/public/logos/logo-full_white.png"
 import adCamFooterLogo from "/public/logos/logo_white.png"
 import escortLogo from "/public/partners/escort-logo.png"
 import isiLogo from "/public/partners/isi-logo.png"
+import shdLogo from "/public/partners/shd-logo.png"
 /* Utils & Data Imports */
 import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
@@ -360,7 +361,8 @@ export default function Footer() {
                         { `Nos partenaires` }
                     </h3>
                     <Image src={ escortLogo } alt="Logo de Escort" height={ 75 } width={ 115 } style={{ margin: "10px" }} />
-                    <Image src={ isiLogo } alt="Logo de ISI" height={ 75 } width={ 170 } style={{ margin: "10px" }} />
+                    <Image src={ isiLogo } alt="Logo de Icon Security International" height={ 75 } width={ 170 } style={{ margin: "10px" }} />
+                    <Image src={ shdLogo } alt="Logo de Safe Home Detector" height={ 75 } width={ 75 } style={{ margin: "10px" }} />
                 </div>
             </div>
 
