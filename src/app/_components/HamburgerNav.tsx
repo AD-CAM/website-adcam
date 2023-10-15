@@ -158,7 +158,7 @@ function HamburgerNav({ activePage, hasButton }: HamburgerNavProps) {
                 { 
                     hasButton &&  
                                 <div className={ classes.navButtonContainer }>
-                                    <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
+                                    <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' } isOutside={ false }/>
                                 </div>
                 }
             </motion.nav>

@@ -143,6 +143,7 @@ interface ButtonProps {
     text: string;
     link: string;
     description: string;
+    isOutside: boolean;
 }
 
 interface IconlessButtonProps {
@@ -188,11 +189,15 @@ const Icon = ({ icon }: IconProps) => {
 
 
 
-function IconButton({ icon, text, link, description }: ButtonProps) {
+function IconButton({ icon, text, link, description, isOutside }: ButtonProps) {
     const { classes } = useStyles()
 
+    const linkProps = isOutside
+        ? { target: '_blank', rel: 'noopener noreferrer' }
+        : {}
+
     return (      
-        <Link href={ link }>
+        <Link href={ link } {...linkProps}>
             <motion.span    
                 className={ classes.root }
 
@@ -259,6 +264,9 @@ function SocialButton({ icon, link, description }: TextlessButtonProps) {
                     variants={ socialButtonVariants }
                     initial="rest"
                     whileHover="hover"
+
+                    target="_blank"
+                    rel="noopener noreferrer"
         >
             <Icon icon={ icon }/>
         </motion.a>

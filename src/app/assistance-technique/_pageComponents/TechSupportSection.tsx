@@ -213,11 +213,11 @@ export default function TechSupportSection() {
                         <div className={ classes.supportTutorial }>
                             <h3 className={ classes.tutorialTitle }>{ `Pour que nous vous aidions, suivez bien ces instructions` }</h3>
                             <ol className={ classes.tutorialList }>
-                                <li className={ classes.tutorialListEntry }>{ `Téléchargez puis ouvrez le logiciel ` }<a href={ `https://www.teamviewer.com/fr/info/quicksupport` } className={ classes.tutorialLink }>{ `Teamviewer QuickSupport` }</a>{ ` sur votre ordinateur` }</li>
+                                <li className={ classes.tutorialListEntry }>{ `Téléchargez puis ouvrez le logiciel ` }<a href={ `https://www.teamviewer.com/fr/info/quicksupport` } className={ classes.tutorialLink } target={ '_blank' } rel={ 'noopener noreferrer' }>{ `Teamviewer QuickSupport` }</a>{ ` sur votre ordinateur` }</li>
                                 <li className={ classes.tutorialListEntry }>{ `Acceptez les conditions d'utilisation` }</li>
                                 <li className={ classes.tutorialListEntry }>{ `Une fois ouvert, appelez notre assistant(e):` }</li>
                                 <div className={ classes.buttonHolder }>
-                                    <IconButton icon={ 'phone' } text={ '09 75 98 80 57' } link={ 'tel:+33975988057' } description={ 'Appelez notre assistance technique au 09 75 98 80 57' }/>
+                                    <IconButton icon={ 'phone' } text={ '09 75 98 80 57' } link={ 'tel:+33975988057' } description={ 'Appelez notre assistance technique au 09 75 98 80 57' } isOutside={ false }/>
                                 </div>
                                 <li className={ classes.tutorialListEntry }>{ `Communiquez `}<strong>{ `votre ID` }</strong>{ ` ainsi que `}<strong>{ `votre mot de passe` }</strong>{ ` à notre assistant(e)` }</li>
                             </ol>

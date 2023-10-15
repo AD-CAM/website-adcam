@@ -127,7 +127,7 @@ export default function Header({ activePage }: HeaderProps) {
                 {
                     !isSmallScreen  ? (
                                         <div className={ classes.buttonsRoot }>
-                                            <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' }/>
+                                            <IconButton icon={ 'invoice' } text={ 'Devis gratuit' } link={ '/contact' } description={ 'Obtenez rapidement un devis 100% gratuit.' } isOutside={ false }/>
                                             <HamburgerNav activePage={ activePage } hasButton={ false } />
                                         </div>
                                     ) : (
