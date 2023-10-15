@@ -41,6 +41,7 @@ export default function RexSection() {
                                         text: "Les prolongateurs de portée fonctionne sur OS Malevich, le système d'exploitation en temps réel qui gère également les hubs Ajax. Le système d'exploitation assure leur parfaite compatibilité. OS Malevich est protégé contre les cyberattaques et résiste au piratage, et toutes les données transmises sont chiffrées. Même en cas de panne de courant soudaine, le prolongateur de portée peut fonctionner jusqu'à 38 heures."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>

@@ -42,6 +42,7 @@ export default function SirenSection() {
                                         text: "Le boîtier compact et minimaliste de la sirène intérieure contient un avertisseur sonore puissant et un système anti-sabotage, qui prévient si la sirène est retirée de son support. Les sirènes Ajax servent également d'indicateurs de l'état du système de sécurité, des temporisations à l'armement et au désarmement, et de l'ouverture des portes lorsque le système est désarmé. Les sirènes filaires et sans fil sont disponibles dans la gamme de produits Ajax."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>

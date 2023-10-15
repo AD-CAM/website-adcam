@@ -40,6 +40,7 @@ export default function DoorSection() {
                                         text: "Les détecteurs d'ouverture de porte et de fenêtre sont un élément essentiel de tout système de sécurité. Les détecteurs d'ouverture intégrés au système de sécurité Ajax, peuvent déclencher une sirène, exécuter des scénarios d'automatisation et intégrer des capteurs tiers, ces fonctions les rendent indispensables pour votre système de domotique. Les détecteurs d'ouverture Ajax filaires et sans fil sont disponibles dans la gamme de produits."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>

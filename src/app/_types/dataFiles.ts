@@ -56,6 +56,7 @@ interface TechSheetBannerData {
     boldTitle: string;
     regularTitle: string;
     text: TextContent[];
+    transparent: boolean;
 }
 
 interface TechSheetSubBannerData {

@@ -40,6 +40,7 @@ export default function GlassSection() {
                                         text: "Si des intrus tentent de pénétrer dans une maison par une fenêtre cassée, de casser une vitrine pour voler des marchandises, ou si une branche tombe sur une fenêtre et la brise lors d'une tempête, le système en informe immédiatement les utilisateurs et le centre de télésurveillance. Mais le passage d'une voiture, le tonnerre ou les aboiements d'un chien ne provoquent pas de fausses alarmes. Les détecteurs de bris de glace Ajax existent en deux formats : un mini-détecteur indépendant qui saura s'intégrer dans n'importe quel intérieur, et un détecteur combiné doté d'un capteur de mouvement. Les détecteurs de bris de glace filaires et sans fil sont disponibles dans la gamme de produits Ajax."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>

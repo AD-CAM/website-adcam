@@ -44,6 +44,7 @@ export default function HubSection() {
                                         text: "Les centrales n'ont pas de clavier, la gestion et la configuration du système se font via l'application Ajax. L'intervention de l'utilisateur peut également être minimisée. Les centrales peuvent prendre en charge jusqu'à 64 scénarios d'automatisation qui permettent de planifier le changement des modes de sécurité, de réduire les actions routinières et de contrer activement les menaces. Selon le modèle, les centrales prennent en charge la connexion des appareils Ajax filaires et sans fil."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>

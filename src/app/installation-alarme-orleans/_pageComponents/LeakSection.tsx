@@ -35,6 +35,7 @@ export default function LeakSection() {
                                         text: "Les détecteurs de fuites d'eau sans fil Ajax préviennent les inondations dès les premières gouttes. Dès que de l'eau s'infiltre dans l'une des quatre paires de capteurs, le système déclenche une alarme. Une notification est envoyée aux utilisateurs et au centre de télésurveillance. En programmant une électrovanne via le dispositif Relay, le système de sécurité Ajax peut couper l'eau automatiquement jusqu'à l'arrivée du plombier."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>

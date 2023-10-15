@@ -1,75 +1,11 @@
 'use client'
 /* Assets Imports */
-import adCamFullLogo from "public/logos/logo-full_black.png"
-import cameraOne from "public/camera-image_one.png"
-import cameraTwo from "public/camera-image_two.png"
-
-import cameraTube from "public/cameras/camera-tube.jpg"
-import cameraDome from "public/cameras/camera-dome.png"
-import cameraFisheye from "public/cameras/camera-fisheye.jpg"
-
-import cameraMall from "public/cameras/camera_mall.jpg"
-import cameraWarehouse from "public/cameras/camera_warehouse.jpg"
-import cameraBuilding from "public/cameras/camera_building.jpg"
-
-import cameraFullCloud from "public/cameras/full-cloud.png"
-import cameraRemote from "public/cameras/full-remote-control.jpg"
-import cameraTelesurveillance from "public/cameras/telesurveillance.jpeg"
+import dahuaCameraBanner from "../../../../public/dahua/banner-dahua_products.jpg"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
-import { useMediaQuery, useTheme } from "@mui/material"
+import YouTube from "react-youtube"
 /* Components Imports */
-import { SectionTitle, ImageTitle } from '../../_components/SectionTitle'
-import ImagedArticle from '../../_components/ImagedArticle'
-import { IconButton } from "../../_components/Button"
-import ImageGrid from "../../_components/ImageGrid"
-
-
-
-const imageGridArray = [
-    [
-        {
-            image: cameraTube,
-            alt: 'Caméra "tube"',
-        },
-        {
-            image: cameraBuilding,
-            alt: 'Caméra de bâtiment',
-        },
-        {
-            image: cameraRemote,
-            alt: 'Système automatique full-remote',
-        }
-    ],
-    [
-        {
-            image: cameraDome,
-            alt: 'Caméra "dome"',
-        },
-        {
-            image: cameraWarehouse,
-            alt: `Caméra d'entrepôt ou d'usine`,
-        },
-        {
-            image: cameraFullCloud,
-            alt: 'Système entièrement connecté au cloud',
-        }
-    ],
-    [
-        {
-            image: cameraFisheye,
-            alt: 'Caméra "fisheye"',
-        },
-        {
-            image: cameraMall,
-            alt: 'Caméra de supermarché',
-        },
-        {
-            image: cameraTelesurveillance,
-            alt: 'Surveillance contre le cambriolage',
-        }
-    ]
-]
+import { TechSheetBanner } from '@/app/_components/TechSheet'
 
 
 
@@ -84,9 +20,13 @@ const useStyles = makeStyles()((theme) => {
 
             width: "100%",
 
-            paddingTop: theme.spacing(10),
-
             boxShadow: "0px -50px 25px -50px rgba(0, 0, 0, 0.3)",
+
+
+
+            [theme.breakpoints.down('sm')]: {
+                paddingTop: theme.spacing(16),
+            },
         },
         subRoot: {
             display: "flex",
@@ -95,56 +35,30 @@ const useStyles = makeStyles()((theme) => {
 
             boxSizing: "border-box",
 
-            width: "100%",
-            maxWidth: "1450px",
+            
 
-            [theme.breakpoints.up('sm')]: {
-                paddingLeft: theme.spacing(6),
-                paddingRight: theme.spacing(6),   
-            },
-        },
-        imageContainer: {
-
-        },
-        sectionTitleHolder: {
-            width: "100%",
-
-            [theme.breakpoints.down('sm')]: {
+            [theme.breakpoints.down('lg')]: {
+                width: "1100px",
                 maxWidth: "90%",
-                marginBottom: theme.spacing(2),
             },
-            [theme.breakpoints.up('sm')]: {
-                maxWidth: "1050px",   
-            },
-        },
-        articleContainer: {
-            [theme.breakpoints.down('sm')]: {
-                maxWidth: "90%",
-                marginBottom: theme.spacing(2),
-            },
-            [theme.breakpoints.up('sm')]: {
-                maxWidth: "1050px",
+            [theme.breakpoints.up('lg')]: {
+                width: "100%",
+                maxWidth: "1100px",
             },
         },
-        textParagraph: {
-            fontSize: theme.typography.pxToRem(15),
-            fontWeight: 400,
-    
-            color: "rgba(41, 41, 41, 1)",
-        },
-        textContainer: {
-            width: "100%",
-            boxSizing: "border-box",
+        youtubeContainer: {
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
 
-            [theme.breakpoints.down('sm')]: {
-                maxWidth: "90%",
-                marginBottom: theme.spacing(6),
-            },
-            [theme.breakpoints.up('sm')]: {
-                maxWidth: "1050px",
-                marginBottom: theme.spacing(4),
-            },
+            marginTop: theme.spacing(6),
+
+            width: "1100px",
+            maxWidth: "90%",
         },
+
+
+
         contactUsArea: {
             display: "flex",
             flexDirection: "column",
@@ -174,48 +88,28 @@ const useStyles = makeStyles()((theme) => {
 export default function FirstSection() {
     const { classes } = useStyles()
 
-    const theme = useTheme()
-    const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'))
-
 
 
     return (      
         <section className={ classes.root }>
-            <div className={ classes.subRoot }>
-                <div className={ classes.sectionTitleHolder }>
-                    <SectionTitle text={ "Installation de caméras" } />
-                </div>
-                <div className={ classes.articleContainer }>
-                    <ImagedArticle image={ cameraOne } alt={ `Système de vidéosurveillance à distance` } isLeft={ false } title={ `Faites appel à AD CAM pour sécuriser votre résidence ou votre entreprise` }>
-                        <p>{ `Les avantages de la vidéo surveillance sont multiples. Ce système de protection peut être installé (presque) partout pour en assurer la surveillance.` }</p>
-                        <p>{ `Les œuvres des malfaiteurs et les différents accidents perturbent notre paix au quotidien. C’est pourquoi il est nécessaire d’installer un système de ` }<strong>{ `vidéo surveillance.` }</strong>{ ` AD CAM est spécialisé dans les systèmes de sécurité à ` }<strong>{ `Orléans` }</strong>{ `, il vous fait profiter des avantages de la technologie sur la sécurité. Soyez au courant de tout événement, avec une simplicité d’accès.` }</p>
-                        <p>{ `Vous êtes propriétaire d’une boutique ? Vous souhaitez que vos clients se sentent en sécurité, en faisant leurs achats chez vous ? Vous souhaitez faire avancer  les enquêtes en cas de vol le plus rapidement possible ? Vous aimeriez savoir en détail le déroulement des activités dans votre entreprise ? Ou vous voulez simplement assurer la garde de votre domicile ? Dans tous les cas, nous avons la solution qu’il vous faut. Optez pour la mise en place d’une ` }<strong>{ `vidéo surveillance` }</strong>{ ` dans votre propriété. Nos compétences en pose et la diversité de modèles que nous vous proposons sauront vous protéger.` }</p>
-                    </ImagedArticle>
-                </div>
-                <div className={ classes.articleContainer }>
-                    <ImagedArticle image={ cameraTwo } alt={ `Un écran de caméras de surveillance` } isLeft={ true } title={ `AD CAM vous procure un système de protection fiable` }>
-                    <p>{ `Avec notre entreprise, vous pouvez profiter d’une ` }<strong>{ `caméra de surveillance performante.` }</strong>{ ` Un emplacement discret et une gamme d’appareils parfaitement adaptés font la notoriété de notre service. Dans le but d’optimiser votre protection, nos techniciens qualifiés:` }</p>
-                    <ul style={{ paddingLeft: "20px", }}>
-                        <li>{ `Détectent l’emplacement stratégique pour l’installation de l’équipement, pour assurer la qualité des images d’informations et la discrétion de l’appareil` }</li>
-                        <li>{ `Assurent la liaison de la caméra au routeur avant de bien la fixer` }</li>
-                        <li>{ `Protègent le dispositif et ses accessoires contre les intempéries` }</li>
-                    </ul>
-                    </ImagedArticle>
-                </div>
-                <div className={ classes.sectionTitleHolder }>
-                    <ImageTitle image={ adCamFullLogo } alt={ `AD CAM, Installateur de systèmes de télésurveillance à Orléans` } width={ "350px" } />
-                </div>
-                <div className={ classes.textContainer }>
-                    <p className={ classes.textParagraph }>{ `Notre équipe est habilitée à installer des dispositifs de vidéosurveillance. Nous intervenons chez vous en toute discrétion et nous nous chargeons de l’installation de caméras de vidéo dans les pièces potentiellement sensibles qui donnent directement sur l’extérieur. Nous vous assurons une couverture totale des pièces à surveiller par nos caméras. Choisissez parmi nos différents dispositifs : caméra avec détecteur de mouvements, avec détecteur thermique, etc. Une photo ou une vidéo est prise lorsque quelque chose d’anormal est détecté et vous pouvez en être informé par téléphone, voire les visualiser depuis votre smartphone.` }</p>
-                    <p className={ classes.textParagraph }>{ `Pour plus de sérénité, nous installons également des enregistreurs pour conserver un historique des vidéos. En complément, nous proposons également la création d’un réseau informatique vous permettant à tout moment de consulter vos caméras via un ordinateur, votre téléphone portable ou encore votre tablette.` }</p>
-                </div>
-                <ImageGrid imageArray={ imageGridArray } />
-                <div className={ classes.contactUsArea }>
-                    <h3 className={ classes.contactUsTitle }>
-                        { `Nos solutions en matière de vidéo surveillance vous intéressent ? AD CAM est à votre disposition afin de vous transmettre une estimation de prix gratuite ! Nous intervenons dans un rayon de 50 kilomètres autour d’Orléans.` }
-                    </h3>
-                    <IconButton icon={ "invoice" } text={ `Devis 100% gratuit` } link={ "/contact" } description={ `Contactez-nous pour obtenir un devis 100% gratuit` }/>
-                </div>
+            <TechSheetBanner
+                                image={ dahuaCameraBanner }
+                                alt={ "Logo de Dahua Technology" }
+                                isTop={ true }
+                                tag={ "" }
+                                boldTitle={ "Un œil" }
+                                regularTitle={ " partout, tout le temps" }
+                                text={ [
+                                    {
+                                        type: "regular",
+                                        text: "Les systèmes de surveillance Dahua Technology sont à la pointe de la technologie et vous offrent une surveillance continue des zones les plus importantes."
+                                    }
+                                ] }
+                                transparent={ false }
+            />
+
+            <div className={ classes.youtubeContainer }>
+                <YouTube videoId={ `eXVS3EYULtI` } className={ "youtubeContainer" } />
             </div>
         </section>
     )

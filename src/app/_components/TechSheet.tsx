@@ -254,6 +254,30 @@ const useStyles = makeStyles()((theme) => {
                 paddingBottom: "0",
             },
         },
+        bannerImageBackground: {
+            position: "relative",
+            boxSizing: "border-box",
+
+            objectFit: "cover",
+
+            height: "250px",
+            marginTop: theme.spacing(4),
+            marginBottom: theme.spacing(4),
+            borderRadius: theme.spacing(1),
+
+            overflow: "hidden",
+
+            zIndex: "9998",
+
+            [theme.breakpoints.down('lg')]: {
+                width: "600px",
+                maxWidth: "90%",
+                height: "auto",
+
+                marginTop: theme.spacing(8),
+                marginBottom: "0",
+            },
+        },
 
 
 
@@ -396,7 +420,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
     )
 }
 
-function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text }: TechSheetBannerData) {
+function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text, transparent }: TechSheetBannerData) {
     const { classes } = useStyles()
 
     const theme = useTheme()
@@ -430,8 +454,8 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
                     }
                 </div>
                 <div className={ classes.bannerImageContainer }>
-                    <div className={ classes.bannerImageGlow }></div> 
-                    <img src={ image.src } alt={ alt } className={ classes.bannerImage } />
+                    { transparent && <div className={ classes.bannerImageGlow }></div> } 
+                    <img src={ image.src } alt={ alt } className={ transparent ? classes.bannerImage : classes.bannerImageBackground } />
                 </div>
                 
             </motion.div>

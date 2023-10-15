@@ -17,7 +17,6 @@ export default function AlarmPage() {
             <Header activePage={ "video" } />
             <CallUs />
             <main>
-                <Banner image={ cameraBannerPhoto } isSmall={ false } position='right' />
                 <FirstSection />
             </main>
             <Footer />

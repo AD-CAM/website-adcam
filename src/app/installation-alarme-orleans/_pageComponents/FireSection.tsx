@@ -41,6 +41,7 @@ export default function FireSection() {
                                         text: "Leurs deux batteries et leur sirène intégrée permettent aux détecteurs d'incendie Ajax d'informer les utilisateurs en cas de danger, indépendamment de l'état de l'alimentation ou de la connexion au panneau de contrôle."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>

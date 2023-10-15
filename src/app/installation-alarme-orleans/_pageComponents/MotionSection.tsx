@@ -34,6 +34,7 @@ export default function MotionSection() {
                                         text: "Les détecteurs de mouvement sans fil et filaires Ajax détectent les intrus dès leurs premiers pas, que ce soit à l'extérieur ou à l'intérieur. Lorsqu'un intrus pénètre dans le champ de vision des capteurs PIR, le détecteur analyse le rayonnement thermique de son corps, si le détecteur est sûr qu'il s'agit d'un humain il déclenche une alarme. Tout se passe en moins d'une seconde. Les détecteurs de mouvement Ajax filaires et sans fil sont tous deux disponibles dans la gamme. Selon le type de capteur, ils peuvent être installés à l'intérieur comme à l'extérieur."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <TechSheetSubSectionBanner

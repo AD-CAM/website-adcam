@@ -38,6 +38,7 @@ export default function ButtonSection() {
                                         text: "Tous les dispositifs de commande de la gamme Ajax sont protégés contre les tentatives d'accès non autorisées et l'interception des signaux, de plus l'application vous signale quand et par qui le système a été activé ou désactivé via notification. La gamme de produits comprend des dispositifs Ajax filaires et sans fil."
                                     }
                                 ] }
+                                transparent={ true }
             />
 
             <div className={ classes.subRoot }>
