@@ -134,7 +134,7 @@ export default function SecondSection() {
                                 text={ [
                                     {
                                         type: "regular",
-                                        text: "Assurez vous de ne vous concentrer sur les réelles menaces grâce à un système assisté par intelligence artificielle."
+                                        text: "Assurez vous de ne vous concentrer que sur les réelles menaces grâce à un système assisté par intelligence artificielle."
                                     }
                                 ] }
                                 transparent={ false }
