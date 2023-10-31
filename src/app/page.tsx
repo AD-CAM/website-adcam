@@ -9,6 +9,7 @@ import HomeBanner from './_pageComponents/HomeBanner'
 import AboutSection from './_pageComponents/AboutSection'
 import WhatWeOffer from './_pageComponents/WhatWeOffer'
 import ReviewCarousel from './_pageComponents/ReviewCarousel'
+import OurClients from './_pageComponents/OurClients'
 
 
 
@@ -23,6 +24,7 @@ export default function Home() {
                 <WhatWeOffer sectionType={ "ourPledges"} />
                 <ReviewCarousel />
                 <WhatWeOffer sectionType={ "ourServices"} />
+                <OurClients />
             </main>
             <Footer />
         </>
