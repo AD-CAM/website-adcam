@@ -86,7 +86,7 @@ export default function OurClients() {
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
                 <div className={ classes.titleRoot }>
-                    <SectionTitle text={ "Nos clients" } />
+                    <SectionTitle text={ "Parmi nos clients" } />
                 </div>
 
                 <div className={ classes.clientsRoot }>
