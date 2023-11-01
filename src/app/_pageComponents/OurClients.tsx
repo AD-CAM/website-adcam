@@ -1,17 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
-import { motion, Variants } from 'framer-motion'
-/* Utils & Data Imports */
-import { PledgeInfo } from '../_types/dataFiles'
-const pledges: PledgeInfo[] = require('../_data/ourPledges.json')
-const services: PledgeInfo[] = require('../_data/ourServices.json')
+/* Data & Types Imports */
+import { ClientLogoData } from '../_types/dataFiles'
+const ClientsLogos: ClientLogoData[] = require("../_data/ourClients.json")
 /* Components Imports */
 import { SectionTitle } from '../_components/SectionTitle'
-/* Icons Imports */
-import { PiSealCheckBold } from 'react-icons/pi'
-import { FaRegClock, FaRegThumbsUp, FaPencilRuler, FaCog, FaUserFriends, FaTools } from 'react-icons/fa'
-import { FaPeopleGroup } from 'react-icons/fa6'
 
 
 
@@ -57,8 +52,30 @@ const useStyles = makeStyles()((theme) => {
                 maxWidth: "864px",   
             },
         },
+        clientsRoot: {
+            display: "flex",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+        },
+        clientsImage: {
+            margin: theme.spacing(1),
+            
+            height: "90px",
+            maxWidth: "90%"
+        }
     }
 })
+
+
+
+function ClientLogo({ src, alt }: ClientLogoData) {
+    const { classes } = useStyles()
+
+    return (
+        <img src={ `clients/${src}` } alt={ alt } className={ classes.clientsImage } />
+    )
+}
 
 
 
@@ -70,6 +87,16 @@ export default function OurClients() {
             <div className={ classes.subRoot }>
                 <div className={ classes.titleRoot }>
                     <SectionTitle text={ "Nos clients" } />
+                </div>
+
+                <div className={ classes.clientsRoot }>
+                    {
+                        ClientsLogos.map((logo, index) => {
+                            return (
+                                <ClientLogo key={ index } src={ logo.src } alt={ logo.alt } />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </section>

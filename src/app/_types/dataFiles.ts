@@ -69,4 +69,9 @@ interface TechSheetDetails {
     text: string;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData, TechSheetDetails }
+interface ClientLogoData {
+    src: string;
+    alt: string;
+}
+
+export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData, TechSheetDetails, ClientLogoData }
