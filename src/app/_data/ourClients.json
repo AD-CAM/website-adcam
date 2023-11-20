@@ -70,5 +70,25 @@
     {
         "src": "total.png",
         "alt": "Logo de Total"
+    },
+    {
+        "src": "pharmaciecentrale.png",
+        "alt": "Logo de la Pharmacie Centrale"
+    },
+    {
+        "src": "delarte.png",
+        "alt": "Logo de Ristorante Del Arte"
+    },
+    {
+        "src": "eurorepar.png",
+        "alt": "Logo de Eurorepar"
+    },
+    {
+        "src": "blao.png",
+        "alt": "Logo du Groupe Financier B'Lao"
+    },
+    {
+        "src": "ateliersdufaubourg.png",
+        "alt": "Logo des Ateliers du Faubourg"
     }
 ]
