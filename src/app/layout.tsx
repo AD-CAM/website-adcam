@@ -5,6 +5,8 @@ import { Quicksand } from 'next/font/google'
 import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir"
 /* Components Imports */
 import ScrollToTop from './_components/ScrollToTop'
+import Analytics from './_components/Analytics'
+import { Suspense } from 'react'
 
 
 
@@ -29,6 +31,9 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     return (
                 <html lang="fr">
                     <body className={ quicksand.className }>
+                        <Suspense>
+                            <Analytics />
+                        </Suspense>
                         <NextAppDirEmotionCacheProvider options={{ key: "css" }}>
                             { children }
                             <ScrollToTop />
