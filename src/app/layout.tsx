@@ -31,10 +31,10 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     return (
                 <html lang="fr">
                     <body className={ quicksand.className }>
-                        <Suspense>
-                            <Analytics />
-                        </Suspense>
                         <NextAppDirEmotionCacheProvider options={{ key: "css" }}>
+                            <Suspense>
+                                <Analytics />
+                            </Suspense>
                             { children }
                             <ScrollToTop />
                         </NextAppDirEmotionCacheProvider>
