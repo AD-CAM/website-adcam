@@ -2,7 +2,7 @@
 /* Data & Types Imports */
 const techSheetsList = require("../_pageData/fireTechSheetsList.json")
 /* Assets Imports */
-import ajaxBanner from "../../../../public/ajax/banner-ajax_fire.jpg"
+import ajaxBanner from "../../../../public/ajax/banner-ajax_fire.png"
 /* Library Imports */
 import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
@@ -34,7 +34,7 @@ export default function FireSection() {
                                     },
                                     {
                                         type: "regular",
-                                        text: "Les détecteurs d'incendie font partie intégrante du système de sécurité Ajax, ils alertent les utilisateurs via les sirènes connectées au système, l'application mobile, par SMS ou appel téléphonique. Si plusieurs détecteurs sont connectés au hub ils peuvent activer une alarme de façon synchronisée si l'un d'entre eux est déclenché. Ce système d'alarmes interconnectées augmente considérablement les chances que toutes les personnes présentes sur le lieu de l'incendie soient rapidement informées de la situation."
+                                        text: "La chambre optique unique ne nécessite pas de nettoyage régulier, le capteur à double spectre distingue la fumée de la vapeur, la thermistance réagit rapidement aux matériaux synthétiques en combustion et un logiciel sophistiqué minimise les déclenchements intempestifs. Grâce à une conception bien pensée, ainsi qu'aux paramètres intégrés à l'application, l'installation est simple et rapide. Tout est conforme aux normes de sécurité incendie les plus modernes."
                                     },
                                     {
                                         type: "regular",
