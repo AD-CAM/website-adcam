@@ -82,9 +82,9 @@ export default function MapSection() {
                 <div className={ classes.mainContainer }>
                     <ImageTitle image={ ajaxInstaller } alt={ `AD-Cam est un installateur agréé AJAX` } width={ isSmallScreen ? "80%" : "450px" } />
 
-                    <div className={ classes.mapContainer }>
+                    { /* <div className={ classes.mapContainer }>
                         <MapComponent radius={50} />
-                    </div>
+                    </div> */ }
                 </div>
             </div>
         </section>
