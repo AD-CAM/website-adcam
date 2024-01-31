@@ -350,7 +350,7 @@ export default function Footer() {
                         </h3>
                         <div className={ classes.logoInfoButtons }>
                             <IconButton icon={ 'phone' } text={ '06 95 86 91 76' } link={ 'tel:+33695869176' } description={ 'Appelez nous au 06 95 86 91 76' } isOutside={ false }/>
-                            <SocialButton icon={ 'facebook' } link={ 'https://www.facebook.com/AD-CAM-103597488861540' } description={ 'Suivez nous sur Facebook.' }/>
+                            <SocialButton icon={ 'facebook' } link={ 'https://www.facebook.com/profile.php?id=61554165517749&locale=fr_FR' } description={ 'Suivez nous sur Facebook.' }/>
                         </div>
                         <IconButton icon={ 'certificate' } text={ 'Certifié AJAX Fibra' } link={ 'https://ajax.systems/fr/where-to-buy/' } description={ `Nous sommes certifiés pour l'installation d'équipements AJAX Fibra.` } isOutside={ true }/>
                     </div>
