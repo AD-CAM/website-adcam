@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /password
 
 Sitemap: https://www.ad-cam.fr/sitemap.xml
