@@ -10,8 +10,6 @@ import * as Yup from 'yup'
 import logo from "/public/dahua/dahua-logo.png"
 
 /* Components Imports */
-import { SectionTitle } from '../../_components/SectionTitle'
-import Link from 'next/link'
 import Image from 'next/image'
 import { SubmitButton } from '@/app/_components/Button'
 
@@ -261,14 +259,14 @@ export default function MainSection() {
     return (      
         <main className={ classes.root }>
             <section className={ classes.subRoot }>
-                <Link className={ classes.logoRoot } href="/">
+                <div className={ classes.logoRoot }>
                     <Image  src={ logo }
                             alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
 
                             height={ "75" }
                             width={ "250" }
                     />
-                </Link>
+                </div>
                 <div className={ classes.subSubRoot }>
                     <p className={ classes.instructions }>
                         { `Veuillez entrer ici votre adresse mail et un mot de passe. Le mot de passe doit contenir entre 8 et 32 caractères. Il doit contenir au moins une lettre, un symbole et un chiffre. Veuillez ne pas utiliser les caractères spéciaux suivants:   '  "  ;  :  &` }
