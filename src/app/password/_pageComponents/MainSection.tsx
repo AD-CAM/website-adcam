@@ -7,7 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as Yup from 'yup'
 
 /* Assets Imports */
-import adCamLogo from "/public/logos/logo-full_black.png"
+import logo from "/public/dahua/dahua-logo.png"
 
 /* Components Imports */
 import { SectionTitle } from '../../_components/SectionTitle'
@@ -78,7 +78,7 @@ const useStyles = makeStyles()((theme) => {
             height: "100vh",
             width: "100vw",
 
-            backgroundColor: "#3f3f3f",
+            background: "linear-gradient(180deg, rgba(57,57,57,1) 0%, rgba(57,57,57,1) 40%, rgba(120,120,120,1) 40%, rgba(74,74,74,1) 60%, rgba(57,57,57,1) 60%, rgba(57,57,57,1) 100%)",
 
             [theme.breakpoints.down('sm')]: {  
             },
@@ -91,7 +91,8 @@ const useStyles = makeStyles()((theme) => {
             justifyContent: "space-between",
             alignItems: "center",
 
-            backgroundColor: "#f7f7f7",
+            background: "linear-gradient(180deg, rgba(233,233,233,1) 0%, rgba(168,168,168,1) 100%)",
+            /* backgroundColor: "#f7f7f7", */
             
 
 
@@ -119,6 +120,7 @@ const useStyles = makeStyles()((theme) => {
         },
         logoRoot: {
             margin: theme.spacing(2),
+            marginTop: theme.spacing(4),
 
             boxSizing: "border-box",
         },
@@ -217,7 +219,7 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 600,
 
             boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
-            backgroundColor: "#228b22",
+            backgroundColor: "#198754",
             color: "white",
         },
     }
@@ -237,7 +239,7 @@ export default function MainSection() {
                     .matches(emailRegex, "L'adresse rentrée est invalide"),
 
         password: Yup   .string()
-                        .required('Vous devez confirmer votre mot de passe.')
+                        .required('Vous devez entrer votre mot de passe.')
                         .matches(passwordRegex, "Le mot de passe rentré est invalide"),
 
         confirmPassword: Yup.string()
@@ -260,11 +262,11 @@ export default function MainSection() {
         <main className={ classes.root }>
             <section className={ classes.subRoot }>
                 <Link className={ classes.logoRoot } href="/">
-                    <Image  src={ adCamLogo }
+                    <Image  src={ logo }
                             alt="AD CAM, installateurs de systèmes de télésurveillance à Orléans"
 
-                            height={ "100" }
-                            width={ "280" }
+                            height={ "75" }
+                            width={ "250" }
                     />
                 </Link>
                 <div className={ classes.subSubRoot }>
