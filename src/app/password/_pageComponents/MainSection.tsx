@@ -271,6 +271,9 @@ export default function MainSection() {
                     <p className={ classes.instructions }>
                         { `Veuillez entrer ici votre adresse mail et un mot de passe. Le mot de passe doit contenir entre 8 et 32 caractères. Il doit contenir au moins une lettre, un symbole et un chiffre. Veuillez ne pas utiliser les caractères spéciaux suivants:   '  "  ;  :  &` }
                     </p>
+                    <p className={ classes.instructions } style={{ margin: "0" }}>
+                        { `Votre envoi sera traité dans les 24 heures qui suivent.` }
+                    </p>
 
                     <form className={ classes.formRoot } onSubmit={ handleSubmit(onSubmit) }>
                         <div className={ classes.formInputRoot }>
