@@ -58,6 +58,9 @@ const linkVariants: Variants = {
     hover: {
         borderColor: "rgba(200, 4, 4, 1)",
     },
+    disabled: {
+        borderColor: "rgba(80, 80, 80, 1)"
+    },
 }
 
 const socialButtonVariants: Variants = {
@@ -104,7 +107,7 @@ const useStyles = makeStyles()((theme) => {
             padding: theme.spacing(1.2),
 
             borderRadius: theme.spacing(0.75),
-            border: "2px solid",
+            border: "1px solid",
 
             backgroundColor: "rgba(170, 170, 170, 1)",
             boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)",
@@ -308,9 +311,9 @@ function SubmitButton({ text, description, enabled }: SubmitButtonProps) {
         <motion.button className={ enabled ? classes.root : classes.rootDisabled } type="submit"
 
                 variants={ linkVariants }
-                initial="rest"
-                animate="rest"
-                whileHover={ enabled ? "hover" : "rest" }
+                initial={ enabled ? "rest" : "disabled" }
+                animate={ enabled ? "rest" : "disabled" }
+                whileHover={ enabled ? "hover" : "disabled" }
 
                 aria-label={ description }
                 aria-disabled={ !enabled }
