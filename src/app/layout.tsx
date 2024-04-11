@@ -1,12 +1,19 @@
 /* Assets Imports */
 import './globals.css'
 import { Quicksand } from 'next/font/google'
+
 /* Library Imports */
 import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir"
+
 /* Components Imports */
 import ScrollToTop from './_components/ScrollToTop'
 import Analytics from './_components/Analytics'
+import Script from 'next/script'
 import { Suspense } from 'react'
+
+/* Utils Imports */
+import { GTM_ID } from "./_utils/googleTagManager"
+
 
 
 
@@ -32,13 +39,20 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                 <html lang="fr">
                     <body className={ quicksand.className }>
                         <NextAppDirEmotionCacheProvider options={{ key: "css" }}>
-                            <Suspense>
-                                <Analytics />
-                            </Suspense>
                             { children }
                             <ScrollToTop />
                         </NextAppDirEmotionCacheProvider>
                     </body>
+                    <Script
+                        async
+                        src={ `https://www.googletagmanager.com/gtag/js?id=${GTM_ID}` }
+                    />
+                    <Script id='gtag'>
+                        { `window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', '${GTM_ID}');` }
+                    </Script>
                 </html>
     )
 }
