@@ -7,7 +7,7 @@ import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir"
 
 /* Components Imports */
 import ScrollToTop from './_components/ScrollToTop'
-import Analytics from './_components/Analytics'
+import { Analytics, GoogleTagScript } from './_components/Analytics'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
@@ -43,16 +43,9 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                             <ScrollToTop />
                         </NextAppDirEmotionCacheProvider>
                     </body>
-                    <Script
-                        async
-                        src={ `https://www.googletagmanager.com/gtag/js?id=${GTM_ID}` }
-                    />
-                    <Script id='gtag'>
-                        { `window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', '${GTM_ID}');` }
-                    </Script>
+                    <Suspense>
+                        <Analytics />
+                    </Suspense>
                 </html>
     )
 }
