@@ -1,5 +1,5 @@
 "use client"
-import { GTM_ID, pageview } from "../_utils/googleTagManager"
+import { GTM_ID, GTAG_ID, pageview } from "../_utils/googleTagManager"
 import { usePathname, useSearchParams } from "next/navigation"
 import Script from "next/script"
 import { useEffect } from "react"
@@ -58,13 +58,13 @@ function GoogleTagScript() {
         <>
             <Script
                 async
-                src={ `https://www.googletagmanager.com/gtag/js?id=${GTM_ID}` }
+                src={ `https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}` }
             />
             <Script id='gtag'>
                 { `window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${GTM_ID}');` }
+                gtag('config', '${GTAG_ID}');` }
             </Script>
         </>
     )
