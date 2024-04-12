@@ -13,6 +13,8 @@ declare const window: WindowWithDataLayer
 
 export const GTM_ID = process.env.NEXT_PUBLIC_GTM
 
+export const GTAG_ID = process.env.NEXT_PUBLIC_GTAG
+
 
 
 export const pageview = (url: string) => {

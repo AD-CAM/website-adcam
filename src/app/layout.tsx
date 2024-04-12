@@ -46,6 +46,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                     <Suspense>
                         <Analytics />
                     </Suspense>
+                    <GoogleTagScript />
                 </html>
     )
 }
