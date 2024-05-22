@@ -111,6 +111,7 @@ export default function ReviewCarousel() {
     const theme = useTheme()
     const { classes } = useStyles()
 
+    const displayedReviews = reviewList.slice(0, 30)
     const averageRating = reviewList.reduce((total, review) => total + review.rating, 0) / reviewList.length
     const ratingArray: string[] = []
     for(let i = 1; i <= 5; i++) {
@@ -128,12 +129,6 @@ export default function ReviewCarousel() {
     const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'))
     const isLargeScreen = useMediaQuery(theme.breakpoints.down('lg'))
     const isStrictlyLargeScreen = !isSmallScreen && !isMediumScreen && isLargeScreen
-
-
-
-    /* useEffect(() => {
-        getReviews()
-    }) */
 
 
 
@@ -159,7 +154,7 @@ export default function ReviewCarousel() {
                 </div>
                 <Carousel startingIndex={ isSmallScreen ? 0 : 1 } maxDistanceSeen={ isLargeScreen ? 0 : 1 } displayCentered={ isStrictlyLargeScreen ? false : true }> 
                 {
-                    reviewList.map((review, index) => {
+                    displayedReviews.map((review, index) => {
                         return <Review key={index} name={review.author_name} photo={review.profile_photo_url} rating={review.rating} text={review.text} time={review.time} />
                     })
                 }
