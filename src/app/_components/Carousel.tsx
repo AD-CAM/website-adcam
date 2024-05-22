@@ -103,8 +103,6 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
     function handleSliding(isNext: boolean, prevIndex: number): number {
         const newIndex = isNext ? (prevIndex + 1) % children.length : (prevIndex - 1 + children.length) % children.length
 
-        console.log(`Sliding ${isNext ? 'next' : 'previous'}. New index: ${newIndex}`)
-
         return newIndex
     }
 
@@ -120,7 +118,6 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
     }
 
     useEffect(() => {
-        console.log("Component mounted. Starting index: ", startingIndex)
         setActiveIndex(startingIndex)
     }, [startingIndex])
 
@@ -140,10 +137,6 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
     }
 
     const offset = Math.floor((children.length - 2) / 2) + 1
-
-    console.log("Active Index: ", activeIndex)
-    console.log("Children length: ", children.length)
-    console.log("Offset: ", offset)
 
 
 
