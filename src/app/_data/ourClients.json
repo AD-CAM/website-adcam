@@ -94,5 +94,17 @@
     {
         "src": "saveursoriginelles.png",
         "alt": "Logo de Saveurs Originelles"
+    },
+    {
+        "src": "police_municipale.png",
+        "alt": "Logo de la Police Municipale"
+    },
+    {
+        "src": "nordex.png",
+        "alt": "Logo de Nordex"
+    },
+    {
+        "src": "jump.png",
+        "alt": "Logo de la salle d'arcade VR Jump"
     }
 ]

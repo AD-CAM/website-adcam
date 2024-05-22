@@ -46,7 +46,7 @@ const useStyles = makeStyles()((theme) => {
 
             display: "flex",
             alignItems: "flex-start",
-            justifyContent: "space-around",
+            justifyContent: "center",
 
             width: "95%",
             maxWidth: "95%",
@@ -136,10 +136,8 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
         return opacity
     }
 
-    const offset = 2
-
-    /* Previous offset calculation, for some reason it stopped working ?? Works fine on my dev environment though. */
-    /* Math.floor((children.length - 2) / 2) + 1 */
+    const offset = Math.floor((children.length - 2) / 2) + 1
+    
 
 
     return (      
