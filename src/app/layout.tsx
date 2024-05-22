@@ -7,12 +7,13 @@ import { NextAppDirEmotionCacheProvider } from "tss-react/next/appDir"
 
 /* Components Imports */
 import ScrollToTop from './_components/ScrollToTop'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { Analytics, GoogleTagScript } from './_components/Analytics'
 import Script from 'next/script'
 import { Suspense } from 'react'
 
 /* Utils Imports */
-import { GTM_ID } from "./_utils/googleTagManager"
+import { gtmId } from "./_utils/googleTagManager"
 
 
 
@@ -37,6 +38,7 @@ export const metadata = {
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
     return (
                 <html lang="fr">
+                    <GoogleTagManager gtmId={ gtmId } />
                     <body className={ quicksand.className }>
                         <NextAppDirEmotionCacheProvider options={{ key: "css" }}>
                             { children }

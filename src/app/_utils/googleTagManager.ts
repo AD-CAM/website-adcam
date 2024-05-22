@@ -10,14 +10,21 @@ type WindowWithDataLayer = Window & {
 declare const window: WindowWithDataLayer
 
 
+const GTM_ID = process.env.NEXT_PUBLIC_GTM
+let gtmId: string
 
-export const GTM_ID = process.env.NEXT_PUBLIC_GTM
+if(!GTM_ID) {
+    gtmId = "undefined"
+} else {
+    gtmId = GTM_ID
+}
 
-export const GTAG_ID = process.env.NEXT_PUBLIC_GTAG
+
+const GTAG_ID = process.env.NEXT_PUBLIC_GTAG
 
 
 
-export const pageview = (url: string) => {
+const pageview = (url: string) => {
     if (typeof window.dataLayer !== "undefined") {
         window.dataLayer.push({
             event: "pageview",
@@ -30,3 +37,7 @@ export const pageview = (url: string) => {
         })
     }
 }
+
+
+
+export { gtmId, GTAG_ID, pageview }
