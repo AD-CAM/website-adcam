@@ -1,6 +1,6 @@
 'use client'
 /* Utils & Data Imports */
-import { ReactNode, useState } from "react"
+import { ReactNode, useEffect, useState } from "react"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 /* Icons Imports */
@@ -97,11 +97,7 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
 
 
     function isEven(number: number): boolean {
-        if(Math.floor(number / 2) - (number / 2) === 0) {
-            return true
-        } else {
-            return false
-        }
+        return number % 2 === 0
     }
 
     function handleSliding(isNext: boolean, prevIndex: number): number {
@@ -176,7 +172,9 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
 
     const offset = Math.floor((children.length - 2) / 2) + 1
 
-
+    useEffect(() => {
+        setActiveIndex(startingIndex)
+    }, [startingIndex])
 
 
 
