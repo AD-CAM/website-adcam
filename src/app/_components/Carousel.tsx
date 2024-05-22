@@ -136,9 +136,9 @@ export default function Carousel({ children, startingIndex, maxDistanceSeen, dis
         return opacity
     }
 
-    const offset = Math.floor((children.length - 2) / 2) + 1
+    const offset = 0
 
-
+    /* Math.floor((children.length - 2) / 2) + 1 */
 
 
     return (      
