@@ -43,10 +43,10 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                             <ScrollToTop />
                         </NextAppDirEmotionCacheProvider>
                     </body>
-                    <Suspense>
+                    {/* <Suspense>
                         <Analytics />
                     </Suspense>
-                    <GoogleTagScript />
+                    <GoogleTagScript /> */}
                 </html>
     )
 }
