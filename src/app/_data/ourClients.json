@@ -106,5 +106,9 @@
     {
         "src": "jump.png",
         "alt": "Logo de la salle d'arcade VR Jump"
+    },
+    {
+        "src": "foncia.png",
+        "alt": "Logo de Foncia"
     }
 ]
