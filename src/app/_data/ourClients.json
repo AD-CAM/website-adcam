@@ -1,5 +1,41 @@
 [
     {
+        "src": "police_municipale.png",
+        "alt": "Logo de la Police Municipale"
+    },
+    {
+        "src": "total.png",
+        "alt": "Logo de Total"
+    },
+    {
+        "src": "foncia.png",
+        "alt": "Logo de Foncia"
+    },
+    {
+        "src": "vinci.jpg",
+        "alt": "Logo de Vinci Construction"
+    },
+    {
+        "src": "renault.jpg",
+        "alt": "Logo de Renault"
+    },
+    {
+        "src": "peugeot.jpg",
+        "alt": "Logo de Peugeot"
+    },
+    {
+        "src": "delarte.png",
+        "alt": "Logo de Ristorante Del Arte"
+    },
+    {
+        "src": "kyriaddirect.png",
+        "alt": "Logo de Kyriad Direct"
+    },
+    {
+        "src": "famillesrurales.png",
+        "alt": "Logo de Familles Rurales"
+    },
+    {
         "src": "montfleury.jpg",
         "alt": "Logo de Mont Fleury, Brasserie Bar"
     },
@@ -16,20 +52,12 @@
         "alt": "Logo de Club énergie"
     },
     {
-        "src": "famillesrurales.png",
-        "alt": "Logo de Familles Rurales"
-    },
-    {
         "src": "flh.jpg",
         "alt": "Logo de FLH"
     },
     {
         "src": "jprenovation.jpg",
         "alt": "Logo de JP Rénovations"
-    },
-    {
-        "src": "kyriaddirect.png",
-        "alt": "Logo de Kyriad Direct"
     },
     {
         "src": "laconcurrence.jpg",
@@ -44,16 +72,8 @@
         "alt": "Logo de Mondial Pare-brise"
     },
     {
-        "src": "peugeot.jpg",
-        "alt": "Logo de Peugeot"
-    },
-    {
         "src": "pharmaciefeuillardnourrit.png",
         "alt": "Logo de Pharmacie Feuillard Nourrit"
-    },
-    {
-        "src": "renault.jpg",
-        "alt": "Logo de Renault"
     },
     {
         "src": "radiologieres.jpg",
@@ -68,16 +88,8 @@
         "alt": "Logo de Tissus Jaurès"
     },
     {
-        "src": "total.png",
-        "alt": "Logo de Total"
-    },
-    {
         "src": "pharmaciecentrale.png",
         "alt": "Logo de la Pharmacie Centrale"
-    },
-    {
-        "src": "delarte.png",
-        "alt": "Logo de Ristorante Del Arte"
     },
     {
         "src": "eurorepar.png",
@@ -96,10 +108,6 @@
         "alt": "Logo de Saveurs Originelles"
     },
     {
-        "src": "police_municipale.png",
-        "alt": "Logo de la Police Municipale"
-    },
-    {
         "src": "nordex.png",
         "alt": "Logo de Nordex"
     },
@@ -108,7 +116,27 @@
         "alt": "Logo de la salle d'arcade VR Jump"
     },
     {
-        "src": "foncia.png",
-        "alt": "Logo de Foncia"
+        "src": "ecopark.jpg",
+        "alt": "Logo de Ecopark"
+    },
+    {
+        "src": "levelup.png",
+        "alt": "Logo de Level Up Fitness"
+    },
+    {
+        "src": "hyphen.jpg",
+        "alt": "Logo de Hyphen Transport"
+    },
+    {
+        "src": "symmarket.jpg",
+        "alt": "Logo de Sym Market"
+    },
+    {
+        "src": "alpapaysage.png",
+        "alt": "Logo de Alpha Paysage"
+    },
+    {
+        "src": "herissonvert.png",
+        "alt": "Logo de Herisson Vert Parcs et Jardins"
     }
 ]
