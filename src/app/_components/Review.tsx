@@ -109,6 +109,20 @@ const useStyles = makeStyles()((theme) => {
             height: "80px",
             width: "100%",
         },
+        emptyText: {
+            fontSize: theme.typography.pxToRem(15),
+        
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+
+            margin: 0,
+
+            height: "80px",
+            width: "100%",
+
+            fontStyle: "italic",
+            color: "rgba(0, 0, 0, .4)"
+        },
         expandButton: {
             alignSelf: "flex-start",
 
@@ -224,15 +238,28 @@ export default function Review({ name, photo, rating, text, time }: ReviewProps)
             </div>
 
             <div className={ classes.textRoot }>
-                <motion.p   className={ classes.text }
-                            ref={ textRef }
-                            variants={ textVariants }
+                {
+                    text === "" ?
+                                <motion.p   className={ classes.emptyText }
+                                            ref={ textRef }
+                                            variants={ textVariants }
 
-                            initial="collapsed"
-                            animate={ expanded ? "expanded" : "collapsed" }
-                >
-                    { text }
-                </motion.p>
+                                            initial="collapsed"
+                                            animate={ expanded ? "expanded" : "collapsed" }
+                                >
+                                    { "Cet avis ne contient aucun texte." }
+                                </motion.p>
+                                :
+                                <motion.p   className={ classes.text }
+                                            ref={ textRef }
+                                            variants={ textVariants }
+                
+                                            initial="collapsed"
+                                            animate={ expanded ? "expanded" : "collapsed" }
+                                >
+                                    { text }
+                                </motion.p>
+                }
             </div>
             {
                 (overflowing || expanded) && (
