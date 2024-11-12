@@ -138,5 +138,25 @@
     {
         "src": "herissonvert.png",
         "alt": "Logo de Herisson Vert Parcs et Jardins"
+    },
+    {
+        "src": "lelugere.jpg",
+        "alt": "Logo du Centre Equestre Le Lugère"
+    },
+    {
+        "src": "bourgeoisenergie.png",
+        "alt": "Logo de Bourgeois Energie"
+    },
+    {
+        "src": "daboutmaillard.jpg",
+        "alt": "Logo du Docteur Dominique Dabout-Maillard"
+    },
+    {
+        "src": "orangebleue.jpg",
+        "alt": "Logo du Coach Fitness l'Orange Bleue"
+    },
+    {
+        "src": "laboutiquedufouilleur.png",
+        "alt": "Logo de la Boutique du Fouilleur"
     }
 ]
