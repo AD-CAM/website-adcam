@@ -37,13 +37,14 @@ function Tile({ image, isFirst, isImageUnder, isVideo, isDark, title, body, body
             <div
                   style={{    display: "flex",
                               width: "85%",
+                              alignItems: "center",
                               justifyContent: "space-between",
                               flexDirection: isImageUnder ? "column" : "row",
                               boxShadow: "4px 5px 19px -6px rgba(0,0,0,0.6)",
                               backgroundColor: isDark ? "rgba(0,0,0,1)" : "rgba(255,255,255,1)",
                               borderRadius: "1rem",
                               marginTop: isFirst ? "0" : "25px",
-                              padding: image ? "0 2rem" : "2rem",
+                              padding: image && !isImageUnder ? "0 2rem" : "2rem",
                         }}
             >
                   <div
@@ -66,7 +67,7 @@ function Tile({ image, isFirst, isImageUnder, isVideo, isDark, title, body, body
                   {
                         image && (
                               isVideo     ? <video style={{ width: "210px" }} loop muted autoPlay src={ image } controlsList="nofullscreen" playsInline />
-                                          : <img src={ image } alt={ "" }  />
+                                          : <img style={{ width: "75%", boxSizing: "border-box", padding: "25px" }} src={ image } alt={ "" }  />
                         )
                   }
             </div>
@@ -140,7 +141,7 @@ export default function DoorBellSection() {
                                     body={[ "avec suppression du bruit et annulation de l'écho" ]}
                                     bodySize="16px"
                               />
-                              <Tile image="ajax/doorbell/tile_vid.mp4"
+                              <Tile image="ajax/doorbell/device_colors.png"
                                     isImageUnder
                                     title="Quatre couleurs"
                               />
