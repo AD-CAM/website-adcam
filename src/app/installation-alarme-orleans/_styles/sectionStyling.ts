@@ -33,6 +33,11 @@ const useStyles = makeStyles()((theme) => {
                 maxWidth: "1100px",
             },
         },
+        listTitle: {
+            marginTop: "70px",
+            fontSize: "36px",
+            textAlign: "center",
+        },
 
 
 

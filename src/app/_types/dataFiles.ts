@@ -50,7 +50,9 @@ interface TechSheetTextData {
 
 interface TechSheetBannerData {
     image: StaticImageData;
-    alt: string;
+    backgroundColor?: string;
+    height?: number;
+    alt?: string;
     isTop: boolean;
     tag: string;
     boldTitle: string;

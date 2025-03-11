@@ -12,6 +12,7 @@ import YouTube from "react-youtube"
 /* Components Imports */
 import { TechSheetBanner, TechSheetList, TechSheetText } from '@/app/_components/TechSheet'
 import { TechSheetData } from '@/app/_types/dataFiles'
+import { IconButton } from "@/app/_components/Button"
 
 
 
@@ -88,6 +89,20 @@ export default function LeakSection() {
                                 }
                             ] }
                 />
+            </div>
+            <div className={ classes.contactUsRoot }>
+                <div className={ classes.contactUsSubRoot }>
+                    <div className={ classes.contactUsText }>
+                        <h3 className={ classes.contactUsTitle }>
+                            { `Les systèmes de sécurité AJAX vous intéressent ?` }
+                        </h3>
+                        <p className={ classes.contactUsSubTitle }>
+                            { `AD CAM est à votre disposition pour vous conseiller et vous transmettre une estimation des coûts gratuite ! Nous intervenons dans un rayon de 50 kilomètres autour d'Orléans.` }
+                        </p>
+                    </div>
+
+                    <IconButton icon={ "invoice" } text={ `Devis 100% gratuit` } link={ "/contact" } description={ `Contactez-nous pour obtenir un devis 100% gratuit` } isOutside={ false }/>
+                </div>
             </div>
         </section>
     )

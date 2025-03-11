@@ -1,0 +1,56 @@
+[
+    {
+      "image": "/ajax/doorbell/one_vid.mp4",
+      "alt": "",
+      "isLeft": false,
+      "boldTitle": "Accès instantané au flux vidéo dans les applications Ajax",
+      "regularTitle": "",
+      "subTitle": "Les utilisateurs ne feront jamais attendre leurs invités à la porte. Notre technologie propriétaire JetSparrow assure un flux vidéo rapide afin que les utilisateurs puissent voir leurs visiteurs dans une application Ajax dès qu'ils sonnent à la porte. Grâce à la superbe qualité d'image et de son du DoorBell, répondre à la porte n'a jamais été aussi proche d'un simple appel téléphonique.",
+      "techSheet":    [
+                              {
+                              "icon": "HDR",
+                              "text": "Vidéo nette 2K optimisée par HDR"
+                              },
+                              {
+                              "icon": "microphone",
+                              "text": "Transmission vocale claire avec suppression du bruit"
+                              },
+                              {
+                              "icon": "noise_cancellation",
+                              "text": "Annulation de l'écho pour une meilleure audibilité"
+                              }
+                        ]
+    },
+    {
+      "image": "/ajax/doorbell/two_vid.mp4",
+      "alt": "",
+      "isLeft": true,
+      "boldTitle": "Synergie de l'IA ",
+      "regularTitle": "et de la sécurité pour une reconnaissance précise des objets",
+      "subTitle": "La caméra alimentée par l’IA du DoorBell détecte les personnes, les véhicules et les animaux, tandis qu’un capteur PIR intégré améliore la précision de la détection et réduit les faux positifs. En configurant des zones de détection, les utilisateurs reçoivent des notifications uniquement lorsque cela est vraiment important. Pour les visiteurs, le dispositif offre une expérience sans contact. Un coursier aux mains pleines n’a pas besoin d’appuyer sur le bouton de la sonnette : les utilisateurs sont instantanément avertis de leur arrivée et peuvent immédiatement intervenir dans la conversation.",
+      "techSheet":    [
+                      ]
+    },
+    {
+      "image": "/ajax/doorbell/three_vid.mp4",
+      "alt": "",
+      "isLeft": false,
+      "boldTitle": "Garde permanente",
+      "regularTitle": "",
+      "subTitle": "DoorBell ne devient jamais une coquille vide, même si la connexion Wi-Fi est perdue. Lorsqu'il est ajouté à une centrale Ajax, DoorBell dispose d'un canal de communication de secours. Le dispositif fonctionne comme un élément à part entière d'un système de sécurité Ajax et informe les utilisateurs et le centre de télésurveillance des événements survenus sur le site. DoorBell utilise la technologie de communication sécurisée Jeweller pour envoyer des notifications d'événements et d'alarmes, tandis que le protocole Wings assure une transmission fiable des photos.",
+      "techSheet":    [
+                          {
+                              "icon": "hub_connection",
+                              "text": "Jusqu'à 1 700 m de communication sans fil2 avec une centrale Ajax"
+                          },
+                          {
+                              "icon": "bit_jump",
+                              "text": "Saut de fréquence pour détecter les interférences ou le brouillage"
+                          },
+                          {
+                              "icon": "anti_sabotage",
+                              "text": "Bouton anti-sabotage pour détecter le démontage du dispositif"
+                          }
+                      ]
+    }
+]

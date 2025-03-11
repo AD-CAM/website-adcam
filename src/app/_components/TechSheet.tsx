@@ -10,6 +10,7 @@ import { makeStyles } from 'tss-react/mui'
 import { useMediaQuery, useTheme } from "@mui/material"
 /* Components Imports */
 import Paper from "@mui/material"
+import { url } from "inspector"
 
 
 
@@ -330,6 +331,8 @@ const useStyles = makeStyles()((theme) => {
     }
 })
 
+
+
 function getVariant(isLeft: boolean): Variants {
     if(isLeft){
         return {rest: { opacity: 0, translateX: "-10%" }, loaded: { opacity: 1, translateX: "0%" }} 
@@ -345,6 +348,30 @@ function getFlexDirection(isLeft: boolean, isSmallScreen: boolean): any {
 }
 
 
+
+function TechSheetTileContainer(props: { children: ReactNode }) {
+      const { classes } = useStyles()
+  
+      const theme = useTheme()
+      const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'))
+  
+  
+  
+      return (      
+          <motion.article
+                          className={ classes.root }
+                          style={{ flexDirection: "column" }}
+  
+                          variants={ getVariant(true) }
+                          initial="rest"
+                          whileInView="loaded"
+                          transition={{ duration: 0.5 }}
+                          viewport={{ once: true }}
+          >
+              { props.children }
+          </motion.article>
+      )
+}
 
 function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
     const { classes } = useStyles()
@@ -384,6 +411,46 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
             </div>
         </motion.article>
     )
+}
+
+function TechSheetListVideo({ image, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
+      const { classes } = useStyles()
+  
+      const theme = useTheme()
+      const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'))
+  
+  
+  
+      return (      
+          <motion.article
+                          className={ classes.root }
+                          style={ getFlexDirection(isLeft, isSmallScreen) }
+  
+                          variants={ getVariant(isLeft) }
+                          initial="rest"
+                          whileInView="loaded"
+                          transition={{ duration: 0.5 }}
+                          viewport={{ once: true }}
+          >
+              <video loop muted autoPlay className={ classes.infoImage } src={ image } controlsList="nofullscreen" playsInline />
+              <div className={ classes.infoRoot }>
+                  <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
+                  <p className={ classes.infoSubTitle }>{ subTitle }</p>
+                  
+                  <div className={ classes.infoList }>
+                      {
+                          techSheet.map((entry, index) => {
+                              return  <div className={ classes.infoListEntry} key={ index }>
+                                          <Image src={ `ajax/icons/${entry.icon}.svg` } alt={ "" } height="32" width="32" />
+                                          <p className={ classes.infoListEntryText }>{ entry.text }</p>
+                                      </div>
+                          })
+                      }
+                  </div>
+  
+              </div>
+          </motion.article>
+      )
 }
 
 function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: TechSheetTextData) {
@@ -463,6 +530,53 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
     )
 }
 
+function TechSheetImageBanner({ image, backgroundColor, height, isTop, tag, boldTitle, regularTitle, text, transparent }: TechSheetBannerData) {
+      const { classes } = useStyles()
+  
+      const theme = useTheme()
+      const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'))
+  
+  
+  
+      return (      
+          <div    className={ classes.bannerRoot }
+                  style={{    height: `${height}px`,
+                              backgroundColor: backgroundColor,
+                              backgroundImage: `url(${image.src})`,
+                              backgroundSize: "contain",
+                              backgroundPosition: "right",
+                              backgroundRepeat: "no-repeat"
+                        }}
+          >
+              <motion.div
+                          className={ classes.bannerSubRoot }
+                          style={{ justifyContent: "flex-start" }}
+  
+                          variants={ getVariant(true) }
+                          initial="rest"
+                          whileInView="loaded"
+                          transition={{ duration: 0.5 }}
+                          viewport={{ once: true }}
+              >
+                  <div className={ classes.bannerInfoRoot }>
+                      <p className={ classes.bannerTag }>{ tag }</p>
+                      {
+                          isTop   ?   <h1 className={ classes.bannerTitle }><strong className={ classes.bannerTitleBold }>{ boldTitle }</strong>{ regularTitle }</h1>
+                                  :   <h2 className={ classes.bannerTitle }><strong className={ classes.bannerTitleBold }>{ boldTitle }</strong>{ regularTitle }</h2>
+                      }
+                      {
+                          text.map((paragraph, index) => {
+                              return  <p key={ index } className={ paragraph.type === "bold" ? classes.bannerTextBold : classes.bannerText }>
+                                          { paragraph.text }
+                                      </p>
+                          })
+                      }
+                  </div> 
+              </motion.div>
+          </div>
+      )
+  }
+
 function TechSheetSubSectionBanner({ section, subSection }: TechSheetSubBannerData) {
     const { classes } = useStyles()
 
@@ -482,4 +596,4 @@ function TechSheetSubSectionBanner({ section, subSection }: TechSheetSubBannerDa
 
 
 
-export { TechSheetList, TechSheetText, TechSheetBanner, TechSheetSubSectionBanner }
+export { TechSheetTileContainer, TechSheetList, TechSheetListVideo, TechSheetText, TechSheetBanner, TechSheetImageBanner, TechSheetSubSectionBanner }
