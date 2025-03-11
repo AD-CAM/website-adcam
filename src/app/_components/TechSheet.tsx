@@ -360,7 +360,7 @@ function TechSheetTileContainer(props: { children: ReactNode }) {
       return (      
           <motion.article
                           className={ classes.root }
-                          style={{ flexDirection: "column" }}
+                          style={{ flexDirection: "column", backgroundColor: "rgba(255,255,255,1)" }}
   
                           variants={ getVariant(true) }
                           initial="rest"
