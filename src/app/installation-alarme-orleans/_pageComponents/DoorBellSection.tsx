@@ -124,7 +124,7 @@ export default function DoorBellSection() {
 
             <div className={ classes.subRoot }>
                   <div style={{ flexDirection: isSmallScreen ? "column" : "row", alignItems: isSmallScreen ? "center" : "flex-start", display: "flex", width: "100%" }}>
-                        <TechSheetTileContainer>
+                        <TechSheetTileContainer isVertical>
                               <Tile title="Caméra de première qualité"
                                     isFirst
                                     body={[ "155°", "4 MP", "HDR" ]}
@@ -138,7 +138,7 @@ export default function DoorBellSection() {
                                     bodySize="28px"
                               />
                         </TechSheetTileContainer>
-                        <TechSheetTileContainer>
+                        <TechSheetTileContainer isVertical>
                               <Tile title="Audio bidirectionnelle claire"
                                     isFirst
                                     body={[ "avec suppression du bruit et annulation de l'écho" ]}

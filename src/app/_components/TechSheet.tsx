@@ -349,7 +349,14 @@ function getFlexDirection(isLeft: boolean, isSmallScreen: boolean): any {
 
 
 
-function TechSheetTileContainer(props: { children: ReactNode }) {
+interface TechSheetTileContainerTypes {
+    children: ReactNode;
+    isVertical?: boolean;
+}
+
+
+
+function TechSheetTileContainer({ children, isVertical = false }: TechSheetTileContainerTypes) {
       const { classes } = useStyles()
   
       const theme = useTheme()
@@ -360,7 +367,7 @@ function TechSheetTileContainer(props: { children: ReactNode }) {
       return (      
           <motion.article
                           className={ classes.root }
-                          style={{ flexDirection: "column", backgroundColor: "rgba(255,255,255,0)" }}
+                          style={{ flexDirection: isVertical ? "column" : "row", backgroundColor: "rgba(255,255,255,0)" }}
   
                           variants={ getVariant(true) }
                           initial="rest"
@@ -368,7 +375,7 @@ function TechSheetTileContainer(props: { children: ReactNode }) {
                           transition={{ duration: 0.5 }}
                           viewport={{ once: true }}
           >
-              { props.children }
+              { children }
           </motion.article>
       )
 }
