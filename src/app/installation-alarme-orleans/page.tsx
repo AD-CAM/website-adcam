@@ -31,7 +31,6 @@ export default function AlarmPage() {
                 <FirstSection />
                 <HubSection />
                 <DoorBellSection />
-                <KeypadSection />
                 <MotionSection />
                 <FireSection />
                 <DoorSection />
@@ -39,6 +38,7 @@ export default function AlarmPage() {
                 <SirenSection />
                 <RexSection />
                 <ButtonSection />
+                <KeypadSection />
                 <LeakSection />
             </main>
             <Footer />

@@ -367,7 +367,7 @@ function TechSheetTileContainer({ children, isVertical = false }: TechSheetTileC
       return (      
           <motion.article
                           className={ classes.root }
-                          style={{ flexDirection: isVertical ? "column" : "row", backgroundColor: "rgba(255,255,255,0)" }}
+                          style={{ flexWrap: "wrap", width: "49%", flexDirection: isVertical ? "column" : "row", justifyContent: "space-evenly", alignItems: isVertical ? "center" : "flex-start", backgroundColor: "rgba(255,255,255,0)" }}
   
                           variants={ getVariant(true) }
                           initial="rest"
@@ -521,12 +521,9 @@ function TechSheetImageBanner({ image, isVideo, backgroundColor, height, isTop, 
                               backgroundRepeat: "no-repeat"
                         }}
           >
-              { 
-                isVideo && <video loop muted autoPlay src={ image } controlsList="nofullscreen" playsInline />
-              }
               <motion.div
                           className={ classes.bannerSubRoot }
-                          style={{ justifyContent: "flex-start" }}
+                          style={ isVideo ? { justifyContent: "flex-start", position: "absolute", zIndex: 1 } : { justifyContent: "flex-start" }}
   
                           variants={ getVariant(true) }
                           initial="rest"
@@ -534,7 +531,7 @@ function TechSheetImageBanner({ image, isVideo, backgroundColor, height, isTop, 
                           transition={{ duration: 0.5 }}
                           viewport={{ once: true }}
               >
-                  <div className={ classes.bannerInfoRoot }>
+                  <div className={ classes.bannerInfoRoot } style={ isVideo ? { width: "60%" } : {} }>
                       <p className={ classes.bannerTag }>{ tag }</p>
                       {
                           isTop   ?   <h1 className={ classes.bannerTitle }><strong className={ classes.bannerTitleBold }>{ boldTitle }</strong>{ regularTitle }</h1>
@@ -549,9 +546,25 @@ function TechSheetImageBanner({ image, isVideo, backgroundColor, height, isTop, 
                       }
                   </div> 
               </motion.div>
+              { 
+                isVideo && 
+                            <video loop muted autoPlay playsInline
+                                    controlsList="nofullscreen"        
+                                    src={ image }
+                                    style={{
+                                        position: "relative",
+                                        top: 0,
+                                        left: 0,
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                        zIndex: 0,
+                                    }}
+                            />
+              }
           </div>
       )
-  }
+}
 
 function TechSheetSubSectionBanner({ section, subSection }: TechSheetSubBannerData) {
     const { classes } = useStyles()
