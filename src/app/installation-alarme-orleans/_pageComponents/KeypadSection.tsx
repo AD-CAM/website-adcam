@@ -72,7 +72,7 @@ function Tile({ image, isVertical, reverse, isFirst, isImageUnder, isVideo, isDa
                   {
                         image && (
                               isVideo     ? <video style={{ width: "210px", borderRadius: "1em" }} loop muted autoPlay src={ image } controlsList="nofullscreen" playsInline />
-                                          : <img style={{ width: isImageUnder ? "auto" : isVertical ? "25%" : "75%", height: isImageUnder ? (isVertical ? "60px" : "60%") : "auto", boxSizing: "border-box", padding: isImageUnder ? "0" : "25px", borderRadius: "1em", fill: isDark ? "#FFFFFF" : "#000000" }} src={ image } alt={ "" }  />
+                                          : <img style={{ width: isImageUnder ? "auto" : isVertical ? "25%" : "75%", height: isImageUnder ? (isVertical ? "60px" : "50%") : "auto", boxSizing: "border-box", padding: isImageUnder ? "0" : "25px", borderRadius: "1em", fill: isDark ? "#FFFFFF" : "#000000" }} src={ image } alt={ "" }  />
                         )
                   }
             </div>
