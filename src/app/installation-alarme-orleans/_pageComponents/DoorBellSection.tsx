@@ -10,7 +10,7 @@ import useStyles from "../_styles/sectionStyling"
 import { makeStyles } from 'tss-react/mui'
 import YouTube from "react-youtube"
 /* Components Imports */
-import { TechSheetBanner, TechSheetImageBanner, TechSheetList, TechSheetListVideo, TechSheetText, TechSheetTileContainer } from '@/app/_components/TechSheet'
+import { TechSheetBanner, TechSheetImageBanner, TechSheetList, TechSheetText, TechSheetTileContainer } from '@/app/_components/TechSheet'
 import { TechSheetData } from '@/app/_types/dataFiles'
 import { useMediaQuery, useTheme } from "@mui/material"
 import React from "react"
@@ -157,8 +157,9 @@ export default function DoorBellSection() {
 
                 {
                     techSheetsList.map((techSheetData: TechSheetData, index: number) => {
-                        return <TechSheetListVideo 
+                        return <TechSheetList 
                                             key={ index }
+                                            isVideo
                                             image={ techSheetData.image }
                                             alt={ techSheetData.alt }
                                             isLeft={ techSheetData.isLeft }

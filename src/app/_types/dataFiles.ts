@@ -31,6 +31,7 @@ interface TextContent {
 
 interface TechSheetData {
     image: any;
+    isVideo?: boolean;
     alt: string;
     isLeft: boolean;
     boldTitle: string;
@@ -49,7 +50,8 @@ interface TechSheetTextData {
 }
 
 interface TechSheetBannerData {
-    image: StaticImageData;
+    image: any;
+    isVideo?: boolean;
     backgroundColor?: string;
     height?: number;
     alt?: string;

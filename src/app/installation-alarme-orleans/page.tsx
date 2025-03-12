@@ -18,6 +18,7 @@ import SirenSection from './_pageComponents/SirenSection'
 import RexSection from './_pageComponents/RexSection'
 import ButtonSection from './_pageComponents/ButtonSection'
 import DoorBellSection from './_pageComponents/DoorBellSection'
+import KeypadSection from './_pageComponents/KeypadSection'
 
 
 
@@ -30,6 +31,7 @@ export default function AlarmPage() {
                 <FirstSection />
                 <HubSection />
                 <DoorBellSection />
+                <KeypadSection />
                 <MotionSection />
                 <FireSection />
                 <DoorSection />

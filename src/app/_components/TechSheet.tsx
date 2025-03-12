@@ -380,7 +380,7 @@ function TechSheetTileContainer({ children, isVertical = false }: TechSheetTileC
       )
 }
 
-function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
+function TechSheetList({ image, isVideo, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
     const { classes } = useStyles()
 
     const theme = useTheme()
@@ -399,7 +399,10 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
         >
-            <img src={ image } alt={ alt } className={ classes.infoImage } />
+            {
+                isVideo ? <video loop muted autoPlay className={ classes.infoImage } src={ image } controlsList="nofullscreen" playsInline />
+                        : <img src={ image } alt={ alt } className={ classes.infoImage } />
+            }
             <div className={ classes.infoRoot }>
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 <p className={ classes.infoSubTitle }>{ subTitle }</p>
@@ -418,46 +421,6 @@ function TechSheetList({ image, alt, isLeft, boldTitle, regularTitle, subTitle, 
             </div>
         </motion.article>
     )
-}
-
-function TechSheetListVideo({ image, alt, isLeft, boldTitle, regularTitle, subTitle, techSheet }: TechSheetData) {
-      const { classes } = useStyles()
-  
-      const theme = useTheme()
-      const isSmallScreen = useMediaQuery(theme.breakpoints.down('lg'))
-  
-  
-  
-      return (      
-          <motion.article
-                          className={ classes.root }
-                          style={ getFlexDirection(isLeft, isSmallScreen) }
-  
-                          variants={ getVariant(isLeft) }
-                          initial="rest"
-                          whileInView="loaded"
-                          transition={{ duration: 0.5 }}
-                          viewport={{ once: true }}
-          >
-              <video loop muted autoPlay className={ classes.infoImage } src={ image } controlsList="nofullscreen" playsInline />
-              <div className={ classes.infoRoot }>
-                  <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
-                  <p className={ classes.infoSubTitle }>{ subTitle }</p>
-                  
-                  <div className={ classes.infoList }>
-                      {
-                          techSheet.map((entry, index) => {
-                              return  <div className={ classes.infoListEntry} key={ index }>
-                                          <Image src={ `ajax/icons/${entry.icon}.svg` } alt={ "" } height="32" width="32" />
-                                          <p className={ classes.infoListEntryText }>{ entry.text }</p>
-                                      </div>
-                          })
-                      }
-                  </div>
-  
-              </div>
-          </motion.article>
-      )
 }
 
 function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: TechSheetTextData) {
@@ -494,7 +457,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
     )
 }
 
-function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text, transparent }: TechSheetBannerData) {
+function TechSheetBanner({ image, isVideo, alt, isTop, tag, boldTitle, regularTitle, text, transparent }: TechSheetBannerData) {
     const { classes } = useStyles()
 
     const theme = useTheme()
@@ -529,7 +492,10 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
                 </div>
                 <div className={ classes.bannerImageContainer }>
                     { transparent && <div className={ classes.bannerImageGlow }></div> } 
-                    <img src={ image.src } alt={ alt } className={ transparent ? classes.bannerImage : classes.bannerImageBackground } />
+                    {
+                        isVideo ? <video loop muted autoPlay className={ classes.bannerImageBackground } src={ image } controlsList="nofullscreen" playsInline />
+                                : <img src={ image.src } alt={ alt } className={ transparent ? classes.bannerImage : classes.bannerImageBackground } />
+                    }
                 </div>
                 
             </motion.div>
@@ -537,7 +503,7 @@ function TechSheetBanner({ image, alt, isTop, tag, boldTitle, regularTitle, text
     )
 }
 
-function TechSheetImageBanner({ image, backgroundColor, height, isTop, tag, boldTitle, regularTitle, text, transparent }: TechSheetBannerData) {
+function TechSheetImageBanner({ image, isVideo, backgroundColor, height, isTop, tag, boldTitle, regularTitle, text, transparent }: TechSheetBannerData) {
       const { classes } = useStyles()
   
       const theme = useTheme()
@@ -555,6 +521,9 @@ function TechSheetImageBanner({ image, backgroundColor, height, isTop, tag, bold
                               backgroundRepeat: "no-repeat"
                         }}
           >
+              { 
+                isVideo && <video loop muted autoPlay src={ image } controlsList="nofullscreen" playsInline />
+              }
               <motion.div
                           className={ classes.bannerSubRoot }
                           style={{ justifyContent: "flex-start" }}
@@ -603,4 +572,4 @@ function TechSheetSubSectionBanner({ section, subSection }: TechSheetSubBannerDa
 
 
 
-export { TechSheetTileContainer, TechSheetList, TechSheetListVideo, TechSheetText, TechSheetBanner, TechSheetImageBanner, TechSheetSubSectionBanner }
+export { TechSheetTileContainer, TechSheetList, TechSheetText, TechSheetBanner, TechSheetImageBanner, TechSheetSubSectionBanner }
