@@ -367,7 +367,7 @@ function TechSheetTileContainer({ children, isVertical = false }: TechSheetTileC
       return (      
           <motion.article
                           className={ classes.root }
-                          style={{ flexWrap: "wrap", width: "49%", flexDirection: isVertical ? "column" : "row", justifyContent: "space-evenly", alignItems: isVertical ? "center" : "flex-start", backgroundColor: "rgba(255,255,255,0)" }}
+                          style={{ flexWrap: "wrap", width: isSmallScreen ? "100%" : "49%", flexDirection: isVertical ? "column" : "row", justifyContent: "space-evenly", alignItems: isVertical ? "center" : "flex-start", backgroundColor: "rgba(255,255,255,0)" }}
   
                           variants={ getVariant(true) }
                           initial="rest"
