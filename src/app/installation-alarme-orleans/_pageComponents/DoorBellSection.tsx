@@ -19,6 +19,7 @@ import React from "react"
 
 interface TileInterface {
       image?: string,
+      reverse?: boolean,
       isFirst?: boolean,
       isImageUnder?: boolean,
       isVideo?: boolean,
@@ -30,7 +31,7 @@ interface TileInterface {
 
 
 
-function Tile({ image, isFirst, isImageUnder, isVideo, isDark, title, body, bodySize }:TileInterface) {
+function Tile({ image, reverse, isFirst, isImageUnder, isVideo, isDark, title, body, bodySize }:TileInterface) {
       const { classes } = useStyles()
 
       return (
@@ -39,7 +40,7 @@ function Tile({ image, isFirst, isImageUnder, isVideo, isDark, title, body, body
                               width: "85%",
                               alignItems: "center",
                               justifyContent: "space-between",
-                              flexDirection: isImageUnder ? "column" : "row",
+                              flexDirection: isImageUnder ? (reverse ? "column-reverse" : "column") : (reverse ? "row-reverse" : "row"),
                               boxShadow: "4px 5px 19px -6px rgba(0,0,0,0.6)",
                               backgroundColor: isDark ? "rgba(0,0,0,1)" : "rgba(255,255,255,1)",
                               borderRadius: "1rem",
@@ -50,7 +51,9 @@ function Tile({ image, isFirst, isImageUnder, isVideo, isDark, title, body, body
                   <div
                         style={{ display: "flex", alignItems: "center", justifyContent: image && !isImageUnder ? "center" : "flex-start", flexDirection: "column", width: image && !isImageUnder ? "50%" : "100%" }}
                   >
-                        <h3 style={{ fontSize: "20px", textAlign: "center", margin:"0", color: isDark ? "#ADADAD" : "#181818" }}>{ `${title}` }</h3>
+                        {
+                              title &&    <h3 style={{ fontSize: "20px", textAlign: "center", margin:"0", color: isDark ? "#ADADAD" : "#181818" }}>{ `${title}` }</h3>
+                        }
                         {
                               body &&     <p style={{ fontSize: `${bodySize}`, fontWeight: "bold", textAlign: "center", marginBottom: "0", color: isDark ? "#F7F7F7" : "#181818" }}>
                                                 {
@@ -66,8 +69,8 @@ function Tile({ image, isFirst, isImageUnder, isVideo, isDark, title, body, body
                   </div>
                   {
                         image && (
-                              isVideo     ? <video style={{ width: "210px" }} loop muted autoPlay src={ image } controlsList="nofullscreen" playsInline />
-                                          : <img style={{ width: "75%", boxSizing: "border-box", padding: "25px" }} src={ image } alt={ "" }  />
+                              isVideo     ? <video style={{ width: "210px", borderRadius: "1em" }} loop muted autoPlay src={ image } controlsList="nofullscreen" playsInline />
+                                          : <img style={{ width: "75%", boxSizing: "border-box", padding: "25px", borderRadius: "1em" }} src={ image } alt={ "" }  />
                         )
                   }
             </div>
