@@ -72,7 +72,7 @@ function Tile({ image, isVertical, reverse, isFirst, isImageUnder, isVideo, isDa
                   {
                         image && (
                               isVideo     ? <video style={{ width: "210px", borderRadius: "1em" }} loop muted autoPlay src={ image } controlsList="nofullscreen" playsInline />
-                                          : <img style={{ width: isVertical ? "25%" : "75%", boxSizing: "border-box", padding: "20px", borderRadius: "1em", fill: isDark ? "#FFFFFF" : "#000000" }} src={ image } alt={ "" }  />
+                                          : <img style={{ width: isImageUnder ? "auto" : isVertical ? "25%" : "75%", height: isImageUnder ? (isVertical ? "60px" : "60%") : "auto", boxSizing: "border-box", padding: isImageUnder ? "0" : "25px", borderRadius: "1em", fill: isDark ? "#FFFFFF" : "#000000" }} src={ image } alt={ "" }  />
                         )
                   }
             </div>
@@ -162,10 +162,13 @@ export default function KeypadSection() {
                               />
                         </TechSheetTileContainer>
                         <TechSheetTileContainer isVertical>
-                              <Tile title="Audio bidirectionnelle claire"
+                              <Tile title="Contrôle sans contact via smartphone"
+                                    image="ajax/icons/bluetooth.svg"
+                                    isImageUnder
+                                    reverse
                                     isVertical
                                     isFirst
-                                    body={[ "avec suppression du bruit et annulation de l'écho" ]}
+                                    body={[ "en utilisant Bluetooth Low Energy (BLE)" ]}
                                     bodySize="16px"
                               />
                               <Tile image="ajax/doorbell/device_colors.png"
