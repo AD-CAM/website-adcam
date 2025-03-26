@@ -1,5 +1,105 @@
 [
+	{
+        "author_name": "Cindy MENDES DA SILVA",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIht6mcYiyDhVUIHI4cH_oaHxv4ruXx2SKhQIGYBg-MRVCEeQ=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "03-2025",
+        "text": "",
+        "time": "03-2025"
+    },
+	{
+        "author_name": "romain",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKWQ50dv_zrhUQcwHt9FbVgxel8ZP3WYQD7mqvfZo5dxvh5=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "03-2025",
+        "text": "Un contact excellent, à l'écoute et de bon conseils. Installation rapide et propre. Du bon matériel.",
+        "time": "03-2025"
+    },
+	{
+        "author_name": "jordane sauger",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocK6cFvYaKHsS6N5Jh_n7sz9enlDJOdvH7kawtNlB-jlQBxa=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "03-2025",
+        "text": "Bonne équipe, très bon conseil ! Matériels de qualité au top.",
+        "time": "03-2025"
+    },
+	{
+        "author_name": "YaYa",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLLP0mpmYtQRf_OnhAmjlcdzQTkMPxIsuv81AZfreQkivdi4SY=s36-c-rp-mo-ba2-br100",
+        "rating": 5,
+        "relative_time_description": "02-2025",
+        "text": "C'est une collègue qui m'a conseillé cette société. Je suis pleinement satisfait. C'est très pro, les conseils sont pertinents. Il y a une vrai expertise.",
+        "time": "02-2025"
+    },
+	{
+        "author_name": "Arnaud Robert",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLmKnE9KJ_WOH57-q08AX34VENpskrTQq8CLjYLKxT96DfToA=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "02-2025",
+        "text": "Un contact et une communication aisés, une grande disponibilité, une proposition en rapport avec le besoin exprimé, des délais respectés et un travail correspondant au devis réalisé. Une entreprise fiable et sérieuse, à recommander !",
+        "time": "02-2025"
+    },
+	{
+        "author_name": "Sen Dave",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWAciPzh83EEigpWxKOkYqzqjof0vplA56c09gMJ7S_ic1b1K0V=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "02-2025",
+        "text": "Ecoute du client, devis rapide et clair. Installation propre et sérieuse, dans des délais courts. Je recommande.",
+        "time": "02-2025"
+    },
+	{
+        "author_name": "David Balland",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUUgw74qwqdhAuFgDz1DbxHdbVdiwxXH_9BeNFRU9kftqHSOf8Htg=s36-c-rp-mo-ba3-br100",
+        "rating": 5,
+        "relative_time_description": "02-2025",
+        "text": "Société à la réactivité et au professionnalisme remarquables, avec une véritable expertise et d'excellents conseils adaptés aux besoins spécifiques de chaque site.",
+        "time": "02-2025"
+    },
+	{
+        "author_name": "Jean luc Bourillot",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocK1hM_N9WIKn6MeOij5uLqm-fPoDtOLOU1xH3QXV_mWxf51GQ=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "02-2025",
+        "text": "Très bonne description et explication pendant le premier rdv. Après avoir pris la décision, le délai est respecté, l’installation est rapide et propre. Très bonne prise en main.",
+        "time": "02-2025"
+    },
+	{
+        "author_name": "laurent fourage",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWcwOFirTAF9y1Y4Oqk0hzX7KV7xGApZDor9-u63mWtEBNihZT5=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "01-2025",
+        "text": "Prestation de qualité, disponibilité du responsable de la société, explication au top pour l'optimisation du matériel installé. Merci pour la prestation.",
+        "time": "01-2025"
+    },
     {
+        "author_name": "Morpheans",
+        "author_url": "null",
+        "language": "fr",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWpkogwksK4MOTHcudfi8k26qFuk-YccCuBX2ZsfNAtK1rcrng=s36-c-rp-mo-br100",
+        "rating": 5,
+        "relative_time_description": "01-2025",
+        "text": "Je souhaite partager mon expérience exceptionnelle avec AD-CAM, un professionnel incontournable pour quiconque recherche un service de qualité supérieure. Leur expertise technique est indéniable, et chaque interaction témoigne de leur engagement envers l’excellence. Leur souci du détail et leur dévouement à satisfaire le client sont remarquables. Je recommande vivement AD-CAM à tous ceux qui recherchent un service irréprochable.",
+        "time": "01-2025"
+    },
+	{
         "author_name": "airsoft spectres",
         "author_url": "null",
         "language": "fr",
