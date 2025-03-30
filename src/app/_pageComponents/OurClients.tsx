@@ -12,60 +12,60 @@ import { SectionTitle } from '../_components/SectionTitle'
 
 
 const useStyles = makeStyles()((theme) => {
-    return {
-        root: {
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-
-            width: "100%",
-
-            [theme.breakpoints.down('sm')]: {
-                paddingTop: theme.spacing(2),
-            },
-            [theme.breakpoints.up('sm')]: {
-                paddingTop: theme.spacing(10),    
-            },
-        },
-        subRoot: {
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-
-            boxSizing: "border-box",
-
-            width: "100%",
-            maxWidth: "1450px",
-
-            [theme.breakpoints.up('sm')]: {
-                paddingLeft: theme.spacing(6),
-                paddingRight: theme.spacing(6),   
-            },
-        },
-        titleRoot: {
-            width: "100%",
-
-            [theme.breakpoints.down('sm')]: {
-                maxWidth: "90%",
-            },
-            [theme.breakpoints.up('sm')]: {
-                maxWidth: "864px",   
-            },
-        },
-        clientsRoot: {
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-        },
-        clientsImage: {
-            margin: theme.spacing(1),
-            
-            height: "90px",
-            maxWidth: "90%"
-        }
-    }
-})
+      return {
+          root: {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+  
+              width: "100%",
+  
+              [theme.breakpoints.down('sm')]: {
+                  paddingTop: theme.spacing(2),
+              },
+              [theme.breakpoints.up('sm')]: {
+                  paddingTop: theme.spacing(10),    
+              },
+          },
+          subRoot: {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+  
+              boxSizing: "border-box",
+  
+              width: "100%",
+              maxWidth: "1450px",
+  
+              [theme.breakpoints.up('sm')]: {
+                  paddingLeft: theme.spacing(6),
+                  paddingRight: theme.spacing(6),   
+              },
+          },
+          titleRoot: {
+              width: "100%",
+  
+              [theme.breakpoints.down('sm')]: {
+                  maxWidth: "90%",
+              },
+              [theme.breakpoints.up('sm')]: {
+                  maxWidth: "864px",   
+              },
+          },
+          clientsRoot: {
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "space-evenly",
+          },
+          clientsImage: {
+              margin: theme.spacing(3),
+              
+              maxHeight: "80px",
+              maxWidth: "170px"
+          }
+      }
+  })
 
 
 

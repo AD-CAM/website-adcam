@@ -158,5 +158,17 @@
     {
         "src": "laboutiquedufouilleur.png",
         "alt": "Logo de la Boutique du Fouilleur"
+    },
+    {
+        "src": "lesjardinsdunoyer.jpg",
+        "alt": "Logo des Jardins du Noyer"
+    },
+    {
+        "src": "lasertagorleans.png",
+        "alt": "Logo du Laser Tag Orléans"
+    },
+    {
+        "src": "thiriet.png",
+        "alt": "Logo de la Maison Thiriet"
     }
 ]
