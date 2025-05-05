@@ -170,5 +170,13 @@
     {
         "src": "thiriet.png",
         "alt": "Logo de la Maison Thiriet"
+    },
+    {
+        "src": "lhuillier.jpg",
+        "alt": "Logo de Lhuillier"
+    },
+    {
+        "src": "lecudebretagne.jpg",
+        "alt": "Logo de l'Hôtel L'écu de Bretagne"
     }
 ]
