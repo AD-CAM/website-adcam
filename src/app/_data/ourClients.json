@@ -178,5 +178,25 @@
     {
         "src": "lecudebretagne.jpg",
         "alt": "Logo de l'Hôtel L'écu de Bretagne"
+    },
+    {
+        "src": "beauvallet.png",
+        "alt": "Logo de Beauvallet"
+    },
+    {
+        "src": "armurerie-pierre-desforges.png",
+        "alt": "Logo de l'Armurerie Pierre Desforges"
+    },
+    {
+        "src": "boulangerie-jouanneau.jpg",
+        "alt": "Logo de la Boulangerie Jouanneau"
+    },
+    {
+        "src": "serma-technologies.png",
+        "alt": "Logo de Serma Technologies"
+    },
+    {
+        "src": "camping-jargeau.png",
+        "alt": "Logo du Camping Jargeau"
     }
 ]
