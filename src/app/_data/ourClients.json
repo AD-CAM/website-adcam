@@ -198,5 +198,13 @@
     {
         "src": "camping-jargeau.png",
         "alt": "Logo du Camping Jargeau"
+    },
+    {
+        "src": "basty.jpg",
+        "alt": "Logo de Basty"
+    },
+    {
+        "src": "best-western.jpg",
+        "alt": "Logo du Best Western"
     }
 ]

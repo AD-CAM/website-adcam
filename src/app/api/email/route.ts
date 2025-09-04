@@ -1,51 +1,57 @@
 /* Env Variable Assignment */
-const destination = process.env.SENDGRID_DESTINATION
+let destination = process.env.EMAIL_DESTINATION
+let origin = process.env.EMAIL_ORIGIN
 /* Libraries Imports */
-import sgMail from '@sendgrid/mail'
+import { Resend } from 'resend'
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 
 
 export async function GET() {
-    return new Response('There is no server logic on GET route for email API', { status: 200 })
+   return new Response('There is no server logic on GET route for email API', { status: 200 })
 }
 
 
 
 export async function POST(req: any) {
-    if(process.env.SENDGRID_API_KEY !== undefined) {
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-    } else {
-        return new Response('The Server Sendgrid API key is undefined', { status: 500 })
-    }
-    
+   if(!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not defined')
+      return new Response('The Server Resend API key is undefined', { status: 500 })
+   }
+   
+   const data = await req.json()
 
-    
-    const data = await req.json()
+   if(!data.subject || !data.text) {
+      return new Response('Missing subject or text in request', { status: 400 })
+   }
 
-    if(!data.subject || !data.text) {
-        return new Response('Error while sending email', { status: 500 })
-    }
-
-
-
-    const msg = {
-        to: destination,
-        from: "contact@ad-cam.fr",
-        subject: data.subject,
-        text: data.text
-    }
-
-
-
-    try {
-        await sgMail.send(msg)
-
-        console.log('Email sent')
-
-        return new Response('Email sent', { status: 200 })
-    } catch (error) {
-        console.error(error)
-
-        return new Response('Error while sending email', { status: 500 })
-    }
+   try {
+      const response = await resend.emails.send({
+         from: origin ? origin : "",
+         to: destination ? destination : "",
+         subject: data.subject,
+         text: data.text,
+      })
+      
+      console.log('Email sent successfully:', response)
+      return new Response(JSON.stringify({ 
+         message: 'Email sent',
+         id: response.data?.id 
+      }), { 
+         status: 200,
+         headers: { 'Content-Type': 'application/json' }
+      })
+      
+   } catch (error: any) {
+      console.error('Email Error:', error)
+      
+      return new Response(JSON.stringify({ 
+         error: 'Error while sending email',
+         details: error.message
+      }), { 
+         status: 500,
+         headers: { 'Content-Type': 'application/json' }
+      })
+   }
 }
