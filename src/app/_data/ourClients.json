@@ -206,5 +206,9 @@
     {
         "src": "best-western.jpg",
         "alt": "Logo du Best Western"
+    },
+    {
+        "src": "confort-elec-sco.png",
+        "alt": "Logo de Confort Elec SCO"
     }
 ]
