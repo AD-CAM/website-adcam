@@ -3,7 +3,7 @@
 import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
 /* Assets Imports */
-import adCamHeaderLogo from "/public/logos/logo-full_black.png"
+import adCamHeaderLogo from "../../../public/logos/logo-full_black.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import { useTheme, useMediaQuery } from "@mui/material"

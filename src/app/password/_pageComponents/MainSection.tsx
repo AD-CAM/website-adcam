@@ -7,7 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as Yup from 'yup'
 
 /* Assets Imports */
-import logo from "/public/dahua/dahua-logo.png"
+import logo from "../../../../public/dahua/dahua-logo.png"
 
 /* Components Imports */
 import Image from 'next/image'

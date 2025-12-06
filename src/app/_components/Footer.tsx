@@ -1,10 +1,10 @@
 'use client'
 /* Assets Imports */
-import adCamFullLogo from "/public/logos/logo-full_white.png"
-import adCamFooterLogo from "/public/logos/logo_white.png"
-import escortLogo from "/public/partners/escort-logo.png"
-import isiLogo from "/public/partners/isi-logo.png"
-import shdLogo from "/public/partners/shd-logo.png"
+import adCamFullLogo from "../../../public/logos/logo-full_white.png"
+import adCamFooterLogo from "../../../public/logos/logo_white.png"
+import escortLogo from "../../../public/partners/escort-logo.png"
+import isiLogo from "../../../public/partners/isi-logo.png"
+import shdLogo from "../../../public/partners/shd-logo.png"
 /* Utils & Data Imports */
 import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")

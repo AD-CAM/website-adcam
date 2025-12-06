@@ -4,7 +4,15 @@ let origin = process.env.EMAIL_ORIGIN
 /* Libraries Imports */
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+
+
+let resend: Resend | null = null
+function getResend() {
+   if (!resend && process.env.RESEND_API_KEY) {
+      resend = new Resend(process.env.RESEND_API_KEY)
+   }
+   return resend
+}
 
 
 
@@ -15,11 +23,13 @@ export async function GET() {
 
 
 export async function POST(req: any) {
-   if(!process.env.RESEND_API_KEY) {
+   const resendClient = getResend()
+
+   if(!resendClient) {
       console.error('RESEND_API_KEY is not defined')
       return new Response('The Server Resend API key is undefined', { status: 500 })
    }
-   
+
    const data = await req.json()
 
    if(!data.subject || !data.text) {
@@ -27,7 +37,7 @@ export async function POST(req: any) {
    }
 
    try {
-      const response = await resend.emails.send({
+      const response = await resendClient.emails.send({
          from: origin ? origin : "",
          to: destination ? destination : "",
          subject: data.subject,
