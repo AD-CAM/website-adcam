@@ -210,5 +210,33 @@
     {
         "src": "confort-elec-sco.png",
         "alt": "Logo de Confort Elec SCO"
+    },
+    {
+        "src": "maisonrenard.jpg",
+        "alt": "Logo de Maison Renard"
+    },
+    {
+        "src": "studio118.png",
+        "alt": "Logo de Studio 118"
+    },
+    {
+        "src": "dejeantransport.png",
+        "alt": "Logo de Dejean Transport"
+    },
+    {
+        "src": "barancarrelage.jpg",
+        "alt": "Logo de Baran Carrelage"
+    },
+    {
+        "src": "eaueau.jpg",
+        "alt": "Logo de Eau Eau"
+    },
+    {
+        "src": "ecolelaprovidence.jpg",
+        "alt": "Logo de l'Ecole de la Providence"
+    },
+    {
+        "src": "boulangeriejouanneau.JPG",
+        "alt": "Logo de Boulangerie Jouanneau"
     }
 ]
