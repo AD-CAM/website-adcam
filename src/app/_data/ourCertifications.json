@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Solutions de sécurité d'extérieur",
+        "file": "/files/certifications/certification-securite-exterieure.pdf",
+        "organism": "AJAX"
+    },
+    {
+        "name": "Solutions de vidéo surveillance",
+        "file": "/files/certifications/certification-video-surveillance.pdf",
+        "organism": "AJAX"
+    },
+    {
+        "name": "Solutions de détection d'intrusion",
+        "file": "/files/certifications/certification-detection-intrusion.pdf",
+        "organism": "AJAX"
+    },
+    {
+        "name": "Installateur Certifié Superior Jeweller",
+        "file": "/files/certifications/certification-installateur-jeweller.pdf",
+        "organism": "AJAX"
+    },
+    {
+        "name": "Installateur Certifié Superior Fibra",
+        "file": "/files/certifications/certification-installateur-fibra.pdf",
+        "organism": "AJAX"
+    },
+    {
+        "name": "Installateur Certifié Pro Desktop",
+        "file": "/files/certifications/certification-installateur-pro-desktop.pdf",
+        "organism": "AJAX"
+    }
+]

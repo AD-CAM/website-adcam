@@ -78,4 +78,10 @@ interface ClientLogoData {
     alt: string;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData, TechSheetDetails, ClientLogoData }
+interface CertificationData {
+    name: string;
+    file: string;
+    organism: string;
+}
+
+export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData, TechSheetDetails, ClientLogoData, CertificationData }

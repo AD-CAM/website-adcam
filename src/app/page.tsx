@@ -10,6 +10,7 @@ import AboutSection from './_pageComponents/AboutSection'
 import WhatWeOffer from './_pageComponents/WhatWeOffer'
 import ReviewCarousel from './_pageComponents/ReviewCarousel'
 import OurClients from './_pageComponents/OurClients'
+import OurCertifications from './_pageComponents/OurCertifications'
 
 
 
@@ -21,9 +22,10 @@ export default function Home() {
             <main>
                 <HomeBanner />
                 <AboutSection />
-                <WhatWeOffer sectionType={ "ourPledges"} />
+                <OurCertifications />
+                <WhatWeOffer sectionType={"ourPledges"} />
                 <ReviewCarousel />
-                <WhatWeOffer sectionType={ "ourServices"} />
+                <WhatWeOffer sectionType={"ourServices"} />
                 <OurClients />
             </main>
             <Footer />
