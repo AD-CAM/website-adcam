@@ -238,5 +238,25 @@
     {
         "src": "boulangeriejouanneau.JPG",
         "alt": "Logo de Boulangerie Jouanneau"
+    },
+    {
+        "src": "orleans-car-shop.jpg",
+        "alt": "Logo de Orleans Car Shop"
+    },
+    {
+        "src": "chez-luigi.jpg",
+        "alt": "Logo de Chez Luigi"
+    },
+    {
+        "src": "la-chopine.jpg",
+        "alt": "Logo de La Chopine"
+    },
+    {
+        "src": "canotto.png",
+        "alt": "Logo de Canotto"
+    },
+    {
+        "src": "octopus-energy.jpg",
+        "alt": "Logo de Octopus Energy"
     }
 ]
