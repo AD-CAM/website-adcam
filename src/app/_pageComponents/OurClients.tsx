@@ -7,6 +7,7 @@ import { ClientLogoData } from '../_types/dataFiles'
 const ClientsLogos: ClientLogoData[] = require("../_data/ourClients.json")
 /* Components Imports */
 import { SectionTitle } from '../_components/SectionTitle'
+import LogoCarousel from '../_components/LogoCarousel'
 
 
 
@@ -52,52 +53,22 @@ const useStyles = makeStyles()((theme) => {
                   maxWidth: "864px",   
               },
           },
-          clientsRoot: {
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "center",
-              justifyContent: "space-evenly",
-          },
-          clientsImage: {
-              margin: theme.spacing(3),
-              
-              maxHeight: "80px",
-              maxWidth: "170px"
-          }
       }
   })
-
-
-
-function ClientLogo({ src, alt }: ClientLogoData) {
-    const { classes } = useStyles()
-
-    return (
-        <img src={ `clients/${src}` } alt={ alt } className={ classes.clientsImage } />
-    )
-}
 
 
 
 export default function OurClients() {
     const { classes } = useStyles()
 
-    return (      
+    return (
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
                 <div className={ classes.titleRoot }>
                     <SectionTitle text={ "Parmi nos clients" } />
                 </div>
 
-                <div className={ classes.clientsRoot }>
-                    {
-                        ClientsLogos.map((logo, index) => {
-                            return (
-                                <ClientLogo key={ index } src={ logo.src } alt={ logo.alt } />
-                            )
-                        })
-                    }
-                </div>
+                <LogoCarousel logos={ ClientsLogos } scrollSpeed={ 50 } rowsAmount={ 3 } alternateDirection />
             </div>
         </section>
     )
