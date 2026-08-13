@@ -7,7 +7,7 @@ import { ClientLogoData } from '../_types/dataFiles'
 const ClientsLogos: ClientLogoData[] = require("../_data/ourClients.json")
 /* Components Imports */
 import { SectionTitle } from '../_components/SectionTitle'
-import LogoCarousel from '../_components/LogoCarousel'
+import LogoGrid from '../_components/LogoGrid'
 
 
 
@@ -68,7 +68,7 @@ export default function OurClients() {
                     <SectionTitle text={ "Parmi nos clients" } />
                 </div>
 
-                <LogoCarousel logos={ ClientsLogos } scrollSpeed={ 50 } rowsAmount={ 3 } alternateDirection />
+                <LogoGrid logos={ ClientsLogos } />
             </div>
         </section>
     )

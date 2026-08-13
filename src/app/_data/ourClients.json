@@ -258,5 +258,29 @@
     {
         "src": "octopus-energy.jpg",
         "alt": "Logo de Octopus Energy"
+    },
+	{
+        "src": "ashura.png",
+        "alt": "Logo de Ashura Performance Center"
+    },
+	{
+        "src": "creche-et-naissance.png",
+        "alt": "Logo de Crèche & Naissance"
+    },
+	{
+        "src": "agri-territoires.png",
+        "alt": "Logo d'Agri Territoires"
+    },
+	{
+        "src": "d8.png",
+        "alt": "Logo de D8, Espresso Excellence"
+    },
+	{
+        "src": "century-21.jpg",
+        "alt": "Logo de Century 21"
+    },
+	{
+        "src": "bell-arbre.png",
+        "alt": "Logo de Bell'Arbre"
     }
 ]
