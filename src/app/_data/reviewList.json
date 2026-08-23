@@ -1,4 +1,14 @@
 [
+{
+		"author_name": "Maxime",
+      "author_url": "null",
+      "language": "fr",
+      "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocI_4bDkOJcSql2ziO-LWVaHNXjaQvh3rG6w-Sn3mcrrhcB4UA=s36-c-rp-mo-br100",
+      "rating": 5,
+      "relative_time_description": "08-2026",
+      "text": "Très professionnel et réactif. À recommander !",
+      "time": "08-2026"
+	},
    {
 		"author_name": "Stéphane GUILLEMETTE",
       "author_url": "null",
@@ -8,7 +18,7 @@
       "relative_time_description": "08-2026",
       "text": "Installation rapide et soignée, matériel de qualité, technicien courtois, compétent et parfaitement à l’aise avec son équipement. Des tarifs compétitifs et un travail irréprochable. Je recommande sans hésiter, les yeux fermés !",
       "time": "08-2026"
-   },
+	},
 	{
 		"author_name": "Sylvie Baudin",
       "author_url": "null",
