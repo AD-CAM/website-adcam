@@ -1,9 +1,10 @@
 'use client'
+/* Assets Imports */
+import ajaxInstaller from "public/ad-cam_authorized_installer.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
-import { motion, Variants } from 'framer-motion'
 /* Components Imports */
-import { SectionTitle } from '../../_components/SectionTitle'
+import { SectionTitle, ImageTitle } from '../../_components/SectionTitle'
 import { InvoiceForm } from '../../_components/ContactForm'
 /* Icons Imports */
 import { BsMailbox2 } from "react-icons/bs"
@@ -120,6 +121,11 @@ const useStyles = makeStyles()((theme) => {
             fontSize: theme.typography.pxToRem(15),
             fontWeight: 500,
         },
+        installerBadge: {
+            width: "100%",
+
+            marginTop: theme.spacing(4),
+        },
     }
 })
 
@@ -146,6 +152,10 @@ export default function FormSection() {
                             <h3 className={ classes.articleTitle }>{ `Nos experts vous recontactent` }</h3>
                             <p className={ classes.articleText }>{ `Nous vous recontactons dans les plus brefs délais afin d'établir avec vous un devis entièrement adapté à vos besoins et à votre budget` }</p>
                         </article>
+                    </div>
+
+                    <div className={ classes.installerBadge }>
+                        <ImageTitle image={ ajaxInstaller } alt={ "AD CAM est un installateur agréé AJAX" } width={ "300px" } />
                     </div>
                 </div>
             </div>
