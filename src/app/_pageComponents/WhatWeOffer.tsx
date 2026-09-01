@@ -1,17 +1,13 @@
 'use client'
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
-import { motion, Variants } from 'framer-motion'
 /* Utils & Data Imports */
 import { PledgeInfo } from '../_types/dataFiles'
 const pledges: PledgeInfo[] = require('../_data/ourPledges.json')
 const services: PledgeInfo[] = require('../_data/ourServices.json')
 /* Components Imports */
 import { SectionTitle } from '../_components/SectionTitle'
-/* Icons Imports */
-import { PiSealCheckBold } from 'react-icons/pi'
-import { FaRegClock, FaRegThumbsUp, FaPencilRuler, FaCog, FaUserFriends, FaTools } from 'react-icons/fa'
-import { FaPeopleGroup } from 'react-icons/fa6'
+import { PledgeCard } from '../_components/PledgeCard'
 
 
 
@@ -29,7 +25,7 @@ const useStyles = makeStyles()((theme) => {
                 paddingTop: theme.spacing(2),
             },
             [theme.breakpoints.up('sm')]: {
-                paddingTop: theme.spacing(10),    
+                paddingTop: theme.spacing(10),
             },
         },
         subRoot: {
@@ -44,7 +40,7 @@ const useStyles = makeStyles()((theme) => {
 
             [theme.breakpoints.up('sm')]: {
                 paddingLeft: theme.spacing(6),
-                paddingRight: theme.spacing(6),   
+                paddingRight: theme.spacing(6),
             },
         },
         titleRoot: {
@@ -54,7 +50,7 @@ const useStyles = makeStyles()((theme) => {
                 maxWidth: "90%",
             },
             [theme.breakpoints.up('sm')]: {
-                maxWidth: "864px",   
+                maxWidth: "864px",
             },
         },
         articlesRoot: {
@@ -72,119 +68,16 @@ const useStyles = makeStyles()((theme) => {
             },
             [theme.breakpoints.up('lg')]: {
                 alignItems: "flex-start",
-                flexDirection: "row",     
-            },
-        },
-        cardRoot: {
-            display: "flex",
-            
-            alignItems: "center",
-            justifyContent: "center",
-
-            color: "#C80404",
-            height: "100%",
-
-            fontSize: theme.typography.pxToRem(68),
-
-            [theme.breakpoints.down('sm')]: {
                 flexDirection: "row",
-                justifyContent: "space-between",
-
-                maxWidth: "90%",
-                marginBottom: theme.spacing(8),
-            },
-            [theme.breakpoints.up('sm')]: {
-                flexDirection: "column",
-
-                maxWidth: "45%",     
-            },
-            [theme.breakpoints.up('lg')]: {
-                flexDirection: "column",
-
-                maxWidth: "20%",     
             },
         },
-        cardSubRoot: {
-            marginTop: theme.spacing(2),
-
-            color: "rgba(41, 41, 41, 1)",
-
-            [theme.breakpoints.down('sm')]: {
-                width: "90%",
-                paddingLeft: theme.spacing(4),
-            },
-            [theme.breakpoints.up('sm')]: {
-                width: "auto",    
-            },
-        },
-        cardTitle: {
-            fontWeight: 600,
-            fontSize: theme.typography.pxToRem(22),
-
-            [theme.breakpoints.down('sm')]: {
-            marginTop: "0",
-            },
-        },
-        cardText: {
-            fontWeight: 500,
-            fontSize: theme.typography.pxToRem(14),
-        }
     }
 })
 
 
 
-interface IconProps {
-    icon: string;
-}
-
-interface PledgeCardProps {
-    icon: string;
-    title: string;
-    text: string;
-}
-
 interface WhatWeOfferProps {
     sectionType: string;
-}
-
-const Icon = ({ icon }: IconProps) => {
-    switch(icon) {
-        default :
-            break
-        case 'quality' :
-            return <PiSealCheckBold />
-        case 'speed' :
-            return <FaRegClock />
-        case 'trust' :
-            return <FaPeopleGroup />
-        case 'continuity' :
-            return <FaRegThumbsUp />
-        case 'study' :
-            return <FaPencilRuler />
-        case 'installation' :
-            return <FaCog />
-        case 'aid' :
-            return <FaUserFriends />
-        case 'maintenance' :
-            return <FaTools />
-    }
-}
-
-
-
-function PledgeCard({ icon, title, text }: PledgeCardProps) {
-    const { classes } = useStyles()
-
-    return (      
-        <article className={ classes.cardRoot }>
-            <Icon icon={ icon } />
-            <div className={ classes.cardSubRoot }>
-                <h3 className={ classes.cardTitle }>{ title }</h3>
-                <p className={ classes.cardText }>{ text }</p>
-            </div>
-        </article>
-    )
 }
 
 
@@ -192,11 +85,11 @@ function PledgeCard({ icon, title, text }: PledgeCardProps) {
 export default function WhatWeOffer({ sectionType }: WhatWeOfferProps) {
     const { classes } = useStyles()
 
-    return (      
+    return (
         <section className={ classes.root }>
             <div className={ classes.subRoot }>
                 {
-                    sectionType === "ourPledges" && 
+                    sectionType === "ourPledges" &&
                             <>
                                 <div className={ classes.titleRoot }>
                                     <SectionTitle text={ "Nos engagements" } />
@@ -214,7 +107,7 @@ export default function WhatWeOffer({ sectionType }: WhatWeOfferProps) {
                             </>
                 }
                 {
-                    sectionType === "ourServices" && 
+                    sectionType === "ourServices" &&
                             <>
                                 <div className={ classes.titleRoot }>
                                     <SectionTitle text={ "Nos services" } />

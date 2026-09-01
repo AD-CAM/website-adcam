@@ -9,6 +9,7 @@ import { Variants, motion } from "framer-motion"
 import { makeStyles } from 'tss-react/mui'
 import { useMediaQuery, useTheme } from "@mui/material"
 /* Components Imports */
+import { IconButton } from "./Button"
 import Paper from "@mui/material"
 import { url } from "inspector"
 
@@ -213,6 +214,11 @@ const useStyles = makeStyles()((theme) => {
             fontWeight: 600,
 
             color: "#F5F5F5",
+        },
+        bannerCta: {
+            display: "flex",
+
+            marginTop: theme.spacing(4),
         },
         bannerImageContainer: {
             display: "flex",
@@ -457,7 +463,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
     )
 }
 
-function TechSheetBanner({ image, isVideo, alt, isTop, tag, boldTitle, regularTitle, text, transparent }: TechSheetBannerData) {
+function TechSheetBanner({ image, isVideo, alt, isTop, tag, boldTitle, regularTitle, text, transparent, ctaText, ctaLink, ctaDescription }: TechSheetBannerData) {
     const { classes } = useStyles()
 
     const theme = useTheme()
@@ -489,9 +495,14 @@ function TechSheetBanner({ image, isVideo, alt, isTop, tag, boldTitle, regularTi
                                     </p>
                         })
                     }
+                    {
+                        ctaText &&  <div className={ classes.bannerCta }>
+                                        <IconButton icon={ "invoice" } text={ ctaText } link={ ctaLink ?? "/contact" } description={ ctaDescription ?? ctaText } isOutside={ false } />
+                                    </div>
+                    }
                 </div>
                 <div className={ classes.bannerImageContainer }>
-                    { transparent && <div className={ classes.bannerImageGlow }></div> } 
+                    { transparent && <div className={ classes.bannerImageGlow }></div> }
                     {
                         isVideo ? <video loop muted autoPlay className={ classes.bannerImageBackground } src={ image } controlsList="nofullscreen" playsInline />
                                 : <img src={ image.src } alt={ alt } className={ transparent ? classes.bannerImage : classes.bannerImageBackground } />

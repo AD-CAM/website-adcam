@@ -1,0 +1,5 @@
+[
+    { "icon": "notifications", "title": "Notifications en direct", "text": "Chaque événement vous alerte instantanément sur votre téléphone." },
+    { "icon": "remote", "title": "Armement à distance", "text": "Armez ou désarmez vos sites où que vous soyez, en un geste." },
+    { "icon": "history", "title": "Historique consultable", "text": "Retrouvez le journal complet de vos événements à tout moment." }
+]

@@ -13,6 +13,12 @@ interface PledgeInfo {
     text: string;
 }
 
+interface SiteStatusInfo {
+    site: string;
+    type: string;
+    armed: boolean;
+}
+
 interface ReviewInfo {
     author_name: string;
     author_url: string;
@@ -61,6 +67,9 @@ interface TechSheetBannerData {
     regularTitle: string;
     text: TextContent[];
     transparent: boolean;
+    ctaText?: string;
+    ctaLink?: string;
+    ctaDescription?: string;
 }
 
 interface TechSheetSubBannerData {
@@ -84,4 +93,4 @@ interface CertificationData {
     organism: string;
 }
 
-export type { PageInfo, PledgeInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData, TechSheetDetails, ClientLogoData, CertificationData }
+export type { PageInfo, PledgeInfo, SiteStatusInfo, ReviewInfo, TechSheetData, TechSheetTextData, TechSheetBannerData, TechSheetSubBannerData, TechSheetDetails, ClientLogoData, CertificationData }

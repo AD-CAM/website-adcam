@@ -1,0 +1,4 @@
+[
+    { "site": "Maison", "type": "house", "armed": false },
+    { "site": "Entrepôt", "type": "warehouse", "armed": true }
+]

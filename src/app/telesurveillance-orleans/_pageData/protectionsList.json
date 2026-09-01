@@ -1,0 +1,7 @@
+[
+    { "icon": "intrusion", "title": "Détection d'intrusion", "text": "Toute entrée non autorisée est détectée et déclenche immédiatement une levée de doute." },
+    { "icon": "video", "title": "Surveillance vidéo", "text": "Vos caméras sont reliées à la station, qui vérifie visuellement chaque alerte en temps réel." },
+    { "icon": "fire", "title": "Détection d'incendie", "text": "Fumée et anomalies sont surveillées en continu pour réagir avant que le feu ne se propage." },
+    { "icon": "technical-alert", "title": "Alertes techniques", "text": "Coupure de courant, défaut ou batterie faible: chaque anomalie du système est signalée." },
+    { "icon": "intervention", "title": "Intervention", "text": "Sur alerte confirmée, l'intervention adaptée est déclenchée sans que vous ayez à intervenir." }
+]

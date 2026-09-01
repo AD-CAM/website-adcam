@@ -1,0 +1,6 @@
+[
+    { "icon": "no-engagement", "title": "Sans engagement", "text": "Aucune durée d'engagement imposée: vous restez libre à tout moment." },
+    { "icon": "transparent-price", "title": "Tarifs transparents", "text": "Des tarifs clairs et compétitifs, sans frais cachés ni mauvaise surprise." },
+    { "icon": "installer", "title": "Installé par AD CAM", "text": "De l'étude à la pose, tout est réalisé par nos équipes, jamais sous-traité." },
+    { "icon": "local-support", "title": "Support local et réactif", "text": "Une équipe proche de vous, qui répond vite et connaît votre installation." }
+]
