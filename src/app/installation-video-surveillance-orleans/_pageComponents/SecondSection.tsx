@@ -2,6 +2,7 @@
 /* Assets Imports */
 import wizSenseBanner from "../../../../public/dahua/banner-wiz_sense.png"
 import wizOne from "../../../../public/dahua/wizOne.png"
+import smartDetection from "../../../../public/dahua/smart_detect.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
 import YouTube from "react-youtube"
@@ -155,6 +156,23 @@ export default function SecondSection() {
                                 {
                                     type: "regular",
                                     text: "Avec notre entreprise, vous pouvez profiter d’une caméra de surveillance performante. Un emplacement discret et une gamme d’appareils parfaitement adaptés font la notoriété de notre service."
+                                },
+                            ] }
+                />
+                <TechSheetText
+                            image={ smartDetection }
+                            alt={ "Détection intelligente par intelligence artificielle" }
+                            isLeft={ true }
+                            boldTitle={ "Réduisez" }
+                            regularTitle={ " les fausses alertes" }
+                            text={ [
+                                {
+                                    type: "bold",
+                                    text: "La caméra analyse chaque mouvement et ne vous signale que ce qui mérite votre attention."
+                                },
+                                {
+                                    type: "regular",
+                                    text: "Assistée par l'intelligence artificielle, elle distingue une réelle intrusion du passage d'un animal ou d'un véhicule, et écarte ainsi les déclenchements sans intérêt. Vous n'êtes alerté qu'au bon moment, sans être submergé de notifications."
                                 },
                             ] }
                 />
