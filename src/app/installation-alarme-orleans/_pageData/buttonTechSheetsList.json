@@ -166,39 +166,9 @@
                         ]
     },
     {
-        "image": "/ajax/buttons/six.jpg",
-        "alt": "Carte crypté sans contact AJAX",
-        "isLeft": false,
-        "boldTitle": "",
-        "regularTitle": "Ajax Pass",
-        "subTitle": "Carte sans contact cryptée pour un clavier Keypad Plus Jeweller",
-        "techSheet":    [
-                            {
-                                "icon": "RFID",
-                                "text": "Prise en charge de la technologie DESFire®"
-                            },
-                            {
-                                "icon": "users",
-                                "text": "Accès des visiteurs"
-                            },
-                            {
-                                "icon": "hub",
-                                "text": "Mémoire intégrée pouvant stocker les identifiants pour 13 centrales"
-                            },
-                            {
-                                "icon": "encryption",
-                                "text": "Chiffrement"
-                            },
-                            {
-                                "icon": "security_card",
-                                "text": "Protection contre la contre-façon"
-                            }
-                        ]
-    },
-    {
         "image": "/ajax/buttons/seven.jpg",
         "alt": "Télécommande sans fil AJAX",
-        "isLeft": true,
+        "isLeft": false,
         "boldTitle": "SpaceControl",
         "regularTitle": " Jeweller",
         "subTitle": "Télécommande sans fil pour contrôler le système de sécurité",

@@ -100,9 +100,68 @@
                         ]
     },
     {
-        "image": "/ajax/motion/outside/three.jpg",
+        "image": "/ajax/motion/outside/five.jpg",
         "alt": "Détecteur de mouvement AJAX",
         "isLeft": false,
+        "boldTitle": "MotionCam Outdoor HighMount",
+        "regularTitle": " Jeweller",
+        "subTitle": "Détecteur de mouvement extérieur sans fil avec levée de doute photo, conçu pour une installation en hauteur",
+        "techSheet":    [
+                            {
+                                "icon": "alarm_photo",
+                                "text": "Photo par alarme"
+                            },
+                            {
+                                "icon": "photo_verification",
+                                "text": "Photo sur demande"
+                            },
+                            {
+                                "icon": "scenario",
+                                "text": "Photo par scénario"
+                            },
+                            {
+                                "icon": "elsa",
+                                "text": "Filtrage numérique des fausses alarmes"
+                            },
+                            {
+                                "icon": "HDR",
+                                "text": "Caméra photo HDR"
+                            },
+                            {
+                                "icon": "combi-range",
+                                "text": "Détection jusqu'à 15m"
+                            },
+                            {
+                                "icon": "height",
+                                "text": "Installation en hauteur de 2 à 4 m"
+                            },
+
+
+
+
+
+                            {
+                                "icon": "antimasking",
+                                "text": "Système anti-masquage"
+                            },
+                            {
+                                "icon": "ip55",
+                                "text": "Résistance à la poussière et aux éclaboussures"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Jusqu'à 3 ans de fonctionnement sur batterie"
+                            },
+                            {
+                                "icon": "two_way_communication",
+                                "text": "Communication radio bidirectionnelle jusqu'à 1700m"
+                            }
+                        ]
+    },
+    {
+        "image": "/ajax/motion/outside/three.jpg",
+        "alt": "Détecteur de mouvement AJAX",
+        "isLeft": true,
         "boldTitle": "MotionCam Outdoor",
         "regularTitle": " Jeweller",
         "subTitle": "Détecteur de mouvement extérieur sans fil avec levée de doute",
@@ -144,7 +203,7 @@
     {
         "image": "/ajax/motion/outside/four.jpg",
         "alt": "Détecteur de mouvement AJAX",
-        "isLeft": true,
+        "isLeft": false,
         "boldTitle": "MotionProtect Outdoor",
         "regularTitle": " Jeweller",
         "subTitle": "Détecteur de mouvement extérieur sans fil",

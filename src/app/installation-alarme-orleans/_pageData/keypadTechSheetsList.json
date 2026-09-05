@@ -1,0 +1,36 @@
+[
+    {
+        "image": "/ajax/buttons/eight.png",
+        "alt": "Clavier sans fil AJAX",
+        "isLeft": true,
+        "boldTitle": "KeyPad Outdoor",
+        "regularTitle": " Jeweller",
+        "subTitle": "Clavier extérieur sans fil permettant de gérer l'accès et le système de sécurité",
+        "techSheet":    [
+                            {
+                                "icon": "dry_out",
+                                "text": "Conçu pour l'extérieur et résistant aux intempéries"
+                            },
+                            {
+                                "icon": "security_card",
+                                "text": "Accès sécurisé par code, Pass ou Tag"
+                            },
+                            {
+                                "icon": "attempts_limit",
+                                "text": "Blocage après tentatives de code incorrect"
+                            },
+                            {
+                                "icon": "external_led",
+                                "text": "Indicateur LED du mode de sécurité"
+                            },
+                            {
+                                "icon": "battery",
+                                "text": "Fonctionnement sur batterie longue durée"
+                            },
+                            {
+                                "icon": "two_way_communication",
+                                "text": "Communication radio avec la centrale jusqu'à 1 700 m"
+                            }
+                        ]
+    }
+]
