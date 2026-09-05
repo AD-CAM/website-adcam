@@ -5,6 +5,7 @@ import { makeStyles } from 'tss-react/mui'
 import { PledgeInfo } from '../_types/dataFiles'
 const pledges: PledgeInfo[] = require('../_data/ourPledges.json')
 const services: PledgeInfo[] = require('../_data/ourServices.json')
+const whyAdCam: PledgeInfo[] = require('../_data/whyAdCam.json')
 /* Components Imports */
 import { SectionTitle } from '../_components/SectionTitle'
 import { PledgeCard } from '../_components/PledgeCard'
@@ -118,6 +119,24 @@ export default function WhatWeOffer({ sectionType }: WhatWeOfferProps) {
                                         services.map((service, index) => {
                                             return (
                                                 <PledgeCard key={ index } icon={ service.icon } title={ service.title } text={ service.text } />
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </>
+                }
+                {
+                    sectionType === "whyAdCam" &&
+                            <>
+                                <div className={ classes.titleRoot }>
+                                    <SectionTitle text={ "Pourquoi AD CAM" } />
+                                </div>
+
+                                <div className={ classes.articlesRoot }>
+                                    {
+                                        whyAdCam.map((perk, index) => {
+                                            return (
+                                                <PledgeCard key={ index } icon={ perk.icon } title={ perk.title } text={ perk.text } />
                                             )
                                         })
                                     }

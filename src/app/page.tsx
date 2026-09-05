@@ -26,6 +26,7 @@ export default function Home() {
                 <WhatWeOffer sectionType={"ourPledges"} />
                 <ReviewCarousel />
                 <WhatWeOffer sectionType={"ourServices"} />
+                <WhatWeOffer sectionType={"whyAdCam"} />
                 <OurClients />
             </main>
             <Footer />

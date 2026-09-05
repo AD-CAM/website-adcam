@@ -1,6 +1,6 @@
 'use client'
 /* Assets Imports */
-import dahuaCameraBanner from "../../../../public/dahua/banner-dahua_products.jpg"
+import dahuaCameraBanner from "../../../../public/banners/videosurveillance_stock_photo.png"
 import dahuaOne from "../../../../public/dahua/dahuaOne.png"
 import dahuaTwo from "../../../../public/dahua/dahuaTwo.png"
 import dahuaThree from "../../../../public/dahua/dahuaThree.png"
@@ -73,7 +73,7 @@ export default function FirstSection() {
         <section className={ classes.root }>
             <TechSheetBanner
                                 image={ dahuaCameraBanner }
-                                alt={ "Logo de Dahua Technology" }
+                                alt={ "Logos de Dahua et Ajax" }
                                 isTop={ true }
                                 tag={ "" }
                                 boldTitle={ "Un œil" }
@@ -81,15 +81,11 @@ export default function FirstSection() {
                                 text={ [
                                     {
                                         type: "regular",
-                                        text: "Les systèmes de surveillance Dahua Technology sont à la pointe de la technologie et vous offrent une surveillance continue des zones les plus importantes."
+                                        text: "Les systèmes de surveillance Dahua Technology ou Ajax sont à la pointe de la technologie et vous offrent une surveillance continue des zones les plus importantes."
                                     }
                                 ] }
                                 transparent={ false }
             />
-
-            <div className={ classes.youtubeContainer }>
-                <YouTube videoId={ `eXVS3EYULtI` } className={ "youtubeContainer" } />
-            </div>
             
             <div className={ classes.subRoot }>
                 <TechSheetText 

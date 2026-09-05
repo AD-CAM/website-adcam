@@ -1,6 +1,6 @@
 'use client'
 /* Assets Imports */
-import wizSenseBanner from "../../../../public/dahua/banner-wiz_sense.webp"
+import wizSenseBanner from "../../../../public/dahua/banner-wiz_sense.png"
 import wizOne from "../../../../public/dahua/wizOne.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'

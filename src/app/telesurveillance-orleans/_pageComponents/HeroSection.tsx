@@ -45,7 +45,7 @@ export default function HeroSection() {
                                 text={ [
                                     {
                                         type: "regular",
-                                        text: "Une surveillance de vos locaux 24h/24, reliée à un centre de télésurveillance certifié APSAD P5, installée et suivie de bout en bout par AD CAM."
+                                        text: "Une surveillance de vos locaux 24h/24, reliée à un centre de télésurveillance certifié APSAD P5, installée par les professionels d'AD CAM."
                                     }
                                 ] }
                                 transparent={ false }
