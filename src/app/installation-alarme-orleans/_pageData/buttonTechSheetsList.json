@@ -72,36 +72,6 @@
                         ]
     },
     {
-        "image": "/ajax/buttons/three.jpg",
-        "alt": "Digicode sécurisé AJAX",
-        "isLeft": true,
-        "boldTitle": "Keypad",
-        "regularTitle": " Jeweller",
-        "subTitle": "Clavier tactile sans fil permettant de contrôler le système de sécurité",
-        "techSheet":    [
-                            {
-                                "icon": "attempts_limit",
-                                "text": "Bloque toute tentative de violation du code d’accès"
-                            },
-                            {
-                                "icon": "mute",
-                                "text": "Fonction d'alarme silencieuse"
-                            },
-                            {
-                                "icon": "keypad-indication",
-                                "text": "Indicateur du mode de sécurité"
-                            },
-                            {
-                                "icon": "battery",
-                                "text": "Jusqu'à 2 ans de fonctionnement sur batterie"
-                            },
-                            {
-                                "icon": "hub_connection",
-                                "text": "Distance de communication avec la centrale pouvant atteindre 1700m"
-                            }
-                        ]
-    },
-    {
         "image": "/ajax/buttons/four.jpg",
         "alt": "Digicode sécurisé AJAX",
         "isLeft": false,

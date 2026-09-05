@@ -81,7 +81,7 @@ export default function FirstSection() {
                                 text={ [
                                     {
                                         type: "regular",
-                                        text: "Les systèmes de surveillance Dahua Technology ou Ajax sont à la pointe de la technologie et vous offrent une surveillance continue des zones les plus importantes."
+                                        text: "Les systèmes de surveillance Dahua Technology et Ajax sont à la pointe de la technologie et vous offrent une surveillance continue des zones les plus importantes."
                                     }
                                 ] }
                                 transparent={ false }
