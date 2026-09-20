@@ -3,7 +3,6 @@
 import ajaxAlarmBanner from "../../../../public/ajax/banner-ajax_products.png"
 /* Library Imports */
 import { makeStyles } from 'tss-react/mui'
-import YouTube from "react-youtube"
 /* Components Imports */
 import { TechSheetBanner } from '@/app/_components/TechSheet'
 
@@ -46,15 +45,22 @@ const useStyles = makeStyles()((theme) => {
                 maxWidth: "1100px",
             },
         },
-        youtubeContainer: {
+        videoContainer: {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
 
             marginTop: theme.spacing(6),
+            marginBottom: theme.spacing(6),
 
             width: "1100px",
             maxWidth: "90%",
+        },
+        video: {
+            width: "100%",
+            height: "auto",
+
+            borderRadius: theme.spacing(1),
         },
 
 
@@ -108,8 +114,15 @@ export default function FirstSection() {
                                 transparent={ true }
             />
 
-            <div className={ classes.youtubeContainer }>
-                <YouTube videoId={ `gdeDCNWoMGg` } className={ "youtubeContainer" } />
+            <div className={ classes.videoContainer }>
+                <video
+                            className={ classes.video }
+                            src="/ajax/alarm-animation.mp4"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                />
             </div>
         </section>
     )
