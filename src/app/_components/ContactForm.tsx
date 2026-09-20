@@ -77,6 +77,15 @@ const useStyles = makeStyles()((theme) => {
                 width: "48%",
             },
         },
+        inputContainerFull: {
+            [theme.breakpoints.down('sm')]: {
+                marginBottom: theme.spacing(1),
+                width: "100%",
+            },
+            [theme.breakpoints.up('sm')]: {
+                width: "100%",
+            },
+        },
         inputLabel: {
             marginLeft: theme.spacing(0.5),
 
@@ -224,6 +233,7 @@ function handleContactSend(data: any) {
 
         Nom du ou de la correspondant(e): ${data.name}
         Email du ou de la correspondant(e): ${data.email}
+        Téléphone du ou de la correspondant(e): ${data.phone}
         Message: ${data.message}
         
         Cet email a été envoyé automatiquement depuis le serveur de AD-CAM.fr et ne permet pas d'y répondre directement.`
@@ -416,6 +426,27 @@ function ContactForm({ location }: ContactFormProps) {
                 />
             </div>
             <div className={ classes.inputContainer }>
+                <label className={ classes.inputLabel } htmlFor="phone-field" id="phone-label">{ `Numéro de Téléphone*` }</label>
+                <motion.input   className={ classes.inputField }
+
+                            { ... register('phone', { required: true, pattern: regex.phone })}
+
+                            placeholder='Votre numéro de téléphone...'
+                            id="phone-field"
+                            name="phone"
+                            type="tel"
+                            autoComplete="off"
+
+                            aria-required="true"
+                            aria-describedby='phone-label'
+
+                            variants={ inputVariants }
+                            initial="rest"
+                            whileHover="hover"
+                            whileFocus="focus"
+                />
+            </div>
+            <div className={ classes.inputContainerFull }>
                 <label className={ classes.inputLabel } htmlFor="email-field" id="email-label">{ `Adresse Email*` }</label>
                 <motion.input   className={ classes.inputField }
 
@@ -424,7 +455,7 @@ function ContactForm({ location }: ContactFormProps) {
                             placeholder='Votre adresse email...'
                             id="email-field"
                             name="email"
-                            type="email" 
+                            type="email"
                             autoComplete="off"
 
                             aria-required="true"

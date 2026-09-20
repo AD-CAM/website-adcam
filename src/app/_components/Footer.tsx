@@ -4,6 +4,7 @@ import adCamFullLogo from "../../../public/logos/logo-full_white.png"
 import adCamFooterLogo from "../../../public/logos/logo_white.png"
 import escortLogo from "../../../public/partners/escort-logo.png"
 import shdLogo from "../../../public/partners/shd-logo.png"
+import telesureLogo from "../../../public/partners/telesure-logo.png"
 /* Utils & Data Imports */
 import { PageInfo } from "../_types/dataFiles"
 const pageList: PageInfo[] = require("../_data/pageList.json")
@@ -361,6 +362,7 @@ export default function Footer() {
                     </h3>
                     <Image src={ escortLogo } alt="Logo de Escort" height={ 75 } width={ 115 } style={{ margin: "10px" }} />
                     <Image src={ shdLogo } alt="Logo de Safe Home Detector" height={ 75 } width={ 75 } style={{ margin: "10px" }} />
+                    <Image src={ telesureLogo } alt="Logo de Telesure" height={ 75 } width={ 280 } style={{ margin: "10px" }} />
                 </div>
             </div>
 
