@@ -91,6 +91,11 @@ const useStyles = makeStyles()((theme) => {
         infoText: {
             color: "#404040",
         },
+        infoTextList: {
+            marginTop: 0,
+            marginBottom: 0,
+            color: "#404040",
+        },
         infoTextBold: {
             fontWeight: 600,
 
@@ -453,7 +458,7 @@ function TechSheetText({ image, alt, isLeft, boldTitle, regularTitle, text }: Te
                 <h4 className={ classes.infoTitle }><strong className={ classes.infoTitleBold }>{ boldTitle }</strong>{ regularTitle }</h4>
                 {
                     text.map((paragraph, index) => {
-                        return  <p key={ index } className={ paragraph.type === "bold" ? classes.infoTextBold : classes.infoText }>
+                        return  <p key={ index } className={ paragraph.type === "bold" ? classes.infoTextBold : paragraph.type === "list" ? classes.infoTextList : classes.infoText }>
                                     { paragraph.text }
                                 </p>
                     })

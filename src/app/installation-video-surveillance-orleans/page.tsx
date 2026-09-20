@@ -8,6 +8,7 @@ import Footer from '../_components/Footer'
 import Banner from '../_components/Banner'
 /* Page Components Imports */
 import FirstSection from './_pageComponents/FirstSection'
+import ThirdSection from './_pageComponents/ThirdSection'
 import SecondSection from './_pageComponents/SecondSection'
 
 
@@ -19,6 +20,7 @@ export default function AlarmPage() {
             <CallUs />
             <main>
                 <FirstSection />
+                <ThirdSection />
                 <SecondSection />
             </main>
             <Footer />
