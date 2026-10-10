@@ -1,5 +1,6 @@
 "use client"
 import { gtmId, GTAG_ID, pageview } from "../_utils/googleTagManager"
+import { ADS_ID } from "../_utils/googleAds"
 import { usePathname, useSearchParams } from "next/navigation"
 import Script from "next/script"
 import { useEffect } from "react"
@@ -70,4 +71,27 @@ function GoogleTagScript() {
     )
 }
 
-export { Analytics, GoogleTagScript }
+function GoogleAdsTag() {
+    // Load the Ads conversion tag only where it is explicitly enabled in the deploy environment.
+    if (process.env.NEXT_PUBLIC_ADS_ENABLED !== "true") {
+        return null
+    }
+
+    return (
+        <>
+            <Script
+                async
+                src={ `https://www.googletagmanager.com/gtag/js?id=${ADS_ID}` }
+                strategy="afterInteractive"
+            />
+            <Script id="google-ads" strategy="afterInteractive">
+                { `window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${ADS_ID}');` }
+            </Script>
+        </>
+    )
+}
+
+export { Analytics, GoogleTagScript, GoogleAdsTag }

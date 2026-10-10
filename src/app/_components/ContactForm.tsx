@@ -10,6 +10,7 @@ import { EmailData } from '../_types/email'
 /* Utils & Data Imports */
 import { isOnMaintenance } from '../_utils/handleEnvVariables'
 import { regex } from '../_utils/regex'
+import { trackConversion } from '../_utils/googleAds'
 /* Components Imports */
 import { SubmitButton } from "./Button"
 import MaintenanceBanner from './MaintenanceBanner'
@@ -286,6 +287,7 @@ function InvoiceForm() {
 
     function onSubmit(data: any) {
         handleInvoiceSend(data)
+        trackConversion("devisExpress")
         reset()
     }
 
@@ -393,6 +395,7 @@ function ContactForm({ location }: ContactFormProps) {
 
     function onSubmit(data: any) {
         handleContactSend(data)
+        trackConversion("contact")
         reset()
     }
 
